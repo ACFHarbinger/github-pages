@@ -1,0 +1,102 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","tools","d"]
+0:["kZJeCgQwhgHhQNCy0vgQM",[[["",{"children":["content",{"children":[["slug","tools","d"],{"children":["__PAGE__?{\"slug\":\"tools\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":[["slug","tools","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cc81f53d0cc261e0.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_b0711f __variable_c0ebee","children":[["$","head",null,{"children":["$","style",null,{"children":"\n          :root {\n            --font-sans: var(--font-inter);\n            --font-display: var(--font-lexend);\n          }\n        "}]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]],null],null],["$L6",null]]]]
+7:I[9360,["590","static/chunks/590-f419930710a49f0f.js","544","static/chunks/app/content/%5Bslug%5D/page-22c86aebbd23d2bb.js"],"default"]
+8:T1059,<p><img src="assets/images/maxresdefault.jpg" alt="Jinx from Arcane, a League of Legends Series, firing her minigun Pow-Pow"></p>
+<h1>Tools Index</h1>
+<ul>
+<li><a href="#tools-index">Tools Index</a>
+<ul>
+<li><a href="#computer-science-and-engineering-cse">Computer Science and Engineering (CSE)</a>
+<ul>
+<li><a href="#programming-languages">Programming Languages</a></li>
+<li><a href="#frameworks--libraries">Frameworks &#x26; Libraries</a></li>
+<li><a href="#other-languages">Other Languages</a></li>
+<li><a href="#version-control">Version Control</a></li>
+<li><a href="#project-setup--management">Project Setup &#x26; Management</a></li>
+<li><a href="#ides--text-editors">IDEs &#x26; Text Editors</a></li>
+<li><a href="#game-engines--runtime-environments">Game Engines &#x26; Runtime Environments</a></li>
+</ul>
+</li>
+<li><a href="#art">Art</a>
+<ul>
+<li><a href="#3d-modelling">3D Modelling</a></li>
+<li><a href="#pixel-art">Pixel Art</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Computer Science and Engineering (CSE)</h2>
+<h3>Programming Languages</h3>
+<ul>
+<li><a href="https://www.python.org/">Python</a></li>
+<li><a href="https://www.java.com/en/">Java</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/javascript">JavaScript</a></li>
+<li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+<li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+<li><a href="https://devdocs.io/c/">C</a></li>
+<li><a href="https://cplusplus.com/doc/tutorial/">C++</a></li>
+<li><a href="https://dotnet.microsoft.com/en-us/languages/csharp">C#</a></li>
+</ul>
+<h3>Frameworks &#x26; Libraries</h3>
+<ul>
+<li><a href="https://getbootstrap.com/">Bootstrap - HTML, CSS and JS Library</a></li>
+<li><a href="https://rubyonrails.org/">Ruby on Rails Framework</a></li>
+<li><a href="https://pytorch.org/">PyTorch - Python Framework</a></li>
+<li><a href="https://lightning.ai/docs/pytorch/stable/">Pytorch Lightning - Python Framework</a></li>
+<li><a href="https://www.djangoproject.com/">DJango - Python Framework</a></li>
+<li><a href="https://spring.io/">Spring - Java Framework</a></li>
+<li><a href="https://junit.org/junit5/">JUnit - Java Framework</a></li>
+<li><a href="https://jupyter.org/">Jupyter - Python Framework</a></li>
+</ul>
+<h3>Other Languages</h3>
+<ul>
+<li><a href="https://html.com/">HTML - HyperText Markup Language</a></li>
+<li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS - Cascading Style Sheets</a></li>
+<li><a href="https://sass-lang.com/">SASS - Syntactically Awesome Style Sheets</a></li>
+<li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL - Structured Query Language</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Shell</a></li>
+</ul>
+<h3>Version Control</h3>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://gitlab.com/">GitLab</a></li>
+<li><a href="https://bitbucket.org/">BitBucket</a></li>
+</ul>
+<h3>Project Setup &#x26; Management</h3>
+<ul>
+<li><a href="https://www.anaconda.com/download/">Anaconda</a></li>
+<li><a href="https://maven.apache.org/">Maven</a></li>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://www.npmjs.com/package/npm">npm</a></li>
+</ul>
+<h3>IDEs &#x26; Text Editors</h3>
+<ul>
+<li><a href="https://visualstudio.microsoft.com/">Visual Studio - IDE</a></li>
+<li><a href="https://code.visualstudio.com/Download">VS Code - IDE</a></li>
+<li><a href="https://www.vim.org/">Vim - Editor</a></li>
+<li><a href="https://obsidian.md/">Obsidian - Editor</a></li>
+<li><a href="https://www.nano-editor.org/">Nano - Editor</a></li>
+</ul>
+<h3>Game Engines &#x26; Runtime Environments</h3>
+<ul>
+<li><a href="https://unity.com/">Unity Game Engine</a></li>
+<li><a href="https://www.unrealengine.com/en-US">Unreal Engine</a></li>
+<li><a href="https://nodejs.org/en">Node.js - JavaScript Runtime Environment</a></li>
+</ul>
+<h2>Art</h2>
+<h3>3D Modelling</h3>
+<ul>
+<li><a href="https://www.blender.org/">Blender</a></li>
+</ul>
+<h3>Pixel Art</h3>
+<ul>
+<li><a href="https://libresprite.github.io/#!/">LibreSprite</a></li>
+<li><a href="https://www.gimp.org/">GIMP</a></li>
+</ul>
+2:["$","$L7",null,{"children":["$","section",null,{"className":"py-12","children":["$","div",null,{"className":"backdrop-blur-md bg-white/70 dark:bg-slate-800/70 border border-white/50 dark:border-white/10 shadow-sm rounded-xl transition-all duration-300 p-8 lg:p-12","children":[["$","header",null,{"className":"mb-8 border-b border-slate-200 dark:border-slate-700 pb-4","children":[["$","h1",null,{"className":"text-4xl font-bold font-display text-slate-900 dark:text-white mb-2","children":"Tools"}],["$","p",null,{"className":"text-sm text-slate-500 dark:text-slate-400","children":null}]]}],["$","div",null,{"className":"prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300","dangerouslySetInnerHTML":{"__html":"$8"}}]]}]}]}]
+6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","meta","2",{"name":"next-size-adjust"}]]
+1:null

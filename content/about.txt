@@ -1,0 +1,111 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","about","d"]
+0:["kZJeCgQwhgHhQNCy0vgQM",[[["",{"children":["content",{"children":[["slug","about","d"],{"children":["__PAGE__?{\"slug\":\"about\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":[["slug","about","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cc81f53d0cc261e0.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_b0711f __variable_c0ebee","children":[["$","head",null,{"children":["$","style",null,{"children":"\n          :root {\n            --font-sans: var(--font-inter);\n            --font-display: var(--font-lexend);\n          }\n        "}]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]],null],null],["$L6",null]]]]
+7:I[9360,["590","static/chunks/590-f419930710a49f0f.js","544","static/chunks/app/content/%5Bslug%5D/page-22c86aebbd23d2bb.js"],"default"]
+8:T27cc,<p align='center'>
+    <img alt="Jinx from Arcane, a League of Legends Series, holding a hextech crystal." src="http://acfpeacekeeper.github.io/github-pages/assets/images/steamuserimages-a.akamaihd.jpeg" onerror="this.src='http://localhost:4000/assets/images/steamuserimages-a.akamaihd.jpeg';">
+</p>
+<h1>About Index</h1>
+<ul>
+<li><a href="#about-index">About Index</a>
+<ul>
+<li><a href="#current-work">Current Work</a></li>
+<li><a href="#previous-work">Previous Work</a></li>
+<li><a href="#hobbies--personal-interests">Hobbies &#x26; Personal Interests</a>
+<ul>
+<li><a href="#knowledge-areas-of-interest">Knowledge Areas of Interest</a></li>
+</ul>
+</li>
+<li><a href="#academia">Academia</a>
+<ul>
+<li><a href="#extracurricular-courses">Extracurricular Courses</a></li>
+</ul>
+</li>
+<li><a href="#other-activities">Other Activities</a></li>
+</ul>
+</li>
+</ul>
+<h2>Current Work</h2>
+<p>I'm currently a First Stage Researcher at <a href="https://www.inesc-id.pt/">INESC-ID</a> - where I'm developing new Deep Reinforcement Learning methods to solve Combinatorial Optimization tasks - and a invited Assistant Professor at the Computer Science and Engineering department of <a href="https://tecnico.ulisboa.pt/en/">IST</a>, where I teach courses about <a href="https://fenix.tecnico.ulisboa.pt/cursos/leic-t/disciplina-curricular/1408903891910867">Distributed Systems</a>, <a href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/disciplina-curricular/1127428915200223">Cloud Computing and Virtualization</a> and <a href="https://fenix.tecnico.ulisboa.pt/cursos/leic-t/disciplina-curricular/1971853845332781">Computer Organization</a>.
+I am also co-founding a Game Development studio called <a href="https://twitter.com/RetsamGames">Retsam Entertainment</a> with <a href="https://github.com/jfperodrigues">@jfperodrigues</a> and <a href="https://github.com/fafpinheiro">@fafpinheiro</a>.</p>
+<h2>Previous Work</h2>
+<p>Previously, I was a Computer Programmer Analyst at the Research &#x26; Development department of <a href="http://www.qub-it.com/">qubIT</a> - where I developed a Java application to integrate several Git-based version control services, as well as a microservice and a set of cryptographic tools to allow clients to securely manage several keystore files spread across multiple servers - and a Graduate Student Researcher at <a href="https://gaips.inesc-id.pt/">GAIPS</a>, where I developed new Multimodal Deep Learning architectures and frameworks with a focus towards increased robustness against noisy data and adversarial attacks.</p>
+<h2>Hobbies &#x26; Personal Interests</h2>
+<p>During my spare time, I enjoy reading books (including both fiction and non-Fiction), playing a wide variety of games (such as videogames, table top games, card games, etc.), listening to music and watching movies, anime and TV series.
+Beyond this, I also like to work on hardware and software for personal projects, which I find to be both inherently fulfilling and a complement to my theoretical understanding of the world.</p>
+<h3>Knowledge Areas of Interest</h3>
+<p>For as long as I can remember, I have been a naturally curious person which has sought to better understand the world by performing rudimentary experiments and learning as much knowledge as possible. Today, I continue my quest for knowledge, now not only due to an inherent curiosity, but also with the goal of using this knowledge and information to further my own research work.
+The main focus of my research is the development of new Artificial Intelligence (AI) techniques to tackle real world problems. Towards this goal, I seek to not only learn about topics directly related to AI, such as Machine Learning (ML), Deep Learning (DL) and Reinforcement Learning (RL), but also about natural intelligence in general, particularly the interdisciplinary study of the mind known as cognitive science, which integrates several diverse fields such as AI, neuroscience, psychology, anthropology, philosophy, and linguistics. Overall, I am interested if the following fields of knowledge:</p>
+<ul>
+<li>Computer Science and Engineering
+<ul>
+<li>Artificial Intelligence
+<ul>
+<li>Machine Learning
+<ul>
+<li>Reinforcement Learning</li>
+<li>Deep Learning</li>
+<li>Graph Machine Learning</li>
+<li>Meta-Learning</li>
+<li>Adversarial Attacks</li>
+</ul>
+</li>
+<li>Multimodal Learning
+<ul>
+<li>Computer Vision</li>
+<li>Natural Language Processing</li>
+<li>Audio Analysis &#x26; Processing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Academia</h2>
+<p>I initially pursued a <a href="https://www.fct.unl.pt/en/education/course/integrated-master-computer-science">Integrated Master's (BSc + MSc) in Computer Science</a> at <a href="https://www.fct.unl.pt/en">NOVA - FCT</a>, and a <a href="https://fenix.ciencias.ulisboa.pt/degrees/bioquimica-564500436615216">Bachelor of Science (BSc) in Biochemistry</a> at <a href="https://ciencias.ulisboa.pt/en">UL - FCUL</a>, both of which I did not complete.
+Afterwards, I studied for and completed a <a href="https://fenix.tecnico.ulisboa.pt/cursos/leic-t/curriculo?year=1972768673366017">Bachelor of Science (BSc)</a> and a <a href="https://fenix.tecnico.ulisboa.pt/cursos/meic-t/curriculo?year=1128343743234050">Master of Science (MSc)</a> degrees in Computer Science and Engineering (CSE) at <a href="https://tecnico.ulisboa.pt/en/">UL - IST</a>. During my BSc, I learned about core concepts in Computer Science, Mathematics, Computer Engineering and Physics (along with some minor courses about HASS and Management) and I also participated in a <a href="http://athensnetwork.eu/">Athens Network</a> exchange program at <a href="https://tecnico.ulisboa.pt/en/">Mines Paris - PSL</a>, where I learned about Extreme Value Statistics. During my MSc, I did a double major in Artificial Intelligence and Cyber-Security (and also did some courses about Game Development) and I participated in a semester exchange program at <a href="https://international.postech.ac.kr/">POSTECH</a>, where I studied Machine Learning and Mathematics.</p>
+<p>I'm currently taking a Advanced Formation Diploma in <a href="https://fenix.tecnico.ulisboa.pt/disciplinas/MTIC/2021-2022/1-semestre/programa">Methodologies and Techniques of Scientific Research</a> at UL - IST.</p>
+<h3>Extracurricular Courses</h3>
+<p>Beyond formal academia, I also participated in Summer Schools and took extra courses from several different universities to complement my academic knowledge or to learn more about subjects I'm interested in:</p>
+<ul>
+<li>From UL - IST:
+<ul>
+<li><a href="https://courses.elearning.tecnico.ulisboa.pt/courses/course-v1:MOOCs+vapX+2021/about">Eigenvalues - vapX</a>;</li>
+<li><a href="https://courses.elearning.tecnico.ulisboa.pt/courses/course-v1:MOOCs+lematecX+2021/about">Machine Learning, Maths &#x26; Ethics: Hands-on - lematecX</a>;</li>
+<li><a href="https://courses.elearning.tecnico.ulisboa.pt/courses/course-v1:MOOCs+mmX+2021/about">Markov Matrices - mmX</a>;</li>
+<li><a href="https://fenix.tecnico.ulisboa.pt/disciplinas/MAAut3/2023-2024/2-semestre/programa">Mathematics for Machine Learning</a>.</li>
+</ul>
+</li>
+<li>From <a href="https://www.harvard.edu/">Harvard</a>:
+<ul>
+<li><a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">Introduction to Computer Science - CS50</a>;</li>
+<li><a href="https://www.edx.org/learn/christianity/harvard-university-christianity-through-its-scriptures">Christianity Through Its Scriptures</a>.</li>
+</ul>
+</li>
+<li>From <a href="https://www.stanford.edu/">Stanford</a>:
+<ul>
+<li><a href="https://online.stanford.edu/courses/xcs229-machine-learning">Machine Learning - XCS229</a>.</li>
+</ul>
+</li>
+<li>From <a href="https://www.cornell.edu/">Cornell</a>:
+<ul>
+<li><a href="https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/">Advanced Compilers - CS6120</a>.</li>
+</ul>
+</li>
+</ul>
+<h2>Other Activities</h2>
+<p>When I was in highschool at <a href="https://liceucamoes.wixsite.com/camoes">Liceu Camões</a>, my interest in politics led me to become a member of the youth wing of the portuguese <a href="https://ps.pt/">Socialist Party</a>, known in portuguese as <a href="https://juventudesocialista.pt/">Juventude Socialista (JS)</a>. During my time at JS, I worked on policies related to the environment, education, economics, technology and innovation, and held positions as:</p>
+<ul>
+<li>Vice-President of: my parish.</li>
+<li>Member of the secretariat of: my highschool, my parish of residence, my university, the Secondary and Higher Education committee of Lisbon, and the county of Lisbon;</li>
+<li>Member of the political commission of: the county of Lisbon, and the district of Lisbon.</li>
+</ul>
+<p>During my time as a BSc and MSc student at <a href="https://tecnico.ulisboa.pt/en/">IST</a>, I participated in several clubs related to the university: as a developer at <a href="https://hackerschool.tecnico.ulisboa.pt/">HackerSchool</a>, as a marketing assistant at <a href="https://labjogos.tecnico.ulisboa.pt/en">LabJogos</a>, as the EBEC Information Technology responsible for <a href="https://best.tecnico.ulisboa.pt/">BEST Lisbon</a>, and as a member of the student newspaper <a href="https://diferencial.tecnico.ulisboa.pt/">Diferencial</a>.</p>
+<p>I volunteered as a Computer Science Instructor at <a href="https://www.treetree2.org/">TreeTree2</a>, at the <a href="http://voxlisboa.pt/rua-com-sa%c3%adda.html">Rua com Saída</a> project of the <a href="http://voxlisboa.pt/index.html">VOXLisboa Association</a> for the homeless and as a staff member of the team of the TORNADU debate tournament organized by <a href="https://debates.pt/">CNADU</a>.</p>
+<p>Finally, I was a debater at <a href="http://sdal.weebly.com/">SDAL</a>, where I participated in several debate tournaments: TORNADU 2019 (Initiate 2nd place), Open Lisbon V (Initiate 3rd place + Initiate Brake), CMDLP 2019 (Initiate 1st place + Initiate Brake), Open da Católica III (Finalist + Top 10 Speaker), Open do Tejo III (Finalist + Top 10 Speaker).
+I was also part of the CA Team of the Open Centro Sul 2021, and worked as both a Member of the Board at IST and (later) as the Secretary General of <a href="http://sdal.weebly.com/">SDAL</a>.</p>
+2:["$","$L7",null,{"children":["$","section",null,{"className":"py-12","children":["$","div",null,{"className":"backdrop-blur-md bg-white/70 dark:bg-slate-800/70 border border-white/50 dark:border-white/10 shadow-sm rounded-xl transition-all duration-300 p-8 lg:p-12","children":[["$","header",null,{"className":"mb-8 border-b border-slate-200 dark:border-slate-700 pb-4","children":[["$","h1",null,{"className":"text-4xl font-bold font-display text-slate-900 dark:text-white mb-2","children":"About Me"}],["$","p",null,{"className":"text-sm text-slate-500 dark:text-slate-400","children":null}]]}],["$","div",null,{"className":"prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300","dangerouslySetInnerHTML":{"__html":"$8"}}]]}]}]}]
+6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","meta","2",{"name":"next-size-adjust"}]]
+1:null

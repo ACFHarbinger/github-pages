@@ -1,0 +1,73 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","media","d"]
+0:["kZJeCgQwhgHhQNCy0vgQM",[[["",{"children":["content",{"children":[["slug","media","d"],{"children":["__PAGE__?{\"slug\":\"media\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":[["slug","media","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cc81f53d0cc261e0.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_b0711f __variable_c0ebee","children":[["$","head",null,{"children":["$","style",null,{"children":"\n          :root {\n            --font-sans: var(--font-inter);\n            --font-display: var(--font-lexend);\n          }\n        "}]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]],null],null],["$L6",null]]]]
+7:I[9360,["590","static/chunks/590-f419930710a49f0f.js","544","static/chunks/app/content/%5Bslug%5D/page-22c86aebbd23d2bb.js"],"default"]
+8:T63a,<h1>Media Index</h1>
+<ol>
+<li><a href="#games">Games</a>
+<ol>
+<li><a href="#video-games">Video Games</a></li>
+<li><a href="#tabletop-games">Tabletop Games</a></li>
+</ol>
+</li>
+<li><a href="#cinema--broadcasting">Cinema &#x26; Broadcasting</a>
+<ol>
+<li><a href="#movies">Movies</a></li>
+<li><a href="#television-shows">Television Shows</a></li>
+</ol>
+</li>
+<li><a href="#print-media">Print Media</a>
+<ol>
+<li><a href="#books">Books</a></li>
+<li><a href="#papers">Papers</a></li>
+</ol>
+</li>
+</ol>
+<h2>Games</h2>
+<h3>Video Games</h3>
+<h3>Tabletop Games</h3>
+<h2>Cinema &#x26; Broadcasting</h2>
+<h3>Movies</h3>
+<h4>Animated Movies</h4>
+<ul>
+<li>Carmen Sandiego: To Steal or Not to Steal</li>
+<li>Next Gen</li>
+</ul>
+<h3>Television Shows</h3>
+<h4>Animated Series</h4>
+<ul>
+<li>Carmen Sandiego S4</li>
+<li>Ergo Proxy</li>
+<li>Glitch Techs S2</li>
+<li>Harley Quinn S4</li>
+<li>Kimi to Boku no Saigo no Senjou, Aruiwa Sekai ga Hajimaru Seisen</li>
+<li>Little Demon</li>
+<li>Sonic Prime S3</li>
+<li>Sherwood</li>
+<li>Star Trek: Prodigy S2</li>
+<li>Star Trek: Lower Decks S4</li>
+<li>Star Wars: The Bad Batch S3</li>
+<li>Teen Titans S1</li>
+<li>The Dragon Prince S6</li>
+<li>The Legend of Vox Machina S2</li>
+<li>Velma S2</li>
+</ul>
+<h4>Animated Mini-Series &#x26; OVAs</h4>
+<ul>
+<li>Justice League x RWBY: Super Heroes and Huntsmen</li>
+<li>Pokemon: The Arceus Chronicles</li>
+<li>Star Wars: Tales of the Empire</li>
+<li>Star Wars: Tales of the Jedi</li>
+</ul>
+<h4>Live-Action Series</h4>
+<ul>
+<li>Star Wars: The Acolyte</li>
+<li>Knuckles</li>
+</ul>
+<h2>Print Media</h2>
+<h3>Books</h3>
+<h3>Papers</h3>
+2:["$","$L7",null,{"children":["$","section",null,{"className":"py-12","children":["$","div",null,{"className":"backdrop-blur-md bg-white/70 dark:bg-slate-800/70 border border-white/50 dark:border-white/10 shadow-sm rounded-xl transition-all duration-300 p-8 lg:p-12","children":[["$","header",null,{"className":"mb-8 border-b border-slate-200 dark:border-slate-700 pb-4","children":[["$","h1",null,{"className":"text-4xl font-bold font-display text-slate-900 dark:text-white mb-2","children":"Media"}],["$","p",null,{"className":"text-sm text-slate-500 dark:text-slate-400","children":null}]]}],["$","div",null,{"className":"prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300","dangerouslySetInnerHTML":{"__html":"$8"}}]]}]}]}]
+6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","meta","2",{"name":"next-size-adjust"}]]
+1:null
