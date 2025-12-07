@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect's Guide to Image Embeddings & Semantic Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Typography */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafaf9; color: #44403c; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 350px; /* Base height */
+            max-height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f4; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        /* Utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid #e7e5e4;
+        }
+        .transition-base { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Chosen Palette: Warm Neutrals. Background: Stone-50 (#fafaf9). Primary Text: Stone-800. 
+         Accents: Amber-600 (Focus/Action), Stone-500 (Secondary). 
+         Creates a calm, "architectural blueprint" aesthetic. -->
+
+    <!-- Application Structure Plan:
+         1. Hero: Sets the stage (Local Features -> Global Understanding).
+         2. Foundation Layer: Radar Chart comparing CNN (ResNet) vs ViT (DINOv2) trade-offs.
+         3. Learning Layer: Interactive Cards for Loss Functions (Contrastive vs ArcFace).
+         4. SOTA Layer: Bar Chart comparing DINOv2 vs CLIP performance profiles.
+         5. Deployment Layer: Interactive Form (The Architect's Calculator) to generate a recommended stack.
+         Rationale: Mirrors the decision-making process of a systems architect, moving from theory to component selection to system design.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Radar Chart: Best to show the multi-dimensional trade-offs (e.g., Inductive Bias vs Scalability) between CNNs and ViTs.
+         2. Bar Chart: To visualize the clear performance gap between DINOv2 (Visual) and CLIP (Conceptual) on specific tasks.
+         3. Deployment Logic: JS-based conditional logic to simulate the "Model Selection Guide" table from the report.
+         4. No SVG/Mermaid: All visuals are Chart.js or HTML/CSS layouts.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🏛️</span>
+                    <h1 class="text-lg font-bold tracking-tight text-stone-900 font-heading">Semantic<span class="font-light text-stone-500">Architect</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#foundation" class="text-stone-500 hover:text-amber-600 transition-base">Foundation Models</a>
+                    <a href="#dml" class="text-stone-500 hover:text-amber-600 transition-base">Metric Learning</a>
+                    <a href="#sota" class="text-stone-500 hover:text-amber-600 transition-base">SOTA Benchmarks</a>
+                    <a href="#deploy" class="bg-stone-800 text-stone-50 px-4 py-2 rounded-full hover:bg-amber-600 transition-base">Build Stack</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Header -->
+        <header class="text-center max-w-4xl mx-auto space-y-6">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-stone-200 text-stone-600 text-xs font-semibold uppercase tracking-wide">
+                From Local Features to Global Understanding
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 tracking-tight font-heading leading-tight">
+                An Architect's Guide to <br>
+                <span class="text-amber-600">Image Embeddings & Deployment</span>
+            </h2>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                The efficacy of a semantic search system is determined by its architecture. 
+                This interactive guide analyzes the shift from <strong>CNNs</strong> to <strong>Vision Transformers</strong>, 
+                evaluates SOTA models like <strong>DINOv2</strong> and <strong>CLIP</strong>, and provides a framework for scalable vector deployment.
+            </p>
+        </header>
+
+        <!-- Section 1: The Foundation (CNN vs ViT) -->
+        <section id="foundation" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">I. The Architectural Divide</h3>
+                <p class="text-stone-600 leading-relaxed">
+                    The field is defined by a split between <strong>CNNs</strong> (ResNet, EfficientNet), which rely on strong "inductive biases" like locality, and <strong>Vision Transformers (ViTs)</strong>, which favor global context and massive data scale.
+                    While CNNs excel with limited data, ViTs dominate when data is abundant, treating images as sequences of patches to capture long-range dependencies.
+                </p>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 space-y-4">
+                    <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wide">Key Takeaway</h4>
+                    <p class="text-sm text-stone-600">
+                        The ViT era shifts the burden from <em>architecture engineering</em> (designing clever filters) to <em>data engineering</em>. 
+                        Success now depends on the scale and curation of the training dataset (e.g., LVD-142M).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interactive Radar Chart -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-stone-800 font-bold font-heading">Architecture Profile Analysis</h4>
+                    <div class="flex gap-4 text-xs">
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-stone-400"></span> CNN (ResNet)</span>
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span> ViT (Transformer)</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="archChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Metric Learning (Loss Functions) -->
+        <section id="dml" class="scroll-mt-24">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <h3 class="text-2xl font-bold text-stone-900 font-heading">II. The Engine of Similarity</h3>
+                <p class="text-stone-600 mt-4">
+                    A backbone is useless without a structured vector space. Deep Metric Learning (DML) shapes this space.
+                    Explore how loss functions evolved from simple Euclidean distance to Geodesic optimization on a hypersphere.
+                </p>
+            </div>
+
+            <!-- Interactive Loss Explorer -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Option 1 -->
+                <button onclick="updateLoss('contrastive')" class="loss-btn active group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-2xl">🔗</span>
+                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Pair-Based</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Contrastive Loss</h4>
+                    <p class="text-sm text-stone-500 mt-2">The foundational approach using simple positive/negative pairs.</p>
+                </button>
+
+                <!-- Option 2 -->
+                <button onclick="updateLoss('triplet')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-2xl">∆</span>
+                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Triplet-Based</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Triplet Loss</h4>
+                    <p class="text-sm text-stone-500 mt-2">Uses Anchor-Positive-Negative triplets to create clustered spaces.</p>
+                </button>
+
+                <!-- Option 3 -->
+                <button onclick="updateLoss('arcface')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-2xl">🌐</span>
+                        <span class="text-xs font-bold bg-amber-100 text-amber-700 px-2 py-1 rounded">SOTA / Margin</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">ArcFace</h4>
+                    <p class="text-sm text-stone-500 mt-2">Optimizes angular geodesic distance on a normalized hypersphere.</p>
+                </button>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div id="lossContent" class="mt-8 bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
+                <!-- Content injected via JS -->
+            </div>
+        </section>
+
+        <!-- Section 3: SOTA Comparison (DINOv2 vs CLIP) -->
+        <section id="sota" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">III. Visual vs. Conceptual</h3>
+                    <p class="text-stone-600 leading-relaxed">
+                        The SOTA landscape is divided between Self-Supervised Learning (SSL) and Multimodal Learning.
+                        <strong>DINOv2</strong> (SSL) acts as a "visual cortex," excelling at pure pixel-level understanding. 
+                        <strong>CLIP</strong> (Multimodal) learns "meaning" through language, enabling zero-shot capabilities.
+                    </p>
+                    
+                    <ul class="space-y-4 mt-6">
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">A</span>
+                            <div>
+                                <strong class="text-stone-800">DINOv2 (ViT-L/G):</strong>
+                                <p class="text-sm text-stone-600">Best for "Find similar looking images". 768-dim embeddings. Higher storage cost.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-600 flex items-center justify-center text-xs font-bold">B</span>
+                            <div>
+                                <strong class="text-stone-800">CLIP / MetaCLIP:</strong>
+                                <p class="text-sm text-stone-600">Best for "Find images matching this text". 512-dim embeddings. Lower visual precision.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+                     <h4 class="text-stone-800 font-bold font-heading mb-4 text-center">Performance Profile Comparison</h4>
+                    <div class="chart-container">
+                        <canvas id="sotaChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-stone-400 mt-4">Relative performance scale based on benchmark trends (visual vs. semantic tasks).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Deployment Architect (Interactive Form) -->
+        <section id="deploy" class="scroll-mt-24 bg-stone-900 text-stone-50 rounded-3xl p-8 md:p-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-bold font-heading text-white">Build Your Architecture</h3>
+                    <p class="text-stone-400 mt-2">
+                        Define your constraints to generate a recommended stack (Model + Training Strategy + Vector DB).
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Input Panel -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Search Modality</label>
+                            <select id="inputModality" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                                <option value="visual">Visual Only (Image-to-Image)</option>
+                                <option value="multimodal">Multimodal (Text-to-Image)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Domain Specificity</label>
+                            <select id="inputDomain" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                                <option value="general">General (Web/Life)</option>
+                                <option value="specific">Specialized (Medical/E-comm)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Scale & Ops Capability</label>
+                            <select id="inputScale" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                                <option value="prototyping">Prototyping / Managed (Low Ops)</option>
+                                <option value="massive">Massive Scale (Self-Hosted)</option>
+                            </select>
+                        </div>
+                        <button onclick="generateArchitecture()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-xl transition-base mt-4 shadow-lg shadow-amber-900/50">
+                            Generate Stack Recommendation
+                        </button>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div class="bg-stone-800 rounded-xl p-6 border border-stone-700 relative min-h-[300px] flex items-center justify-center" id="resultContainer">
+                        <p class="text-stone-500 text-center italic">Configure inputs and click Generate to see your architectural blueprint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-100 py-12 mt-24 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-stone-500 font-heading font-medium">SemanticArchitect © 2025</p>
+            <p class="text-stone-400 text-sm mt-2">Based on "An Architect's Guide to Image Embeddings and Semantic Search"</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // --- Data for Loss Explorer ---
+        const lossData = {
+            contrastive: {
+                title: "Contrastive Loss (Pair-Based)",
+                desc: "The simplest approach: Pull positive pairs together, push negative pairs apart.",
+                pros: "Simple and intuitive to implement.",
+                cons: "Greedy algorithm. Collapses intra-class variance (e.g., forces all 'red dresses' to the same point), losing nuance.",
+                formula: "Target: 0 distance for positives, >m distance for negatives."
+            },
+            triplet: {
+                title: "Triplet Loss",
+                desc: "Uses an Anchor, Positive, and Negative. Ensures Positive is closer to Anchor than Negative by a margin.",
+                pros: "Tolerates intra-class variance. Creates rich clusters rather than single points.",
+                cons: "Computationally expensive. Requires complex 'hard negative mining' to be effective.",
+                formula: "L = max(d(a,p) - d(a,n) + m, 0)"
+            },
+            arcface: {
+                title: "ArcFace (Additive Angular Margin)",
+                desc: "State-of-the-Art. Optimizes Geodesic distance on a hypersphere by adding an angular margin penalty.",
+                pros: "Mathematically robust geometric optimization. SOTA for discriminative tasks.",
+                cons: "Optimized for classification (separability) potentially at the cost of granular semantic overlap.",
+                formula: "Target: cos(θ + m)"
+            }
+        };
+
+        // --- Functions ---
+
+        // 1. Loss Explorer Logic
+        function updateLoss(type) {
+            // Update buttons
+            document.querySelectorAll('.loss-btn').forEach(btn => {
+                btn.classList.remove('border-amber-500', 'ring-2', 'ring-amber-500');
+                btn.classList.add('border-stone-200');
+            });
+            event.currentTarget.classList.remove('border-stone-200');
+            event.currentTarget.classList.add('border-amber-500', 'ring-2', 'ring-amber-500');
+
+            // Update Content
+            const data = lossData[type];
+            const contentDiv = document.getElementById('lossContent');
+            contentDiv.innerHTML = `
+                <div class="animate-fade-in">
+                    <h4 class="text-xl font-bold text-stone-800 mb-2">${data.title}</h4>
+                    <p class="text-stone-600 mb-6 text-lg border-b border-stone-100 pb-4">${data.desc}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <span class="text-xs font-bold text-stone-400 uppercase tracking-wider">Geometric Intuition</span>
+                             <p class="font-mono text-sm bg-stone-50 p-3 rounded mt-1 text-stone-700 border border-stone-200">${data.formula}</p>
+                        </div>
+                        <div class="space-y-2">
+                             <div class="flex gap-2">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <p class="text-sm text-stone-600"><strong>Pro:</strong> ${data.pros}</p>
+                            </div>
+                             <div class="flex gap-2">
+                                <span class="text-red-500 font-bold">✕</span>
+                                <p class="text-sm text-stone-600"><strong>Con:</strong> ${data.cons}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 2. Deployment Stack Generator
+        function generateArchitecture() {
+            const modality = document.getElementById('inputModality').value;
+            const domain = document.getElementById('inputDomain').value;
+            const scale = document.getElementById('inputScale').value;
+            
+            let model = "";
+            let tuning = "";
+            let db = "";
+            let logic = "";
+
+            // Model Logic
+            if (modality === 'visual') {
+                model = "DINOv2 (ViT-L)";
+                logic = "Using SSL (DINOv2) because visual similarity is the priority. 768-dim embeddings.";
+            } else {
+                model = "MetaCLIP / OpenCLIP";
+                logic = "Using Multimodal (CLIP) to enable text-to-image semantic queries. 512-dim embeddings.";
+            }
+
+            // Tuning Logic
+            if (domain === 'specific') {
+                tuning = "Top-Tuning (SOTA Strategy)";
+                logic += " Adding lightweight linear layers on top of frozen backbone for domain adaptation.";
+            } else {
+                tuning = "Pre-trained (Zero-Shot)";
+                logic += " Using generalist weights out-of-the-box.";
+            }
+
+            // DB Logic
+            if (scale === 'massive') {
+                db = "Milvus (Self-Hosted)";
+            } else {
+                db = "Pinecone / Weaviate (Managed)";
+            }
+
+            const resultHTML = `
+                <div class="w-full text-left animate-fade-in">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-amber-500 uppercase tracking-wide">Recommended Stack</span>
+                        <h4 class="text-2xl font-bold text-white mt-1">Your Blueprint</h4>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-stone-900/50 p-4 rounded-lg border border-stone-600">
+                            <span class="text-stone-400 text-xs uppercase">Model Backbone</span>
+                            <div class="text-white font-bold text-lg">Running ${model}</div>
+                        </div>
+                         <div class="bg-stone-900/50 p-4 rounded-lg border border-stone-600">
+                            <span class="text-stone-400 text-xs uppercase">Training Strategy</span>
+                            <div class="text-white font-bold text-lg">${tuning}</div>
+                        </div>
+                         <div class="bg-stone-900/50 p-4 rounded-lg border border-stone-600">
+                            <span class="text-stone-400 text-xs uppercase">Vector Infrastructure</span>
+                            <div class="text-white font-bold text-lg">${db} (HNSW Index)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-stone-700">
+                        <p class="text-stone-400 text-sm italic"><strong>Architect's Note:</strong> ${logic}</p>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('resultContainer').innerHTML = resultHTML;
+        }
+
+        // --- Chart Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Initialize Loss Content
+            updateLoss('contrastive');
+
+            // 1. Radar Chart (Architecture)
+            const ctxArch = document.getElementById('archChart').getContext('2d');
+            new Chart(ctxArch, {
+                type: 'radar',
+                data: {
+                    labels: ['Inductive Bias', 'Small Data Perf', 'Inference Efficiency', 'Global Context', 'Scalability'],
+                    datasets: [{
+                        label: 'CNN (ResNet/EfficientNet)',
+                        data: [9, 9, 8, 3, 6],
+                        backgroundColor: 'rgba(168, 162, 158, 0.2)', // Stone-400
+                        borderColor: '#a8a29e',
+                        pointBackgroundColor: '#a8a29e',
+                        borderWidth: 2
+                    }, {
+                        label: 'ViT (DINOv2)',
+                        data: [2, 4, 6, 10, 10],
+                        backgroundColor: 'rgba(217, 119, 6, 0.2)', // Amber-600
+                        borderColor: '#d97706',
+                        pointBackgroundColor: '#d97706',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#e5e5e5' },
+                            grid: { color: '#e5e5e5' },
+                            pointLabels: { font: { family: 'Plus Jakarta Sans', size: 11 }, color: '#57534e' },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 2. Bar Chart (SOTA Comparison)
+            const ctxSota = document.getElementById('sotaChart').getContext('2d');
+            new Chart(ctxSota, {
+                type: 'bar',
+                data: {
+                    labels: ['Visual Similarity', 'Segmentation', 'Zero-Shot Classification', 'Text-to-Image Search'],
+                    datasets: [{
+                        label: 'DINOv2 (Visual)',
+                        data: [95, 90, 40, 0],
+                        backgroundColor: '#d97706', // Amber
+                        borderRadius: 4
+                    }, {
+                        label: 'CLIP (Multimodal)',
+                        data: [65, 50, 90, 95],
+                        backgroundColor: '#57534e', // Stone
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, max: 100, grid: { color: '#f5f5f4' } },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { usePointStyle: true, fontFamily: 'Plus Jakarta Sans' } },
+                        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}% (Relative Perf)` } }
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

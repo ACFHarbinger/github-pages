@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCLIP 2025: Strategic Generative Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Base Typography */
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            max-height: 400px;
+            margin: 0 auto;
+        }
+
+        /* Infographic Pipeline Styles */
+        .pipeline-container {
+            position: relative;
+        }
+        
+        /* The Connecting Line */
+        .pipeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #e2e8f0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        /* The Node (Circle) */
+        .pipeline-node {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #64748b;
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        .pipeline-node.active {
+            border-color: #4f46e5;
+            background: #4f46e5;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 0 8px rgba(79, 70, 229, 0.2);
+        }
+
+        /* The Content Card (Left or Right) */
+        .pipeline-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            width: 100%;
+        }
+        
+        .pipeline-card.active {
+            border-color: #4f46e5;
+            border-left-width: 4px;
+        }
+
+        /* Connector Arrow (CSS only) */
+        .connector-line {
+            display: none; /* Hidden on mobile */
+        }
+
+        @media (min-width: 1024px) {
+            .connector-line {
+                display: block;
+                position: absolute;
+                top: 30px;
+                height: 2px;
+                background: #cbd5e1;
+                width: 50px;
+                transition: background 0.3s;
+            }
+            .left-card .connector-line { left: 100%; }
+            .right-card .connector-line { right: 100%; }
+            
+            .pipeline-node.active + .connector-line,
+            .pipeline-card.active .connector-line {
+                background: #4f46e5;
+            }
+        }
+
+        /* Interactive Card Hover Effects */
+        .interactive-card {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .interactive-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #6366f1;
+        }
+        .interactive-card.active {
+            border-color: #4f46e5;
+            background-color: #eef2ff;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+    <!-- Palette: "Synthetic Indigo" -->
+    <!-- Structure: 
+         1. Hero (Paradigm Shift)
+         2. Strategic Stack (Architecture Visual)
+         3. The Pipeline (Infographic Flowchart)
+         4. Efficiency Stats
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. CSS-based Infographics only. -->
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl text-indigo-600">❖</span>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span class="font-normal text-slate-500">Pipeline '25</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#paradigm" class="text-slate-500 hover:text-indigo-600 transition-colors">Shift</a>
+                    <a href="#stack" class="text-slate-500 hover:text-indigo-600 transition-colors">The Stack</a>
+                    <a href="#pipeline" class="text-slate-500 hover:text-indigo-600 transition-colors">Pipeline Infographic</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
+
+        <!-- 1. The Paradigm Shift (Hero) -->
+        <section id="paradigm" class="text-center max-w-4xl mx-auto space-y-8">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wide">
+                Strategic Recommendation
+            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+                From Scavenging <br>
+                to <span class="text-indigo-600">Synthesis</span>
+            </h2>
+            <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                Training SOTA Vision-Language Models in late 2025 no longer requires billions of noisy web images. 
+                The new standard is <strong>Generative Augmentation</strong>—using FLUX.1 and ControlNet to manufacture semantic alignment.
+            </p>
+            
+            <!-- Comparison Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-left">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 opacity-60 hover:opacity-100 transition-opacity">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                        <h3 class="font-bold text-slate-500 uppercase text-xs tracking-wider">Legacy (2021-2024)</h3>
+                    </div>
+                    <div class="font-bold text-xl text-slate-800 mb-1">Data Scavenging</div>
+                    <p class="text-sm text-slate-500">Web scraping (LAION), noisy alignment, long-tail distribution, harmful content bottlenecks.</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-100 rounded-bl-full -mr-8 -mt-8"></div>
+                    <div class="flex items-center gap-2 mb-2 relative z-10">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <h3 class="font-bold text-indigo-600 uppercase text-xs tracking-wider">SOTA (2025)</h3>
+                    </div>
+                    <div class="font-bold text-xl text-indigo-900 mb-1 relative z-10">Data Synthesis</div>
+                    <p class="text-sm text-indigo-800 relative z-10">Programmatic generation, perfect alignment, controlled compositionality, iterative filtering.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. The Generative Stack (Visual Architecture) -->
+        <section id="stack" class="scroll-mt-24">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-slate-900">The Recommended Stack</h3>
+                <p class="text-slate-600">A modular architecture built on the FLUX.1 ecosystem.</p>
+            </div>
+
+            <!-- CSS Architecture Diagram -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Interactive Selector -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="interactive-card active bg-white p-4 rounded-lg border border-indigo-500 shadow-sm" onclick="showStackDetail('flux')">
+                        <span class="text-xs font-bold text-slate-400 uppercase">The Backbone</span>
+                        <h4 class="font-bold text-indigo-600 text-lg">FLUX.1 Kontext Pro</h4>
+                        <p class="text-xs text-slate-500 mt-1">Native multimodal context (Text + Image).</p>
+                    </div>
+                    
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('control')">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Structural Control</span>
+                        <h4 class="font-bold text-slate-800 text-lg">ControlNet Union</h4>
+                        <p class="text-xs text-slate-500 mt-1">Depth, Canny, Pose invariance.</p>
+                    </div>
+                    
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('instruct')">
+                        <span class="text-xs font-bold text-slate-400 uppercase">Semantic Control</span>
+                        <h4 class="font-bold text-slate-800 text-lg">InstructAny2Pix</h4>
+                        <p class="text-xs text-slate-500 mt-1">Multi-modal instruction following.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Diagram Area -->
+                <div class="lg:col-span-8 bg-slate-100 rounded-2xl p-8 border border-slate-200 min-h-[400px] flex items-center justify-center relative overflow-hidden">
+                    <!-- Background Grid -->
+                    <div class="absolute inset-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px; opacity: 0.5;"></div>
+                    
+                    <!-- Dynamic Content -->
+                    <div id="stackVisual" class="relative z-10 w-full max-w-lg bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center animate-fade-in">
+                        <!-- Initial Content -->
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">⚡</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">FLUX.1 Kontext Pro</h3>
+                        <p class="text-slate-600 mb-6">The "Engine" of the pipeline. Selected for its ability to accept both text and reference images natively, enabling the "Context-Aware" generation required for VLM training.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                                <span class="block text-xs font-bold text-slate-500">Inputs</span>
+                                <span class="font-mono text-sm">Text + Image</span>
+                            </div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                                <span class="block text-xs font-bold text-slate-500">Role</span>
+                                <span class="font-mono text-sm">Synthesis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. The Pipeline Infographic (Centerpiece) -->
+        <section id="pipeline" class="scroll-mt-24 bg-white rounded-3xl border border-slate-200 shadow-sm p-8 md:p-12">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold tracking-wider text-sm uppercase">The Playbook</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Data Synthesis Pipeline</h2>
+                <p class="text-slate-500 mt-2">Interactive roadmap: From bulk generation to curated training.</p>
+            </div>
+
+            <div class="pipeline-container max-w-4xl mx-auto">
+                <div class="pipeline-line"></div>
+
+                <!-- Step 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(1)">
+                    <div class="order-2 lg:order-1 flex justify-center lg:justify-end items-center">
+                         <div class="pipeline-card left-card active cursor-pointer" id="card-1">
+                            <div class="connector-line"></div>
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded uppercase">Gen-1</span>
+                                <span class="text-xs text-slate-400 font-mono">SynthCLIP</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg">Baseline Generation</h4>
+                            <p class="text-sm text-slate-600 mt-2">Generate 30M+ pairs using high-quality LLM captions and FLUX.1 backbone.</p>
+                         </div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center items-center relative">
+                        <div class="pipeline-node active" id="node-1">01</div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(2)">
+                    <div class="order-2 lg:order-1 flex justify-center items-center relative">
+                         <div class="pipeline-node" id="node-2">02</div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center lg:justify-start items-center">
+                        <div class="pipeline-card right-card cursor-pointer" id="card-2">
+                            <div class="connector-line"></div>
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded uppercase">Augment</span>
+                                <span class="text-xs text-slate-400 font-mono">SPARCL</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg">Compositional Variation</h4>
+                            <p class="text-sm text-slate-600 mt-2">Create "clusters" of data (e.g., same scene, different object) using ControlNet & InstructAny2Pix.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(3)">
+                    <div class="order-2 lg:order-1 flex justify-center lg:justify-end items-center">
+                         <div class="pipeline-card left-card cursor-pointer" id="card-3">
+                            <div class="connector-line"></div>
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded uppercase">Filter</span>
+                                <span class="text-xs text-slate-400 font-mono">UniFilter</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg">Quality Curation</h4>
+                            <p class="text-sm text-slate-600 mt-2">Train a QA classifier on small HQ data. Filter the 1B synthetic pairs down to the best 20%.</p>
+                         </div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center items-center relative">
+                        <div class="pipeline-node" id="node-3">03</div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative group" onclick="activateStep(4)">
+                    <div class="order-2 lg:order-1 flex justify-center items-center relative">
+                         <div class="pipeline-node" id="node-4">04</div>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center lg:justify-start items-center">
+                        <div class="pipeline-card right-card cursor-pointer" id="card-4">
+                            <div class="connector-line"></div>
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded uppercase">Train</span>
+                                <span class="text-xs text-slate-400 font-mono">MetaCLIP</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg">Iterative Loop</h4>
+                            <p class="text-sm text-slate-600 mt-2">Train v0.1. Use v0.1 to re-filter the dataset. Train v0.2. Data-Model co-evolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Efficiency Data -->
+        <section class="max-w-3xl mx-auto pb-20">
+            <div class="bg-slate-900 rounded-2xl p-8 text-white shadow-xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2 space-y-4">
+                        <h3 class="text-2xl font-bold text-white">The ROI of Synthesis</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Research (SynthVLM) demonstrates that high-quality synthetic data is significantly more data-efficient than web data. You need less compute to reach the same SOTA performance.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <div>
+                                <div class="text-3xl font-bold text-emerald-400">18%</div>
+                                <div class="text-xs text-slate-400 uppercase tracking-wide">Data Volume</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-indigo-400">100%</div>
+                                <div class="text-xs text-slate-400 uppercase tracking-wide">Performance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-48">
+                         <canvas id="roiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12 text-center">
+        <p class="text-slate-500 font-medium">MetaCLIP Strategic Report • Late 2025</p>
+        <p class="text-slate-400 text-sm mt-1">Generated based on SynthCLIP, SPARCL, and SynthVLM methodologies.</p>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        // --- Stack Visual Data ---
+        const stackDetails = {
+            flux: {
+                icon: "⚡",
+                title: "FLUX.1 Kontext Pro",
+                desc: "The 'Engine' of the pipeline. Selected for its ability to accept both text and reference images natively, enabling the 'Context-Aware' generation required for VLM training.",
+                inputs: "Text + Image",
+                role: "Synthesis"
+            },
+            control: {
+                icon: "📐",
+                title: "ControlNet Union Pro 2.0",
+                desc: "The 'Structure' enforcer. Attaches to FLUX.1 to lock in depth, canny edges, and poses. Essential for generating variations where the concept changes but the shape remains.",
+                inputs: "Depth/Edge Maps",
+                role: "Invariance"
+            },
+            instruct: {
+                icon: "📝",
+                title: "InstructAny2Pix",
+                desc: "The 'Semantic' editor. A model trained to follow editing instructions. Used to create compositional challenges (e.g., 'swap the cat for a dog').",
+                inputs: "Edit Instructions",
+                role: "Composition"
+            }
+        };
+
+        function showStackDetail(key) {
+            // Update Active State
+            document.querySelectorAll('.interactive-card').forEach(el => el.classList.remove('active', 'border-indigo-500', 'shadow-sm'));
+            document.querySelectorAll('.interactive-card').forEach(el => el.classList.add('border-slate-200'));
+            event.currentTarget.classList.add('active', 'border-indigo-500', 'shadow-sm');
+            event.currentTarget.classList.remove('border-slate-200');
+
+            // Update Visual
+            const data = stackDetails[key];
+            const visual = document.getElementById('stackVisual');
+            
+            // Simple fade effect
+            visual.style.opacity = 0;
+            setTimeout(() => {
+                visual.innerHTML = `
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">${data.icon}</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">${data.title}</h3>
+                    <p class="text-slate-600 mb-6">${data.desc}</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                            <span class="block text-xs font-bold text-slate-500">Inputs</span>
+                            <span class="font-mono text-sm">${data.inputs}</span>
+                        </div>
+                        <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                            <span class="block text-xs font-bold text-slate-500">Role</span>
+                            <span class="font-mono text-sm">${data.role}</span>
+                        </div>
+                    </div>
+                `;
+                visual.style.opacity = 1;
+            }, 200);
+        }
+
+        // --- Pipeline Infographic Logic ---
+        function activateStep(step) {
+            // Reset all
+            for(let i=1; i<=4; i++) {
+                document.getElementById(`node-${i}`).classList.remove('active');
+                document.getElementById(`card-${i}`).classList.remove('active');
+            }
+            // Activate target
+            document.getElementById(`node-${step}`).classList.add('active');
+            document.getElementById(`card-${step}`).classList.add('active');
+        }
+
+        // --- Charts ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('roiChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Baseline Data', 'Synthetic Data'],
+                    datasets: [{
+                        label: 'Data Needed for SOTA',
+                        data: [100, 18],
+                        backgroundColor: ['rgba(255,255,255,0.2)', '#34d399'], // White-ish vs Emerald
+                        borderRadius: 4,
+                        barThickness: 20
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { 
+                        x: { display: false, max: 100 }, 
+                        y: { 
+                            ticks: { color: '#94a3b8', font: { family: 'Inter' } },
+                            grid: { display: false }
+                        } 
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

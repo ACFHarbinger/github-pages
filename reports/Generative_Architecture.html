@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bifurcated vs. Unified Generative Architectures: 2025 Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            color: #0f172a; 
+        }
+        
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            max-height: 400px;
+            margin: 0 auto;
+        }
+
+        /* Interactive Elements */
+        .card-interaction {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-interaction:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #6366f1; /* Indigo-500 */
+        }
+        
+        /* CSS-only Flowchart Nodes */
+        .flow-node {
+            position: relative;
+        }
+        .flow-arrow::after {
+            content: '↓';
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        @media (min-width: 768px) {
+            .flow-arrow-md::after {
+                content: '→';
+                top: 50%;
+                right: -24px;
+                bottom: auto;
+                left: auto;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-800">
+
+    <!-- Chosen Palette: "Tech Rationality". Background: Slate-50 (#f8fafc). Text: Slate-800 (#1e293b). 
+         Primary Accent: Indigo-600 (#4f46e5). Secondary: Emerald-500 (Unified), Amber-500 (Bifurcated).
+         Rationale: Communicates precision, academic rigor, and technical depth. -->
+
+    <!-- Application Structure Plan:
+         1. Hero: Defines the "Bifurcated vs. Unified" conflict.
+         2. Landscape (The Trilemma): Interactive Radar Chart comparing R3GAN, SD3.5, and FLUX.1.
+         3. Architectural Breakdown: Two-column layout comparing Component 1 (GAN) and Component 2 (Diffusion).
+         4. Convergence Thesis: The "Unified" argument. Visual diagram of consolidated workflows.
+         5. Technical Deep Dive: Explains "Latent Mismatch" via text/CSS diagrams (No SVG).
+         6. Strategic Recommendations: Interactive cards for decision making.
+         Rationale: Moves from abstract theory -> comparative data -> synthesis -> actionable advice.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Radar Chart (Chart.js): To visualize the "Generative Learning Trilemma" (Speed vs Quality vs Diversity).
+         2. Bar Chart (Chart.js): Comparison of Inference Speed (GAN vs Diffusion).
+         3. CSS Diagrams: To illustrate the "Bifurcated" vs "Unified" pipeline without SVGs.
+         4. JS State: Manages the "Recommendation" engine view.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-indigo-600 rounded-sm"></div>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900 font-heading">GenAI <span class="font-light text-slate-500">Architectural Analysis</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#trilemma" class="text-slate-500 hover:text-indigo-600 transition-colors">The Trilemma</a>
+                    <a href="#components" class="text-slate-500 hover:text-indigo-600 transition-colors">Components</a>
+                    <a href="#convergence" class="text-slate-500 hover:text-indigo-600 transition-colors">Convergence</a>
+                    <a href="#strategy" class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full hover:bg-indigo-100 transition-colors">Strategy</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Executive Summary -->
+        <header class="text-center max-w-4xl mx-auto space-y-6">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold uppercase tracking-wide">
+                2025 Market Update
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight font-heading leading-tight">
+                Bifurcated vs. Unified Architectures <br>
+                <span class="text-indigo-600">in Multi-Modal Image Generation</span>
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                An assessment of the proposal to separate <strong>Multi-Image Composition (GANs)</strong> from <strong>Text-to-Image Synthesis (Diffusion)</strong>. 
+                While historically sound, the 2025 landscape suggests a convergence toward unified, multi-modal diffusion transformers.
+            </p>
+        </header>
+
+        <!-- Section 2.0: The Generative Trilemma -->
+        <section id="trilemma" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-900 font-heading border-l-4 border-indigo-500 pl-4">The Generative Learning Trilemma</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The core architectural conflict lies in balancing <strong>Fidelity</strong>, <strong>Diversity</strong>, and <strong>Speed</strong>. 
+                        Historically, you had to pick two. The 2025 landscape shows how different architectures (R3GAN vs. FLUX.1) attack this problem.
+                    </p>
+                    
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                        <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                            <span>Architectural Archetypes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                            <span class="text-sm font-medium text-slate-700">Modern GAN (R3GAN)</span>
+                            <span class="text-xs text-slate-400 ml-auto">Extreme Speed</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+                            <span class="text-sm font-medium text-slate-700">Diffusion Transformer (FLUX.1)</span>
+                            <span class="text-xs text-slate-400 ml-auto">Unified SOTA</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-slate-400"></span>
+                            <span class="text-sm font-medium text-slate-700">Latent Diffusion (SD 3.5)</span>
+                            <span class="text-xs text-slate-400 ml-auto">Balanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="chart-container">
+                        <canvas id="trilemmaChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-slate-400 mt-4">Data derived from Comparative Analysis of SOTA Generative Architectures (2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.0: Component Analysis -->
+        <section id="components" class="scroll-mt-24 space-y-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-slate-900 font-heading">Component Analysis</h3>
+                <p class="text-slate-600 mt-2">Validating the specific strengths of the bifurcated components in the 2025 ecosystem.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Component 1: GANs -->
+                <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm card-interaction group">
+                    <div class="bg-amber-50 p-6 border-b border-amber-100">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-lg font-bold text-amber-900 font-heading">Component 1: The GAN</h4>
+                                <span class="text-xs font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Multi-Image Composition</span>
+                            </div>
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <p class="text-sm text-slate-600">
+                            <strong>The "Renaissance":</strong> Contrary to being obsolete, R3GAN (2025) proves GANs are viable with modern backbones and stable losses.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-sm">
+                                <span class="text-amber-500 mr-2">✓</span>
+                                <span class="text-slate-700"><strong>Latent Purity:</strong> StyleGAN's $\mathcal{W}$ space allows mathematically principled style mixing (GeMix).</span>
+                            </li>
+                            <li class="flex items-start text-sm">
+                                <span class="text-amber-500 mr-2">✓</span>
+                                <span class="text-slate-700"><strong>Inference Speed:</strong> Single forward pass. Orders of magnitude faster than diffusion.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Component 2: Diffusion -->
+                <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm card-interaction group">
+                    <div class="bg-indigo-50 p-6 border-b border-indigo-100">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-lg font-bold text-indigo-900 font-heading">Component 2: Diffusion</h4>
+                                <span class="text-xs font-semibold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Text-to-Image (T2I)</span>
+                            </div>
+                            <span class="text-2xl">🎨</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <p class="text-sm text-slate-600">
+                            <strong>The Dominator:</strong> FLUX.1 Pro has overtaken SD 3.5 in fidelity and control.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-sm">
+                                <span class="text-indigo-500 mr-2">✓</span>
+                                <span class="text-slate-700"><strong>Text Rendering:</strong> SOTA capability to render legible text within images.</span>
+                            </li>
+                            <li class="flex items-start text-sm">
+                                <span class="text-indigo-500 mr-2">✓</span>
+                                <span class="text-slate-700"><strong>Prompt Adherence:</strong> Complex instruction following that GANs cannot match.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5.0: The Convergence Thesis -->
+        <section id="convergence" class="scroll-mt-24 bg-slate-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden relative">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="inline-block bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                        The 2025 Pivot
+                    </div>
+                    <h3 class="text-3xl font-bold font-heading">The Bifurcation is Obsolete.</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        The user's premise relies on a historical division of labor. 
+                        <strong>FLUX.1 Kontext Pro</strong> and <strong>Qwen-Image-Edit</strong> demonstrate that a single unified model can now absorb the multi-image conditioning task (Component 1) into the SOTA T2I architecture (Component 2).
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                            <div class="bg-emerald-500/20 p-2 rounded-lg text-emerald-400 font-bold text-xl">1</div>
+                            <div>
+                                <h5 class="font-bold text-white">Native In-Context Reference</h5>
+                                <p class="text-xs text-slate-400">FLUX.1 treats reference images and text as a continuous stream of context.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                            <div class="bg-emerald-500/20 p-2 rounded-lg text-emerald-400 font-bold text-xl">2</div>
+                            <div>
+                                <h5 class="font-bold text-white">Interleaved Instructions</h5>
+                                <p class="text-xs text-slate-400">InstructAny2Pix uses LLMs to interleave text and multiple image inputs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Chart -->
+                <div class="flex flex-col justify-center bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
+                     <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 text-center">Model Capabilities Coverage</h4>
+                     <div class="chart-container" style="height: 300px;">
+                        <canvas id="capabilityChart"></canvas>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6.0: Technical Deep Dive (Visualizing the Problem) -->
+        <section class="scroll-mt-24">
+            <div class="mb-10">
+                <h3 class="text-2xl font-bold text-slate-900 font-heading">The Hybrid Engineering Challenge</h3>
+                <p class="text-slate-600 mt-2 max-w-3xl">
+                    If you choose the bifurcated path, you face the <strong>Latent Space Mismatch</strong>. 
+                    The diagram below illustrates the complex "Semantic Bridge" required to connect a GAN to a Diffusion Model.
+                </p>
+            </div>
+
+            <!-- CSS Flow Diagram (No SVG) -->
+            <div class="w-full overflow-x-auto pb-6">
+                <div class="min-w-[700px] flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-2">
+                    
+                    <!-- Step 1: GAN -->
+                    <div class="flex-1 bg-amber-50 border border-amber-200 p-5 rounded-lg text-center flow-node flow-arrow-md">
+                        <div class="text-xs font-bold text-amber-600 uppercase mb-2">Component 1</div>
+                        <h4 class="font-bold text-slate-800">GAN Generator</h4>
+                        <p class="text-xs text-slate-500 mt-2">Disentangled $\mathcal{W}$ Space</p>
+                        <div class="mt-3 text-xs bg-white py-1 px-2 rounded border border-amber-100 shadow-sm">
+                            Output: Raw Pixels
+                        </div>
+                    </div>
+
+                    <!-- Step 2: The Bridge -->
+                    <div class="flex-1 bg-slate-100 border-2 border-dashed border-slate-300 p-5 rounded-lg text-center flow-node flow-arrow-md flex flex-col justify-center">
+                        <div class="text-xs font-bold text-slate-500 uppercase mb-1">The Semantic Bridge</div>
+                        <h4 class="font-bold text-slate-700">VLM / CLIP</h4>
+                        <p class="text-xs text-red-500 mt-2 font-medium">⚠ Information Loss Risk</p>
+                        <div class="mt-3 text-xs bg-white py-1 px-2 rounded border border-slate-200">
+                            Process: Encoding
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Diffusion -->
+                    <div class="flex-1 bg-indigo-50 border border-indigo-200 p-5 rounded-lg text-center">
+                        <div class="text-xs font-bold text-indigo-600 uppercase mb-2">Component 2</div>
+                        <h4 class="font-bold text-slate-800">Diffusion Model</h4>
+                        <p class="text-xs text-slate-500 mt-2">VAE Latent Space</p>
+                        <div class="mt-3 text-xs bg-white py-1 px-2 rounded border border-indigo-100 shadow-sm">
+                            Output: Final Image
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7.0: Strategic Recommendations -->
+        <section id="strategy" class="scroll-mt-24 pb-20">
+            <h3 class="text-2xl font-bold text-slate-900 font-heading mb-8">Strategic Path Selector</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Path A -->
+                <button onclick="updateStrategy('unified')" class="text-left bg-white p-8 rounded-2xl border-2 border-transparent hover:border-emerald-500 shadow-sm hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold group-hover:bg-emerald-600 group-hover:text-white transition-colors">A</span>
+                        <h4 class="text-xl font-bold text-slate-900">General Purpose / Production</h4>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Applications requiring consistency, ease of maintenance, and high fidelity.
+                    </p>
+                    <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Recommended: Unified Model</div>
+                </button>
+
+                <!-- Path B -->
+                <button onclick="updateStrategy('bifurcated')" class="text-left bg-white p-8 rounded-2xl border-2 border-transparent hover:border-amber-500 shadow-sm hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 font-bold group-hover:bg-amber-600 group-hover:text-white transition-colors">B</span>
+                        <h4 class="text-xl font-bold text-slate-900">Real-Time / Research Niche</h4>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Applications requiring mathematically pure interpolations or sub-50ms inference.
+                    </p>
+                    <div class="text-xs font-semibold text-amber-600 uppercase tracking-wide">Recommended: Bifurcated System</div>
+                </button>
+            </div>
+
+            <!-- Dynamic Strategy Content -->
+            <div id="strategyContent" class="mt-8 bg-slate-50 border border-slate-200 rounded-xl p-8 hidden animate-fade-in">
+                <!-- JS populates this -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-400 text-sm">Based on Research Report: Analysis of Bifurcated and Unified Architectures (2025)</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Implementation -->
+    <script>
+        // --- Data & Logic ---
+
+        // Chart 1: The Trilemma (Radar)
+        const initTrilemmaChart = () => {
+            const ctx = document.getElementById('trilemmaChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Inference Speed', 'T2I Fidelity', 'Prompt Adherence', 'Training Stability', 'Latent Control'],
+                    datasets: [
+                        {
+                            label: 'Modern GAN (R3GAN)',
+                            data: [10, 7, 4, 8, 9],
+                            borderColor: '#f59e0b', // Amber
+                            backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#f59e0b'
+                        },
+                        {
+                            label: 'Unified Flux (FLUX.1)',
+                            data: [5, 10, 10, 9, 9],
+                            borderColor: '#6366f1', // Indigo
+                            backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#6366f1'
+                        },
+                        {
+                            label: 'Latent Diffusion (SD 3.5)',
+                            data: [6, 8, 8, 10, 7],
+                            borderColor: '#94a3b8', // Slate
+                            backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#94a3b8'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#e2e8f0' },
+                            grid: { color: '#e2e8f0' },
+                            pointLabels: {
+                                font: { size: 11, family: 'Inter' },
+                                color: '#64748b'
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { usePointStyle: true, font: { family: 'Inter' } } },
+                        tooltip: { backgroundColor: '#1e293b' }
+                    }
+                }
+            });
+        };
+
+        // Chart 2: Capability Coverage (Bar - Horizontal)
+        const initCapabilityChart = () => {
+            const ctx = document.getElementById('capabilityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Multi-Image Control', 'Text Adherence', 'Text Rendering', 'Editability'],
+                    datasets: [
+                        {
+                            label: 'Bifurcated (Combines Best of Both)',
+                            data: [9, 9, 8, 7],
+                            backgroundColor: '#f59e0b', // Amber
+                            barPercentage: 0.6
+                        },
+                        {
+                            label: 'Unified (FLUX.1 Kontext)',
+                            data: [9.5, 10, 10, 9],
+                            backgroundColor: '#10b981', // Emerald
+                            barPercentage: 0.6
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { beginAtZero: true, max: 10, grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { display: false }, ticks: { color: '#e2e8f0', font: { family: 'Inter' } } }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#cbd5e1' } }
+                    }
+                }
+            });
+        };
+
+        // Interaction Logic: Strategy Selector
+        const strategies = {
+            unified: {
+                title: "Implementation Strategy: The Unified Stack",
+                color: "emerald",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-slate-700"><strong>Core Model:</strong> FLUX.1 Kontext Pro (or Qwen-Image-Edit).</p>
+                        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-600">
+                            <li><strong>Workflow:</strong> Single-model inference. Pass text prompt AND reference images into the multi-modal context window.</li>
+                            <li><strong>Benefit:</strong> Eliminates "Semantic Bridge" errors. Reduces MLOps complexity (one model to host). SOTA text rendering included.</li>
+                            <li><strong>Trade-off:</strong> Higher VRAM requirements per instance compared to a standalone GAN, but lower than hosting two separate large models.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            bifurcated: {
+                title: "Implementation Strategy: The Hybrid Bridge",
+                color: "amber",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-slate-700"><strong>Core Stack:</strong> R3GAN (for composition) + CLIP (Bridge) + FLUX.1 (Detailing).</p>
+                        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-600">
+                            <li><strong>Workflow:</strong> Generate coarse composition in GAN -> Encode via CLIP -> Guide Diffusion generation.</li>
+                            <li><strong>Benefit:</strong> R3GAN allows real-time (30fps+) preview of compositions before committing to the slower diffusion step.</li>
+                            <li><strong>Trade-off:</strong> Engineering the "Bridge" is non-trivial. Risk of semantic loss during CLIP encoding.</li>
+                        </ul>
+                    </div>
+                `
+            }
+        };
+
+        function updateStrategy(type) {
+            const container = document.getElementById('strategyContent');
+            const data = strategies[type];
+            
+            container.classList.remove('hidden');
+            container.className = `mt-8 bg-${data.color}-50 border border-${data.color}-200 rounded-xl p-8 animate-fade-in block`;
+            
+            container.innerHTML = `
+                <h4 class="text-xl font-bold text-${data.color}-800 font-heading mb-4">${data.title}</h4>
+                ${data.content}
+            `;
+            
+            // Scroll to view
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Initialize Charts on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            initTrilemmaChart();
+            initCapabilityChart();
+        });
+
+    </script>
+</body>
+</html>

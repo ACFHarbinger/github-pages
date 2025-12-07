@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning for Anime Generation: Research & Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #fdfaf6; color: #333; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            max-height: 400px;
+            margin: 0 auto;
+        }
+
+        /* Timeline Node Logic */
+        .timeline-node.active .circle { background-color: #ea580c; border-color: #ea580c; color: white; }
+        .timeline-node.active .content { border-left-color: #ea580c; background-color: #fff7ed; }
+        
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .transition-all-300 { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Chosen Palette: Warm Neutrals (Stone/Orange/Slate). Background: #fdfaf6. Accents: #ea580c (Orange). 
+         Use of whitespace and subtle shadows for hierarchy. -->
+
+    <!-- Application Structure Plan: 
+         1. Hero Section: Sets the context of the research ("Open Source Anime Generation").
+         2. Strategic Dashboard: Top-level quantitative view (Bar charts for resource usage vs quality).
+         3. Model Explorer (The "Meat"): Interactive Radar chart + details pane. Users select a model to see specific qualitative/quantitative data.
+            Reasoning: Allows users to drill down into specific models without overwhelming them with a giant table.
+         4. Architecture Breakdown: Text/Visual comparison of GANs vs Diffusion.
+         5. Research Implementation Plan: Interactive Timeline. Users click steps to see tasks.
+            Reasoning: Turns a dry list of steps into a progressive journey. 
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Resource Efficiency (Bar Chart): To compare VRAM vs Inference Time.
+         2. Model Scoring (Radar Chart): To compare multi-dimensional attributes (Style Consistency, Community Support, License).
+         3. Logic: All data is stored in JS objects and charts update via event listeners.
+         4. No SVG/Mermaid: Charts are Canvas-based (Chart.js). Icons are CSS/Unicode.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl text-orange-600">●</span>
+                    <h1 class="text-xl font-bold tracking-tight text-stone-800">AnimeGen <span class="font-normal text-stone-500">Research Report</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#dashboard" class="text-stone-500 hover:text-orange-600 transition-colors">Performance</a>
+                    <a href="#models" class="text-stone-500 hover:text-orange-600 transition-colors">Model Explorer</a>
+                    <a href="#roadmap" class="text-stone-500 hover:text-orange-600 transition-colors">Research Plan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- Header / Context -->
+        <header class="text-center max-w-3xl mx-auto space-y-4">
+            <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Open Source Deep Learning Models for Anime Illustration</h2>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                A strategic analysis of non-proprietary generative models capable of integration into external software stacks. 
+                Focusing on <strong>Stable Diffusion Fine-tunes</strong> and <strong>GANs</strong>, prioritized by style consistency, resource efficiency, and licensing flexibility.
+            </p>
+        </header>
+
+        <!-- Section 1: Strategic Dashboard (Performance Metrics) -->
+        <section id="dashboard" class="scroll-mt-24">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-orange-500 rounded-full"></span>
+                    Performance Landscape
+                </h3>
+                <p class="text-stone-600 mt-2 max-w-4xl">
+                    This section visualizes the trade-offs between computational cost (VRAM) and output quality (Community Rating). 
+                    Understanding these metrics is crucial for determining which models can be deployed in consumer-grade environments versus server-side clusters.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Chart 1: VRAM vs Speed -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                    <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource Efficiency Analysis</h4>
+                    <div class="chart-container">
+                        <canvas id="resourceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Text Summary -->
+                <div class="bg-orange-50 p-6 rounded-xl border border-orange-100 flex flex-col justify-center space-y-4">
+                    <h4 class="text-lg font-bold text-orange-800">Key Findings</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-orange-500 mr-2 mt-1">▸</span>
+                            <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong> While slower, models like <em>Anything V5</em> offer superior semantic understanding compared to GANs.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-500 mr-2 mt-1">▸</span>
+                            <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g., AnimeGANv2) are real-time capable but lack generative diversity, suitable only for style transfer, not creation from scratch.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-500 mr-2 mt-1">▸</span>
+                            <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo offers a middle ground—fast inference with decent quality, making it the prime candidate for interactive software integration.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-orange-200">
+                         <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX 3060 (12GB).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Model Explorer (Interactive Radar) -->
+        <section id="models" class="scroll-mt-24 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+            <div class="p-8 border-b border-stone-100">
+                <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-blue-500 rounded-full"></span>
+                    Model Explorer
+                </h3>
+                <p class="text-stone-600 mt-2">
+                    Select a model below to analyze its specific capabilities across five key dimensions: 
+                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence), <strong>Speed</strong> (Inference time), 
+                    <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet compatibility).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[600px]">
+                <!-- Sidebar: Model Selection -->
+                <div class="lg:col-span-4 bg-stone-50 border-r border-stone-100 p-4 space-y-2 overflow-y-auto max-h-[600px]">
+                    <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 px-2">Select Model</p>
+                    <!-- Generated via JS -->
+                    <div id="modelList" class="space-y-2"></div>
+                </div>
+
+                <!-- Main: Radar Chart & Details -->
+                <div class="lg:col-span-8 p-6 lg:p-10 flex flex-col">
+                    <div class="flex flex-col md:flex-row gap-8 items-center h-full">
+                        <!-- Radar Chart -->
+                        <div class="w-full md:w-1/2 flex justify-center">
+                            <div class="chart-container">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Detail Panel -->
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <div id="modelDetails">
+                                <!-- Dynamic Content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Architecture Comparison -->
+        <section class="scroll-mt-24">
+             <div class="mb-6">
+                <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-purple-500 rounded-full"></span>
+                    Technical Architecture
+                </h3>
+                <p class="text-stone-600 mt-2">
+                    Understanding the underlying architecture is critical for software integration. 
+                    This breakdown contrasts the two dominant approaches.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Latent Diffusion -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition-all-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-stone-800">Latent Diffusion Models (LDM)</h4>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Recommended</span>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-6 h-12">
+                        Iteratively denoises random latent noise conditioned on text embeddings (CLIP).
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Training Stability</span>
+                            <span class="font-semibold text-stone-700">High</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Inference Cost</span>
+                            <span class="font-semibold text-stone-700">High (VRAM Intensive)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Diversity</span>
+                            <span class="font-semibold text-stone-700">Excellent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-stone-100 p-3 rounded text-xs text-stone-500 font-mono">
+                        User Prompt -> CLIP -> U-Net (Denoise) -> VAE Decoder -> Image
+                    </div>
+                </div>
+
+                <!-- Card 2: GANs -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-stone-400 hover:shadow-md transition-all-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-stone-800">Generative Adversarial (GAN)</h4>
+                        <span class="bg-stone-100 text-stone-600 text-xs font-bold px-2 py-1 rounded">Legacy/Specific</span>
+                    </div>
+                    <p class="text-sm text-stone-600 mb-6 h-12">
+                        A Generator creates images while a Discriminator critiques them in a zero-sum game.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Training Stability</span>
+                            <span class="font-semibold text-stone-700">Low (Mode Collapse Risk)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Inference Cost</span>
+                            <span class="font-semibold text-stone-700">Low (Fast)</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
+                            <span class="text-stone-500">Diversity</span>
+                            <span class="font-semibold text-stone-700">Limited</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-stone-100 p-3 rounded text-xs text-stone-500 font-mono">
+                        Noise -> Generator -> Image -> Discriminator
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Research & Implementation Roadmap -->
+        <section id="roadmap" class="scroll-mt-24">
+            <div class="mb-10">
+                <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-green-500 rounded-full"></span>
+                    Research & Integration Plan
+                </h3>
+                <p class="text-stone-600 mt-2">
+                    An interactive guide to the proposed research phases. Click on a phase to reveal detailed tasks.
+                </p>
+            </div>
+
+            <div class="relative border-l-2 border-stone-200 ml-4 md:ml-10 space-y-10 pb-10" id="roadmapContainer">
+                <!-- Roadmap Items Generated via JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-100 py-10 mt-20 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Data Store ---
+        const models = [
+            {
+                id: 'anything_v5',
+                name: 'Anything V5',
+                type: 'Stable Diffusion 1.5 Finetune',
+                desc: 'The gold standard for general anime illustration. Highly flexible prompt adherence.',
+                stats: { quality: 9, speed: 6, flexibility: 9, license: 8, ecosystem: 10 },
+                pros: ['Massive LoRA compatibility', 'Rich color palette', 'Low hardware requirement (SD1.5)'],
+                cons: ['Can struggle with anatomy without negative prompts', 'Resolution limited natively to 512-768px']
+            },
+            {
+                id: 'waifu_diff',
+                name: 'Waifu Diffusion v1.4',
+                type: 'Stable Diffusion 1.5 Finetune',
+                desc: 'Trained on Danbooru tags heavily. Requires specific tag-based prompting syntax.',
+                stats: { quality: 8, speed: 6, flexibility: 7, license: 9, ecosystem: 8 },
+                pros: ['Excellent tag compliance', 'Open licensing (MIT)', 'Distinct style'],
+                cons: ['Steeper learning curve for prompting', 'Older base model']
+            },
+            {
+                id: 'counterfeit',
+                name: 'Counterfeit V3.0',
+                type: 'Stable Diffusion 1.5 Finetune',
+                desc: 'Specialized in high-fidelity, painterly, and background-rich anime art.',
+                stats: { quality: 9.5, speed: 6, flexibility: 8, license: 8, ecosystem: 9 },
+                pros: ['Stunning lighting effects', 'High details', 'Great for landscapes'],
+                cons: ['Slightly less versatile for character design']
+            },
+            {
+                id: 'animagine_xl',
+                name: 'Animagine XL 3.1',
+                type: 'SDXL Finetune',
+                desc: 'Next-gen high resolution model based on SDXL. Superior quality but heavy resource usage.',
+                stats: { quality: 10, speed: 3, flexibility: 9, license: 7, ecosystem: 7 },
+                pros: ['Native 1024x1024 generation', 'Better text rendering', 'Superior anatomy'],
+                cons: ['Requires high VRAM (12GB+ recommended)', 'Slower inference']
+            },
+            {
+                id: 'animegan',
+                name: 'AnimeGANv2',
+                type: 'GAN',
+                desc: 'Image-to-Image style transfer model. Turns photos into anime style.',
+                stats: { quality: 6, speed: 10, flexibility: 2, license: 9, ecosystem: 4 },
+                pros: ['Real-time processing', 'Lightweight', 'Great for filters'],
+                cons: ['Cannot generate from text', 'Fixed style output']
+            }
+        ];
+
+        const roadmapSteps = [
+            {
+                phase: 'Phase 1',
+                title: 'Literature & Model Selection',
+                details: 'Evaluate current SOTA models. Focus on weights that allow commercial use (Apache 2.0, OpenRAIL-M).',
+                tasks: ['Audit licenses of SDXL vs SD1.5 checkpoints.', 'Benchmark inference speeds on target hardware.', 'Identify required VRAM constraints.']
+            },
+            {
+                phase: 'Phase 2',
+                title: 'Pipeline Architecture Design',
+                details: 'Design the software integration layer. How will the model talk to the main app?',
+                tasks: ['Select backend: Python (FastAPI) vs C++ (OnnxRuntime).', 'Design API schema for prompt ingestion.', 'Implement queue system for image generation requests.']
+            },
+            {
+                phase: 'Phase 3',
+                title: 'Optimization & Quantization',
+                details: 'Reduce model size and memory footprint without significant quality loss.',
+                tasks: ['Test TensorRT implementation for NVIDIA GPUs.', 'Evaluate xFormers for memory efficiency.', 'Experiment with INT8 quantization.']
+            },
+            {
+                phase: 'Phase 4',
+                title: 'Fine-tuning Strategy (Optional)',
+                details: 'If base models fail specific style requirements, implement Low-Rank Adaptation (LoRA).',
+                tasks: ['Curate a dataset of ~50 high-quality target style images.', 'Train LoRA adapter.', 'Integrate adapter loading into inference pipeline.']
+            }
+        ];
+
+        // --- State Management ---
+        let selectedModelId = models[0].id;
+        let radarChartInstance = null;
+
+        // --- DOM Elements ---
+        const modelListEl = document.getElementById('modelList');
+        const modelDetailsEl = document.getElementById('modelDetails');
+        const roadmapContainer = document.getElementById('roadmapContainer');
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initResourceChart();
+            renderModelList();
+            updateModelView(selectedModelId);
+            renderRoadmap();
+        });
+
+        // --- Chart.js: Resource Chart ---
+        function initResourceChart() {
+            const ctx = document.getElementById('resourceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Anything V5', 'Waifu Diff', 'Animagine XL', 'AnimeGANv2'],
+                    datasets: [
+                        {
+                            label: 'VRAM Usage (GB)',
+                            data: [6, 6, 14, 2],
+                            backgroundColor: '#fb923c', // Orange-400
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Quality Score (1-10)',
+                            data: [9, 8, 10, 5],
+                            backgroundColor: '#a8a29e', // Stone-400
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, max: 16 }
+                    }
+                }
+            });
+        }
+
+        // --- Chart.js: Radar Chart Update ---
+        function updateRadarChart(model) {
+            const ctx = document.getElementById('radarChart').getContext('2d');
+            
+            if (radarChartInstance) {
+                radarChartInstance.destroy();
+            }
+
+            radarChartInstance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Quality', 'Speed', 'Flexibility', 'License', 'Ecosystem'],
+                    datasets: [{
+                        label: model.name,
+                        data: [
+                            model.stats.quality,
+                            model.stats.speed,
+                            model.stats.flexibility,
+                            model.stats.license,
+                            model.stats.ecosystem
+                        ],
+                        backgroundColor: 'rgba(234, 88, 12, 0.2)', // Orange with opacity
+                        borderColor: '#ea580c',
+                        pointBackgroundColor: '#ea580c',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#ea580c'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#e5e7eb' },
+                            grid: { color: '#e5e7eb' },
+                            pointLabels: { font: { size: 12, family: 'Inter' }, color: '#4b5563' },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        // --- Render Model List ---
+        function renderModelList() {
+            modelListEl.innerHTML = '';
+            models.forEach(model => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors border ${
+                    model.id === selectedModelId 
+                    ? 'bg-orange-50 border-orange-200 text-orange-700' 
+                    : 'bg-white border-transparent text-stone-600 hover:bg-stone-100'
+                }`;
+                btn.innerText = model.name;
+                btn.onclick = () => {
+                    selectedModelId = model.id;
+                    renderModelList(); // Re-render to update active state
+                    updateModelView(model.id);
+                };
+                modelListEl.appendChild(btn);
+            });
+        }
+
+        // --- Update Model Details View ---
+        function updateModelView(id) {
+            const model = models.find(m => m.id === id);
+            
+            // Update Text Details
+            let prosHtml = model.pros.map(p => `<li class="flex items-start text-sm text-stone-600"><span class="text-green-500 mr-2">✓</span>${p}</li>`).join('');
+            let consHtml = model.cons.map(c => `<li class="flex items-start text-sm text-stone-600"><span class="text-red-400 mr-2">✕</span>${c}</li>`).join('');
+
+            modelDetailsEl.innerHTML = `
+                <div class="animate-fade-in">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-2">${model.name}</h2>
+                    <span class="inline-block bg-stone-100 text-stone-600 text-xs px-2 py-1 rounded mb-4 font-mono">${model.type}</span>
+                    <p class="text-stone-600 mb-6">${model.desc}</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <h5 class="font-bold text-stone-800 text-sm mb-2">Strengths</h5>
+                            <ul class="space-y-1">${prosHtml}</ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-stone-800 text-sm mb-2">Weaknesses</h5>
+                            <ul class="space-y-1">${consHtml}</ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Update Chart
+            updateRadarChart(model);
+        }
+
+        // --- Render Interactive Roadmap ---
+        function renderRoadmap() {
+            roadmapContainer.innerHTML = '';
+            roadmapSteps.forEach((step, index) => {
+                const node = document.createElement('div');
+                node.className = 'timeline-node relative pl-8 cursor-pointer group';
+                node.innerHTML = `
+                    <div class="circle absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-stone-300 transition-colors group-hover:border-orange-500"></div>
+                    <div class="content p-4 rounded-lg border-l-4 border-stone-200 bg-white shadow-sm transition-all duration-300 hover:border-orange-400">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs font-bold text-orange-600 uppercase tracking-wide">${step.phase}</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-stone-800 mb-1">${step.title}</h4>
+                        <p class="text-stone-600 text-sm mb-3">${step.details}</p>
+                        <div class="hidden group-hover:block transition-all ease-in-out">
+                            <ul class="space-y-1 mt-2 border-t border-stone-100 pt-2">
+                                ${step.tasks.map(t => `<li class="text-xs text-stone-500 flex items-center"><span class="w-1 h-1 bg-stone-400 rounded-full mr-2"></span>${t}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                roadmapContainer.appendChild(node);
+            });
+        }
+
+    </script>
+</body>
+</html>
