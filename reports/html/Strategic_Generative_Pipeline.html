@@ -23,10 +23,10 @@
 
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl text-indigo-600">❖</span>
-                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span class="font-normal text-slate-500">Pipeline '25</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span class="font-normal text-slate-500">Pipeline</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#paradigm" class="text-slate-500 hover:text-indigo-600 transition-colors">Shift</a>
@@ -87,19 +87,20 @@
                 
                 <!-- Left: Interactive Selector -->
                 <div class="lg:col-span-4 space-y-4">
-                    <div class="interactive-card active bg-white p-4 rounded-lg border border-indigo-500 shadow-sm" onclick="showStackDetail('flux')">
+                    <!-- MODIFIED: Pass 'event' object to showStackDetail -->
+                    <div class="interactive-card active bg-white p-4 rounded-lg border border-indigo-500 shadow-sm" onclick="showStackDetail('flux', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">The Backbone</span>
                         <h4 class="font-bold text-indigo-600 text-lg">FLUX.1 Kontext Pro</h4>
                         <p class="text-xs text-slate-500 mt-1">Native multimodal context (Text + Image).</p>
                     </div>
                     
-                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('control')">
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('control', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">Structural Control</span>
                         <h4 class="font-bold text-slate-800 text-lg">ControlNet Union</h4>
                         <p class="text-xs text-slate-500 mt-1">Depth, Canny, Pose invariance.</p>
                     </div>
                     
-                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('instruct')">
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('instruct', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">Semantic Control</span>
                         <h4 class="font-bold text-slate-800 text-lg">InstructAny2Pix</h4>
                         <p class="text-xs text-slate-500 mt-1">Multi-modal instruction following.</p>

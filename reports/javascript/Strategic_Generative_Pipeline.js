@@ -23,12 +23,18 @@ const stackDetails = {
     }
 };
 
-function showStackDetail(key) {
+// MODIFIED: Accepts event object explicitly for robustness
+function showStackDetail(key, event) {
     // Update Active State
     document.querySelectorAll('.interactive-card').forEach(el => el.classList.remove('active', 'border-indigo-500', 'shadow-sm'));
     document.querySelectorAll('.interactive-card').forEach(el => el.classList.add('border-slate-200'));
-    event.currentTarget.classList.add('active', 'border-indigo-500', 'shadow-sm');
-    event.currentTarget.classList.remove('border-slate-200');
+    
+    // Use the passed event object to get the target
+    const currentTarget = event ? event.currentTarget : document.querySelector(`[onclick*="'${key}'"]`);
+    if (currentTarget) {
+        currentTarget.classList.add('active', 'border-indigo-500', 'shadow-sm');
+        currentTarget.classList.remove('border-slate-200');
+    }
 
     // Update Visual
     const data = stackDetails[key];
@@ -70,31 +76,34 @@ function activateStep(step) {
 
 // --- Charts ---
 document.addEventListener('DOMContentLoaded', () => {
-    const ctx = document.getElementById('roiChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Baseline Data', 'Synthetic Data'],
-            datasets: [{
-                label: 'Data Needed for SOTA',
-                data: [100, 18],
-                backgroundColor: ['rgba(255,255,255,0.2)', '#34d399'], // White-ish vs Emerald
-                borderRadius: 4,
-                barThickness: 20
-            }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: { 
-                x: { display: false, max: 100 }, 
-                y: { 
-                    ticks: { color: '#94a3b8', font: { family: 'Inter' } },
-                    grid: { display: false }
-                } 
+    // Use a scoped block for safety if we must use const/let
+    {
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Baseline Data', 'Synthetic Data'],
+                datasets: [{
+                    label: 'Data Needed for SOTA',
+                    data: [100, 18],
+                    backgroundColor: ['rgba(255,255,255,0.2)', '#34d399'], // White-ish vs Emerald
+                    borderRadius: 4,
+                    barThickness: 20
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { 
+                    x: { display: false, max: 100 }, 
+                    y: { 
+                        ticks: { color: '#94a3b8', font: { family: 'Inter' } },
+                        grid: { display: false }
+                    } 
+                }
             }
-        }
-    });
+        });
+    }
 });
