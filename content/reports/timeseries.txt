@@ -1,10 +1,338 @@
-2:I[2972,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],""]
-3:I[6205,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],"default"]
-4:I[4707,[],""]
-6:I[6423,[],""]
-7:I[8212,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-8:I[1403,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-5:["slug","timeseries","d"]
-0:["Np5qZ1FNfteFwBaYBCHhB",[[["",{"children":["content",{"children":["reports",{"children":[["slug","timeseries","d"],{"children":["__PAGE__?{\"slug\":\"timeseries\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","timeseries","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-12","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Time Series Forecasting"}],["$","$L3",null,{"htmlFileName":"TimeSeries_Forecasting.html","title":"Time Series Forecasting"}]]}]}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cb91445b47bdd02a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L7",null,{}],["$","$L8",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$L9",null]]]]
-9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
+2:I[2972,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],""]
+3:I[6205,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],"default"]
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+4:T3500,
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-6">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-teal-900/30 text-teal-400 text-xs font-semibold uppercase tracking-wide border border-teal-800">
+                State of the Art Research Report
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold font-heading tracking-tight leading-tight">
+                The Great Bifurcation of <br>
+                <span class="gradient-text">Time Series Forecasting</span>
+            </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                2025 is defined by a schism: The industrialization of massive <strong>Foundation Models</strong> (TSFMs) vs. the pragmatic dominance of <strong>Statistical Ensembles</strong>.
+            </p>
+        </section>
+
+        <!-- Section 1: The Great Bifurcation (Comparative Analysis) -->
+        <section id="bifurcation" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Foundation Models -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-teal-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl">🤖</div>
+                        <h3 class="text-2xl font-bold text-slate-100">Foundation Models (TSFMs)</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Treats time series as a "language." Trained on billions of tokens to learn universal patterns.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Tokenization:</strong>
+                                <span class="text-sm text-slate-500">Patching (TimesFM) or Quantization (Chronos) to bridge the modality gap.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Architecture:</strong>
+                                <span class="text-sm text-slate-500">Transformers & Linear-Complexity Models (Mamba).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-teal-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Strength:</strong>
+                                <span class="text-sm text-slate-500">Zero-shot generalization, cold-start problems.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Pragmatic Stats -->
+                <div class="glass-panel p-8 rounded-2xl border-l-4 border-amber-500">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl">📊</div>
+                        <h3 class="text-2xl font-bold text-slate-100">Statistical & GBDTs</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        The "Statistical Renaissance." Radical software engineering (Numba/JIT) meets feature engineering.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Speed:</strong>
+                                <span class="text-sm text-slate-500">StatsForecast (Nixtla) is 500x faster than Prophet.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Dominance:</strong>
+                                <span class="text-sm text-slate-500">Kaggle & M6 Competition winners (XGBoost, LightGBM).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-400 mt-1">▸</span>
+                            <div>
+                                <strong class="text-slate-200 block">Strength:</strong>
+                                <span class="text-sm text-slate-500">Tabular data, complex exogenous variables, accuracy.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Model Architecture Explorer -->
+        <section id="models" class="scroll-mt-24">
+            <div class="mb-10 text-center">
+                <h3 class="text-3xl font-bold font-heading text-slate-100">Architectural Frontier</h3>
+                <p class="text-slate-400 mt-2">How deep learning handles continuous time.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Chronos -->
+                <div class="glass-panel p-6 rounded-xl group hover:border-teal-500/50 cursor-default">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-bold text-lg text-teal-400">Chronos (Amazon)</h4>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">Quantization</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">
+                        Treats time series as a language task by <strong>binning</strong> continuous values into discrete tokens.
+                    </p>
+                    <div class="text-xs text-slate-500 border-t border-slate-700/50 pt-2">
+                        <strong>Output:</strong> Probabilistic distribution (good for uncertainty).
+                    </div>
+                </div>
+
+                <!-- Card 2: TimesFM -->
+                <div class="glass-panel p-6 rounded-xl group hover:border-teal-500/50 cursor-default">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-bold text-lg text-teal-400">TimesFM (Google)</h4>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">Patching</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">
+                        Uses <strong>Patching</strong> to aggregate time steps into semantic tokens, reducing sequence length.
+                    </p>
+                    <div class="text-xs text-slate-500 border-t border-slate-700/50 pt-2">
+                        <strong>Output:</strong> Direct multi-horizon forecast.
+                    </div>
+                </div>
+
+                <!-- Card 3: Mamba -->
+                <div class="glass-panel p-6 rounded-xl group hover:border-teal-500/50 cursor-default">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-bold text-lg text-teal-400">Mamba (SSM)</h4>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">Linear Complexity</span>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">
+                        Revisits RNNs/State Space Models to process massive history windows with <strong>O(L) complexity</strong>.
+                    </p>
+                    <div class="text-xs text-slate-500 border-t border-slate-700/50 pt-2">
+                        <strong>Output:</strong> Efficient long-context processing.
+                    </div>
+                </div>
+                
+                            </div>
+        </section>
+
+        <!-- Section 3: The Arena (Competitions & Benchmarks) -->
+        <section id="competitions" class="scroll-mt-24 bg-slate-800/30 rounded-3xl p-8 md:p-12 border border-slate-800">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-3xl font-bold font-heading text-slate-100">
+                        The Crucible of Truth
+                    </h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        In high-stakes competitions like the <strong>M6 Financial Forecasting Competition</strong>, complex models often fail against simple baselines due to low signal-to-noise ratios.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <h5 class="text-sm font-bold text-amber-400 uppercase tracking-wide mb-1">M6 Finding</h5>
+                            <p class="text-xs text-slate-400">Deep Learning models failed to beat simple equal-weighted ensembles. Risk management > Forecasting accuracy.</p>
+                        </div>
+                        <div class="p-4 bg-slate-900/50 rounded-lg border border-slate-700">
+                            <h5 class="text-sm font-bold text-teal-400 uppercase tracking-wide mb-1">Kaggle Finding</h5>
+                            <p class="text-xs text-slate-400">Feature Engineering + XGBoost/LightGBM is the "Winning Formula" for tabular data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-6 rounded-2xl">
+                        <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 text-center">Zero-Shot vs. Trained Performance (Normalized Error)</h4>
+                        <div class="chart-container">
+                            <canvas id="benchmarkChart"></canvas>
+                        </div>
+                        <p class="text-center text-xs text-slate-500 mt-4">
+                            TSFMs (Foundation Models) excel at "Zero-Shot" but optimized Statistical Ensembles often win when fine-tuned.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Strategic Decision Guide (Prescriptive Analytics) -->
+        <section id="strategy" class="scroll-mt-24 pb-20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold font-heading text-slate-100">From Prediction to Action</h3>
+                <p class="text-slate-400 mt-2">The frontier is <strong>Prescriptive Analytics</strong> via Reinforcement Learning.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Old Way -->
+                <div class="glass-panel p-8 rounded-xl border border-slate-700 opacity-60">
+                    <div class="text-xs font-bold text-slate-500 uppercase mb-2">The Old Pipeline</div>
+                    <h4 class="text-xl font-bold text-slate-300 mb-4">Forecast → Optimize</h4>
+                    <div class="space-y-4 font-mono text-sm text-slate-400">
+                        <div class="bg-slate-900 p-3 rounded">1. Model predicts Demand (y)</div>
+                        <div class="flex justify-center text-slate-600">↓</div>
+                        <div class="bg-slate-900 p-3 rounded">2. Solver calculates Order (x)</div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4">
+                        Minimizes MSE, which may not align with minimizing business *cost*.
+                    </p>
+                </div>
+
+                <!-- New Way -->
+                <div class="glass-panel p-8 rounded-xl border border-teal-500/30 bg-teal-900/10">
+                    <div class="text-xs font-bold text-teal-400 uppercase mb-2">The 2025 SOTA</div>
+                    <h4 class="text-xl font-bold text-slate-100 mb-4">End-to-End RL</h4>
+                    <div class="space-y-4 font-mono text-sm text-teal-100">
+                        <div class="bg-teal-900/40 p-3 rounded border border-teal-500/20">
+                            Agent observes State ($S_t$) → Outputs Action ($A_t$)
+                        </div>
+                    </div>
+                    <div class="mt-4 text-xs text-teal-200/70">
+                        <strong class="block mb-1 text-teal-400">Inventory Reward Function:</strong>
+                        $$R_t = p \cdot \min(d_t, I_t) - h \cdot I_t - \pi \cdot \max(0, d_t - I_t)$$
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4">
+                        Directly optimizes Profit. Used by Amazon/Instacart for inventory placement.
+                    </p>
+                </div>
+            </div>
+            
+                    </section>
+
+    5:T689,
+        .report-content { font-family: 'Outfit', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-panel:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            background: rgba(30, 41, 59, 0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    6:T889,
+        // --- Chart Config ---
+        const ctx = document.getElementById('benchmarkChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['TimeGPT (Zero-Shot)', 'Chronos-Bolt (Zero-Shot)', 'AutoARIMA (Tuned)', 'LightGBM (Tuned)'],
+                datasets: [{
+                    label: 'Normalized Error (Lower is Better)',
+                    data: [0.85, 0.78, 0.72, 0.65],
+                    backgroundColor: [
+                        'rgba(45, 212, 191, 0.6)', // Teal (Foundation)
+                        'rgba(45, 212, 191, 0.8)', // Teal
+                        'rgba(245, 158, 11, 0.6)', // Amber (Stats)
+                        'rgba(245, 158, 11, 0.8)'  // Amber
+                    ],
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#e2e8f0',
+                        bodyColor: '#e2e8f0',
+                        borderColor: '#475569',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw + ' (CRPS/MASE Avg)';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                        ticks: { color: '#94a3b8' },
+                        title: { display: true, text: 'Error Rate', color: '#64748b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#94a3b8', font: { family: 'Outfit' } }
+                    }
+                }
+            }
+        });
+    8:["slug","timeseries","d"]
+0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","timeseries","d"],{"children":["__PAGE__?{\"slug\":\"timeseries\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","timeseries","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Time Series Forecasting"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Time Series Forecasting"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null

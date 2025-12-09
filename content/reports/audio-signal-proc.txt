@@ -1,10 +1,317 @@
-2:I[2972,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],""]
-3:I[6205,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],"default"]
-4:I[4707,[],""]
-6:I[6423,[],""]
-7:I[8212,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-8:I[1403,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-5:["slug","audio-signal-proc","d"]
-0:["Np5qZ1FNfteFwBaYBCHhB",[[["",{"children":["content",{"children":["reports",{"children":[["slug","audio-signal-proc","d"],{"children":["__PAGE__?{\"slug\":\"audio-signal-proc\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","audio-signal-proc","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-12","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Audio Signal Processing"}],["$","$L3",null,{"htmlFileName":"Audio_Signal_Processing.html","title":"Audio Signal Processing"}]]}]}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cb91445b47bdd02a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L7",null,{}],["$","$L8",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$L9",null]]]]
-9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
+2:I[2972,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],""]
+3:I[6205,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],"default"]
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+4:T2c16,
+
+        <!-- Hero Section -->
+        <section id="shift" class="text-center space-y-8 pt-10">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-pink-400 text-xs font-bold uppercase tracking-widest border border-white/10">
+                Strategic Research Report
+            </div>
+            <h2 class="text-5xl md:text-7xl font-bold font-display tracking-tight leading-tight uppercase">
+                The Cognitive Shift in <br>
+                <span class="gradient-text">Audio Engineering</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+                From static, rule-based DSP to dynamic, <span class="text-white">Reinforcement Learning Agents</span>. 
+                The era of the "Black Box" is ending; the era of the "Grey Box" neuro-symbolic system has begun.
+            </p>
+            
+            <!-- Paradigm Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 text-left">
+                <div class="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-black opacity-60">
+                    <h3 class="text-gray-500 font-display text-lg mb-4">Legacy Paradigm (2010-2022)</h3>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> Linear Adaptive Filters (FxLMS)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> "Black Box" End-to-End Deep Learning</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> MSE Loss (Perceptual Mismatch)</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-900/10 to-purple-900/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-pink-500 blur-3xl opacity-20"></div>
+                    <h3 class="text-white font-display text-lg mb-4">Cognitive State (2023-2025)</h3>
+                    <ul class="space-y-3 text-sm text-gray-200">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>Deep Reinforcement Learning</strong> (PPO Agents)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>Differentiable DSP (DDSP)</strong> "Grey Box"</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>RLHF</strong> (Alignment with Human Aesthetics)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Active Acoustic Control -->
+        <section id="control" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Content -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h3 class="text-3xl font-display text-white">
+                        The Rise of the <span class="text-pink-500">Meta-Controller</span>
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        In Active Noise Control (ANC), traditional algorithms like FxLMS fail with non-linear distortion and impulsive noise. The SOTA solution is <strong>DRL-ANC</strong>: an RL agent that doesn't generate audio, but *tunes the filters* in real-time.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="neon-panel p-4 rounded-lg">
+                            <h4 class="text-pink-400 font-bold mb-1">Algorithm: PPO (Proximal Policy Optimization)</h4>
+                            <p class="text-xs text-gray-400">Chosen for stability. Prevents "howling" by clipping policy updates, ensuring smooth filter transitions.</p>
+                        </div>
+                        <div class="neon-panel p-4 rounded-lg">
+                            <h4 class="text-purple-400 font-bold mb-1">Reward Function Engineering</h4>
+                            <p class="text-xs text-gray-400 font-mono">R = α·ΔSNR - β·MSE - γ·TV(w)</p>
+                            <p class="text-xs text-gray-500 mt-1">Includes Total Variation (TV) penalties to prevent "zipper noise" artifacts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Visualization -->
+                <div class="lg:col-span-7 neon-panel p-6 rounded-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Convergence & Stability Benchmark</h4>
+                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Impulsive Noise Scenario</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="controlChart"></canvas>
+                    </div>
+                    <div class="mt-6 text-center">
+                        
+                        <p class="text-xs text-gray-500 mt-2 italic">Figure: The Agent observes the error microphone state and adjusts IIR filter coefficients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Synthesis & Architecture -->
+        <section id="synthesis" class="scroll-mt-24">
+            <div class="mb-12 text-center">
+                <h3 class="text-3xl font-display text-white">Architectural <span class="text-purple-500">Renaissance</span></h3>
+                <p class="text-gray-400 mt-2">Moving beyond "Black Boxes" to interpretable, differentiable systems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: DDSP -->
+                <div class="neon-panel p-8 rounded-xl group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎛️</div>
+                    <h4 class="text-xl font-bold text-pink-400 mb-2">DDSP</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Differentiable DSP</p>
+                    <p class="text-sm text-gray-300">
+                        Neural networks predict parameters for oscillators and filters rather than raw samples.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Phase-coherent, high-fidelity audio with 1/10th parameters.</span>
+                    </div>
+                    <div class="mt-4 opacity-50 hover:opacity-100 transition-opacity">
+                         
+                    </div>
+                </div>
+
+                <!-- Card 2: Neural Fields -->
+                <div class="neon-panel p-8 rounded-xl group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌐</div>
+                    <h4 class="text-xl font-bold text-purple-400 mb-2">Neural Fields</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Spatial Audio</p>
+                    <p class="text-sm text-gray-300">
+                        Replacing discrete HRTF tables with continuous neural functions $f(x,y,z) \rightarrow \text{Filter}$.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Infinite resolution spatial audio for VR/XR.</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Diffusion -->
+                <div class="neon-panel p-8 rounded-xl group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌊</div>
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">Diffusion (DiT)</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Generative Synthesis</p>
+                    <p class="text-sm text-gray-300">
+                        Diffusion Transformers (like EzAudio-DiT) operating in latent space to hallucinate missing frequencies.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">SOTA Bandwidth Extension & Packet Loss Concealment.</span>
+                    </div>
+                    <div class="mt-4 opacity-50 hover:opacity-100 transition-opacity">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Agentic Music & Future -->
+        <section id="music" class="scroll-mt-24 pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left: Music RL -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-display text-white">The Agent as Engineer</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        AI is no longer just generating MIDI; it is mixing tracks. Systems like <strong>DeepFADE</strong> use hierarchical DRL to automate DJ transitions, optimizing for beat alignment and tonal consonance.
+                    </p>
+                    
+                    <div class="bg-gray-900/50 p-6 rounded-xl border-l-2 border-pink-500">
+                        <h4 class="text-white font-bold mb-2">SynthRL (Inverse Synthesis)</h4>
+                        <p class="text-sm text-gray-400">
+                            An RL agent hears a sound and turns the knobs on a VST synthesizer to recreate it. Because RL doesn't need gradients, it works on "Black Box" plugins.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-900/50 p-6 rounded-xl border-l-2 border-purple-500">
+                        <h4 class="text-white font-bold mb-2">RLHF in Music</h4>
+                        <p class="text-sm text-gray-400">
+                            <strong>MusicRL</strong> aligns generative output with human preference. Users rank clips, training a Reward Model that guides the diffusion process toward "aesthetic" quality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Future Radar -->
+                <div class="neon-panel p-6 rounded-2xl flex flex-col justify-center items-center">
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">2025 Technology Radar</h4>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    5:T6b9,
+        .report-content { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
+        h1, h2, h3, .font-display { font-family: 'Syncopate', sans-serif; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .neon-panel {
+            background: rgba(20, 20, 23, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .neon-panel:hover {
+            border-color: rgba(236, 72, 153, 0.4); /* Pink-500 */
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Audio Waveform Animation */
+        .waveform-bar {
+            width: 4px;
+            background: #ec4899;
+            animation: wave 1s infinite ease-in-out;
+            border-radius: 2px;
+        }
+        
+        @keyframes wave {
+            0%, 100% { height: 10px; opacity: 0.5; }
+            50% { height: 30px; opacity: 1; box-shadow: 0 0 10px #ec4899; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
+    6:Te28,
+        // --- Control Chart Logic (Line) ---
+        const ctxControl = document.getElementById('controlChart').getContext('2d');
+        new Chart(ctxControl, {
+            type: 'line',
+            data: {
+                labels: ['0ms', '100ms', '200ms', '300ms', '400ms', '500ms'],
+                datasets: [
+                    {
+                        label: 'DRL-ANC (PPO)',
+                        data: [0, -15, -25, -28, -30, -30],
+                        borderColor: '#ec4899', // Pink
+                        backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: 'Traditional FxLMS',
+                        data: [0, -5, -8, -5, -12, -10], // Unstable behavior
+                        borderColor: '#9ca3af', // Gray
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.1,
+                        fill: false
+                    },
+                    {
+                        label: 'Deep ANC (Supervised)',
+                        data: [0, -10, -18, -20, -22, -22],
+                        borderColor: '#8b5cf6', // Purple
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { color: '#e5e5e5', font: { family: 'Inter' } } },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Noise Reduction (dB)', color: '#6b7280' },
+                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                        ticks: { color: '#9ca3af' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#9ca3af' }
+                    }
+                }
+            }
+        });
+
+        // --- Future Radar Chart ---
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['Real-Time RLHF', '6G Semantic Comms', 'Neural HRTF Fields', 'Deep PLC', 'Grey Box DSP'],
+                datasets: [{
+                    label: 'Impact Magnitude',
+                    data: [80, 95, 85, 75, 90],
+                    backgroundColor: 'rgba(139, 92, 246, 0.2)', // Purple transparent
+                    borderColor: '#8b5cf6',
+                    pointBackgroundColor: '#ec4899',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#ec4899'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        pointLabels: { color: '#e5e5e5', font: { size: 10, family: 'Inter' } },
+                        ticks: { display: false }
+                    }
+                }
+            }
+        });
+    8:["slug","audio-signal-proc","d"]
+0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","audio-signal-proc","d"],{"children":["__PAGE__?{\"slug\":\"audio-signal-proc\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","audio-signal-proc","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Audio Signal Processing"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Audio Signal Processing"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null

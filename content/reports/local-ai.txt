@@ -1,10 +1,387 @@
-2:I[2972,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],""]
-3:I[6205,["972","static/chunks/972-027c0cb2b97c4010.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-468f977c8aa32eb8.js"],"default"]
-4:I[4707,[],""]
-6:I[6423,[],""]
-7:I[8212,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-8:I[1403,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-5:["slug","local-ai","d"]
-0:["Np5qZ1FNfteFwBaYBCHhB",[[["",{"children":["content",{"children":["reports",{"children":[["slug","local-ai","d"],{"children":["__PAGE__?{\"slug\":\"local-ai\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","local-ai","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-12","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Local AI Coding"}],["$","$L3",null,{"htmlFileName":"Local_AI_Coding.html","title":"Local AI Coding"}]]}]}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cb91445b47bdd02a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L7",null,{}],["$","$L8",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$L9",null]]]]
-9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
+2:I[2972,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],""]
+3:I[6205,["972","static/chunks/972-125803dc71d1afa1.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-c00e3ce3c4ca33a4.js"],"default"]
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
+4:T417d,
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-6">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-sky-900/30 text-sky-400 text-xs font-semibold uppercase tracking-wide border border-sky-800">
+                2025 Research Report
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold font-heading tracking-tight">
+                The Developer's Stack for <br>
+                <span class="gradient-text">Local AI-Assisted Coding</span>
+            </h2>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                The 2025 meta is <strong>Specialized, Local, and Quantized</strong>. The primary goal is achieving absolute privacy, security, and compliance by running SOTA models entirely on your machine.
+            </p>
+        </section>
+
+        <!-- Section 1: The New S-Tier (Benchmarks) -->
+        <section id="landscape" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-3xl font-bold font-heading text-slate-100">
+                        Model Architecture: <span class="text-sky-400">Dense vs. MoE</span>
+                    </h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        The divergence in performance between the S-Tier models—Qwen2.5-Coder (Dense) and DeepSeek-V3 (Mixture-of-Experts or MoE)—reveals a crucial distinction in their capabilities.
+                    </p>
+
+                    <div class="mt-4">
+                        
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-4 pt-4">
+                        <div class="bg-slate-800/50 p-4 rounded-xl border-l-4 border-sky-500">
+                            <h4 class="font-bold text-sky-400">Qwen2.5-Coder (Dense, 32B)</h4>
+                            <p class="text-sm text-slate-400 mt-1">The "Software Engineer". Highly specialized, strong Aider score, excelling at daily tasks like debugging and generating boilerplate.</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-indigo-400">DeepSeek-V3 (MoE, 671B Total)</h4>
+                            <p class="text-sm text-slate-400 mt-1">The "Research Scientist". Vast knowledge applied sparsely (37B active params). Superior for complex, abstract reasoning and new algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 glass-panel p-6 rounded-2xl">
+                    <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 text-center">Aider Benchmark: Autonomous Coding (Pass %)</h4>
+                    <div class="chart-container">
+                        <canvas id="benchmarkChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-slate-500 mt-4">
+                        The "Benchmark Trap": Code-specific models (Qwen, DeepSeek) outperform the massive Llama generalist because Aider measures *editing* ability, not just function generation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Hardware Reality Check (VRAM Calculator) -->
+        <section id="hardware" class="scroll-mt-24 bg-slate-800/30 rounded-3xl p-8 md:p-12 border border-slate-800">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-bold font-heading text-slate-100">VRAM Requirement Calculator</h3>
+                    <p class="text-slate-400 mt-2">
+                        Quantization (GGUF) is the key. **4-bit (Q4\_K\_M) is the new frontier**, offering an 8x memory reduction with minimal practical performance loss.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wide text-sky-400 mb-2">Model Size (Parameters)</label>
+                            <select id="modelSize" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 outline-none transition-all">
+                                <option value="7">7B / 8B (Lightweight)</option>
+                                <option value="14">14B (Mid-Range)</option>
+                                <option value="22">22B (Codestral)</option>
+                                <option value="32" selected>32B (Qwen S-Tier)</option>
+                                <option value="70">70B (Llama 3.1)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wide text-indigo-400 mb-2">Quantization Level</label>
+                            <select id="quantLevel" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
+                                <option value="0.55">Q4_K_M (Recommended 4-bit)</option>
+                                <option value="0.65">Q5_K_M (High Quality 5-bit)</option>
+                                <option value="0.95">Q8_0 (Luxury 8-bit)</option>
+                            </select>
+                        </div>
+                        <button onclick="calculateVRAM()" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-sky-900/50">
+                            Calculate Requirement
+                        </button>
+                    </div>
+
+                    <!-- Calculator Output -->
+                    <div class="glass-panel rounded-xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-indigo-500/10"></div>
+                        <div class="relative z-10">
+                            <span class="text-slate-400 text-sm font-medium">Estimated VRAM (Weights + 8K Context)</span>
+                            <div id="vramResult" class="text-5xl font-bold text-white mt-2 mb-1">-- GB</div>
+                            <div id="hardwareRec" class="text-sm font-bold text-sky-400 uppercase tracking-wide">Select Options</div>
+                            <p id="hardwareDesc" class="text-xs text-slate-500 mt-4 max-w-xs mx-auto"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                    
+                    <p class="text-xs text-slate-500 mt-2">
+                        The GGUF format enables flexible weight management, allowing layers to be offloaded to slower system RAM if VRAM is insufficient, though performance suffers greatly. The goal is always 100% VRAM residency.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Software Stack -->
+        <section id="stack" class="scroll-mt-24">
+            <div class="mb-10">
+                <h3 class="text-3xl font-bold font-heading text-slate-100">The Software Ecosystem</h3>
+                <p class="text-slate-400 mt-2">The goal is seamless integration. Ollama is the invisible backend service that connects your model to your IDE.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Step 1: Runtime -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-sky-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded bg-sky-900/50 text-sky-400 flex items-center justify-center font-bold">1</div>
+                        <h4 class="font-bold text-slate-200">The Runtime: Ollama</h4>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-xs text-slate-400">
+                            Ollama is the clear winner for professionals. It runs as a stable background service and provides a clean, **OpenAI-compatible REST API**. Model management is simple: <code>ollama pull qwen2.5-coder:32b</code>.
+                        </p>
+                        <strong class="text-sky-400 text-sm block pt-2 border-t border-slate-700">Competitors:</strong>
+                        <p class="text-xs text-slate-500">
+                            LM Studio (GUI focused, less integration power) / llama.cpp (command-line, for tinkerers).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: IDE Plugin -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded bg-indigo-900/50 text-indigo-400 flex items-center justify-center font-bold">2</div>
+                        <h4 class="font-bold text-slate-200">IDE Integration (Offline Mode)</h4>
+                    </div>
+                    <ul class="space-y-4">
+                        <li>
+                            <strong class="text-indigo-400 block text-sm">VS Code:</strong>
+                            <span class="text-slate-300 text-sm">Use <strong>Continue</strong> extension.</span>
+                            <p class="text-xs text-slate-500">Acts as a bridge, routing requests from the editor to your local Ollama API.</p>
+                        </li>
+                        <li>
+                            <strong class="text-indigo-400 block text-sm">JetBrains:</strong>
+                            <span class="text-slate-300 text-sm">Use <strong>AI Assistant</strong> plugin.</span>
+                            <p class="text-xs text-slate-500">Crucially, enable "Offline mode" to guarantee data never leaves your network.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 3: Specialization -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded bg-emerald-900/50 text-emerald-400 flex items-center justify-center font-bold">3</div>
+                        <h4 class="font-bold text-slate-200">The Hybrid Stack (FIM)</h4>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">Separate FIM autocomplete from heavy reasoning for max speed.</p>
+                    <div class="space-y-2">
+                        <div class="p-2 rounded bg-slate-900 border border-emerald-500/30">
+                            <span class="text-xs text-emerald-400 font-bold uppercase">Autocomplete (FIM)</span>
+                            <div class="text-sm text-slate-200">Tabby / FauxPilot + Mistral Codestral</div>
+                        </div>
+                        <div class="p-2 rounded bg-slate-900 border border-sky-500/30">
+                            <span class="text-xs text-sky-400 font-bold uppercase">Chat & Debug</span>
+                            <div class="text-sm text-slate-200">Ollama + Qwen 32B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Recommendations -->
+        <section id="recommendations" class="scroll-mt-24 pb-20">
+            <h3 class="text-3xl font-bold font-heading text-slate-100 mb-8">Strategic Build Lists</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Persona 1 -->
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-sky-500">
+                    <h4 class="font-bold text-lg text-white mb-1">Pragmatic NVIDIA</h4>
+                    <p class="text-xs text-sky-400 uppercase tracking-wide mb-4">Best Practicality</p>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090 (24GB)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Qwen2.5-Coder 32B</span></li>
+                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF Q5_K_M</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama + Continue</span></li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
+                        Runs S-Tier coding model entirely in VRAM for maximum speed and fluidity.
+                    </div>
+                </div>
+
+                <!-- Persona 2 -->
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-slate-200">
+                    <h4 class="font-bold text-lg text-white mb-1">Apple Ecosystem</h4>
+                    <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Capacity & Portability</p>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">M3/M4 Max (64GB+)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Llama 3.1 70B</span></li>
+                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF Q4_K_M</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama (Metal)</span></li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
+                        Leverages Unified Memory to run 70B models impossible on single discrete GPUs.
+                    </div>
+                </div>
+
+                <!-- Persona 3 -->
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-emerald-500">
+                    <h4 class="font-bold text-lg text-white mb-1">Ultimate Hybrid</h4>
+                    <p class="text-xs text-emerald-400 uppercase tracking-wide mb-4">Zero Compromise</p>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li class="flex justify-between"><span>FIM:</span> <span class="text-white">Tabby + Codestral 22B</span></li>
+                        <li class="flex justify-between"><span>Debug:</span> <span class="text-white">Ollama + Qwen 32B</span></li>
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090</span></li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
+                        Separates fast autocomplete from heavy-duty reasoning and chat functions.
+                    </div>
+                </div>
+
+                <!-- Persona 4 -->
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-purple-500">
+                    <h4 class="font-bold text-lg text-white mb-1">Bleeding Edge</h4>
+                    <p class="text-xs text-purple-400 uppercase tracking-wide mb-4">Researcher / Complex Math</p>
+                    <ul class="text-sm text-slate-300 space-y-3">
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">2x RTX 4090 (48GB)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">DeepSeek-V3 (MoE)</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama Multi-GPU</span></li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
+                        Required hardware to run the most powerful open-source reasoning engines.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    5:T466,
+        .report-content { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        /* Gradient Text Fix for Compatibility */
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property added for compatibility */
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    6:T1062,
+        // --- Chart Config ---
+        const ctx = document.getElementById('benchmarkChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Qwen2.5-Coder 32B', 'DeepSeek-V2 (MoE)', 'Llama 3.1 405B', 'Llama 3.1 70B'],
+                datasets: [{
+                    label: 'Aider Polyglot Benchmark (% Pass)',
+                    data: [73.7, 73.0, 66.0, 59.0],
+                    backgroundColor: [
+                        'rgba(56, 189, 248, 0.8)',
+                        'rgba(99, 102, 241, 0.8)',
+                        'rgba(148, 163, 184, 0.5)',
+                        'rgba(148, 163, 184, 0.3)'
+                    ],
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#e2e8f0',
+                        bodyColor: '#e2e8f0',
+                        borderColor: '#475569',
+                        borderWidth: 1
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#94a3b8', font: { family: 'Inter' } }
+                    }
+                }
+            }
+        });
+
+        // --- VRAM Calculator Logic ---
+        window.calculateVRAM = function() {
+            const size = parseFloat(document.getElementById('modelSize').value);
+            const quant = parseFloat(document.getElementById('quantLevel').value);
+            
+            // Heuristic multipliers:
+            const MULTIPLIERS = {
+                7: { 0.55: 5.5, 0.65: 6.5, 0.95: 8.5 },
+                14: { 0.55: 9.5, 0.65: 11.5, 0.95: 16.5 },
+                22: { 0.55: 15, 0.65: 18, 0.95: 26 },
+                32: { 0.55: 20, 0.65: 24, 0.95: 35 },
+                70: { 0.55: 40, 0.65: 46.5, 0.95: 73.5 }
+            };
+
+            let total = "N/A";
+            
+            // Check for explicit value from the report's synthesized data
+            if (MULTIPLIERS[size] && MULTIPLIERS[size][quant]) {
+                 total = MULTIPLIERS[size][quant].toFixed(1);
+            } else {
+                 // Fallback calculation (if new sizes/quants were added)
+                 let baseVram = size * quant; 
+                 let contextOverhead = 2.5;
+                 total = (baseVram + contextOverhead).toFixed(1);
+            }
+
+            // Determine Hardware Rec
+            let rec = "";
+            let desc = "";
+            
+            let numTotal = parseFloat(total);
+
+            if (numTotal <= 6) {
+                rec = "Mid-Range Laptop / GPU";
+                desc = "8GB VRAM (RTX 3060/4060) or M1/M2/M3 Base.";
+            } else if (numTotal <= 12) {
+                rec = "High-End Consumer GPU";
+                desc = "12GB VRAM (RTX 3080/4070) required.";
+            } else if (numTotal <= 24) {
+                rec = "NVIDIA Sweet Spot";
+                desc = "24GB VRAM (RTX 3090/4090). Target for Qwen 32B.";
+            } else if (numTotal <= 48) {
+                rec = "Dual GPU or Mac Studio";
+                desc = "Requires 2x 3090s or Apple Silicon with 64GB+ RAM.";
+            } else {
+                rec = "Server / High-End Mac";
+                desc = "Requires 2x 4090 / A6000 or Mac with 96GB+ Unified Memory.";
+            }
+
+            // Update UI
+            document.getElementById('vramResult').innerText = `${total} GB`;
+            document.getElementById('hardwareRec').innerText = rec;
+            document.getElementById('hardwareDesc').innerText = desc;
+        }
+
+        // Init Calculator
+        calculateVRAM();
+    8:["slug","local-ai","d"]
+0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","local-ai","d"],{"children":["__PAGE__?{\"slug\":\"local-ai\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","local-ai","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Local AI Coding"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Local AI Coding"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null
