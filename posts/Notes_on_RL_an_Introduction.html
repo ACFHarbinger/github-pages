@@ -6,24 +6,6 @@
     <title>Notes on Reinforcement Learning: An Introduction (2nd edition)</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { border-bottom: 1px solid #eee; margin-bottom: 20px; padding-bottom: 10px; }
-        h1 { margin-bottom: 5px; font-size: 2em;}
-        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 2em; }
-        h3 { margin-top: 1.5em; }
-        .meta { color: #666; font-size: 0.9em; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul, ol { margin-left: 20px; }
-        li { margin-bottom: 5px; }
-        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9em; }
-        code { font-family: Consolas, Monaco, 'Andale Mono', monospace; }
-        figure { margin: 20px 0; text-align: center; }
-        figcaption { font-style: italic; color: #666; margin-top: 5px; }
-        img { max-width: 100%; height: auto; }
-        .toc-list ul { list-style-type: none; }
-    </style>
 </head>
 <body>
 
@@ -90,9 +72,9 @@
     <p>A challenge unique to the RL paradigm is that of the trade-off between <strong>exploration versus exploitation</strong>. This challenge arises due to the fact that an agent prefers to take the actions that have previously given the highest rewards (<em>exploitation</em>), but it must also try out other actions in order to have more knowledge about which actions it should select (<em>exploration</em>).</p>
     <p>A RL system has four main elements beyond the interactive <strong>agent</strong> and the <strong>environment</strong>, which are:</p>
     <ul>
-        <li>A <strong>policy</strong> $$\pi_t: s \rightarrow a$$, which in stochastic cases specifies a probability for each action;</li>
-        <li>A <strong>reward</strong> $$r(s, a)$$, an immediate signal that specifies how good it is for an agent to have chosen a certain action in a given state (may also be stochastic);</li>
-        <li>A <strong>value function</strong> $$v(s)$$ that specifies the total reward an agent is expected to accumulate in the future if he starts at a given state, i.e., predicted long-term reward;</li>
+        <li>A <strong>policy</strong> $\pi_t: s \rightarrow a$, which in stochastic cases specifies a probability for each action;</li>
+        <li>A <strong>reward</strong> $r(s, a)$, an immediate signal that specifies how good it is for an agent to have chosen a certain action in a given state (may also be stochastic);</li>
+        <li>A <strong>value function</strong> $v(s)$ that specifies the total reward an agent is expected to accumulate in the future if he starts at a given state, i.e., predicted long-term reward;</li>
         <li>A (optional) <strong>world model</strong> used by model-based methods (opposed to purely trial-and-error model-free methods) for planning.</li>
     </ul>
 
@@ -102,21 +84,21 @@
     <p><em>Non-associative</em> setting: a problem setting that involves learning to act in only 1 situation.</p>
     <p><em>Associative</em> setting: a problem setting where the best action depends on the situation.</p>
 
-    <h3>Section 2.1: A $$k$$-armed Bandit Problem</h3>
-    <p>Setting of the $$k$$-armed bandit learning problem (analogous to a slot machine with $$k$$ levers):</p>
+    <h3>Section 2.1: A $k$-armed Bandit Problem</h3>
+    <p>Setting of the $k$-armed bandit learning problem (analogous to a slot machine with $k$ levers):</p>
     <ol>
-        <li>Choose 1 action from among $$k$$ different options;</li>
+        <li>Choose 1 action from among $k$ different options;</li>
         <li>Receive a (numerical) reward from a stationary probability distribution which depends on the action selected;</li>
         <li>Repeat steps 1 and 2 with the purpose of maximizing the expected total reward over some time period (e.g., 1000 action selections or <em>time steps</em>).</li>
     </ol>
     <p><strong>Value</strong> of an action: the expected or mean reward received if that action is selected</p>
-    <p>Letting $$A_t$$ be the action taken at time step $$t$$ and $$R_t$$ the corresponding reward, then the value $$q^{*}(a)$$ of an arbitrary action $$a$$ is given by:</p>
+    <p>Letting $A_t$ be the action taken at time step $t$ and $R_t$ the corresponding reward, then the value $q^{*}(a)$ of an arbitrary action $a$ is given by:</p>
     $$
     \begin{equation}
         q^{*} (a) \doteq \mathbb{E} [R_t | A_t = a].
     \end{equation}
     $$
-    <p>Since we do not know the true value of each action, we need to estimate them in such a way that the estimates are close to the real values. The estimated value of an action $$a$$ at time step $$t$$ is denoted by $$Q_t (a)$$.</p>
+    <p>Since we do not know the true value of each action, we need to estimate them in such a way that the estimates are close to the real values. The estimated value of an action $a$ at time step $t$ is denoted by $Q_t (a)$.</p>
     <p><strong>Greedy</strong> action: the action with the highest estimated value at a given time step</p>
     <ul>
         <li>Choosing this action equates to the agent <strong>exploiting</strong> his current knowledge of the values of the actions;</li>
@@ -126,38 +108,38 @@
 
     <h3>Section 2.2: Action-value Methods</h3>
     <p>Def. <strong>Action-value Methods</strong>: methods used to estimate the values of actions and to use those estimates to select an action to take at a given time step.</p>
-    <p>Letting $$\mathbb{1}_{predicate}$$ be the random variable which equals $$1$$ if the $$predicate$$ is true and $$0$$ otherwise, the value of an action can be estimated by averaging the rewards received:</p>
+    <p>Letting $\mathbb{1}_{predicate}$ be the random variable which equals $1$ if the $predicate$ is true and $0$ otherwise, the value of an action can be estimated by averaging the rewards received:</p>
     $$
     \begin{equation}
     Q_t (a) \doteq \frac{\text{sum of rewards when $a$ taken prior to $t$}}{\text{number of times $a$ taken prior to $t$}} = \frac{\sum_{i = 1}^{t - 1} R_i \cdot \mathbb{1}_{A_i = a}}{\sum_{i = 1}^{t - 1} \mathbb{1}_{A_i = a}}.
     \end{equation}
     $$
-    <p>If the denominator is zero (action has never been taken), then $$Q_t(a)$$ is defined as an arbitrary default value (e.g., zero). By the law of large numbers, as the denominator goes to infinity, $$Q_t(a)$$ converges to $$q^{*}(a)$$. This is called the <em>sample-average</em> method for estimating action values.</p>
+    <p>If the denominator is zero (action has never been taken), then $Q_t(a)$ is defined as an arbitrary default value (e.g., zero). By the law of large numbers, as the denominator goes to infinity, $Q_t(a)$ converges to $q^{*}(a)$. This is called the <em>sample-average</em> method for estimating action values.</p>
     <p>The simplest action selection rule is to always select a greedy action and - if there is more than 1 action with the same highest value - to break ties in some arbitrary way (e.g., randomly). This action selection method can be written as:</p>
     $$
     \begin{equation}
     A_t = \argmax_a Q_t (a).
     \end{equation}
     $$
-    <p>This selection method never performs exploration. A simple alternative that does so is to select the greedy action most of the time (probability $$1 - \epsilon$$) and (with probability $$\epsilon$$) to randomly select any possible action with equal probability. Methods that use this near-greedy action selection rule are dubbed $$\epsilon$$-greedy methods.</p>
+    <p>This selection method never performs exploration. A simple alternative that does so is to select the greedy action most of the time (probability $1 - \epsilon$) and (with probability $\epsilon$) to randomly select any possible action with equal probability. Methods that use this near-greedy action selection rule are dubbed $\epsilon$-greedy methods.</p>
 
     <h3>Section 2.3: The 10-armed Test-bed</h3>
     <p><strong>Non-stationary</strong> setting: problem setting where the true values of the actions (or the reward probabilities) change over time.</p>
-    <p>Given a set of 2000 randomly generated $$k$$-armed bandit problems (with $$k = 10$$), for each problem in the set, the action values $$q^{*}(a), \ a = \{1, 2, \dots, 10\},$$ were selected from a normal (Gaussian) distribution with $$\mu = 0, \  \sigma^2 = 1$$. When a learning method is applied to this problem selects action $$A_t$$ at time step $$t$$, the actual reward ($$R_t$$) was drawn from a normal distribution with $$\mu = q^{*}(A_t), \ \sigma^2 = 1$$.</p>
+    <p>Given a set of 2000 randomly generated $k$-armed bandit problems (with $k = 10$), for each problem in the set, the action values $q^{*}(a), \ a = \{1, 2, \dots, 10\},$ were selected from a normal (Gaussian) distribution with $\mu = 0, \  \sigma^2 = 1$. When a learning method is applied to this problem selects action $A_t$ at time step $t$, the actual reward ($R_t$) was drawn from a normal distribution with $\mu = q^{*}(A_t), \ \sigma^2 = 1$.</p>
     <p>The performance of the learning methods is measured as it improves with experience over 1000 time steps of the bandit problem, which makes up a single run. To obtain an accurate measure of the learning algorithms' behavior, 2000 runs are performed and the results for the bandit problems are averaged.</p>
-    <p>A greedy action selection method is compared against 2 $$\epsilon$$-greedy methods (with $$\epsilon = 0.01 \lor \epsilon = 0.1$$). All methods begin with initial action-value estimates of zero and update these estimates using the sample-average technique.</p>
-    <p>While the greedy method improved slightly faster than the other 2, it converged to a reward-per-step of 1, which is lower than the best value of around 1.54 achieved by the $$\epsilon$$-greedy method (with $$\epsilon = 0.1$$). The method with $$\epsilon = 0.1$$ improved faster than the method with $$\epsilon = 0.01$$, since it explored more earlier. However, the method with $$\epsilon = 0.01$$ converges to a higher reward-per-step in the long run, since the method with $$\epsilon = 0.1$$ never selects the optimal action more than 91% of the time. <br>
-    It is possible to perform $$\epsilon$$ annealing to try to get fast learning at the start combined with convergence to a higher reward average.</p>
-    <p>It takes more exploration to find the optimal actions in cases with noisy rewards (i.e., high reward variance), meaning that $$\epsilon$$-greedy methods perform even better in those cases, when compared to the greedy method. Also, although the greedy method is theoretically optimal in the deterministic case (i.e., with $$\sigma^2 = 0$$), this property does not hold in non-stationary bandit problems, making exploration a necessity even in deterministic settings.</p>
+    <p>A greedy action selection method is compared against 2 $\epsilon$-greedy methods (with $\epsilon = 0.01 \lor \epsilon = 0.1$). All methods begin with initial action-value estimates of zero and update these estimates using the sample-average technique.</p>
+    <p>While the greedy method improved slightly faster than the other 2, it converged to a reward-per-step of 1, which is lower than the best value of around 1.54 achieved by the $\epsilon$-greedy method (with $\epsilon = 0.1$). The method with $\epsilon = 0.1$ improved faster than the method with $\epsilon = 0.01$, since it explored more earlier. However, the method with $\epsilon = 0.01$ converges to a higher reward-per-step in the long run, since the method with $\epsilon = 0.1$ never selects the optimal action more than 91% of the time. <br>
+    It is possible to perform $\epsilon$ annealing to try to get fast learning at the start combined with convergence to a higher reward average.</p>
+    <p>It takes more exploration to find the optimal actions in cases with noisy rewards (i.e., high reward variance), meaning that $\epsilon$-greedy methods perform even better in those cases, when compared to the greedy method. Also, although the greedy method is theoretically optimal in the deterministic case (i.e., with $\sigma^2 = 0$), this property does not hold in non-stationary bandit problems, making exploration a necessity even in deterministic settings.</p>
 
     <h3>Section 2.4: Incremental Implementation</h3>
-    <p>For a single action, let $$R_i$$ denote the reward received after the $$i^{th}$$ selection of <em>this action</em> and $$Q_n$$ the estimate of its action value after it has been selected $$n - 1$$ times, written as:</p>
+    <p>For a single action, let $R_i$ denote the reward received after the $i^{th}$ selection of <em>this action</em> and $Q_n$ the estimate of its action value after it has been selected $n - 1$ times, written as:</p>
     $$
     \begin{equation}
     Q_n \doteq \frac{R_1 + R_2 + \dots + R_{n - 1}}{n - 1}.
     \end{equation}
     $$
-    <p>Instead of maintaining a record of all the rewards and performing the computation for the estimated value whenever needed (resulting in the growth of both computational and memory requirements), we can devise incremental formulas to update the averages with a small and constant computation to process each new reward. Given $$Q_n$$ and the $$n^{th}$$ reward $$R_n$$, the new average of all $$n$$ rewards can be computed as:</p>
+    <p>Instead of maintaining a record of all the rewards and performing the computation for the estimated value whenever needed (resulting in the growth of both computational and memory requirements), we can devise incremental formulas to update the averages with a small and constant computation to process each new reward. Given $Q_n$ and the $n^{th}$ reward $R_n$, the new average of all $n$ rewards can be computed as:</p>
     $$
     \begin{align}
         Q_{n + 1} &= \frac{1}{n} \sum_{i = 1}^n R_i \nonumber\\
@@ -169,15 +151,15 @@
         Q_2 &= R_1, \ Q_1 \in \mathbb{R}.
     \end{align}
     $$
-    <p>This implementation only needs memory for $$Q_n$$ and $$n$$, and only performs a small computation for each new reward. 
+    <p>This implementation only needs memory for $Q_n$ and $n$, and only performs a small computation for each new reward. 
     The general form of the previous update rule is given by:</p>
     $$
     \begin{equation}
     NewEstimate \leftarrow OldEstimate + StepSize [Target - OldEstimate],
     \end{equation}
     $$
-    <p>where $$[Target - OldEstimate]$$ is an <em>error</em> in the estimate, which is reduced by taking a step towards the (possibly noisy) target value.
-    The step-size parameter is generally denoted by $$\alpha$$ or $$\alpha_t (a)$$.</p>
+    <p>where $[Target - OldEstimate]$ is an <em>error</em> in the estimate, which is reduced by taking a step towards the (possibly noisy) target value.
+    The step-size parameter is generally denoted by $\alpha$ or $\alpha_t (a)$.</p>
 
     <pre><code>def bandit_problem(int k, float epsilon, bandits):
     Q_a = [0]*k;
@@ -193,51 +175,51 @@
         Q_a[A] += (1/N_a[A]) * (R - Q_a[A]);</code></pre>
 
     <h2 id="chapter-3-finite-markov-decision-processes">Chapter 3: Finite Markov Decision Processes</h2>
-    <p>Markov Decision Processes (MDPs) are a formalization of sequential decision making where actions influence not only the immediate reward, but also future rewards. As such, this is an associative problem that takes into account the need to trade-off immediate and delayed reward. While in bandit problems we estimated the value $$q^{*}(a), \ \forall a \in \mathcal{A},$$ in an MDP, we estimate the value $$q^{*}(s, a), \ \forall a \in \mathcal{A}, \forall s \in \mathcal{S},$$ or the value $$v^{*}(s), \forall s \in \mathcal{S}$$ given optimal action selections. Such state-dependent values are important to assign credit for long-term rewards to individual action selections.</p>
+    <p>Markov Decision Processes (MDPs) are a formalization of sequential decision making where actions influence not only the immediate reward, but also future rewards. As such, this is an associative problem that takes into account the need to trade-off immediate and delayed reward. While in bandit problems we estimated the value $q^{*}(a), \ \forall a \in \mathcal{A},$ in an MDP, we estimate the value $q^{*}(s, a), \ \forall a \in \mathcal{A}, \forall s \in \mathcal{S},$ or the value $v^{*}(s), \forall s \in \mathcal{S}$ given optimal action selections. Such state-dependent values are important to assign credit for long-term rewards to individual action selections.</p>
 
     <h3>Section 3.1: The Agent-Environment Interface</h3>
     <p>An MDP involves a learner and decision maker (i.e., the <em>agent</em>) that interacts with its surroundings (i.e., the <em>environment</em>) by continually selecting actions and having the environment respond by presenting new situations (or states) to the agent and giving rise to rewards, which the agent seeks to maximize over time. This process is illustrated in Figure 1.</p>
 
     <figure align='center'>
-        <img alt="The agent-environment interaction in a Markov decision process." src="http://acfharbinger.github.io/github-pages/assets/images/literature/rl_mdp.png" onerror="this.src='http://localhost:4000/assets/images/literature/rl_mdp.png';">
+        <img alt="The agent-environment interaction in a Markov decision process." src="../../images/rl_mdp.png">
         <figcaption>Figure 1: The agent-environment interaction in a MDP.</figcaption>
     </figure>
 
-    <p>The agent and environment interact with each other in a sequence of discrete time steps $$t = 0, 1, \dots, n.$$ At each time step $$t$$, the agent receives a representation of the environment's <em>state</em> $$S_t \in \mathcal{S},$$ and on that basis selects an <em>action</em> $$A_t \in \mathcal{A}(s).$$ At the next time step $$t + 1$$, the agent receives a reward $$R_{t + 1} \in \mathcal{R} \subset \mathbb{R}$$ and finds itself in another state $$s_{t+1}.$$  Then, the MDP and agent give rise to a sequence or <em>trajectory</em> like this:</p>
+    <p>The agent and environment interact with each other in a sequence of discrete time steps $t = 0, 1, \dots, n.$ At each time step $t,$ the agent receives a representation of the environment's <em>state</em> $S_t \in \mathcal{S},$ and on that basis selects an <em>action</em> $A_t \in \mathcal{A}(s).$ At the next time step $t + 1,$ the agent receives a reward $R_{t + 1} \in \mathcal{R} \subset \mathbb{R}$ and finds itself in another state $s_{t+1}.$  Then, the MDP and agent give rise to a sequence or <em>trajectory</em> like this:</p>
     $$
     \begin{equation}
     S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, \dots
     \end{equation}
     $$
-    <p>In a <em>finite</em> MDP, the random variables $$R_t$$ and $$S_t$$ have well defined discrete probability distributions that depend only on the previous state and action, i.e., for particular values of these random variables $$s' \in \mathcal{A}, \ r \in \mathcal{R},$$ there is a probability of those values occurring at time step $$t,$$ given particular values of the previous state and action:</p>
+    <p>In a <em>finite</em> MDP, the random variables $R_t$ and $S_t$ have well defined discrete probability distributions that depend only on the previous state and action, i.e., for particular values of these random variables $s' \in \mathcal{A}, \ r \in \mathcal{R},$ there is a probability of those values occurring at time step $t,$ given particular values of the previous state and action:</p>
     $$
     \begin{equation}
     p(s', r \vert s, a) \doteq P(S_t = s', R_t \vert S_{t-1} = s, A_{t-1} = a), \ \forall s', s \in \mathcal{S}, \forall r \in \mathcal{R}, \forall a \in \mathcal{A}(s).
     \end{equation}
     $$
-    <p>The function $$p: \mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$$, which completely characterizes the MDP environment's <em>dynamics</em>, is an ordinary deterministic function with four arguments. This function $$p$$ specifies a probability distribution for each choice of $$s$$ and $$a$$, i.e.,</p>
+    <p>The function $p: \mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$, which completely characterizes the MDP environment's <em>dynamics</em>, is an ordinary deterministic function with four arguments. This function $p$ specifies a probability distribution for each choice of $s$ and $a$, i.e.,</p>
     $$
     \begin{equation}
     \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r \vert s, a) = 1, \ \forall s \in \mathcal{S}, \forall a \in \mathcal{A}(s).
     \end{equation}
     $$
-    <p><strong>Markov property</strong>: the state must include information about all aspects of the past agent-environment interaction that make a difference for the future. In practice, this means that the probability of each possible value for $$S_t$$ and $$R_t$$ depends only on the previous state $$S_{t-1}$$ and action $$A_{t-1}$$.</p>
+    <p><strong>Markov property</strong>: the state must include information about all aspects of the past agent-environment interaction that make a difference for the future. In practice, this means that the probability of each possible value for $S_t$ and $R_t$ depends only on the previous state $S_{t-1}$ and action $A_{t-1}$.</p>
     <ul>
         <li>While most methods in this book assume this property to be true, there are methods that don't rely on it. <a href="#chapter-17-frontiers">Chapter 17</a> considers how to efficiently learn a Markov state from non-Markov observations.</li>
     </ul>
-    <p>From the dynamics function $$p,$$ we can compute the <em>state-transition probabilities</em> $$p: \mathcal{S} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1],$$</p>
+    <p>From the dynamics function $p,$ we can compute the <em>state-transition probabilities</em> $p: \mathcal{S} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1],$</p>
     $$
     \begin{equation}
     p(s' \vert s, a) \doteq P(S_t = s' \vert S_{t-1} = s, A_{t-1} = a) = \sum_{r \in \mathcal{R}} p(s', r \vert s, a).
     \end{equation}
     $$
-    <p>We can also compute the expected rewards for state-action pairs as a two-argument function $$r : \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$$:</p>
+    <p>We can also compute the expected rewards for state-action pairs as a two-argument function $r : \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$:</p>
     $$
     \begin{equation}
     r(s, a) \doteq \mathbb{E} [R_t \vert S_{t-1} = s, A_{t-1} = a] = \sum_{r \in \mathcal{R}} r \sum_{s' \in \mathcal{S}} p(s', r \vert s, a),
     \end{equation}
     $$
-    <p>and the expected rewards for the state-action-new_state triples as a three-argument function $$r: \mathcal{S} \times \mathcal{A} \times \mathcal{S} \rightarrow \mathbb{R},$$</p>
+    <p>and the expected rewards for the state-action-new_state triples as a three-argument function $r: \mathcal{S} \times \mathcal{A} \times \mathcal{S} \rightarrow \mathbb{R},$</p>
     $$
     \begin{equation}
     r(s, a, s') \doteq \mathbb{E} [R_t \vert S_{t-1} = s, A_{t-1} = a, S_t = s'] = \sum_{r \in \mathcal{R}} r \frac{p(s', r \vert s, a)}{p(s' \vert s, a)}.
@@ -245,7 +227,7 @@
     $$
 
     <h2 id="chapter-4-dynamic-programming">Chapter 4: Dynamic Programming</h2>
-    <p>The key idea of DP (and RL in general) is the use of value functions to both structure and organize the search for good policies. DP algorithms are obtained by turning Bellman equations into assignments, i.e., into update rules for improving approximations of the desired value functions. Remember that we can easily obtain optimal policies if we find the optimal value functions, $$v^* \lor q^*$$, which satisfy the Bellman optimality equations, $$\forall s \in \mathcal{S}, \forall a \in \mathcal{A}(s), s' \in \mathcal{S}^+$$:</p>
+    <p>The key idea of DP (and RL in general) is the use of value functions to both structure and organize the search for good policies. DP algorithms are obtained by turning Bellman equations into assignments, i.e., into update rules for improving approximations of the desired value functions. Remember that we can easily obtain optimal policies if we find the optimal value functions, $v^* \lor q^*$, which satisfy the Bellman optimality equations, $\forall s \in \mathcal{S}, \forall a \in \mathcal{A}(s), s' \in \mathcal{S}^+$, such that:</p>
     $$
     \begin{align}
     v^*(s) &= \max_a \mathbb{E}[R_{t+1} + \gamma \cdot v^*(S_{t+1} \vert S_t = s, A_t = a)] \nonumber\\
@@ -257,7 +239,7 @@
     $$
 
     <h3>Section 4.1: Policy Evaluation (Prediction)</h3>
-    <p><strong>Policy evaluation:</strong> computing the state-value function $$v^{\pi}$$ for an arbitrary policy $$\pi$$. This is also referred to as the <em>prediction problem</em>. Recall from <a href="#chapter-3-finite-markov-decision-processes">Chapter 3</a> that, $$\forall s \in \mathcal{S}$$,</p>
+    <p><strong>Policy evaluation:</strong> computing the state-value function $v^{\pi}$ for an arbitrary policy $\pi$. This is also referred to as the <em>prediction problem</em>. Recall from <a href="#chapter-3-finite-markov-decision-processes">Chapter 3</a> that, $\forall s \in \mathcal{S}$,</p>
     $$
     \begin{align}
     v^{\pi}(s) &\doteq \mathbb{E}_{\pi}[G_t \vert S_t = s], \nonumber\\
@@ -266,18 +248,17 @@
         &= \sum_a \pi(a \vert s) \sum_{s', r} p(s', r \vert s, a)[r + \gamma v^{\pi}(s')],
     \end{align}
     $$
-    <p>where $$\pi(a\vert s)$$ is the probability of taking action $$a$$ in state $$s$$ under policy $$\pi$$, and the expectations are subscripted by $$\pi$$ to indicate that they are conditional on following policy $$\pi$$. If $$\gamma < 1$$ or eventual termination is guaranteed from all states under the policy $$\pi$$, then w.h.t. that $$v^{\pi}$$ exists and is unique.</p>
+    <p>where $\pi(a\vert s)$ is the probability of taking action $a$ in state $s$ under policy $\pi$, and the expectations are subscripted by $\pi$ to indicate that they are conditional on following policy $\pi$. If $\gamma < 1$ or eventual termination is guaranteed from all states under the policy $\pi$, then w.h.t. that $v^{\pi}$ exists and is unique.</p>
 
-    <pre><code>def iterative_policy_evaluation(policy, mdp, theta, gamma):
+    <pre><code class="language-python">def iterative_policy_evaluation(policy, mdp, theta, gamma):
     assert theta > 0;
     
-    state_values[len(mdp.states)];
     state_values[len(mdp.states)] = 0;
     for x in range(len(mdp.states) - 1):
         state_values[x] = random_value();
         
-    gradient;
-    do {
+    gradient = 0;
+    while gradient >= theta:
         gradient = 0;
         for s in mdp.states:
             v = state_values[s.id];
@@ -287,7 +268,6 @@
                     state_values[s.id] += policy[s.id][a.id] * mdp.reward_probabilities(prev_state=s, cur_state=tmp_s, action=a) * (state.reward + gamma * state_values[state.id]);
             
             gradient = max(gradient, absolute_value(v - state_values[s.id]));
-    } while(gradient >= theta);
 
     return state_values;</code></pre>
 
@@ -303,7 +283,7 @@
     <h3>Section 13.1: Policy Approximation and its Advantages</h3>
     <p>The policy can be parameterized in any way, as long as 2 conditions are met</p>
     <ul>
-        <li>As long as $$\pi(a\vert s, \theta)$$ is differentiable w.r.t. its parameters:</li>
+        <li>As long as $\pi(a\vert s, \theta)$ is differentiable w.r.t. its parameters:</li>
     </ul>
     $$
     \forall s \in S \ \forall a \in A(s) \ \exists \ \nabla \pi (a|s, \theta) : |\nabla \pi (a|s, \theta)| < \infty \ \wedge \theta \in \mathbb{R}^{d'};
@@ -314,7 +294,7 @@
     $$
     \pi (a|s, \theta) \ \in \  ]0, 1[.
     $$
-    <p>For small-to-medium discrete action spaces, it is common to form parameterized numerical preferences $$h(s, a, \theta) \in \mathbb{R}$$ for each $$(s, a)$$ pair. The probabilities of each action being selected can be calculated with, e.g., an exponential softmax distribution:</p>
+    <p>For small-to-medium discrete action spaces, it is common to form parameterized numerical preferences $h(s, a, \theta) \in \mathbb{R}$ for each $(s, a)$ pair. The probabilities of each action being selected can be calculated with, e.g., an exponential softmax distribution:</p>
     $$
     \begin{equation}
     \pi (a|s, \theta) \doteq \frac{\exp(h(s,a,\theta))}{\sum_b \exp(h(s,b,\theta))}.

@@ -1,10 +1,309 @@
-2:I[2972,["972","static/chunks/972-027c0cb2b97c4010.js","318","static/chunks/app/content/posts/%5Bslug%5D/page-ab9adb2382af76e5.js"],""]
-3:I[8548,["972","static/chunks/972-027c0cb2b97c4010.js","318","static/chunks/app/content/posts/%5Bslug%5D/page-ab9adb2382af76e5.js"],"default"]
-4:I[4707,[],""]
-6:I[6423,[],""]
-7:I[8212,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-8:I[1403,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
-5:["slug","2024-10-31-Notes-on-RL-an-Introduction","d"]
-0:["UgYy8s5o_N9j_3g0e-JI1",[[["",{"children":["content",{"children":["posts",{"children":[["slug","2024-10-31-Notes-on-RL-an-Introduction","d"],{"children":["__PAGE__?{\"slug\":\"2024-10-31-Notes-on-RL-an-Introduction\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["posts",{"children":[["slug","2024-10-31-Notes-on-RL-an-Introduction","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"max-w-4xl mx-auto py-12 px-4","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/content/posts","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Posts List"]}]}],["$","$L3",null,{"htmlFileName":"Notes_on_RL_an_Introduction.html","title":"2024-10-31-Notes-on-RL-an-Introduction"}]]}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","posts","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/94e1344828824686.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L7",null,{}],["$","$L8",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$L9",null]]]]
-9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
+2:I[2972,["972","static/chunks/972-027c0cb2b97c4010.js","318","static/chunks/app/content/posts/%5Bslug%5D/page-ae74187df506fa14.js"],""]
+3:I[8548,["972","static/chunks/972-027c0cb2b97c4010.js","318","static/chunks/app/content/posts/%5Bslug%5D/page-ae74187df506fa14.js"],"default"]
+5:I[4707,[],""]
+7:I[6423,[],""]
+8:I[8212,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
+9:I[1403,["972","static/chunks/972-027c0cb2b97c4010.js","185","static/chunks/app/layout-e872c20747812a93.js"],"default"]
+4:T5e38,
+
+<header>
+    <h1>Notes on Reinforcement Learning: An Introduction (2nd edition)</h1>
+    <div class="meta">
+        <strong>Date:</strong> 2024-10-31 <br>
+        <strong>Categories:</strong> ML, RL, DL
+    </div>
+</header>
+
+<main>
+    <div style="display:none">
+        $$
+        \DeclareMathOperator*{\argmin}{arg\,min}
+        \DeclareMathOperator*{\argmax}{arg\,max}
+        $$
+    </div>
+
+    <p>Here are some notes I took when reading the second edition of the <a href="http://acfharbinger.github.io/github-pages/assets/docs/literature/books/RLbook2020.pdf" onerror="this.href='http://localhost:4000/assets/docs/literature/books/RLbook2020.pdf'">Reinforcement Learning: An Introduction</a> book.<br>
+    If you want to get into Reinforcement Learning, or are just interested in Artificial Intelligence in general, I highly recommend that you read this book!<br>
+    It does require some mathematical background to read and understand everything (mostly Linear Algebra, Probabilities, Statistics, and some Calculus), but it is overall one of the best - and most exhaustive - introductory books about Reinforcement Learning out there.</p>
+
+    <h1>Chapter Index</h1>
+    <ol>
+        <li><a href="#chapter-1-introduction">Chapter 1: Introduction</a></li>
+        <li><a href="#part-i-tabular-solution-methods">Part I: Tabular Solution Methods</a>
+            <ol>
+                <li><a href="#chapter-2-multi-armed-bandits">Chapter 2: Multi-armed Bandits</a></li>
+                <li><a href="#chapter-3-finite-markov-decision-processes">Chapter 3: Finite Markov Decision Processes</a></li>
+                <li><a href="#chapter-4-dynamic-programming">Chapter 4: Dynamic Programming</a></li>
+                <li><a href="#chapter-5-monte-carlo-methods">Chapter 5: Monte Carlo Methods</a></li>
+                <li><a href="#chapter-6-temporal-difference-learning">Chapter 6: Temporal-Difference Learning</a></li>
+                <li><a href="#chapter-7-n-step-bootstrapping">Chapter 7: n-step Bootstrapping</a></li>
+                <li><a href="#chapter-8-planning-and-learning-with-tabular-methods">Chapter 8: Planning and Learning with Tabular Methods</a></li>
+            </ol>
+        </li>
+        <li><a href="#part-ii-approximate-solution-methods">Part II: Approximate Solution Methods</a>
+            <ol>
+                <li><a href="#chapter-9-on-policy-prediction-with-approximation">Chapter 9: On-policy Prediction with Approximation</a></li>
+                <li><a href="#chapter-10-on-policy-control-with-approximation">Chapter 10: On-policy Control with Approximation</a></li>
+                <li><a href="#chapter-11-off-policy-methods-with-approximation">Chapter 11: *Off-policy Methods with Approximation</a></li>
+                <li><a href="#chapter-12-eligibility-traces">Chapter 12: Eligibility Traces</a></li>
+                <li><a href="#chapter-13-policy-gradient-methods">Chapter 13: Policy Gradient Methods</a></li>
+            </ol>
+        </li>
+        <li><a href="#part-iii-looking-deeper">Part III: Looking Deeper</a>
+            <ol>
+                <li><a href="#chapter-14-psychology">Chapter 14: Psychology</a></li>
+                <li><a href="#chapter-15-neuroscience">Chapter 15: Neuroscience</a></li>
+                <li><a href="#chapter-16-applications-and-case-studies">Chapter 16: Applications and Case Studies</a></li>
+                <li><a href="#chapter-17-frontiers">Chapter 17: Frontiers</a></li>
+            </ol>
+        </li>
+    </ol>
+
+    <h1 id="chapter-1-introduction">Chapter 1: Introduction</h1>
+    <p>Def. <strong>Reinforcement Learning (RL)</strong>: an agent learns how to map situations to actions through <em>trial-and-error</em> or <em>planned</em> interaction with a (possibly) uncertain environment, so as to maximize a numerical reward value (i.e., achieve his goal or goals).</p>
+    <ul>
+        <li><em>Delayed reward</em> is another important characteristic of RL, since any action taken may influence (not only the immediate reward value, but also) any subsequent rewards;</li>
+        <li>RL can be formalized as the optimal control of incompletely-known Markov Decision Processes (MDPs).</li>
+    </ul>
+    <p>Besides RL, other <strong>Machine Learning (ML)</strong> paradigms include <em>Supervised Learning</em> - predicting the correct label, given the corresponding set of features - and <em>Unsupervised Learning</em> - finding hidden patterns in a collection of unlabeled features.</p>
+    <p>A challenge unique to the RL paradigm is that of the trade-off between <strong>exploration versus exploitation</strong>. This challenge arises due to the fact that an agent prefers to take the actions that have previously given the highest rewards (<em>exploitation</em>), but it must also try out other actions in order to have more knowledge about which actions it should select (<em>exploration</em>).</p>
+    <p>A RL system has four main elements beyond the interactive <strong>agent</strong> and the <strong>environment</strong>, which are:</p>
+    <ul>
+        <li>A <strong>policy</strong> $\pi_t: s \rightarrow a$, which in stochastic cases specifies a probability for each action;</li>
+        <li>A <strong>reward</strong> $r(s, a)$, an immediate signal that specifies how good it is for an agent to have chosen a certain action in a given state (may also be stochastic);</li>
+        <li>A <strong>value function</strong> $v(s)$ that specifies the total reward an agent is expected to accumulate in the future if he starts at a given state, i.e., predicted long-term reward;</li>
+        <li>A (optional) <strong>world model</strong> used by model-based methods (opposed to purely trial-and-error model-free methods) for planning.</li>
+    </ul>
+
+    <h1 id="part-i-tabular-solution-methods">Part I: Tabular Solution Methods</h1>
+
+    <h2 id="chapter-2-multi-armed-bandits">Chapter 2: Multi-armed Bandits</h2>
+    <p><em>Non-associative</em> setting: a problem setting that involves learning to act in only 1 situation.</p>
+    <p><em>Associative</em> setting: a problem setting where the best action depends on the situation.</p>
+
+    <h3>Section 2.1: A $k$-armed Bandit Problem</h3>
+    <p>Setting of the $k$-armed bandit learning problem (analogous to a slot machine with $k$ levers):</p>
+    <ol>
+        <li>Choose 1 action from among $k$ different options;</li>
+        <li>Receive a (numerical) reward from a stationary probability distribution which depends on the action selected;</li>
+        <li>Repeat steps 1 and 2 with the purpose of maximizing the expected total reward over some time period (e.g., 1000 action selections or <em>time steps</em>).</li>
+    </ol>
+    <p><strong>Value</strong> of an action: the expected or mean reward received if that action is selected</p>
+    <p>Letting $A_t$ be the action taken at time step $t$ and $R_t$ the corresponding reward, then the value $q^{*}(a)$ of an arbitrary action $a$ is given by:</p>
+    $$
+    \begin{equation}
+        q^{*} (a) \doteq \mathbb{E} [R_t | A_t = a].
+    \end{equation}
+    $$
+    <p>Since we do not know the true value of each action, we need to estimate them in such a way that the estimates are close to the real values. The estimated value of an action $a$ at time step $t$ is denoted by $Q_t (a)$.</p>
+    <p><strong>Greedy</strong> action: the action with the highest estimated value at a given time step</p>
+    <ul>
+        <li>Choosing this action equates to the agent <strong>exploiting</strong> his current knowledge of the values of the actions;</li>
+        <li>Selecting 1 of the non-greedy actions enables the agent to improve his estimates of the non-greedy action's value, i.e., <strong>exploration</strong>;</li>
+        <li>Exploitation maximizes the reward on 1 step, but it needs to be intercalated with exploration steps so as to maximize the greater total reward in the long term.</li>
+    </ul>
+
+    <h3>Section 2.2: Action-value Methods</h3>
+    <p>Def. <strong>Action-value Methods</strong>: methods used to estimate the values of actions and to use those estimates to select an action to take at a given time step.</p>
+    <p>Letting $\mathbb{1}_{predicate}$ be the random variable which equals $1$ if the $predicate$ is true and $0$ otherwise, the value of an action can be estimated by averaging the rewards received:</p>
+    $$
+    \begin{equation}
+    Q_t (a) \doteq \frac{\text{sum of rewards when $a$ taken prior to $t$}}{\text{number of times $a$ taken prior to $t$}} = \frac{\sum_{i = 1}^{t - 1} R_i \cdot \mathbb{1}_{A_i = a}}{\sum_{i = 1}^{t - 1} \mathbb{1}_{A_i = a}}.
+    \end{equation}
+    $$
+    <p>If the denominator is zero (action has never been taken), then $Q_t(a)$ is defined as an arbitrary default value (e.g., zero). By the law of large numbers, as the denominator goes to infinity, $Q_t(a)$ converges to $q^{*}(a)$. This is called the <em>sample-average</em> method for estimating action values.</p>
+    <p>The simplest action selection rule is to always select a greedy action and - if there is more than 1 action with the same highest value - to break ties in some arbitrary way (e.g., randomly). This action selection method can be written as:</p>
+    $$
+    \begin{equation}
+    A_t = \argmax_a Q_t (a).
+    \end{equation}
+    $$
+    <p>This selection method never performs exploration. A simple alternative that does so is to select the greedy action most of the time (probability $1 - \epsilon$) and (with probability $\epsilon$) to randomly select any possible action with equal probability. Methods that use this near-greedy action selection rule are dubbed $\epsilon$-greedy methods.</p>
+
+    <h3>Section 2.3: The 10-armed Test-bed</h3>
+    <p><strong>Non-stationary</strong> setting: problem setting where the true values of the actions (or the reward probabilities) change over time.</p>
+    <p>Given a set of 2000 randomly generated $k$-armed bandit problems (with $k = 10$), for each problem in the set, the action values $q^{*}(a), \ a = \{1, 2, \dots, 10\},$ were selected from a normal (Gaussian) distribution with $\mu = 0, \  \sigma^2 = 1$. When a learning method is applied to this problem selects action $A_t$ at time step $t$, the actual reward ($R_t$) was drawn from a normal distribution with $\mu = q^{*}(A_t), \ \sigma^2 = 1$.</p>
+    <p>The performance of the learning methods is measured as it improves with experience over 1000 time steps of the bandit problem, which makes up a single run. To obtain an accurate measure of the learning algorithms' behavior, 2000 runs are performed and the results for the bandit problems are averaged.</p>
+    <p>A greedy action selection method is compared against 2 $\epsilon$-greedy methods (with $\epsilon = 0.01 \lor \epsilon = 0.1$). All methods begin with initial action-value estimates of zero and update these estimates using the sample-average technique.</p>
+    <p>While the greedy method improved slightly faster than the other 2, it converged to a reward-per-step of 1, which is lower than the best value of around 1.54 achieved by the $\epsilon$-greedy method (with $\epsilon = 0.1$). The method with $\epsilon = 0.1$ improved faster than the method with $\epsilon = 0.01$, since it explored more earlier. However, the method with $\epsilon = 0.01$ converges to a higher reward-per-step in the long run, since the method with $\epsilon = 0.1$ never selects the optimal action more than 91% of the time. <br>
+    It is possible to perform $\epsilon$ annealing to try to get fast learning at the start combined with convergence to a higher reward average.</p>
+    <p>It takes more exploration to find the optimal actions in cases with noisy rewards (i.e., high reward variance), meaning that $\epsilon$-greedy methods perform even better in those cases, when compared to the greedy method. Also, although the greedy method is theoretically optimal in the deterministic case (i.e., with $\sigma^2 = 0$), this property does not hold in non-stationary bandit problems, making exploration a necessity even in deterministic settings.</p>
+
+    <h3>Section 2.4: Incremental Implementation</h3>
+    <p>For a single action, let $R_i$ denote the reward received after the $i^{th}$ selection of <em>this action</em> and $Q_n$ the estimate of its action value after it has been selected $n - 1$ times, written as:</p>
+    $$
+    \begin{equation}
+    Q_n \doteq \frac{R_1 + R_2 + \dots + R_{n - 1}}{n - 1}.
+    \end{equation}
+    $$
+    <p>Instead of maintaining a record of all the rewards and performing the computation for the estimated value whenever needed (resulting in the growth of both computational and memory requirements), we can devise incremental formulas to update the averages with a small and constant computation to process each new reward. Given $Q_n$ and the $n^{th}$ reward $R_n$, the new average of all $n$ rewards can be computed as:</p>
+    $$
+    \begin{align}
+        Q_{n + 1} &= \frac{1}{n} \sum_{i = 1}^n R_i \nonumber\\
+        &= \frac{1}{n}(R_n + \sum_{i = 1}^{n - 1} R_i) \nonumber\\
+        &= \frac{1}{n}(R_n + (n - 1) \cdot \frac{1}{n - 1} \cdot \sum_{i = 1}^{n - 1} R_i) \nonumber\\
+        &= \frac{1}{n} (R_n + (n - 1) \cdot Q_n) \nonumber\\
+        &= \frac{1}{n} (R_n + n \cdot Q_n - Q_n) \nonumber\\
+        &= Q_n + \frac{1}{n} [R_n - Q_n], \ n > 1 \\
+        Q_2 &= R_1, \ Q_1 \in \mathbb{R}.
+    \end{align}
+    $$
+    <p>This implementation only needs memory for $Q_n$ and $n$, and only performs a small computation for each new reward. 
+    The general form of the previous update rule is given by:</p>
+    $$
+    \begin{equation}
+    NewEstimate \leftarrow OldEstimate + StepSize [Target - OldEstimate],
+    \end{equation}
+    $$
+    <p>where $[Target - OldEstimate]$ is an <em>error</em> in the estimate, which is reduced by taking a step towards the (possibly noisy) target value.
+    The step-size parameter is generally denoted by $\alpha$ or $\alpha_t (a)$.</p>
+
+    <pre><code>def bandit_problem(int k, float epsilon, bandits):
+    Q_a = [0]*k;
+    N_a = [0]*k;
+
+    while(True):
+        if random_float(0, 1) <= epsilon:
+            A = random_int(0, k)
+        else:
+            A = argmax(Q_a)
+        R = bandits[A].get_reward()
+        N_a[A]++;
+        Q_a[A] += (1/N_a[A]) * (R - Q_a[A]);</code></pre>
+
+    <h2 id="chapter-3-finite-markov-decision-processes">Chapter 3: Finite Markov Decision Processes</h2>
+    <p>Markov Decision Processes (MDPs) are a formalization of sequential decision making where actions influence not only the immediate reward, but also future rewards. As such, this is an associative problem that takes into account the need to trade-off immediate and delayed reward. While in bandit problems we estimated the value $q^{*}(a), \ \forall a \in \mathcal{A},$ in an MDP, we estimate the value $q^{*}(s, a), \ \forall a \in \mathcal{A}, \forall s \in \mathcal{S},$ or the value $v^{*}(s), \forall s \in \mathcal{S}$ given optimal action selections. Such state-dependent values are important to assign credit for long-term rewards to individual action selections.</p>
+
+    <h3>Section 3.1: The Agent-Environment Interface</h3>
+    <p>An MDP involves a learner and decision maker (i.e., the <em>agent</em>) that interacts with its surroundings (i.e., the <em>environment</em>) by continually selecting actions and having the environment respond by presenting new situations (or states) to the agent and giving rise to rewards, which the agent seeks to maximize over time. This process is illustrated in Figure 1.</p>
+
+    <figure align='center'>
+        <img alt="The agent-environment interaction in a Markov decision process." src="../../images/rl_mdp.png">
+        <figcaption>Figure 1: The agent-environment interaction in a MDP.</figcaption>
+    </figure>
+
+    <p>The agent and environment interact with each other in a sequence of discrete time steps $t = 0, 1, \dots, n.$ At each time step $t,$ the agent receives a representation of the environment's <em>state</em> $S_t \in \mathcal{S},$ and on that basis selects an <em>action</em> $A_t \in \mathcal{A}(s).$ At the next time step $t + 1,$ the agent receives a reward $R_{t + 1} \in \mathcal{R} \subset \mathbb{R}$ and finds itself in another state $s_{t+1}.$  Then, the MDP and agent give rise to a sequence or <em>trajectory</em> like this:</p>
+    $$
+    \begin{equation}
+    S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, \dots
+    \end{equation}
+    $$
+    <p>In a <em>finite</em> MDP, the random variables $R_t$ and $S_t$ have well defined discrete probability distributions that depend only on the previous state and action, i.e., for particular values of these random variables $s' \in \mathcal{A}, \ r \in \mathcal{R},$ there is a probability of those values occurring at time step $t,$ given particular values of the previous state and action:</p>
+    $$
+    \begin{equation}
+    p(s', r \vert s, a) \doteq P(S_t = s', R_t \vert S_{t-1} = s, A_{t-1} = a), \ \forall s', s \in \mathcal{S}, \forall r \in \mathcal{R}, \forall a \in \mathcal{A}(s).
+    \end{equation}
+    $$
+    <p>The function $p: \mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$, which completely characterizes the MDP environment's <em>dynamics</em>, is an ordinary deterministic function with four arguments. This function $p$ specifies a probability distribution for each choice of $s$ and $a$, i.e.,</p>
+    $$
+    \begin{equation}
+    \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r \vert s, a) = 1, \ \forall s \in \mathcal{S}, \forall a \in \mathcal{A}(s).
+    \end{equation}
+    $$
+    <p><strong>Markov property</strong>: the state must include information about all aspects of the past agent-environment interaction that make a difference for the future. In practice, this means that the probability of each possible value for $S_t$ and $R_t$ depends only on the previous state $S_{t-1}$ and action $A_{t-1}$.</p>
+    <ul>
+        <li>While most methods in this book assume this property to be true, there are methods that don't rely on it. <a href="#chapter-17-frontiers">Chapter 17</a> considers how to efficiently learn a Markov state from non-Markov observations.</li>
+    </ul>
+    <p>From the dynamics function $p,$ we can compute the <em>state-transition probabilities</em> $p: \mathcal{S} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1],$</p>
+    $$
+    \begin{equation}
+    p(s' \vert s, a) \doteq P(S_t = s' \vert S_{t-1} = s, A_{t-1} = a) = \sum_{r \in \mathcal{R}} p(s', r \vert s, a).
+    \end{equation}
+    $$
+    <p>We can also compute the expected rewards for state-action pairs as a two-argument function $r : \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$:</p>
+    $$
+    \begin{equation}
+    r(s, a) \doteq \mathbb{E} [R_t \vert S_{t-1} = s, A_{t-1} = a] = \sum_{r \in \mathcal{R}} r \sum_{s' \in \mathcal{S}} p(s', r \vert s, a),
+    \end{equation}
+    $$
+    <p>and the expected rewards for the state-action-new_state triples as a three-argument function $r: \mathcal{S} \times \mathcal{A} \times \mathcal{S} \rightarrow \mathbb{R},$</p>
+    $$
+    \begin{equation}
+    r(s, a, s') \doteq \mathbb{E} [R_t \vert S_{t-1} = s, A_{t-1} = a, S_t = s'] = \sum_{r \in \mathcal{R}} r \frac{p(s', r \vert s, a)}{p(s' \vert s, a)}.
+    \end{equation}
+    $$
+
+    <h2 id="chapter-4-dynamic-programming">Chapter 4: Dynamic Programming</h2>
+    <p>The key idea of DP (and RL in general) is the use of value functions to both structure and organize the search for good policies. DP algorithms are obtained by turning Bellman equations into assignments, i.e., into update rules for improving approximations of the desired value functions. Remember that we can easily obtain optimal policies if we find the optimal value functions, $v^* \lor q^*$, which satisfy the Bellman optimality equations, $\forall s \in \mathcal{S}, \forall a \in \mathcal{A}(s), s' \in \mathcal{S}^+$, such that:</p>
+    $$
+    \begin{align}
+    v^*(s) &= \max_a \mathbb{E}[R_{t+1} + \gamma \cdot v^*(S_{t+1} \vert S_t = s, A_t = a)] \nonumber\\
+        &= \max_a \sum_{s', r} p(s' r, \vert s, a) [r + \gamma \cdot v^*(s')],\\
+        &\lor \nonumber\\
+    q^*(s, a) &= \mathbb{E}[R_{t+1} + \gamma \max_{'a} q^*(S_{t+1}, a') \vert S_t = s, S_t =a], \nonumber\\
+        &= \sum_{s', r} p(s', r \vert s, a) [r + \gamma \max_{a'} q^*(s', a')].
+    \end{align}
+    $$
+
+    <h3>Section 4.1: Policy Evaluation (Prediction)</h3>
+    <p><strong>Policy evaluation:</strong> computing the state-value function $v^{\pi}$ for an arbitrary policy $\pi$. This is also referred to as the <em>prediction problem</em>. Recall from <a href="#chapter-3-finite-markov-decision-processes">Chapter 3</a> that, $\forall s \in \mathcal{S}$,</p>
+    $$
+    \begin{align}
+    v^{\pi}(s) &\doteq \mathbb{E}_{\pi}[G_t \vert S_t = s], \nonumber\\
+        &= \mathbb{E}_{\pi}[R_{t+1} + \gamma G_{t+1} \vert S_t = s], \nonumber\\
+        &= \mathbb{E}_{\pi}[R_{t+1} + \gamma v^{\pi} (S_{t+1} \vert S_t = s)], \\
+        &= \sum_a \pi(a \vert s) \sum_{s', r} p(s', r \vert s, a)[r + \gamma v^{\pi}(s')],
+    \end{align}
+    $$
+    <p>where $\pi(a\vert s)$ is the probability of taking action $a$ in state $s$ under policy $\pi$, and the expectations are subscripted by $\pi$ to indicate that they are conditional on following policy $\pi$. If $\gamma < 1$ or eventual termination is guaranteed from all states under the policy $\pi$, then w.h.t. that $v^{\pi}$ exists and is unique.</p>
+
+    <pre><code class="language-python">def iterative_policy_evaluation(policy, mdp, theta, gamma):
+    assert theta > 0;
+    
+    state_values[len(mdp.states)] = 0;
+    for x in range(len(mdp.states) - 1):
+        state_values[x] = random_value();
+        
+    gradient = 0;
+    while gradient >= theta:
+        gradient = 0;
+        for s in mdp.states:
+            v = state_values[s.id];
+            state_values[s.id] = 0;
+            for tmp_s in mdp.state:
+                for a in mdp.actions:
+                    state_values[s.id] += policy[s.id][a.id] * mdp.reward_probabilities(prev_state=s, cur_state=tmp_s, action=a) * (state.reward + gamma * state_values[state.id]);
+            
+            gradient = max(gradient, absolute_value(v - state_values[s.id]));
+
+    return state_values;</code></pre>
+
+    <h2 id="chapter-13-policy-gradient-methods">Chapter 13: Policy Gradient Methods</h2>
+    <p><strong>Policy gradient</strong> methods seek to learn an approximation to the policy by maximizing performance. Their updates approximate gradient ascent such as:</p>
+    $$
+    \begin{equation}
+    \theta_{t+1} = \theta_t + \alpha \cdot \hat{\nabla J(\theta_t)}, \ \hat{\nabla J(\theta_t)} \in \mathbb{R}^{d'}.
+    \end{equation}
+    $$
+    <p>Methods that learn an approximation of both policy and value functions are called <strong>actor-critic</strong> methods. The <em>actor</em> is a reference to the learned policy and <em>critic</em> a reference to the learned (state-)value function.</p>
+
+    <h3>Section 13.1: Policy Approximation and its Advantages</h3>
+    <p>The policy can be parameterized in any way, as long as 2 conditions are met</p>
+    <ul>
+        <li>As long as $\pi(a\vert s, \theta)$ is differentiable w.r.t. its parameters:</li>
+    </ul>
+    $$
+    \forall s \in S \ \forall a \in A(s) \ \exists \ \nabla \pi (a|s, \theta) : |\nabla \pi (a|s, \theta)| < \infty \ \wedge \theta \in \mathbb{R}^{d'};
+    $$
+    <ul>
+        <li>As long as it continues to perform exploration (to avoid a deterministic policy):</li>
+    </ul>
+    $$
+    \pi (a|s, \theta) \ \in \  ]0, 1[.
+    $$
+    <p>For small-to-medium discrete action spaces, it is common to form parameterized numerical preferences $h(s, a, \theta) \in \mathbb{R}$ for each $(s, a)$ pair. The probabilities of each action being selected can be calculated with, e.g., an exponential softmax distribution:</p>
+    $$
+    \begin{equation}
+    \pi (a|s, \theta) \doteq \frac{\exp(h(s,a,\theta))}{\sum_b \exp(h(s,b,\theta))}.
+    \end{equation}
+    $$
+    <p>This kind of policy parameterization is called <em>softmax in action preferences</em>.</p>
+
+    <!-- Content continues similarly for other chapters -->
+
+</main>
+
+6:["slug","2024-10-31-Notes-on-RL-an-Introduction","d"]
+0:["Np5qZ1FNfteFwBaYBCHhB",[[["",{"children":["content",{"children":["posts",{"children":[["slug","2024-10-31-Notes-on-RL-an-Introduction","d"],{"children":["__PAGE__?{\"slug\":\"2024-10-31-Notes-on-RL-an-Introduction\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["posts",{"children":[["slug","2024-10-31-Notes-on-RL-an-Introduction","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"max-w-4xl mx-auto py-12 px-4","children":[["$","div",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/content/posts","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left w-4 h-4 mr-2","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Posts"]}]}],["$","$L3",null,{"content":"$4","title":"2024-10-31-Notes-on-RL-an-Introduction"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","posts","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/cb91445b47bdd02a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$La",null]]]]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null

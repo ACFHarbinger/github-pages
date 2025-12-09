@@ -6,17 +6,6 @@
     <title>Combinatorial Optimization: An Introduction</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { border-bottom: 1px solid #eee; margin-bottom: 20px; padding-bottom: 10px; }
-        h1 { margin-bottom: 5px; }
-        h2, h3, h4 { margin-top: 1.5em; margin-bottom: 0.5em; }
-        .meta { color: #666; font-size: 0.9em; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul { list-style-type: disc; margin-left: 20px; }
-        li { margin-bottom: 5px; }
-    </style>
 </head>
 <body>
 
@@ -38,15 +27,19 @@
     <p>Combinations of elements from the set that may be encountered when trying to formulate a solution to a instance of this class of problems are called <em>candidate</em> or <em>feasible</em> solutions. Then, the <em>solutions</em> to this kind of problem are the feasible solutions that satisfy all required conditions.</p>
 
     <h4>The Traveling Salesman Problem</h4>
-    <p>One of the most well known combinatorial problems is the <em>Traveling Salesman Problem</em> (TSP), where, given a graph $$G(N, E): N = \{v_1, ..., v_n\} \wedge E \subseteq \{(u, v): u, v \in N\}$$, the objective is to find shortest path possible $$s^* = \{\bar{s} \subseteq E: \forall s \subseteq E, \ \text{dist}(\bar{s}) \leq \text{dist}(s)\}$$ that visits each of the nodes $$v \in N$$ once and only once.</p>
+    <p>One of the most well known combinatorial problems is the <em>Traveling Salesman Problem</em> (TSP), where, given a graph 
+        $$G(N, E): N = \{v_1, ..., v_n\} \wedge E \subseteq \{(u, v): u, v \in N\},$$ 
+        the objective is to find shortest path possible 
+        $$s^* = \{\bar{s} \subseteq E: \forall s \subseteq E, \ \text{dist}(\bar{s}) \leq \text{dist}(s)\}$$ 
+        that visits each of the nodes $v \in N$ once and only once.</p>
 
     <h3>Optimization</h3>
     <p>Colloquially, optimization refers to the process of optimizing something, i.e., making it the best. What that means can vary, depending on the task at hand. For example, if we want to optimize the path to a location, then we may want to minimize the distance travelled or the travel time. However, if we want to optimize our wealth, than that may involve both maximizing our income and minimizing our expenses.</p>
     <p>Formally, an optimization problem consists of:</p>
     <ul>
-        <li>Objective function $$f(x): X \rightarrow Y$$, which gives us the output we are trying to optimize;</li>
-        <li>Variable set $$X = \{x_1, ..., x_n\}$$, which are the inputs to $$f(x)$$;</li>
-        <li>A set of constraints $$C = \{h_1(x), ..., h_n(x), g_1(x), ..., g_n(x)\}$$, which are (equality $$h_k(x)$$ and inequality $$g_k(x)$$) equations that place limits on the values that some variables may take.</li>
+        <li>Objective function $f(x): X \rightarrow Y$, which gives us the output we are trying to optimize;</li>
+        <li>Variable set $X = \{x_1, ..., x_n\}$, which are the inputs to $f(x)$;</li>
+        <li>A set of constraints $C = \{h_1(x), ..., h_n(x), g_1(x), ..., g_n(x)\}$, which are (equality $h_k(x)$ and inequality $g_k(x)$) equations that place limits on the values that some variables may take.</li>
     </ul>
 
     <h4>Mathematical Optimization</h4>
@@ -61,7 +54,7 @@
     </ul>
 
     <h3>Combinatorial Optimization (CO)</h3>
-    <p>Now knowing the meaning of both Combinatorial (problems) and (mathematical) Optimization, we can define CO as a subfield of Discrete Optimization with the aim of developing algorithms that, given a finite set of discrete variables $$X$$ and constraints $$C$$, searches for the maxima or minima of an objective function $$f(x)$$.</p>
+    <p>Now knowing the meaning of both Combinatorial (problems) and (mathematical) Optimization, we can define CO as a subfield of Discrete Optimization with the aim of developing algorithms that, given a finite set of discrete variables $X$ and constraints $C$, searches for the maxima or minima of an objective function $f(x)$.</p>
 
     <h2>Bibliography</h2>
     <ul>
