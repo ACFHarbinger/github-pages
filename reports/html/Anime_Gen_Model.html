@@ -44,48 +44,58 @@
 
         <!-- Section 1: Strategic Dashboard (Performance Metrics) -->
         <section id="dashboard" class="scroll-mt-24">
-            <div class="mb-6">
-                <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
-                    <span class="w-8 h-1 bg-blue-500 rounded-full"></span>
-                    Performance Landscape
-                </h3>
-                <p class="text-stone-600 mt-2 max-w-4xl">
-                    This section visualizes the trade-offs between computational cost (VRAM) and output quality (Community Rating). 
-                    Understanding these metrics is crucial for determining which models can be deployed in consumer-grade environments versus server-side clusters.
-                </p>
-            </div>
+            <!-- NEW WRAPPER: Ensures all content within this section is centered and constrained for visual hierarchy -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Ensure all content is inside one vertical flex container for strict top-to-bottom flow -->
+                <div class="flex flex-col space-y-8"> 
+                    
+                    <!-- 1. Section Title & Description (The very top content) -->
+                    <!-- Added text-center here to center the description text -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-stone-800 flex items-center justify-center gap-2">
+                            <span class="w-8 h-1 bg-blue-500 rounded-full"></span>
+                            Performance Landscape
+                        </h3>
+                        <!-- Adjusted margin to mt-4 and removed max-w-4xl as the parent wrapper now handles it -->
+                        <p class="text-stone-600 mt-4">
+                            This section visualizes the trade-offs between computational cost (VRAM) and output quality (Community Rating). 
+                            Understanding these metrics is crucial for determining which models can be deployed in consumer-grade environments versus server-side clusters.
+                        </p>
+                    </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Chart 1: VRAM vs Speed -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
-                    <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource Efficiency Analysis</h4>
-                    <div class="chart-container">
-                        <canvas id="resourceChart"></canvas>
+                    <!-- 2. Chart (Now the second item in the section flow, centered) -->
+                    <!-- max-w-2xl mx-auto is kept here to make the chart card visually narrower than the section title -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 max-w-2xl mx-auto w-full">
+                        <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource Efficiency Analysis</h4>
+                        <div class="chart-container">
+                            <canvas id="resourceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- 3. Strengths and Weaknesses (Now the third item, centered) -->
+                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 max-w-2xl mx-auto w-full">
+                        <h4 class="text-lg font-bold text-blue-800 mb-4">Key Findings (Strengths & Weaknesses)</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2 mt-1">▸</span>
+                                <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong> While slower, models like <em>Anything V5</em> offer superior semantic understanding compared to GANs.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2 mt-1">▸</span>
+                                <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g., AnimeGANv2) are real-time capable but lack generative diversity, suitable only for style transfer, not creation from scratch.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2 mt-1">▸</span>
+                                <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo offers a middle ground—fast inference with decent quality, making it the prime candidate for interactive software integration.</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-blue-200 mt-4">
+                            <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX 3060 (12GB).</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Text Summary -->
-                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 flex flex-col justify-center space-y-4">
-                    <h4 class="text-lg font-bold text-blue-800">Key Findings</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-2 mt-1">▸</span>
-                            <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong> While slower, models like <em>Anything V5</em> offer superior semantic understanding compared to GANs.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-2 mt-1">▸</span>
-                            <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g., AnimeGANv2) are real-time capable but lack generative diversity, suitable only for style transfer, not creation from scratch.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-500 mr-2 mt-1">▸</span>
-                            <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo offers a middle ground—fast inference with decent quality, making it the prime candidate for interactive software integration.</span>
-                        </li>
-                    </ul>
-                    <div class="pt-4 border-t border-blue-200">
-                         <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX 3060 (12GB).</p>
-                    </div>
-                </div>
             </div>
+            
         </section>
 
         <!-- Section 2: Model Explorer (Interactive Radar) -->
@@ -97,21 +107,23 @@
                 </h3>
                 <p class="text-stone-600 mt-2">
                     Select a model below to analyze its specific capabilities across five key dimensions: 
-                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence), <strong>Speed</strong> (Inference time), 
+                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence), 
+                    <strong>Speed</strong> (Inference time), 
                     <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet compatibility).
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[600px]">
-                <!-- Sidebar: Model Selection -->
-                <div class="lg:col-span-4 bg-stone-50 border-r border-stone-100 p-4 space-y-2 overflow-y-auto max-h-[600px]">
+            <!-- FIX START: Ensure vertical stacking -->
+            <div class="flex flex-col">
+                <!-- Sidebar: Model Selection - Adjusted classes for dropdown (removed scroll/height limits) -->
+                <div class="w-full bg-stone-50 border-b border-stone-100 lg:border-r-0 p-4">
                     <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 px-2">Select Model</p>
                     <!-- Generated via JS -->
-                    <div id="modelList" class="space-y-2"></div>
+                    <div id="modelList"></div>
                 </div>
 
-                <!-- Main: Radar Chart & Details -->
-                <div class="lg:col-span-8 p-6 lg:p-10 flex flex-col">
+                <!-- Main: Radar Chart & Details - Full width -->
+                <div class="w-full p-6 lg:p-10 flex flex-col">
                     <div class="flex flex-col md:flex-row gap-8 items-center h-full">
                         <!-- Radar Chart -->
                         <div class="w-full md:w-1/2 flex justify-center">
@@ -129,6 +141,7 @@
                     </div>
                 </div>
             </div>
+            <!-- FIX END -->
         </section>
 
         <!-- Section 3: Architecture Comparison -->

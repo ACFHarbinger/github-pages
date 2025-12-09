@@ -5,7 +5,7 @@ const lossData = {
         desc: "The simplest approach: Pull positive pairs together, push negative pairs apart.",
         pros: "Simple and intuitive to implement.",
         cons: "Greedy algorithm. Collapses intra-class variance (e.g., forces all 'red dresses' to the same point), losing nuance.",
-        formula: "Target: 0 distance for positives, >m distance for negatives."
+        formula: "Target: 0 distance for positives, > m distance for negatives."
     },
     triplet: {
         title: "Triplet Loss",
@@ -27,13 +27,24 @@ const lossData = {
 
 // 1. Loss Explorer Logic
 function updateLoss(type) {
-    // Update buttons
+    // Determine the target element. 
+    // If called by a click, use event.currentTarget. 
+    // If called programmatically (like during initialization), find it using the type.
+    const targetElement = event 
+        ? event.currentTarget 
+        : document.querySelector(`.loss-btn[onclick*="updateLoss('${type}')"]`);
+
+    // Update buttons (Remove active state from all)
     document.querySelectorAll('.loss-btn').forEach(btn => {
         btn.classList.remove('border-amber-500', 'ring-2', 'ring-amber-500');
         btn.classList.add('border-stone-200');
     });
-    event.currentTarget.classList.remove('border-stone-200');
-    event.currentTarget.classList.add('border-amber-500', 'ring-2', 'ring-amber-500');
+
+    // Apply active state to the target button if found
+    if (targetElement) {
+        targetElement.classList.remove('border-stone-200');
+        targetElement.classList.add('border-amber-500', 'ring-2', 'ring-amber-500');
+    }
 
     // Update Content
     const data = lossData[type];

@@ -4,7 +4,7 @@
 8:I[6423,[],""]
 9:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
 a:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
-4:T3dea,
+4:T3deb,
 
     <!-- Chosen Palette: Warm Neutrals. Background: Stone-50 (#fafaf9). Primary Text: Stone-800. 
          Accents: Amber-600 (Focus/Action), Stone-500 (Secondary). 
@@ -34,7 +34,7 @@ a:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">🏛️</span>
-                    <h1 class="text-lg font-bold tracking-tight text-stone-900 font-heading">Semantic<span class="font-light text-stone-500">Architect</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight text-stone-900 font-heading">Semantic <span class="font-light text-stone-500">Architect</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#foundation" class="text-stone-500 hover:text-amber-600 transition-base">Foundation Models</a>
@@ -243,14 +243,14 @@ a:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app
 
     <!-- Logic Script -->
     
-5:T221c,// --- Data for Loss Explorer ---
+5:T23db,// --- Data for Loss Explorer ---
 const lossData = {
     contrastive: {
         title: "Contrastive Loss (Pair-Based)",
         desc: "The simplest approach: Pull positive pairs together, push negative pairs apart.",
         pros: "Simple and intuitive to implement.",
         cons: "Greedy algorithm. Collapses intra-class variance (e.g., forces all 'red dresses' to the same point), losing nuance.",
-        formula: "Target: 0 distance for positives, >m distance for negatives."
+        formula: "Target: 0 distance for positives, > m distance for negatives."
     },
     triplet: {
         title: "Triplet Loss",
@@ -272,13 +272,24 @@ const lossData = {
 
 // 1. Loss Explorer Logic
 window.updateLoss = function(type) {
-    // Update buttons
+    // Determine the target element. 
+    // If called by a click, use event.currentTarget. 
+    // If called programmatically (like during initialization), find it using the type.
+    const targetElement = event 
+        ? event.currentTarget 
+        : document.querySelector(`.loss-btn[onclick*="updateLoss('${type}')"]`);
+
+    // Update buttons (Remove active state from all)
     document.querySelectorAll('.loss-btn').forEach(btn => {
         btn.classList.remove('border-amber-500', 'ring-2', 'ring-amber-500');
         btn.classList.add('border-stone-200');
     });
-    event.currentTarget.classList.remove('border-stone-200');
-    event.currentTarget.classList.add('border-amber-500', 'ring-2', 'ring-amber-500');
+
+    // Apply active state to the target button if found
+    if (targetElement) {
+        targetElement.classList.remove('border-stone-200');
+        targetElement.classList.add('border-amber-500', 'ring-2', 'ring-amber-500');
+    }
 
     // Update Content
     const data = lossData[type];
@@ -377,39 +388,6 @@ window.generateArchitecture = function() {
 // --- Chart Initialization ---
 
 
-    // 2. Bar Chart (SOTA Comparison)
-    const ctxSota = document.getElementById('sotaChart').getContext('2d');
-    new Chart(ctxSota, {
-        type: 'bar',
-        data: {
-            labels: ['Visual Similarity', 'Segmentation', 'Zero-Shot Classification', 'Text-to-Image Search'],
-            datasets: [{
-                label: 'DINOv2 (Visual)',
-                data: [95, 90, 40, 0],
-                backgroundColor: '#d97706', // Amber
-                borderRadius: 4
-            }, {
-                label: 'CLIP (Multimodal)',
-                data: [65, 50, 90, 95],
-                backgroundColor: '#57534e', // Stone
-                borderRadius: 4
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: { beginAtZero: true, max: 100, grid: { color: '#f5f5f4' } },
-                x: { grid: { display: false } }
-            },
-            plugins: {
-                legend: { position: 'bottom', labels: { usePointStyle: true, fontFamily: 'Plus Jakarta Sans' } },
-                tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}% (Relative Perf)` } }
-            }
-        }
-    });
-});
-
 // --- Initialization ---
 // Initialize Loss Content
     // Removed problematic updateLoss initialization call
@@ -450,8 +428,41 @@ window.generateArchitecture = function() {
             },
             plugins: { legend: { display: false } }
         }
+    });
+
+    // 2. Bar Chart (SOTA Comparison)
+    const ctxSota = document.getElementById('sotaChart').getContext('2d');
+    new Chart(ctxSota, {
+        type: 'bar',
+        data: {
+            labels: ['Visual Similarity', 'Segmentation', 'Zero-Shot Classification', 'Text-to-Image Search'],
+            datasets: [{
+                label: 'DINOv2 (Visual)',
+                data: [95, 90, 40, 0],
+                backgroundColor: '#d97706', // Amber
+                borderRadius: 4
+            }, {
+                label: 'CLIP (Multimodal)',
+                data: [65, 50, 90, 95],
+                backgroundColor: '#57534e', // Stone
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: { beginAtZero: true, max: 100, grid: { color: '#f5f5f4' } },
+                x: { grid: { display: false } }
+            },
+            plugins: {
+                legend: { position: 'bottom', labels: { usePointStyle: true, fontFamily: 'Plus Jakarta Sans' } },
+                tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}% (Relative Perf)` } }
+            }
+        }
+    });
 if(window.updateLoss) window.updateLoss('contrastive');
 7:["slug","semantic","d"]
-0:["ytNyBwSKXeHCVbKHnCRCP",[[["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__?{\"slug\":\"semantic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Semantic Search"}],["$","$L3",null,{"content":"$4","styles":"/* Typography */\n.report-content { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafaf9; color: #44403c; }\nh1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }\n\n/* Chart Container Strict Styling */\n.chart-container {\n    position: relative;\n    width: 100%;\n    max-width: 600px;\n    height: 350px; /* Base height */\n    max-height: 400px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n/* Custom Scrollbar */\n::-webkit-scrollbar { width: 8px; }\n::-webkit-scrollbar-track { background: #f5f5f4; }\n::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }\n::-webkit-scrollbar-thumb:hover { background: #a8a29e; }\n\n/* Utilities */\n.glass-panel {\n    background: rgba(255, 255, 255, 0.95);\n    backdrop-filter: blur(8px);\n    border: 1px solid #e7e5e4;\n}\n.transition-base { transition: all 0.3s ease-in-out; }","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$5","title":"Semantic Search"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/40e2114990ed84f6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L9",null,{}],["$","$La",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lb",null]]]]
+0:["4JN7HQAnYjvyut2zVpJoK",[[["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__?{\"slug\":\"semantic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Semantic Search"}],["$","$L3",null,{"content":"$4","styles":"/* Typography */\n.report-content { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafaf9; color: #44403c; }\nh1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }\n\n/* Chart Container Strict Styling */\n.chart-container {\n    position: relative;\n    width: 100%;\n    max-width: 600px;\n    height: 350px; /* Base height */\n    max-height: 400px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n/* Custom Scrollbar */\n::-webkit-scrollbar { width: 8px; }\n::-webkit-scrollbar-track { background: #f5f5f4; }\n::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }\n::-webkit-scrollbar-thumb:hover { background: #a8a29e; }\n\n/* Utilities */\n.glass-panel {\n    background: rgba(255, 255, 255, 0.95);\n    backdrop-filter: blur(8px);\n    border: 1px solid #e7e5e4;\n}\n.transition-base { transition: all 0.3s ease-in-out; }","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$5","title":"Semantic Search"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/4ef1a5bd76eb7406.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$L9",null,{}],["$","$La",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lb",null]]]]
 b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null
