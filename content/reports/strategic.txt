@@ -4,7 +4,35 @@
 9:I[6423,[],""]
 a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
 b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
-4:T36ea,
+4:T3dcd,
+
+    <!-- Palette: "Synthetic Indigo" -->
+    <!-- Structure: 
+         1. Hero (Paradigm Shift)
+         2. Strategic Stack (Architecture Visual)
+         3. The Pipeline (Infographic Flowchart)
+         4. Efficiency Stats
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. CSS-based Infographics only. -->
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl text-indigo-600">❖</span>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span class="font-normal text-slate-500">Pipeline '25</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#paradigm" class="text-slate-500 hover:text-indigo-600 transition-colors">Shift</a>
+                    <a href="#stack" class="text-slate-500 hover:text-indigo-600 transition-colors">The Stack</a>
+                    <a href="#pipeline" class="text-slate-500 hover:text-indigo-600 transition-colors">Pipeline Infographic</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-24">
 
         <!-- 1. The Paradigm Shift (Hero) -->
         <section id="paradigm" class="text-center max-w-4xl mx-auto space-y-8">
@@ -212,225 +240,228 @@ b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app
             </div>
         </section>
 
-    5:Tcf8,
-        /* Base Typography */
-        .report-content { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
+    </main>
 
-        /* Chart Container */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            height: 350px;
-            max-height: 400px;
-            margin: 0 auto;
-        }
+    <footer class="bg-white border-t border-slate-200 py-12 text-center">
+        <p class="text-slate-500 font-medium">MetaCLIP Strategic Report • Late 2025</p>
+        <p class="text-slate-400 text-sm mt-1">Generated based on SynthCLIP, SPARCL, and SynthVLM methodologies.</p>
+    </footer>
 
-        /* Infographic Pipeline Styles */
-        .pipeline-container {
-            position: relative;
-        }
-        
-        /* The Connecting Line */
-        .pipeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #e2e8f0;
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-
-        /* The Node (Circle) */
-        .pipeline-node {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: white;
-            border: 4px solid #cbd5e1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #64748b;
-            position: relative;
-            z-index: 10;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            margin: 0 auto; /* Center horizontally */
-        }
-
-        .pipeline-node.active {
-            border-color: #4f46e5;
-            background: #4f46e5;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 0 0 8px rgba(79, 70, 229, 0.2);
-        }
-
-        /* The Content Card (Left or Right) */
-        .pipeline-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            width: 100%;
-        }
-        
-        .pipeline-card.active {
-            border-color: #4f46e5;
-            border-left-width: 4px;
-        }
-
-        /* Connector Arrow (CSS only) */
-        .connector-line {
-            display: none; /* Hidden on mobile */
-        }
-
-        @media (min-width: 1024px) {
-            .connector-line {
-                display: block;
-                position: absolute;
-                top: 30px;
-                height: 2px;
-                background: #cbd5e1;
-                width: 50px;
-                transition: background 0.3s;
-            }
-            .left-card .connector-line { left: 100%; }
-            .right-card .connector-line { right: 100%; }
-            
-            .pipeline-node.active + .connector-line,
-            .pipeline-card.active .connector-line {
-                background: #4f46e5;
-            }
-        }
-
-        /* Interactive Card Hover Effects */
-        .interactive-card {
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        .interactive-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: #6366f1;
-        }
-        .interactive-card.active {
-            border-color: #4f46e5;
-            background-color: #eef2ff;
-        }
-    6:T133c,
-        // --- Stack Visual Data ---
-        const stackDetails = {
-            flux: {
-                icon: "⚡",
-                title: "FLUX.1 Kontext Pro",
-                desc: "The 'Engine' of the pipeline. Selected for its ability to accept both text and reference images natively, enabling the 'Context-Aware' generation required for VLM training.",
-                inputs: "Text + Image",
-                role: "Synthesis"
-            },
-            control: {
-                icon: "📐",
-                title: "ControlNet Union Pro 2.0",
-                desc: "The 'Structure' enforcer. Attaches to FLUX.1 to lock in depth, canny edges, and poses. Essential for generating variations where the concept changes but the shape remains.",
-                inputs: "Depth/Edge Maps",
-                role: "Invariance"
-            },
-            instruct: {
-                icon: "📝",
-                title: "InstructAny2Pix",
-                desc: "The 'Semantic' editor. A model trained to follow editing instructions. Used to create compositional challenges (e.g., 'swap the cat for a dog').",
-                inputs: "Edit Instructions",
-                role: "Composition"
-            }
-        };
-
-        window.showStackDetail = function(key) {
-            // Update Active State
-            document.querySelectorAll('.interactive-card').forEach(el => el.classList.remove('active', 'border-indigo-500', 'shadow-sm'));
-            document.querySelectorAll('.interactive-card').forEach(el => el.classList.add('border-slate-200'));
-            event.currentTarget.classList.add('active', 'border-indigo-500', 'shadow-sm');
-            event.currentTarget.classList.remove('border-slate-200');
-
-            // Update Visual
-            const data = stackDetails[key];
-            const visual = document.getElementById('stackVisual');
-            
-            // Simple fade effect
-            visual.style.opacity = 0;
-            setTimeout(() => {
-                visual.innerHTML = `
-                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">${data.icon}</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">${data.title}</h3>
-                    <p class="text-slate-600 mb-6">${data.desc}</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-2 rounded border border-slate-200">
-                            <span class="block text-xs font-bold text-slate-500">Inputs</span>
-                            <span class="font-mono text-sm">${data.inputs}</span>
-                        </div>
-                        <div class="bg-slate-50 p-2 rounded border border-slate-200">
-                            <span class="block text-xs font-bold text-slate-500">Role</span>
-                            <span class="font-mono text-sm">${data.role}</span>
-                        </div>
-                    </div>
-                `;
-                visual.style.opacity = 1;
-            }, 200);
-        }
-
-        // --- Pipeline Infographic Logic ---
-        window.activateStep = function(step) {
-            // Reset all
-            for(let i=1; i<=4; i++) {
-                document.getElementById(`node-${i}`).classList.remove('active');
-                document.getElementById(`card-${i}`).classList.remove('active');
-            }
-            // Activate target
-            document.getElementById(`node-${step}`).classList.add('active');
-            document.getElementById(`card-${step}`).classList.add('active');
-        }
-
-        // --- Charts ---
-        // Removed original DOMContentLoaded listener block
-        });
+    <!-- Linked Logic -->
     
+5:T9aa,/* Base Typography */
+.report-content { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
 
-// START Report Initialization Code (Manually appended after all function definitions)
+/* Chart Container */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* Infographic Pipeline Styles */
+.pipeline-container {
+    position: relative;
+}
+
+/* The Connecting Line */
+.pipeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e2e8f0;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* The Node (Circle) */
+.pipeline-node {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #64748b;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.pipeline-node.active {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(79, 70, 229, 0.2);
+}
+
+/* The Content Card (Left or Right) */
+.pipeline-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+}
+
+.pipeline-card.active {
+    border-color: #4f46e5;
+    border-left-width: 4px;
+}
+
+/* Connector Arrow (CSS only) */
+.connector-line {
+    display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 1024px) {
+    .connector-line {
+        display: block;
+        position: absolute;
+        top: 30px;
+        height: 2px;
+        background: #cbd5e1;
+        width: 50px;
+        transition: background 0.3s;
+    }
+    .left-card .connector-line { left: 100%; }
+    .right-card .connector-line { right: 100%; }
+    
+    .pipeline-node.active + .connector-line,
+    .pipeline-card.active .connector-line {
+        background: #4f46e5;
+    }
+}
+
+/* Interactive Card Hover Effects */
+.interactive-card {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.interactive-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #6366f1;
+}
+.interactive-card.active {
+    border-color: #4f46e5;
+    background-color: #eef2ff;
+}6:Tfb3,// --- Stack Visual Data ---
+const stackDetails = {
+    flux: {
+        icon: "⚡",
+        title: "FLUX.1 Kontext Pro",
+        desc: "The 'Engine' of the pipeline. Selected for its ability to accept both text and reference images natively, enabling the 'Context-Aware' generation required for VLM training.",
+        inputs: "Text + Image",
+        role: "Synthesis"
+    },
+    control: {
+        icon: "📐",
+        title: "ControlNet Union Pro 2.0",
+        desc: "The 'Structure' enforcer. Attaches to FLUX.1 to lock in depth, canny edges, and poses. Essential for generating variations where the concept changes but the shape remains.",
+        inputs: "Depth/Edge Maps",
+        role: "Invariance"
+    },
+    instruct: {
+        icon: "📝",
+        title: "InstructAny2Pix",
+        desc: "The 'Semantic' editor. A model trained to follow editing instructions. Used to create compositional challenges (e.g., 'swap the cat for a dog').",
+        inputs: "Edit Instructions",
+        role: "Composition"
+    }
+};
+
+window.showStackDetail = function(key) {
+    // Update Active State
+    document.querySelectorAll('.interactive-card').forEach(el => el.classList.remove('active', 'border-indigo-500', 'shadow-sm'));
+    document.querySelectorAll('.interactive-card').forEach(el => el.classList.add('border-slate-200'));
+    event.currentTarget.classList.add('active', 'border-indigo-500', 'shadow-sm');
+    event.currentTarget.classList.remove('border-slate-200');
+
+    // Update Visual
+    const data = stackDetails[key];
+    const visual = document.getElementById('stackVisual');
+    
+    // Simple fade effect
+    visual.style.opacity = 0;
+    setTimeout(() => {
+        visual.innerHTML = `
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">${data.icon}</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">${data.title}</h3>
+            <p class="text-slate-600 mb-6">${data.desc}</p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                    <span class="block text-xs font-bold text-slate-500">Inputs</span>
+                    <span class="font-mono text-sm">${data.inputs}</span>
+                </div>
+                <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                    <span class="block text-xs font-bold text-slate-500">Role</span>
+                    <span class="font-mono text-sm">${data.role}</span>
+                </div>
+            </div>
+        `;
+        visual.style.opacity = 1;
+    }, 200);
+}
+
+// --- Pipeline Infographic Logic ---
+window.activateStep = function(step) {
+    // Reset all
+    for(let i=1; i<=4; i++) {
+        document.getElementById(`node-${i}`).classList.remove('active');
+        document.getElementById(`card-${i}`).classList.remove('active');
+    }
+    // Activate target
+    document.getElementById(`node-${step}`).classList.add('active');
+    document.getElementById(`card-${step}`).classList.add('active');
+}
+
+// --- Charts ---
+
+});
+
+// --- Initialization ---
 const ctx = document.getElementById('roiChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Baseline Data', 'Synthetic Data'],
-                    datasets: [{
-                        label: 'Data Needed for SOTA',
-                        data: [100, 18],
-                        backgroundColor: ['rgba(255,255,255,0.2)', '#34d399'], // White-ish vs Emerald
-                        borderRadius: 4,
-                        barThickness: 20
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: { 
-                        x: { display: false, max: 100 }, 
-                        y: { 
-                            ticks: { color: '#94a3b8', font: { family: 'Inter' } },
-                            grid: { display: false }
-                        } 
-                    }
-                }
-// END Report Initialization Code
-8:["slug","strategic","d"]
-0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__?{\"slug\":\"strategic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Strategic Generative Pipeline"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Strategic Generative Pipeline"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Baseline Data', 'Synthetic Data'],
+            datasets: [{
+                label: 'Data Needed for SOTA',
+                data: [100, 18],
+                backgroundColor: ['rgba(255,255,255,0.2)', '#34d399'], // White-ish vs Emerald
+                borderRadius: 4,
+                barThickness: 20
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { 
+                x: { display: false, max: 100 }, 
+                y: { 
+                    ticks: { color: '#94a3b8', font: { family: 'Inter' } },
+                    grid: { display: false }
+                } 
+            }
+        }8:["slug","strategic","d"]
+0:["ytNyBwSKXeHCVbKHnCRCP",[[["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__?{\"slug\":\"strategic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Strategic Generative Pipeline"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Strategic Generative Pipeline"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/40e2114990ed84f6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
 c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null

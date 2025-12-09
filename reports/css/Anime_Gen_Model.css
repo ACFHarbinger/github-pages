@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+}
+
+/* Chart Container Strict Styling */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* Timeline Node Logic */
+.timeline-node.active .circle {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    color: white;
+}
+
+.timeline-node.active .content {
+    border-left-color: #ea580c;
+    background-color: #fff7ed;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all-300 {
+    transition: all 0.3s ease;
+}

@@ -4,7 +4,30 @@
 9:I[6423,[],""]
 a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
 b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
-4:T2cca,
+4:T3343,
+
+    <!-- Chosen Palette: Warm Neutrals (Stone/blue/Slate). Background: #fdfaf6. Accents: #ea580c (blue). 
+         Use of whitespace and subtle shadows for hierarchy. -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl text-blue-600">●</span>
+                    <h1 class="text-xl font-bold tracking-tight text-stone-800">AnimeGen <span class="font-normal text-stone-500">Research Report</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#dashboard" class="text-stone-500 hover:text-blue-600 transition-colors">Performance</a>
+                    <a href="#models" class="text-stone-500 hover:text-blue-600 transition-colors">Model Explorer</a>
+                    <a href="#roadmap" class="text-stone-500 hover:text-blue-600 transition-colors">Research Plan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
 
         <!-- Header / Context -->
         <header class="text-center max-w-3xl mx-auto space-y-4">
@@ -197,290 +220,324 @@ b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app
             </div>
         </section>
 
-    5:T4b6,
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        .report-content { font-family: 'Inter', sans-serif; background-color: #fdfaf6; color: #333; }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+    </main>
 
-        /* Chart Container Strict Styling */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            height: 350px;
-            max-height: 400px;
-            margin: 0 auto;
-        }
+    <footer class="bg-stone-100 py-10 mt-20 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application</p>
+        </div>
+    </footer>
 
-        /* Timeline Node Logic */
-        .timeline-node.active .circle { background-color: #ea580c; border-color: #ea580c; color: white; }
-        .timeline-node.active .content { border-left-color: #ea580c; background-color: #fff7ed; }
-        
-        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
-        .transition-all-300 { transition: all 0.3s ease; }
-    6:T3110,
-        // --- Data Store ---
-        const models = [
-            {
-                id: 'anything_v5',
-                name: 'Anything V5',
-                type: 'Stable Diffusion 1.5 Finetune',
-                desc: 'The gold standard for general anime illustration. Highly flexible prompt adherence.',
-                stats: { quality: 9, speed: 6, flexibility: 9, license: 8, ecosystem: 10 },
-                pros: ['Massive LoRA compatibility', 'Rich color palette', 'Low hardware requirement (SD1.5)'],
-                cons: ['Can struggle with anatomy without negative prompts', 'Resolution limited natively to 512-768px']
-            },
-            {
-                id: 'waifu_diff',
-                name: 'Waifu Diffusion v1.4',
-                type: 'Stable Diffusion 1.5 Finetune',
-                desc: 'Trained on Danbooru tags heavily. Requires specific tag-based prompting syntax.',
-                stats: { quality: 8, speed: 6, flexibility: 7, license: 9, ecosystem: 8 },
-                pros: ['Excellent tag compliance', 'Open licensing (MIT)', 'Distinct style'],
-                cons: ['Steeper learning curve for prompting', 'Older base model']
-            },
-            {
-                id: 'counterfeit',
-                name: 'Counterfeit V3.0',
-                type: 'Stable Diffusion 1.5 Finetune',
-                desc: 'Specialized in high-fidelity, painterly, and background-rich anime art.',
-                stats: { quality: 9.5, speed: 6, flexibility: 8, license: 8, ecosystem: 9 },
-                pros: ['Stunning lighting effects', 'High details', 'Great for landscapes'],
-                cons: ['Slightly less versatile for character design']
-            },
-            {
-                id: 'animagine_xl',
-                name: 'Animagine XL 3.1',
-                type: 'SDXL Finetune',
-                desc: 'Next-gen high resolution model based on SDXL. Superior quality but heavy resource usage.',
-                stats: { quality: 10, speed: 3, flexibility: 9, license: 7, ecosystem: 7 },
-                pros: ['Native 1024x1024 generation', 'Better text rendering', 'Superior anatomy'],
-                cons: ['Requires high VRAM (12GB+ recommended)', 'Slower inference']
-            },
-            {
-                id: 'animegan',
-                name: 'AnimeGANv2',
-                type: 'GAN',
-                desc: 'Image-to-Image style transfer model. Turns photos into anime style.',
-                stats: { quality: 6, speed: 10, flexibility: 2, license: 9, ecosystem: 4 },
-                pros: ['Real-time processing', 'Lightweight', 'Great for filters'],
-                cons: ['Cannot generate from text', 'Fixed style output']
-            }
-        ];
-
-        const roadmapSteps = [
-            {
-                phase: 'Phase 1',
-                title: 'Literature & Model Selection',
-                details: 'Evaluate current SOTA models. Focus on weights that allow commercial use (Apache 2.0, OpenRAIL-M).',
-                tasks: ['Audit licenses of SDXL vs SD1.5 checkpoints.', 'Benchmark inference speeds on target hardware.', 'Identify required VRAM constraints.']
-            },
-            {
-                phase: 'Phase 2',
-                title: 'Pipeline Architecture Design',
-                details: 'Design the software integration layer. How will the model talk to the main app?',
-                tasks: ['Select backend: Python (FastAPI) vs C++ (OnnxRuntime).', 'Design API schema for prompt ingestion.', 'Implement queue system for image generation requests.']
-            },
-            {
-                phase: 'Phase 3',
-                title: 'Optimization & Quantization',
-                details: 'Reduce model size and memory footprint without significant quality loss.',
-                tasks: ['Test TensorRT implementation for NVIDIA GPUs.', 'Evaluate xFormers for memory efficiency.', 'Experiment with INT8 quantization.']
-            },
-            {
-                phase: 'Phase 4',
-                title: 'Fine-tuning Strategy (Optional)',
-                details: 'If base models fail specific style requirements, implement Low-Rank Adaptation (LoRA).',
-                tasks: ['Curate a dataset of ~50 high-quality target style images.', 'Train LoRA adapter.', 'Integrate adapter loading into inference pipeline.']
-            }
-        ];
-
-        // --- State Management ---
-        let selectedModelId = models[0].id;
-        let radarChartInstance = null;
-
-        // --- DOM Elements ---
-        const modelListEl = document.getElementById('modelList');
-        const modelDetailsEl = document.getElementById('modelDetails');
-        const roadmapContainer = document.getElementById('roadmapContainer');
-
-        // --- Initialization ---
-        // Removed original DOMContentLoaded listener block
-
-        // --- Chart.js: Resource Chart ---
-        window.initResourceChart = function() {
-            const ctx = document.getElementById('resourceChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Anything V5', 'Waifu Diff', 'Animagine XL', 'AnimeGANv2'],
-                    datasets: [
-                        {
-                            label: 'VRAM Usage (GB)',
-                            data: [6, 6, 14, 2],
-                            backgroundColor: '#fb923c', // blue-400
-                            borderRadius: 4
-                        },
-                        {
-                            label: 'Quality Score (1-10)',
-                            data: [9, 8, 10, 5],
-                            backgroundColor: '#a8a29e', // Stone-400
-                            borderRadius: 4
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'bottom' },
-                        tooltip: { mode: 'index', intersect: false }
-                    },
-                    scales: {
-                        y: { beginAtZero: true, max: 16 }
-                    }
-                }
-            });
-        }
-
-        // --- Chart.js: Radar Chart Update ---
-        window.updateRadarChart = function(model) {
-            const ctx = document.getElementById('radarChart').getContext('2d');
-            
-            if (radarChartInstance) {
-                radarChartInstance.destroy();
-            }
-
-            radarChartInstance = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['Quality', 'Speed', 'Flexibility', 'License', 'Ecosystem'],
-                    datasets: [{
-                        label: model.name,
-                        data: [
-                            model.stats.quality,
-                            model.stats.speed,
-                            model.stats.flexibility,
-                            model.stats.license,
-                            model.stats.ecosystem
-                        ],
-                        backgroundColor: 'rgba(234, 88, 12, 0.2)', // blue with opacity
-                        borderColor: '#ea580c',
-                        pointBackgroundColor: '#ea580c',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: '#ea580c'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            angleLines: { color: '#e5e7eb' },
-                            grid: { color: '#e5e7eb' },
-                            pointLabels: { font: { size: 12, family: 'Inter' }, color: '#4b5563' },
-                            suggestedMin: 0,
-                            suggestedMax: 10
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-        }
-
-        // --- Render Model List ---
-        window.renderModelList = function() {
-            modelListEl.innerHTML = '';
-            models.forEach(model => {
-                const btn = document.createElement('button');
-                btn.className = `w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors border ${
-                    model.id === selectedModelId 
-                    ? 'bg-blue-50 border-blue-200 text-blue-700' 
-                    : 'bg-white border-transparent text-stone-600 hover:bg-stone-100'
-                }`;
-                btn.innerText = model.name;
-                btn.onclick = () => {
-                    selectedModelId = model.id;
-                    renderModelList(); // Re-render to update active state
-                    updateModelView(model.id);
-                };
-                modelListEl.appendChild(btn);
-            });
-        }
-
-        // --- Update Model Details View ---
-        window.updateModelView = function(id) {
-            const model = models.find(m => m.id === id);
-            
-            // Update Text Details
-            let prosHtml = model.pros.map(p => `<li class="flex items-start text-sm text-stone-600"><span class="text-green-500 mr-2">✓</span>${p}</li>`).join('');
-            let consHtml = model.cons.map(c => `<li class="flex items-start text-sm text-stone-600"><span class="text-red-400 mr-2">✕</span>${c}</li>`).join('');
-
-            modelDetailsEl.innerHTML = `
-                <div class="animate-fade-in">
-                    <h2 class="text-3xl font-bold text-stone-800 mb-2">${model.name}</h2>
-                    <span class="inline-block bg-stone-100 text-stone-600 text-xs px-2 py-1 rounded mb-4 font-mono">${model.type}</span>
-                    <p class="text-stone-600 mb-6">${model.desc}</p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div>
-                            <h5 class="font-bold text-stone-800 text-sm mb-2">Strengths</h5>
-                            <ul class="space-y-1">${prosHtml}</ul>
-                        </div>
-                        <div>
-                            <h5 class="font-bold text-stone-800 text-sm mb-2">Weaknesses</h5>
-                            <ul class="space-y-1">${consHtml}</ul>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            // Update Chart
-            updateRadarChart(model);
-        }
-
-        // --- Render Interactive Roadmap ---
-        window.renderRoadmap = function() {
-            roadmapContainer.innerHTML = '';
-            roadmapSteps.forEach((step, index) => {
-                const node = document.createElement('div');
-                node.className = 'timeline-node relative pl-8 cursor-pointer group';
-                node.innerHTML = `
-                    <div class="circle absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-stone-300 transition-colors group-hover:border-blue-500"></div>
-                    <div class="content p-4 rounded-lg border-l-4 border-stone-200 bg-white shadow-sm transition-all duration-300 hover:border-blue-400">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${step.phase}</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-stone-800 mb-1">${step.title}</h4>
-                        <p class="text-stone-600 text-sm mb-3">${step.details}</p>
-                        <div class="hidden group-hover:block transition-all ease-in-out">
-                            <ul class="space-y-1 mt-2 border-t border-stone-100 pt-2">
-                                ${step.tasks.map(t => `<li class="text-xs text-stone-500 flex items-center"><span class="w-1 h-1 bg-stone-400 rounded-full mr-2"></span>${t}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                `;
-                roadmapContainer.appendChild(node);
-            });
-        }
-
+    <!-- JavaScript Logic -->
     
+5:T43e,@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-// START Report Initialization Code (Manually appended after all function definitions)
+.report-content {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+}
+
+/* Chart Container Strict Styling */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* Timeline Node Logic */
+.timeline-node.active .circle {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    color: white;
+}
+
+.timeline-node.active .content {
+    border-left-color: #ea580c;
+    background-color: #fff7ed;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all-300 {
+    transition: all 0.3s ease;
+}6:T2906,// --- Data Store ---
+const models = [
+    {
+        id: 'anything_v5',
+        name: 'Anything V5',
+        type: 'Stable Diffusion 1.5 Finetune',
+        desc: 'The gold standard for general anime illustration. Highly flexible prompt adherence.',
+        stats: { quality: 9, speed: 6, flexibility: 9, license: 8, ecosystem: 10 },
+        pros: ['Massive LoRA compatibility', 'Rich color palette', 'Low hardware requirement (SD1.5)'],
+        cons: ['Can struggle with anatomy without negative prompts', 'Resolution limited natively to 512-768px']
+    },
+    {
+        id: 'waifu_diff',
+        name: 'Waifu Diffusion v1.4',
+        type: 'Stable Diffusion 1.5 Finetune',
+        desc: 'Trained on Danbooru tags heavily. Requires specific tag-based prompting syntax.',
+        stats: { quality: 8, speed: 6, flexibility: 7, license: 9, ecosystem: 8 },
+        pros: ['Excellent tag compliance', 'Open licensing (MIT)', 'Distinct style'],
+        cons: ['Steeper learning curve for prompting', 'Older base model']
+    },
+    {
+        id: 'counterfeit',
+        name: 'Counterfeit V3.0',
+        type: 'Stable Diffusion 1.5 Finetune',
+        desc: 'Specialized in high-fidelity, painterly, and background-rich anime art.',
+        stats: { quality: 9.5, speed: 6, flexibility: 8, license: 8, ecosystem: 9 },
+        pros: ['Stunning lighting effects', 'High details', 'Great for landscapes'],
+        cons: ['Slightly less versatile for character design']
+    },
+    {
+        id: 'animagine_xl',
+        name: 'Animagine XL 3.1',
+        type: 'SDXL Finetune',
+        desc: 'Next-gen high resolution model based on SDXL. Superior quality but heavy resource usage.',
+        stats: { quality: 10, speed: 3, flexibility: 9, license: 7, ecosystem: 7 },
+        pros: ['Native 1024x1024 generation', 'Better text rendering', 'Superior anatomy'],
+        cons: ['Requires high VRAM (12GB+ recommended)', 'Slower inference']
+    },
+    {
+        id: 'animegan',
+        name: 'AnimeGANv2',
+        type: 'GAN',
+        desc: 'Image-to-Image style transfer model. Turns photos into anime style.',
+        stats: { quality: 6, speed: 10, flexibility: 2, license: 9, ecosystem: 4 },
+        pros: ['Real-time processing', 'Lightweight', 'Great for filters'],
+        cons: ['Cannot generate from text', 'Fixed style output']
+    }
+];
+
+const roadmapSteps = [
+    {
+        phase: 'Phase 1',
+        title: 'Literature & Model Selection',
+        details: 'Evaluate current SOTA models. Focus on weights that allow commercial use (Apache 2.0, OpenRAIL-M).',
+        tasks: ['Audit licenses of SDXL vs SD1.5 checkpoints.', 'Benchmark inference speeds on target hardware.', 'Identify required VRAM constraints.']
+    },
+    {
+        phase: 'Phase 2',
+        title: 'Pipeline Architecture Design',
+        details: 'Design the software integration layer. How will the model talk to the main app?',
+        tasks: ['Select backend: Python (FastAPI) vs C++ (OnnxRuntime).', 'Design API schema for prompt ingestion.', 'Implement queue system for image generation requests.']
+    },
+    {
+        phase: 'Phase 3',
+        title: 'Optimization & Quantization',
+        details: 'Reduce model size and memory footprint without significant quality loss.',
+        tasks: ['Test TensorRT implementation for NVIDIA GPUs.', 'Evaluate xFormers for memory efficiency.', 'Experiment with INT8 quantization.']
+    },
+    {
+        phase: 'Phase 4',
+        title: 'Fine-tuning Strategy (Optional)',
+        details: 'If base models fail specific style requirements, implement Low-Rank Adaptation (LoRA).',
+        tasks: ['Curate a dataset of ~50 high-quality target style images.', 'Train LoRA adapter.', 'Integrate adapter loading into inference pipeline.']
+    }
+];
+
+// --- State Management ---
+let selectedModelId = models[0].id;
+let radarChartInstance = null;
+
+// --- DOM Elements ---
+const modelListEl = document.getElementById('modelList');
+const modelDetailsEl = document.getElementById('modelDetails');
+const roadmapContainer = document.getElementById('roadmapContainer');
+
+// --- Initialization ---
+
+
+// --- Chart.js: Resource Chart ---
+window.initResourceChart = function() {
+    const ctx = document.getElementById('resourceChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Anything V5', 'Waifu Diff', 'Animagine XL', 'AnimeGANv2'],
+            datasets: [
+                {
+                    label: 'VRAM Usage (GB)',
+                    data: [6, 6, 14, 2],
+                    backgroundColor: '#fb923c', // blue-400
+                    borderRadius: 4
+                },
+                {
+                    label: 'Quality Score (1-10)',
+                    data: [9, 8, 10, 5],
+                    backgroundColor: '#a8a29e', // Stone-400
+                    borderRadius: 4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: { mode: 'index', intersect: false }
+            },
+            scales: {
+                y: { beginAtZero: true, max: 16 }
+            }
+        }
+    });
+}
+
+// --- Chart.js: Radar Chart Update ---
+window.updateRadarChart = function(model) {
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    
+    if (radarChartInstance) {
+        radarChartInstance.destroy();
+    }
+
+    radarChartInstance = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Quality', 'Speed', 'Flexibility', 'License', 'Ecosystem'],
+            datasets: [{
+                label: model.name,
+                data: [
+                    model.stats.quality,
+                    model.stats.speed,
+                    model.stats.flexibility,
+                    model.stats.license,
+                    model.stats.ecosystem
+                ],
+                backgroundColor: 'rgba(234, 88, 12, 0.2)', // blue with opacity
+                borderColor: '#ea580c',
+                pointBackgroundColor: '#ea580c',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#ea580c'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: {
+                    angleLines: { color: '#e5e7eb' },
+                    grid: { color: '#e5e7eb' },
+                    pointLabels: { font: { size: 12, family: 'Inter' }, color: '#4b5563' },
+                    suggestedMin: 0,
+                    suggestedMax: 10
+                }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+}
+
+// --- Render Model List ---
+window.renderModelList = function() {
+    modelListEl.innerHTML = '';
+    models.forEach(model => {
+        const btn = document.createElement('button');
+        btn.className = `w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors border ${
+            model.id === selectedModelId 
+            ? 'bg-blue-50 border-blue-200 text-blue-700' 
+            : 'bg-white border-transparent text-stone-600 hover:bg-stone-100'
+        }`;
+        btn.innerText = model.name;
+        btn.onclick = () => {
+            selectedModelId = model.id;
+            renderModelList(); // Re-render to update active state
+            updateModelView(model.id);
+        };
+        modelListEl.appendChild(btn);
+    });
+}
+
+// --- Update Model Details View ---
+window.updateModelView = function(id) {
+    const model = models.find(m => m.id === id);
+    
+    // Update Text Details
+    let prosHtml = model.pros.map(p => `<li class="flex items-start text-sm text-stone-600"><span class="text-green-500 mr-2">✓</span>${p}</li>`).join('');
+    let consHtml = model.cons.map(c => `<li class="flex items-start text-sm text-stone-600"><span class="text-red-400 mr-2">✕</span>${c}</li>`).join('');
+
+    modelDetailsEl.innerHTML = `
+        <div class="animate-fade-in">
+            <h2 class="text-3xl font-bold text-stone-800 mb-2">${model.name}</h2>
+            <span class="inline-block bg-stone-100 text-stone-600 text-xs px-2 py-1 rounded mb-4 font-mono">${model.type}</span>
+            <p class="text-stone-600 mb-6">${model.desc}</p>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div>
+                    <h5 class="font-bold text-stone-800 text-sm mb-2">Strengths</h5>
+                    <ul class="space-y-1">${prosHtml}</ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-stone-800 text-sm mb-2">Weaknesses</h5>
+                    <ul class="space-y-1">${consHtml}</ul>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Update Chart
+    updateRadarChart(model);
+}
+
+// --- Render Interactive Roadmap ---
+window.renderRoadmap = function() {
+    roadmapContainer.innerHTML = '';
+    roadmapSteps.forEach((step, index) => {
+        const node = document.createElement('div');
+        node.className = 'timeline-node relative pl-8 cursor-pointer group';
+        node.innerHTML = `
+            <div class="circle absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-stone-300 transition-colors group-hover:border-blue-500"></div>
+            <div class="content p-4 rounded-lg border-l-4 border-stone-200 bg-white shadow-sm transition-all duration-300 hover:border-blue-400">
+                <div class="flex justify-between items-center mb-1">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${step.phase}</span>
+                </div>
+                <h4 class="text-lg font-bold text-stone-800 mb-1">${step.title}</h4>
+                <p class="text-stone-600 text-sm mb-3">${step.details}</p>
+                <div class="hidden group-hover:block transition-all ease-in-out">
+                    <ul class="space-y-1 mt-2 border-t border-stone-100 pt-2">
+                        ${step.tasks.map(t => `<li class="text-xs text-stone-500 flex items-center"><span class="w-1 h-1 bg-stone-400 rounded-full mr-2"></span>${t}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+        roadmapContainer.appendChild(node);
+    });
+}
+
+// --- Initialization ---
 initResourceChart();
-            renderModelList();
-            updateModelView(selectedModelId);
-            renderRoadmap();
-// END Report Initialization Code
-8:["slug","anime-gen","d"]
-0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__?{\"slug\":\"anime-gen\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Anime Generation Model"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Anime Generation Model"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+    renderModelList();
+    updateModelView(selectedModelId);
+    renderRoadmap();8:["slug","anime-gen","d"]
+0:["ytNyBwSKXeHCVbKHnCRCP",[[["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__?{\"slug\":\"anime-gen\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Anime Generation Model"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Anime Generation Model"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/40e2114990ed84f6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
 c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null

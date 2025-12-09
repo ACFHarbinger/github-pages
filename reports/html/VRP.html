@@ -7,49 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; }
-        h1, h2, h3, h4, .font-tech { font-family: 'Rajdhani', sans-serif; }
-        
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 350px;
-        }
-
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .glass-panel:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            background: rgba(30, 41, 59, 0.8);
-            transform: translateY(-2px);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Flowchart Connector Lines (CSS Only) */
-        .flow-line {
-            width: 2px;
-            background-color: #475569;
-            margin: 0 auto;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-    </style>
+    <link rel="stylesheet" href="../css/VRP.css">
 </head>
 <body class="antialiased selection:bg-indigo-900 selection:text-indigo-100">
 
@@ -297,85 +255,6 @@
     </footer>
 
     <!-- Chart Logic -->
-    <script>
-        const ctx = document.getElementById('scalingChart').getContext('2d');
-        
-        // Data derived from Table 2 in report
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['100 Nodes', '1,000 Nodes', '10,000 Nodes (XL)'],
-                datasets: [
-                    {
-                        label: 'HGS (PyVRP)',
-                        data: [0.20, 0.50, 2.5],
-                        borderColor: '#10b981', // Emerald
-                        backgroundColor: '#10b981',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'Hexaly (Commercial)',
-                        data: [0.80, 1.6, 2.6],
-                        borderColor: '#38bdf8', // Sky
-                        backgroundColor: '#38bdf8',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'Google OR-Tools',
-                        data: [1.91, 4.18, 6.5],
-                        borderColor: '#a855f7', // Purple
-                        backgroundColor: '#a855f7',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'NCO (Neural)',
-                        data: [1.0, 5.5, 12], // Approximate failure at scale
-                        borderColor: '#f43f5e', // Rose
-                        backgroundColor: '#f43f5e',
-                        borderWidth: 3,
-                        borderDash: [5, 5],
-                        tension: 0.3
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { color: '#94a3b8', font: { family: 'Inter' } }
-                    },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#e2e8f0',
-                        bodyColor: '#e2e8f0',
-                        borderColor: '#475569',
-                        borderWidth: 1,
-                        callbacks: {
-                            label: function(context) {
-                                return context.dataset.label + ': ' + context.raw + '% Gap';
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
-                        ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Optimality Gap (%)', color: '#64748b' }
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { color: '#94a3b8', font: { family: 'Rajdhani', size: 14 } }
-                    }
-                }
-            }
-        });
-    </script>
+    <script src="../javascript/VRP.js"></script>
 </body>
 </html>

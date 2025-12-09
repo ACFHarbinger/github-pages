@@ -4,7 +4,27 @@
 9:I[6423,[],""]
 a:I[8212,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
 b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app/layout-c953c34f9ea7e687.js"],"default"]
-4:T38ef,
+4:T3f39,
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl text-indigo-500">🚚</span>
+                    <h1 class="text-xl font-bold tracking-tight font-tech">Optima<span class="text-indigo-400">2025</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#landscape" class="text-slate-400 hover:text-indigo-400 transition-colors">The Landscape</a>
+                    <a href="#paradigms" class="text-slate-400 hover:text-indigo-400 transition-colors">Algorithms</a>
+                    <a href="#evrp" class="text-slate-400 hover:text-indigo-400 transition-colors">EVRP Frontier</a>
+                    <a href="#recommendations" class="bg-indigo-600/20 text-indigo-300 border border-indigo-500/50 px-4 py-1.5 rounded-full hover:bg-indigo-600/30 transition-colors">Practitioner's Guide</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
 
         <!-- Hero Section -->
         <section class="text-center space-y-6">
@@ -221,128 +241,137 @@ b:I[1403,["972","static/chunks/972-125803dc71d1afa1.js","185","static/chunks/app
             </div>
         </section>
 
-    5:T59c,
-        .report-content { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; }
-        h1, h2, h3, h4, .font-tech { font-family: 'Rajdhani', sans-serif; }
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">Synthesized from "The State of the Art in Combinatorial Optimization" (2025)</p>
+        </div>
+    </footer>
+
+    <!-- Chart Logic -->
+    
+5:T46e,.report-content { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; }
+h1, h2, h3, h4, .font-tech { font-family: 'Rajdhani', sans-serif; }
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.glass-panel {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateY(-2px);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Flowchart Connector Lines (CSS Only) */
+.flow-line {
+    width: 2px;
+    background-color: #475569;
+    margin: 0 auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }6:T9fe,const ctx = document.getElementById('scalingChart').getContext('2d');
         
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 350px;
-        }
-
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .glass-panel:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            background: rgba(30, 41, 59, 0.8);
-            transform: translateY(-2px);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Flowchart Connector Lines (CSS Only) */
-        .flow-line {
-            width: 2px;
-            background-color: #475569;
-            margin: 0 auto;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-    6:Tc50,
-        const ctx = document.getElementById('scalingChart').getContext('2d');
-        
-        // Data derived from Table 2 in report
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['100 Nodes', '1,000 Nodes', '10,000 Nodes (XL)'],
-                datasets: [
-                    {
-                        label: 'HGS (PyVRP)',
-                        data: [0.20, 0.50, 2.5],
-                        borderColor: '#10b981', // Emerald
-                        backgroundColor: '#10b981',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'Hexaly (Commercial)',
-                        data: [0.80, 1.6, 2.6],
-                        borderColor: '#38bdf8', // Sky
-                        backgroundColor: '#38bdf8',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'Google OR-Tools',
-                        data: [1.91, 4.18, 6.5],
-                        borderColor: '#a855f7', // Purple
-                        backgroundColor: '#a855f7',
-                        borderWidth: 3,
-                        tension: 0.3
-                    },
-                    {
-                        label: 'NCO (Neural)',
-                        data: [1.0, 5.5, 12], // Approximate failure at scale
-                        borderColor: '#f43f5e', // Rose
-                        backgroundColor: '#f43f5e',
-                        borderWidth: 3,
-                        borderDash: [5, 5],
-                        tension: 0.3
-                    }
-                ]
+// Data derived from Table 2 in report
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['100 Nodes', '1,000 Nodes', '10,000 Nodes (XL)'],
+        datasets: [
+            {
+                label: 'HGS (PyVRP)',
+                data: [0.20, 0.50, 2.5],
+                borderColor: '#10b981', // Emerald
+                backgroundColor: '#10b981',
+                borderWidth: 3,
+                tension: 0.3
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { color: '#94a3b8', font: { family: 'Inter' } }
-                    },
-                    tooltip: {
-                        backgroundColor: '#1e293b',
-                        titleColor: '#e2e8f0',
-                        bodyColor: '#e2e8f0',
-                        borderColor: '#475569',
-                        borderWidth: 1,
-                        callbacks: {
-                            label: function(context) {
-                                return context.dataset.label + ': ' + context.raw + '% Gap';
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
-                        ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Optimality Gap (%)', color: '#64748b' }
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { color: '#94a3b8', font: { family: 'Rajdhani', size: 14 } }
+            {
+                label: 'Hexaly (Commercial)',
+                data: [0.80, 1.6, 2.6],
+                borderColor: '#38bdf8', // Sky
+                backgroundColor: '#38bdf8',
+                borderWidth: 3,
+                tension: 0.3
+            },
+            {
+                label: 'Google OR-Tools',
+                data: [1.91, 4.18, 6.5],
+                borderColor: '#a855f7', // Purple
+                backgroundColor: '#a855f7',
+                borderWidth: 3,
+                tension: 0.3
+            },
+            {
+                label: 'NCO (Neural)',
+                data: [1.0, 5.5, 12], // Approximate failure at scale
+                borderColor: '#f43f5e', // Rose
+                backgroundColor: '#f43f5e',
+                borderWidth: 3,
+                borderDash: [5, 5],
+                tension: 0.3
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: { color: '#94a3b8', font: { family: 'Inter' } }
+            },
+            tooltip: {
+                backgroundColor: '#1e293b',
+                titleColor: '#e2e8f0',
+                bodyColor: '#e2e8f0',
+                borderColor: '#475569',
+                borderWidth: 1,
+                callbacks: {
+                    label: function(context) {
+                        return context.dataset.label + ': ' + context.raw + '% Gap';
                     }
                 }
             }
-        });
-    8:["slug","vrp","d"]
-0:["N6NPLKhscmA91HSWnpZOX",[[["",{"children":["content",{"children":["reports",{"children":[["slug","vrp","d"],{"children":["__PAGE__?{\"slug\":\"vrp\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","vrp","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Vehicle Routing Problem"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Vehicle Routing Problem"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/c4d716749a9a37e8.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                ticks: { color: '#94a3b8' },
+                title: { display: true, text: 'Optimality Gap (%)', color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#94a3b8', font: { family: 'Rajdhani', size: 14 } }
+            }
+        }
+    }
+});
+
+// --- Initialization ---
+8:["slug","vrp","d"]
+0:["ytNyBwSKXeHCVbKHnCRCP",[[["",{"children":["content",{"children":["reports",{"children":[["slug","vrp","d"],{"children":["__PAGE__?{\"slug\":\"vrp\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","vrp","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Vehicle Routing Problem"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Vehicle Routing Problem"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/40e2114990ed84f6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f bg-slate-50 dark:bg-slate-950 h-full","children":[["$","$La",null,{}],["$","$Lb",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]]}]}]],null],null],["$Lc",null]]]]
 c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACFHarbinger"}],["$","meta","3",{"name":"description","content":"Personal Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
 1:null
