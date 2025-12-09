@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Waste Logistics: Neuro-Evolutionary Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        h1, h2, h3, h4, .font-tech { font-family: 'Orbitron', sans-serif; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-panel:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(30, 41, 59, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Module Connector Lines */
+        .connector-line {
+            height: 40px;
+            width: 2px;
+            background: #475569;
+            margin: 0 auto;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="antialiased selection:bg-sky-900 selection:text-sky-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl text-sky-500">♻️</span>
+                    <h1 class="text-xl font-bold tracking-tight font-tech">Neuro<span class="text-sky-400">Logistics</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#paradigm" class="text-slate-400 hover:text-sky-400 transition-colors">The Paradigm</a>
+                    <a href="#architecture" class="text-slate-400 hover:text-sky-400 transition-colors">Core Architecture</a>
+                    <a href="#optimization" class="text-slate-400 hover:text-sky-400 transition-colors">Optimization</a>
+                    <a href="#impact" class="bg-sky-600/20 text-sky-300 border border-sky-500/50 px-4 py-1.5 rounded-full hover:bg-sky-600/30 transition-colors">System Impact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Hero Section -->
+        <section class="text-center space-y-6">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-sky-900/30 text-sky-400 text-xs font-bold uppercase tracking-wide border border-sky-800">
+                Technical Specification
+            </div>
+            <h2 class="text-5xl md:text-7xl font-bold font-tech tracking-tight leading-tight uppercase">
+                Autonomous <br>
+                <span class="gradient-text">Waste Logistics</span>
+            </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                A Neuro-Evolutionary Architecture resolving the Dynamic Vehicle Routing Problem with Stochastic Demands (DVRPSD) via Graph Neural Networks and State Space Models.
+            </p>
+        </section>
+
+        <!-- Section 1: The Paradigm Shift (Comparison) -->
+        <section id="paradigm" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold font-tech text-slate-100">
+                        From Static to <span class="text-sky-400">State-Dependent</span>
+                    </h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Traditional logistics relies on deterministic schedules ("Every Tuesday"), leading to a bimodal failure: servicing empty bins (Air-Hauling) or ignoring full ones (Overflow).
+                    </p>
+                    
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-slate-200 mb-4">The Cost of Determinism</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                <span class="text-slate-400">40% of collections are premature (Zero Utility).</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                <span class="text-slate-400">Sanitation risks from unpredicted overflow.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Interactive Visualizer -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Efficiency Comparison</h4>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="efficiencyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Architecture (Interactive Diagram) -->
+        <section id="architecture" class="scroll-mt-24">
+            <div class="mb-10 text-center">
+                <h3 class="text-3xl font-bold font-tech text-slate-100">The Neural Stack</h3>
+                <p class="text-slate-400 mt-2">Integrating Geometric Deep Learning with Control Theory.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                <!-- Module 1: GNN -->
+                <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">🕸️</div>
+                    <h4 class="text-xl font-bold text-sky-400 font-tech mb-2">1. Spatial Encoder (GNN)</h4>
+                    <span class="text-xs font-bold bg-sky-900/50 text-sky-300 px-2 py-1 rounded uppercase">Topology</span>
+                    <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+                        Maps the city not as Euclidean coordinates, but as a topological graph. Learns "accessibility" via Message Passing.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs font-mono text-slate-500 overflow-x-auto">
+                        
+                        $$ \mathbf{h}_i^{(l)} = \phi^{(l)} \left( \mathbf{h}_i^{(l-1)}, \text{AGGREGATE} \left( \{ \psi(\mathbf{h}_j^{(l-1)}, \mathbf{e}_{ij}) : j \in \mathcal{N}(i) \} \right) \right) $$
+                    </div>
+                </div>
+
+                <!-- Module 2: SSM -->
+                <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">⏳</div>
+                    <h4 class="text-xl font-bold text-purple-400 font-tech mb-2">2. Temporal Dynamics (SSM)</h4>
+                    <span class="text-xs font-bold bg-purple-900/50 text-purple-300 px-2 py-1 rounded uppercase">Forecasting</span>
+                    <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+                        Models waste generation as a continuous differential equation. Servicing a bin is a "Control Input" that resets the state.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs font-mono text-slate-500 overflow-x-auto">
+                        $$ \mathbf{x}'(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t) $$
+                        $$ y(t) = \mathbf{C}\mathbf{x}(t) $$
+                    </div>
+                </div>
+
+                <!-- Module 3: Glimpse -->
+                <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">👁️</div>
+                    <h4 class="text-xl font-bold text-emerald-400 font-tech mb-2">3. Glimpse Attention</h4>
+                    <span class="text-xs font-bold bg-emerald-900/50 text-emerald-300 px-2 py-1 rounded uppercase">Filtering</span>
+                    <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+                        Acts as an information bottleneck. Filters out irrelevant (empty) nodes to focus computational resources on hotspots.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs font-mono text-slate-500 overflow-x-auto">
+                        
+                        $$ \alpha_i = \text{softmax} \left( \frac{Q(\mathbf{g})^T K(\mathbf{z}_i)}{\sqrt{d_k}} \right) $$
+                        $$ \text{softmax} (\mathbf{z})_i = \frac{\exp{z_i}}{\sum_{j = 1}^K \exp{z_j}} $$
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Optimization Engine -->
+        <section id="optimization" class="scroll-mt-24 bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="flex flex-col items-center space-y-4">
+                        <!-- Step 1 -->
+                        <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h5 class="text-sm font-bold text-indigo-400 uppercase">Input: Latent State</h5>
+                            <p class="text-xs text-slate-400">Compressed representation of only the active, critical bins.</p>
+                        </div>
+                        <!-- Line -->
+                        <div class="connector-line"></div>
+                        <!-- Step 2 -->
+                        <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-sky-500">
+                            <h5 class="text-sm font-bold text-sky-400 uppercase">Global: Genetic Algorithm</h5>
+                            <p class="text-xs text-slate-400">Maintains a population of routes. Uses "Ordered Crossover" to preserve good sequences.</p>
+                        </div>
+                        <!-- Line -->
+                        <div class="connector-line"></div>
+                        <!-- Step 3 -->
+                        <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-amber-500">
+                            <h5 class="text-sm font-bold text-amber-400 uppercase">Local: Beam Search</h5>
+                            <p class="text-xs text-slate-400">Refines solutions. Uses Neural Embeddings to calculate "distance" instantly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-bold font-tech text-slate-100">Hybrid Optimization</h3>
+                    <p class="text-slate-400 mt-4 leading-relaxed">
+                        Pure Deep Learning cannot guarantee hard constraints (capacity). Pure Heuristics are too slow. <br><br>
+                        The <strong>HGS-LBS</strong> engine combines the global search of Genetic Algorithms with the aggressive local refinement of Beam Search, guided by the neural embeddings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Strategic Impact -->
+        <section id="impact" class="scroll-mt-24 pb-20">
+            <h3 class="text-3xl font-bold font-tech text-slate-100 mb-8 text-center">Systemic Implications</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-sky-500">
+                    <h4 class="font-bold text-lg text-white mb-2 font-tech">Closed Loop Control</h4>
+                    <p class="text-sm text-slate-400">
+                        The "Route" is a control input. The system learns the impact of its own servicing actions on the city's state.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-purple-500">
+                    <h4 class="font-bold text-lg text-white mb-2 font-tech">Scalability</h4>
+                    <p class="text-sm text-slate-400">
+                        The Glimpse module allows the system to scale to 10,000+ nodes by filtering noise before optimization begins.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-xl border-t-4 border-emerald-500">
+                    <h4 class="font-bold text-lg text-white mb-2 font-tech">Sustainability</h4>
+                    <p class="text-sm text-slate-400">
+                        Aligns operational spend with actual demand. Eliminates fuel waste from servicing empty bins.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900 py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">Synthesized from "Autonomous Waste Logistics: A Neuro-Evolutionary Architecture"</p>
+        </div>
+    </footer>
+
+    <!-- Logic -->
+    <script>
+        const ctx = document.getElementById('efficiencyChart').getContext('2d');
+        
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Static Routing', 'Neuro-Evolutionary'],
+                datasets: [
+                    {
+                        label: 'Air-Hauling (Wasted Trips)',
+                        data: [40, 5],
+                        backgroundColor: 'rgba(239, 68, 68, 0.7)', // Red
+                        borderColor: 'rgba(239, 68, 68, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Overflow Incidents',
+                        data: [15, 2],
+                        backgroundColor: 'rgba(245, 158, 11, 0.7)', // Amber
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Operational Cost',
+                        data: [100, 65],
+                        backgroundColor: 'rgba(16, 185, 129, 0.7)', // Emerald
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#94a3b8', font: { family: 'Roboto' } }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                        ticks: { color: '#94a3b8' },
+                        title: { display: true, text: 'Relative Metric (%)', color: '#64748b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#94a3b8', font: { family: 'Orbitron' } }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
