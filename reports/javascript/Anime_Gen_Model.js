@@ -135,7 +135,7 @@ function initResourceChart() {
     });
 }
 
-// --- Chart.js: Radar Chart Update (FIXED ANIMATION) ---
+// --- Chart.js: Radar Chart Update ---
 function updateRadarChart(model) {
     const ctx = document.getElementById('radarChart');
     if (!ctx) return; 
@@ -243,7 +243,7 @@ function updateModelView(id) {
     const model = models.find(m => m.id === id);
     if (!model) return;
 
-    // FIX 1: Ensure pros/cons text starts flush by using the parent <ul>'s default style and relying on flex for alignment.
+    // Ensure pros/cons text starts flush by using the parent <ul>'s default style and relying on flex for alignment.
     let prosHtml = model.pros.map(p => 
         // Note: The parent <ul> will handle spacing, the flex ensures icon and text align vertically.
         `<li class="flex items-start text-sm text-stone-600 mb-1">
@@ -282,7 +282,7 @@ function updateModelView(id) {
     // Update Chart
     updateRadarChart(model);
 }
-// --- Render Interactive Roadmap (FIXED CLICK INTERACTION) ---
+// --- Render Interactive Roadmap ---
 function renderRoadmap() {
     if (!roadmapContainer) return; 
 
