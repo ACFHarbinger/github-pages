@@ -2,12 +2,9 @@
 body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
 .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-/* Chart Container */
+/* Chart Container Specifics */
 .chart-container {
-    position: relative;
-    width: 100%;
     max-width: 600px;
-    height: 350px;
     max-height: 400px;
     margin: 0 auto;
 }

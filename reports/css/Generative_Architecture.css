@@ -10,18 +10,14 @@ h1, h2, h3, h4, .font-heading {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
+/* Custom Scrollbar Colors */
 ::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #94a3b8; }
 ::-webkit-scrollbar-thumb:hover { background: #64748b; }
 
-/* Chart Container Strict Styling */
+/* Chart Container Specifics */
 .chart-container {
-    position: relative;
-    width: 100%;
     max-width: 600px;
-    height: 350px;
     max-height: 400px;
     margin: 0 auto;
 }

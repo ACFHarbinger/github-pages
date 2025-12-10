@@ -1,11 +1,11 @@
 body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
 h1, h2, h3, .font-display { font-family: 'Syncopate', sans-serif; }
 
-.chart-container {
-    position: relative;
-    width: 100%;
-    height: 350px;
-}
+/* Audio uses a thinner scrollbar, overriding reports.css */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ec4899; }
 
 .neon-panel {
     background: rgba(20, 20, 23, 0.6);
@@ -40,9 +40,3 @@ h1, h2, h3, .font-display { font-family: 'Syncopate', sans-serif; }
     0%, 100% { height: 10px; opacity: 0.5; }
     50% { height: 30px; opacity: 1; box-shadow: 0 0 10px #ec4899; }
 }
-
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #ec4899; }

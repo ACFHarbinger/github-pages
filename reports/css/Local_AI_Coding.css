@@ -1,11 +1,12 @@
 body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
 h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
 
-.chart-container {
-    position: relative;
-    width: 100%;
-    height: 350px;
-}
+/* Custom Scrollbar Colors */
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Chart Container - Inherits base from reports.css */
 
 .glass-panel {
     background: rgba(30, 41, 59, 0.7);
@@ -20,9 +21,3 @@ h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
     background-clip: text; /* Standard property added for compatibility */
     -webkit-text-fill-color: transparent;
 }
-
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f172a; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #475569; }

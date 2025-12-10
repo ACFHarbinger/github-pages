@@ -6,30 +6,22 @@ body {
     color: #333;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
+/* Custom Scrollbar Colors */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #d4d4d8;
-    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #a1a1aa;
 }
 
-/* Chart Container Strict Styling */
+/* Chart Container Specifics */
 .chart-container {
-    position: relative;
-    width: 100%;
     max-width: 600px;
-    height: 350px;
     max-height: 400px;
     margin: 0 auto;
 }
