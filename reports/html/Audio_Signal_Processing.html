@@ -15,7 +15,7 @@
     <nav class="sticky top-0 z-50 neon-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 mr-20">
                     <!-- Animated Logo -->
                     <div class="flex items-end gap-1 h-8">
                         <div class="waveform-bar" style="animation-delay: 0s;"></div>
@@ -23,7 +23,7 @@
                         <div class="waveform-bar" style="animation-delay: 0.2s;"></div>
                         <div class="waveform-bar" style="animation-delay: 0.3s;"></div>
                     </div>
-                    <h1 class="text-xl font-bold tracking-widest font-display text-white">Audio<span class="text-pink-500">2025</span></h1>
+                    <h1 class="text-xl font-bold tracking-widest font-display text-white"><span class="text-pink-500">Audio</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                     <a href="#shift" class="text-gray-400 hover:text-pink-500 transition-colors">Cognitive Shift</a>
@@ -86,13 +86,13 @@
                     </p>
                     
                     <div class="space-y-4">
-                        <div class="neon-panel p-4 rounded-lg">
+                        <div class="neon-panel rounded-lg">
                             <h4 class="text-pink-400 font-bold mb-1">Algorithm: PPO (Proximal Policy Optimization)</h4>
                             <p class="text-xs text-gray-400">Chosen for stability. Prevents "howling" by clipping policy updates, ensuring smooth filter transitions.</p>
                         </div>
-                        <div class="neon-panel p-4 rounded-lg">
+                        <div class="neon-panel rounded-lg">
                             <h4 class="text-purple-400 font-bold mb-1">Reward Function Engineering</h4>
-                            <p class="text-xs text-gray-400 font-mono">R = α·ΔSNR - β·MSE - γ·TV(w)</p>
+                            <p class="text-xs text-gray-400 font-mono">$R = \alpha·\Delta SNR - \beta·MSE - \gamma·TV(w)$</p>
                             <p class="text-xs text-gray-500 mt-1">Includes Total Variation (TV) penalties to prevent "zipper noise" artifacts.</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                     <h4 class="text-xl font-bold text-purple-400 mb-2">Neural Fields</h4>
                     <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Spatial Audio</p>
                     <p class="text-sm text-gray-300">
-                        Replacing discrete HRTF tables with continuous neural functions $f(x,y,z) \rightarrow \text{Filter}$.
+                        Replacing discrete HRTF tables with continuous neural functions $f(x,y,z) \rightarrow \text{Filter}.$
                     </p>
                     <div class="mt-4 pt-4 border-t border-white/5">
                         <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Infinite resolution spatial audio for VR/XR.</span>

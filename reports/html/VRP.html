@@ -17,7 +17,7 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl text-indigo-500">🚚</span>
-                    <h1 class="text-xl font-bold tracking-tight font-tech">Optima<span class="text-indigo-400">2025</span></h1>
+                    <h1 class="text-xl font-bold tracking-tight font-tech"><span class="text-indigo-400">Optima</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#landscape" class="text-slate-400 hover:text-indigo-400 transition-colors">The Landscape</a>
@@ -93,37 +93,55 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1: HGS -->
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">🧬</div>
                     <h4 class="text-xl font-bold text-emerald-400 font-tech mb-2">Hybrid Genetic Search</h4>
                     <span class="text-xs font-bold bg-emerald-900/50 text-emerald-300 px-2 py-1 rounded uppercase">The King</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                        <li class="flex gap-2"><span class="text-emerald-500">▸</span> <strong>Giant Tour:</strong> Ignores capacity initially to traverse search space.</li>
-                        <li class="flex gap-2"><span class="text-emerald-500">▸</span> <strong>Split Algorithm:</strong> Uses shortest-path on DAG to segment tour into valid routes.</li>
-                        <li class="flex gap-2"><span class="text-emerald-500">▸</span> <strong>PyVRP:</strong> The SOTA implementation bridging C++ speed with Python ease.</li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-emerald-500">▸</span> 
+                            <span><strong>Giant Tour:</strong> Ignores capacity initially to traverse search space.</span>
+                        </li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-emerald-500">▸</span> 
+                            <span><strong>Split Algorithm:</strong> Uses shortest-path on DAG to segment tour into valid routes.</span>
+                        </li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-emerald-500">▸</span> 
+                            <span><strong>PyVRP:</strong> The SOTA implementation bridging C++ speed with Python ease.</span>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Card 2: NCO / Diffusion -->
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">🧠</div>
                     <h4 class="text-xl font-bold text-purple-400 font-tech mb-2">Neural Optimization</h4>
                     <span class="text-xs font-bold bg-purple-900/50 text-purple-300 px-2 py-1 rounded uppercase">The Frontier</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                        <li class="flex gap-2"><span class="text-purple-500">▸</span> <strong>Diffusion Models:</strong> Generates entire solution structure simultaneously (non-autoregressive).</li>
-                        <li class="flex gap-2"><span class="text-purple-500">▸</span> <strong>Generalization:</strong> Uses "Multi-Expert" modules to handle varying constraint tightness.</li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-purple-500">▸</span> 
+                            <span><strong>Diffusion Models:</strong> Generates entire solution structure simultaneously (non-autoregressive).</span>
+                        </li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-purple-500">▸</span> 
+                            <span><strong>Generalization:</strong> Uses "Multi-Expert" modules to handle varying constraint tightness.</span>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Card 3: Exact Methods -->
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">📐</div>
                     <h4 class="text-xl font-bold text-sky-400 font-tech mb-2">Exact Methods (BCP)</h4>
                     <span class="text-xs font-bold bg-sky-900/50 text-sky-300 px-2 py-1 rounded uppercase">The Proof</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                        <li class="flex gap-2"><span class="text-sky-500">▸</span> <strong>Neural Pricing:</strong> Uses ML to accelerate column generation.</li>
-                        <li class="flex gap-2"><span class="text-sky-500">▸</span> <strong>RouteOpt:</strong> Modular solver proving optimality for 360-400 node instances.</li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-sky-500">▸</span> 
+                            <span><strong>Neural Pricing:</strong> Uses ML to accelerate column generation.</span>
+                        </li>
+                        <li class="grid grid-cols-[max-content_1fr] gap-x-2">
+                            <span class="text-sky-500">▸</span> 
+                            <span><strong>RouteOpt:</strong> Modular solver proving optimality for 360-400 node instances.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -167,7 +185,7 @@
 
         <!-- Section 4: EVRP Frontier -->
         <section id="evrp" class="scroll-mt-24">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 gap-8">
                 <div class="glass-panel p-8 rounded-2xl border border-slate-700">
                     <div class="inline-block px-3 py-1 mb-4 rounded bg-amber-900/30 text-amber-400 text-xs font-bold uppercase tracking-wide">
                         Industrial Driver
@@ -187,10 +205,6 @@
                             <span class="text-xs text-amber-500">Q-Learning (RL)</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="bg-slate-800 rounded-2xl flex items-center justify-center border border-slate-700 p-4">
-                    
                 </div>
             </div>
         </section>
