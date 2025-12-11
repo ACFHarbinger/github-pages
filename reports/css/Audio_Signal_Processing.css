@@ -1,28 +1,126 @@
-body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
-h1, h2, h3, .font-display { font-family: 'Syncopate', sans-serif; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #e5e5e5;
+}
+
+/* Fix Dark Mode Text Visibility & Color */
+.dark body {
+    color: #e2e8f0 !important;
+    /* Slate-200 - Neutralize body text to let gradients shine */
+}
+
+/* Fix White Backgrounds/Nav in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark .bg-white\/5,
+.dark nav,
+.dark .neon-panel {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    /* Dark Slate BG */
+    border-color: rgba(59, 130, 246, 0.3) !important;
+    /* Blue-500 border */
+    color: #e2e8f0 !important;
+}
+
+/* Force Headers to be Gradient */
+h1,
+h2,
+h3,
+h4 {
+    background: linear-gradient(to right, #3b82f6, #ef4444);
+    /* Blue-500 to Red-500 */
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: #3b82f6 !important;
+    /* Fallback */
+    width: fit-content;
+    /* Ensure gradient wraps text only */
+}
+
+p,
+li,
+span {
+    color: #cbd5e1;
+    /* Slate-300 */
+}
+
+/* Light Mode Overrides */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) p,
+html:not(.dark) li,
+html:not(.dark) span {
+    color: #334155 !important;
+}
+
+/* Override Grays with Colors in Dark Mode */
+.dark .text-gray-400,
+.dark .text-gray-500 {
+    color: #94a3b8 !important;
+    /* Slate-400 */
+}
+
+.dark .text-gray-300,
+.dark .text-gray-200 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+.dark .text-white {
+    color: #ffffff !important;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+    font-family: 'Syncopate', sans-serif;
+}
 
 /* Audio uses a thinner scrollbar, overriding reports.css */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #ec4899; }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3b82f6, #ef4444);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #2563eb, #dc2626);
+}
 
 .neon-panel {
-    background: rgba(20, 20, 23, 0.6);
+    background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .neon-panel:hover {
-    border-color: rgba(236, 72, 153, 0.4); /* Pink-500 */
-    box-shadow: 0 0 30px rgba(236, 72, 153, 0.1);
+    border-color: rgba(239, 68, 68, 0.5);
+    /* Red-500 transition */
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.2);
     transform: translateY(-2px);
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #ef4444 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31,12 +129,112 @@ h1, h2, h3, .font-display { font-family: 'Syncopate', sans-serif; }
 /* Audio Waveform Animation */
 .waveform-bar {
     width: 4px;
-    background: #ec4899;
-    animation: wave 1s infinite ease-in-out;
+    height: 8px;
+    background: #3b82f6;
+    /* Blue start */
+    animation: wave 1.2s infinite ease-in-out;
     border-radius: 2px;
+    opacity: 0.8;
 }
 
 @keyframes wave {
-    0%, 100% { height: 10px; opacity: 0.5; }
-    50% { height: 30px; opacity: 1; box-shadow: 0 0 10px #ec4899; }
+
+    0%,
+    100% {
+        height: 8px;
+        opacity: 0.8;
+        background: #3b82f6;
+        /* Blue */
+    }
+
+    50% {
+        height: 24px;
+        opacity: 1;
+        background: #ef4444;
+        /* Red pulse */
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.8);
+    }
+}
+
+/* Light Mode Support */
+html:not(.dark) body {
+    background-color: transparent;
+    color: #000000;
+    /* Pure Black (Max Contrast) */
+}
+
+html:not(.dark) .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html:not(.dark) .neon-panel {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+html:not(.dark) .neon-panel:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix for Dark Cards in Light Mode */
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-gray-900,
+html:not(.dark) .bg-black {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Fix Chart Contrast in Dark Mode (Disable Global Inversion) */
+.dark .chart-container canvas {
+    filter: none !important;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-pink-500,
+.dark .text-pink-400 {
+    background: linear-gradient(to right, #3b82f6, #ef4444);
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.dark .text-purple-500,
+.dark .text-purple-400 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-blue-400 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}
+
+.dark .gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #ef4444 100%);
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Footer - Match the Theme */
+footer {
+    background-color: #0f172a !important;
+    /* Dark Slate to match panels */
+    border-top: 1px solid #3b82f6 !important;
+    /* Blue-500 Border */
+}
+
+footer p {
+    color: #94a3b8 !important;
+    /* Slate-400 */
+}
+
+/* Fix MathJax appearing pink */
+.dark mjx-container,
+.dark .mjx-chtml,
+.dark .MathJax {
+    color: #e2e8f0 !important;
+    /* Slate-200 */
 }

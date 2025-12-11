@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architect's Guide to Image Embeddings & Semantic Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/Semantic_Search.css">
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <!-- Chosen Palette: Warm Neutrals. Background: Stone-50 (#fafaf9). Primary Text: Stone-800. 
          Accents: Amber-600 (Focus/Action), Stone-500 (Secondary). 
@@ -34,18 +38,22 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+    <nav class="relative border-b border-stone-200 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">🏛️</span>
-                    <h1 class="text-lg font-bold tracking-tight text-stone-900 font-heading">Semantic <span class="font-light text-stone-500">Architect</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900 font-heading">Semantic <span
+                            class="font-light text-slate-500">Architect</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#foundation" class="text-stone-500 hover:text-amber-600 transition-base">Foundation Models</a>
-                    <a href="#dml" class="text-stone-500 hover:text-amber-600 transition-base">Metric Learning</a>
-                    <a href="#sota" class="text-stone-500 hover:text-amber-600 transition-base">SOTA Benchmarks</a>
-                    <a href="#deploy" class="bg-stone-800 text-stone-50 px-4 py-2 rounded-full hover:bg-amber-600 transition-base">Build Stack</a>
+                    <a href="#foundation" class="text-slate-500 hover:text-indigo-600 transition-base">Foundation
+                        Models</a>
+                    <a href="#dml" class="text-slate-500 hover:text-indigo-600 transition-base">Metric Learning</a>
+                    <a href="#sota" class="text-slate-500 hover:text-indigo-600 transition-base">SOTA Benchmarks</a>
+                    <a href="#deploy"
+                        class="bg-slate-800 text-slate-50 px-4 py-2 rounded-full hover:bg-indigo-600 transition-base">Build
+                        Stack</a>
                 </div>
             </div>
         </div>
@@ -54,34 +62,45 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
 
         <!-- Header -->
+        <!-- Header -->
         <header class="text-center max-w-4xl mx-auto space-y-6">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-stone-200 text-stone-600 text-xs font-semibold uppercase tracking-wide">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wide border border-indigo-200 shadow-sm">
                 From Local Features to Global Understanding
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 tracking-tight font-heading leading-tight">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight font-heading leading-tight">
                 An Architect's Guide to <br>
-                <span class="text-amber-600">Image Embeddings & Deployment</span>
+                <span class="text-indigo-600">Image Embeddings & Deployment</span>
             </h2>
             <p class="text-lg text-stone-600 leading-relaxed">
-                The efficacy of a semantic search system is determined by its architecture. 
-                This interactive guide analyzes the shift from <strong>CNNs</strong> to <strong>Vision Transformers</strong>, 
-                evaluates SOTA models like <strong>DINOv2</strong> and <strong>CLIP</strong>, and provides a framework for scalable vector deployment.
+                The efficacy of a semantic search system is determined by its architecture.
+                This interactive guide analyzes the shift from <strong>CNNs</strong> to <strong>Vision
+                    Transformers</strong>,
+                evaluates SOTA models like <strong>DINOv2</strong> and <strong>CLIP</strong>, and provides a framework
+                for scalable vector deployment.
             </p>
         </header>
 
         <!-- Section 1: The Foundation (CNN vs ViT) -->
         <section id="foundation" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">I. The Architectural Divide</h3>
+                <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">I. The
+                    Architectural Divide</h3>
                 <p class="text-stone-600 leading-relaxed">
-                    The field is defined by a split between <strong>CNNs</strong> (ResNet, EfficientNet), which rely on strong "inductive biases" like locality, and <strong>Vision Transformers (ViTs)</strong>, which favor global context and massive data scale.
-                    While CNNs excel with limited data, ViTs dominate when data is abundant, treating images as sequences of patches to capture long-range dependencies.
+                    The field is defined by a split between <strong>CNNs</strong> (ResNet, EfficientNet), which rely on
+                    strong "inductive biases" like locality, and <strong>Vision Transformers (ViTs)</strong>, which
+                    favor global context and massive data scale.
+                    While CNNs excel with limited data, ViTs dominate when data is abundant, treating images as
+                    sequences of patches to capture long-range dependencies.
                 </p>
-                
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 space-y-4">
-                    <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wide">Key Takeaway</h4>
-                    <p class="text-sm text-stone-600">
-                        The ViT era shifts the burden from <em>architecture engineering</em> (designing clever filters) to <em>data engineering</em>. 
+
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-sm border border-indigo-100 space-y-4">
+                    <h4 class="font-bold text-indigo-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                        <span class="text-xl">💡</span> Key Takeaway
+                    </h4>
+                    <p class="text-sm text-indigo-800">
+                        The ViT era shifts the burden from <em>architecture engineering</em> (designing clever filters)
+                        to <em>data engineering</em>.
                         Success now depends on the scale and curation of the training dataset (e.g., LVD-142M).
                     </p>
                 </div>
@@ -92,8 +111,10 @@
                 <div class="flex justify-between items-center mb-4">
                     <h4 class="text-stone-800 font-bold font-heading">Architecture Profile Analysis</h4>
                     <div class="flex gap-4 text-xs">
-                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-stone-400"></span> CNN (ResNet)</span>
-                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Transformer (ViT)</span>
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-stone-400"></span>
+                            CNN (ResNet)</span>
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            Transformer (ViT)</span>
                     </div>
                 </div>
                 <div class="chart-container">
@@ -107,41 +128,51 @@
             <div class="max-w-3xl mx-auto text-center mb-10">
                 <h3 class="text-2xl font-bold text-stone-900 font-heading">II. The Engine of Similarity</h3>
                 <p class="text-stone-600 mt-4">
-                    A backbone is useless without a structured vector space. Deep Metric Learning (DML) shapes this space.
-                    Explore how loss functions evolved from simple Euclidean distance to Geodesic optimization on a hypersphere.
+                    A backbone is useless without a structured vector space. Deep Metric Learning (DML) shapes this
+                    space.
+                    Explore how loss functions evolved from simple Euclidean distance to Geodesic optimization on a
+                    hypersphere.
                 </p>
             </div>
 
             <!-- Interactive Loss Explorer -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Option 1 -->
-                <button onclick="updateLoss('contrastive')" class="loss-btn active group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('contrastive')"
+                    class="loss-btn active group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">🔗</span>
-                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Pair-Based</span>
+                        <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded">Pair-Based</span>
                     </div>
-                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Contrastive Loss</h4>
-                    <p class="text-sm text-stone-500 mt-2">The foundational approach using simple positive/negative pairs.</p>
+                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-sky-600">Contrastive Loss</h4>
+                    <p class="text-sm text-slate-500 mt-2">The foundational approach using simple positive/negative
+                        pairs.</p>
                 </button>
 
                 <!-- Option 2 -->
-                <button onclick="updateLoss('triplet')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('triplet')"
+                    class="loss-btn group text-left p-6 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 transition-base focus:outline-none focus:ring-2 focus:ring-emerald-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">∆</span>
-                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Triplet-Based</span>
+                        <span
+                            class="text-xs font-bold bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Triplet-Based</span>
                     </div>
-                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Triplet Loss</h4>
-                    <p class="text-sm text-stone-500 mt-2">Uses Anchor-Positive-Negative triplets to create clustered spaces.</p>
+                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-emerald-600">Triplet Loss</h4>
+                    <p class="text-sm text-slate-500 mt-2">Uses Anchor-Positive-Negative triplets to create clustered
+                        spaces.</p>
                 </button>
 
                 <!-- Option 3 -->
-                <button onclick="updateLoss('arcface')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('arcface')"
+                    class="loss-btn group text-left p-6 rounded-xl border border-slate-200 bg-white hover:border-purple-400 transition-base focus:outline-none focus:ring-2 focus:ring-purple-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">🌐</span>
-                        <span class="text-xs font-bold bg-amber-100 text-amber-700 px-2 py-1 rounded">SOTA / Margin</span>
+                        <span class="text-xs font-bold bg-purple-100 text-purple-600 px-2 py-1 rounded">SOTA /
+                            Margin</span>
                     </div>
                     <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">ArcFace</h4>
-                    <p class="text-sm text-stone-500 mt-2">Optimizes angular geodesic distance on a normalized hypersphere.</p>
+                    <p class="text-sm text-stone-500 mt-2">Optimizes angular geodesic distance on a normalized
+                        hypersphere.</p>
                 </button>
             </div>
 
@@ -155,47 +186,57 @@
         <section id="sota" class="scroll-mt-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-5 space-y-6">
-                    <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">III. Visual vs. Conceptual</h3>
-                    <p class="text-stone-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 font-heading border-l-4 border-purple-500 pl-4">III.
+                        Visual vs. Conceptual</h3>
+                    <p class="text-slate-600 leading-relaxed">
                         The SOTA landscape is divided between Self-Supervised Learning (SSL) and Multimodal Learning.
-                        <strong>DINOv2</strong> (SSL) acts as a "visual cortex," excelling at pure pixel-level understanding. 
-                        <strong>CLIP</strong> (Multimodal) learns "meaning" through language, enabling zero-shot capabilities.
+                        <strong>DINOv2</strong> (SSL) acts as a "visual cortex," excelling at pure pixel-level
+                        understanding.
+                        <strong>CLIP</strong> (Multimodal) learns "meaning" through language, enabling zero-shot
+                        capabilities.
                     </p>
-                    
+
                     <ul class="space-y-4 mt-6">
                         <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">A</span>
+                            <span
+                                class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold ring-2 ring-amber-50">A</span>
                             <div>
-                                <strong class="text-stone-800">DINOv2 (ViT-L/G):</strong>
-                                <p class="text-sm text-stone-600">Best for "Find similar looking images". 768-dim embeddings. Higher storage cost.</p>
+                                <strong class="text-slate-800">DINOv2 (ViT-L/G):</strong>
+                                <p class="text-sm text-slate-600">Best for "Find similar looking images". 768-dim
+                                    embeddings. Higher storage cost.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-600 flex items-center justify-center text-xs font-bold">B</span>
+                            <span
+                                class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xs font-bold ring-2 ring-purple-50">B</span>
                             <div>
-                                <strong class="text-stone-800">CLIP / MetaCLIP:</strong>
-                                <p class="text-sm text-stone-600">Best for "Find images matching this text". 512-dim embeddings. Lower visual precision.</p>
+                                <strong class="text-slate-800">CLIP / MetaCLIP:</strong>
+                                <p class="text-sm text-slate-600">Best for "Find images matching this text". 512-dim
+                                    embeddings. Lower visual precision.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-                     <h4 class="text-stone-800 font-bold font-heading mb-4 text-center">Performance Profile Comparison</h4>
+                    <h4 class="text-stone-800 font-bold font-heading mb-4 text-center">Performance Profile Comparison
+                    </h4>
                     <div class="chart-container">
                         <canvas id="sotaChart"></canvas>
                     </div>
-                    <p class="text-center text-xs text-stone-400 mt-4">Relative performance scale based on benchmark trends (visual vs. semantic tasks).</p>
+                    <p class="text-center text-xs text-stone-400 mt-4">Relative performance scale based on benchmark
+                        trends (visual vs. semantic tasks).</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Deployment Architect (Interactive Form) -->
-        <section id="deploy" class="scroll-mt-24 bg-stone-900 text-stone-50 rounded-3xl p-8 md:p-12">
+        <section id="deploy"
+            class="scroll-mt-24 bg-slate-900 text-slate-50 rounded-3xl p-8 md:p-12 border border-slate-800 shadow-2xl">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-10">
                     <h3 class="text-3xl font-bold font-heading text-white">Build Your Architecture</h3>
-                    <p class="text-stone-400 mt-2">
+                    <p class="text-slate-400 mt-2">
                         Define your constraints to generate a recommended stack (Model + Training Strategy + Vector DB).
                     </p>
                 </div>
@@ -204,34 +245,43 @@
                     <!-- Input Panel -->
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Search Modality</label>
-                            <select id="inputModality" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Search
+                                Modality</label>
+                            <select id="inputModality"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="visual">Visual Only (Image-to-Image)</option>
                                 <option value="multimodal">Multimodal (Text-to-Image)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Domain Specificity</label>
-                            <select id="inputDomain" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Domain
+                                Specificity</label>
+                            <select id="inputDomain"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="general">General (Web/Life)</option>
                                 <option value="specific">Specialized (Medical/E-comm)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Scale & Ops Capability</label>
-                            <select id="inputScale" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Scale &
+                                Ops Capability</label>
+                            <select id="inputScale"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="prototyping">Prototyping / Managed (Low Ops)</option>
                                 <option value="massive">Massive Scale (Self-Hosted)</option>
                             </select>
                         </div>
-                        <button onclick="generateArchitecture()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-xl transition-base mt-4 shadow-lg shadow-amber-900/50">
+                        <button onclick="generateArchitecture()"
+                            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold py-4 rounded-xl transition-base mt-4 shadow-lg shadow-indigo-900/50 transform hover:-translate-y-0.5">
                             Generate Stack Recommendation
                         </button>
                     </div>
 
                     <!-- Output Panel -->
-                    <div class="bg-stone-800 rounded-xl p-6 border border-stone-700 relative min-h-[300px] flex items-center justify-center" id="resultContainer">
-                        <p class="text-stone-500 text-center italic">Configure inputs and click Generate to see your architectural blueprint.</p>
+                    <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 relative min-h-[300px] flex items-center justify-center shadow-inner"
+                        id="resultContainer">
+                        <p class="text-slate-500 text-center italic">Configure inputs and click Generate to see your
+                            architectural blueprint.</p>
                     </div>
                 </div>
             </div>
@@ -242,11 +292,13 @@
     <footer class="bg-stone-100 py-12 mt-24 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="text-stone-500 font-heading font-medium">SemanticArchitect © 2025</p>
-            <p class="text-stone-400 text-sm mt-2">Based on "An Architect's Guide to Image Embeddings and Semantic Search"</p>
+            <p class="text-stone-400 text-sm mt-2">Based on "An Architect's Guide to Image Embeddings and Semantic
+                Search"</p>
         </div>
     </footer>
 
     <!-- Logic Script -->
     <script src="../javascript/Semantic_Search.js"></script>
 </body>
+
 </html>

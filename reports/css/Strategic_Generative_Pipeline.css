@@ -1,6 +1,13 @@
 /* Base Typography */
-body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
-.font-mono { font-family: 'JetBrains Mono', monospace; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
 
 /* Chart Container Specifics */
 .chart-container {
@@ -42,7 +49,8 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
     z-index: 10;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
+    /* Center horizontally */
 }
 
 .pipeline-node.active {
@@ -72,7 +80,8 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
 
 /* Connector Arrow (CSS only) */
 .connector-line {
-    display: none; /* Hidden on mobile */
+    display: none;
+    /* Hidden on mobile */
 }
 
 @media (min-width: 1024px) {
@@ -85,10 +94,16 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
         width: 50px;
         transition: background 0.3s;
     }
-    .left-card .connector-line { left: 100%; }
-    .right-card .connector-line { right: 100%; }
-    
-    .pipeline-node.active + .connector-line,
+
+    .left-card .connector-line {
+        left: 100%;
+    }
+
+    .right-card .connector-line {
+        right: 100%;
+    }
+
+    .pipeline-node.active+.connector-line,
     .pipeline-card.active .connector-line {
         background: #4f46e5;
     }
@@ -99,12 +114,315 @@ body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f17
     transition: all 0.2s;
     cursor: pointer;
 }
+
 .interactive-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     border-color: #6366f1;
 }
+
 .interactive-card.active {
     border-color: #4f46e5;
     background-color: #eef2ff;
+}
+
+/* Dark Mode Support */
+.dark body {
+    background-color: transparent;
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Fix White Backgrounds in Dark Mode */
+
+
+/* Fix White Backgrounds in Dark Mode - Comprehensive */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-indigo-50,
+.dark nav,
+.dark .interactive-card {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #e2e8f0 !important;
+}
+
+/* Grid Pattern */
+.bg-grid-pattern {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+.dark .bg-grid-pattern {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+    opacity: 0.3;
+    background-image: radial-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+    opacity: 0.3;
+}
+
+/* Fix Badges/Accents in Dark Mode */
+.dark .bg-indigo-100,
+.dark .bg-emerald-100,
+.dark .bg-purple-100,
+.dark .bg-amber-100 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .text-indigo-700 {
+    color: #818cf8 !important;
+}
+
+.dark .text-emerald-700 {
+    color: #34d399 !important;
+}
+
+.dark .text-purple-700 {
+    color: #c084fc !important;
+}
+
+.dark .text-amber-700 {
+    color: #fbbf24 !important;
+}
+
+/* Fix Pipeline Components in Dark Mode */
+.dark .pipeline-card {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #e2e8f0 !important;
+}
+
+.dark .pipeline-node {
+    background-color: #1e293b !important;
+    border-color: #6366f1 !important;
+    color: #c7d2fe !important;
+}
+
+.dark .pipeline-node.active {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Specific fix for comparison grid items */
+.dark .bg-white.opacity-60 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+/* Fix Text Colors in Dark Mode */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600 {
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+.dark .text-slate-500 {
+    color: #94a3b8 !important;
+    /* Slate-400 */
+}
+
+/* Vibrancy for Accents */
+.dark .text-indigo-600 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-indigo-900 {
+    color: #a5b4fc !important;
+    /* Indigo-300 */
+}
+
+/* Active Card State in Dark Mode */
+.dark .interactive-card.active {
+    background-color: rgba(49, 46, 129, 0.4) !important;
+    /* Indigo-900/40 */
+    border-color: #818cf8 !important;
+}
+
+/* Force Headers to be Colored in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Fix Dark Mode Text Visibility (Override Slate-900/800) */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f1f5f9 !important;
+    /* Slate-100 */
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+.dark .pipeline-line {
+    background: #334155;
+}
+
+.dark .pipeline-node {
+    background: #1e293b;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+.dark .pipeline-node.active {
+    background: #6366f1;
+    /* Indigo-500 */
+    border-color: #6366f1;
+    color: white;
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2);
+}
+
+.dark .pipeline-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+.dark .pipeline-card.active {
+    border-color: #6366f1;
+    background-color: rgba(49, 46, 129, 0.3);
+}
+
+.dark .interactive-card:hover {
+    border-color: #818cf8;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .interactive-card.active {
+    background-color: rgba(49, 46, 129, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .dark .connector-line {
+        background: #334155;
+    }
+
+    .dark .pipeline-node.active+.connector-line,
+    .dark .pipeline-card.active .connector-line {
+        background: #6366f1;
+    }
+}
+
+/* Global Safety Fix for Light Mode Classes in Dark Mode */
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-blue-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* Fix Badges (Purple, Amber, Indigo, Emerald) in Dark Mode */
+.dark .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.2) !important;
+    /* Purple-500/20 */
+    color: #d8b4fe !important;
+    /* Purple-300 */
+}
+
+.dark .text-purple-700 {
+    color: #d8b4fe !important;
+}
+
+.dark .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    color: #fcd34d !important;
+}
+
+.dark .text-amber-700 {
+    color: #fcd34d !important;
+}
+
+.dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+.dark .text-indigo-700 {
+    color: #a5b4fc !important;
+}
+
+.dark .bg-emerald-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: #6ee7b7 !important;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-indigo-600,
+.dark .text-indigo-700,
+.dark .text-indigo-800,
+.dark .text-indigo-900 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-emerald-400,
+.dark .text-emerald-600,
+.dark .text-emerald-700 {
+    color: #34d399 !important;
+    /* Emerald-400 */
+}
+
+.dark .text-purple-700 {
+    color: #c084fc !important;
+    /* Purple-400 */
+}
+
+
+.dark .text-amber-700 {
+    color: #fbbf24 !important;
+    /* Amber-400 */
+}
+
+.dark .text-indigo-600,
+.dark .text-indigo-700 {
+    color: #818cf8 !important;
+}
+
+
+
+/* Fix "SOTA" Card (Indigo-50) in Dark Mode */
+.dark .bg-indigo-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Fix Center Stack Visual Card in Dark Mode */
+.dark #stackVisual {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.dark #stackVisual h3 {
+    color: #ffffff !important;
+}
+
+.dark #stackVisual p {
+    color: #cbd5e1 !important;
 }

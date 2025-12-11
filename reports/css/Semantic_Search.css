@@ -1,11 +1,21 @@
 /* Typography */
-body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafaf9; color: #44403c; }
-h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
 
 /* Custom Scrollbar Colors */
-::-webkit-scrollbar-track { background: #f5f5f4; }
-::-webkit-scrollbar-thumb { background: #d6d3d1; }
-::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+::-webkit-scrollbar-track {
+    background: #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6d3d1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a29e;
+}
 
 /* Chart Container Specifics */
 .chart-container {
@@ -21,4 +31,239 @@ h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
     backdrop-filter: blur(8px);
     border: 1px solid #e7e5e4;
 }
-.transition-base { transition: all 0.3s ease-in-out; }
+
+.transition-base {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Support */
+.dark body {
+    background-color: transparent !important;
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Force Headers to be Colored in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Fix Dark Mode Text Visibility */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f1f5f9 !important;
+    /* Slate-100 */
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Global Safety Fix for Light Mode Classes in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/95,
+.dark .bg-slate-50,
+.dark .bg-gray-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    /* Dark Slate */
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+/* Ensure Slate-50 backgrounds are also dark */
+.dark .bg-slate-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #e2e8f0 !important;
+}
+
+/* Fix Glass Panel in Dark Mode */
+.dark .glass-panel {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix Text in Light Contexts being White in Dark Mode */
+.dark .text-slate-900,
+.dark .text-slate-800 {
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+/* Pop the Indigo Accent */
+.dark .text-indigo-600 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+/* Fix Badges (Indigo, Slate) in Dark Mode */
+.dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    color: #c7d2fe !important;
+}
+
+.dark .bg-indigo-50 {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.dark .text-indigo-900,
+.dark .text-indigo-800,
+.dark .text-indigo-700,
+.dark .text-indigo-600 {
+    color: #c7d2fe !important;
+}
+
+/* Variety Colors (Sky, Emerald, Purple) */
+.dark .bg-sky-100 {
+    background-color: rgba(14, 165, 233, 0.2) !important;
+    color: #bae6fd !important;
+}
+
+.dark .text-sky-600 {
+    color: #bae6fd !important;
+}
+
+.dark .bg-emerald-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: #6ee7b7 !important;
+}
+
+.dark .text-emerald-600 {
+    color: #6ee7b7 !important;
+}
+
+.dark .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.2) !important;
+    color: #e9d5ff !important;
+}
+
+.dark .text-purple-600 {
+    color: #e9d5ff !important;
+}
+
+.dark .bg-slate-100 {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+    color: #cbd5e1 !important;
+}
+
+.dark .bg-slate-200 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    color: #e2e8f0 !important;
+}
+
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+}
+
+
+
+/* Fix Formula Box in Dark Mode */
+.dark .bg-slate-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Fix Footer and Card Backgrounds in Dark Mode */
+.dark .bg-stone-100,
+.dark .bg-stone-800 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+}
+
+.dark .border-stone-700 {
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.dark .text-stone-900,
+.dark .text-stone-800 {
+    color: #f1f5f9 !important;
+    /* Light Text for Dark Mode */
+}
+
+.dark .text-stone-600,
+.dark .text-stone-500,
+.dark .text-stone-400 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+/* Fix Stone Badges in Dark Mode */
+.dark .bg-stone-200 {
+    background-color: rgba(68, 64, 60, 0.6) !important;
+    color: #e7e5e4 !important;
+}
+
+/* Fix Amber Badge (SOTA / Margin) in Dark Mode */
+.dark .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    color: #fcd34d !important;
+}
+
+.dark .text-amber-700 {
+    color: #fcd34d !important;
+}
+
+/* Color Variety Fixes (Simulating variety by mapping Stone classes to different colors in specific contexts if possible, or using direct overrides) */
+/* Ideally, we should update the HTML to use different classes, but for now we ensure the existing classes map nicely. */
+/* Using nth-of-type selectors to inject variety into the loss buttons if they share classes */
+.dark .loss-btn:nth-of-type(1) .bg-stone-100 {
+    background-color: rgba(14, 165, 233, 0.2) !important;
+    /* Sky */
+    color: #bae6fd !important;
+}
+
+.dark .loss-btn:nth-of-type(2) .bg-stone-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    /* Emerald */
+    color: #6ee7b7 !important;
+}
+
+.dark .loss-btn:hover {
+    border-color: rgba(99, 102, 241, 0.4) !important;
+    background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* Specific Fix for Code Box */
+.dark #resultContainer code,
+.dark .font-mono {
+    color: #e2e8f0;
+    background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.dark .glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(148, 163, 184, 0.1);
+}
+
+
+/* Restore Colors in Dark Mode */
+.dark .text-indigo-600,
+.dark .text-indigo-500 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-slate-900 {
+    color: #f1f5f9 !important;
+}

@@ -1,20 +1,21 @@
 2:I[2972,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],""]
 3:I[6205,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],"default"]
-6:I[4707,[],""]
-8:I[6423,[],""]
-9:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-07300a4b5c3281bf.js"],"default"]
-4:T3771,
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-0b5cc103b1b4abea.js"],"default"]
+4:T3921,
 
     <!-- Chosen Palette: Warm Neutrals (Stone/blue/Slate). Background: #fdfaf6. Accents: #ea580c (blue). 
          Use of whitespace and subtle shadows for hierarchy. -->
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+    <nav class="relative bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center space-x-2">
                     <span class="text-2xl text-blue-600">●</span>
-                    <h1 class="text-xl font-bold tracking-tight text-stone-800">Anime <span class="font-normal text-stone-500">Image Generation</span></h1>
+                    <h1 class="text-xl font-bold tracking-tight text-stone-800">Anime <span
+                            class="font-normal text-stone-500">Image Generation</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#dashboard" class="text-stone-500 hover:text-blue-600 transition-colors">Performance</a>
@@ -30,10 +31,13 @@
 
         <!-- Header / Context -->
         <header class="text-center max-w-3xl mx-auto space-y-4">
-            <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Open Source Deep Learning Models for Anime Illustration</h2>
+            <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Open Source Deep Learning Models for Anime
+                Illustration</h2>
             <p class="text-lg text-stone-600 leading-relaxed">
-                A strategic analysis of non-proprietary generative models capable of integration into external software stacks. 
-                Focusing on <strong>Stable Diffusion Fine-tunes</strong> and <strong>GANs</strong>, prioritized by style consistency, resource efficiency, and licensing flexibility.
+                A strategic analysis of non-proprietary generative models capable of integration into external software
+                stacks.
+                Focusing on <strong>Stable Diffusion Fine-tunes</strong> and <strong>GANs</strong>, prioritized by style
+                consistency, resource efficiency, and licensing flexibility.
             </p>
         </header>
 
@@ -42,8 +46,8 @@
             <!-- NEW WRAPPER: Ensures all content within this section is centered and constrained for visual hierarchy -->
             <div class="max-w-4xl mx-auto">
                 <!-- Ensure all content is inside one vertical flex container for strict top-to-bottom flow -->
-                <div class="flex flex-col space-y-8"> 
-                    
+                <div class="flex flex-col space-y-8">
+
                     <!-- 1. Section Title & Description (The very top content) -->
                     <!-- Added text-center here to center the description text -->
                     <div class="text-center">
@@ -53,15 +57,18 @@
                         </h3>
                         <!-- Adjusted margin to mt-4 and removed max-w-4xl as the parent wrapper now handles it -->
                         <p class="text-stone-600 mt-4">
-                            This section visualizes the trade-offs between computational cost (VRAM) and output quality (Community Rating). 
-                            Understanding these metrics is crucial for determining which models can be deployed in consumer-grade environments versus server-side clusters.
+                            This section visualizes the trade-offs between computational cost (VRAM) and output quality
+                            (Community Rating).
+                            Understanding these metrics is crucial for determining which models can be deployed in
+                            consumer-grade environments versus server-side clusters.
                         </p>
                     </div>
 
                     <!-- 2. Chart (Now the second item in the section flow, centered) -->
                     <!-- max-w-2xl mx-auto is kept here to make the chart card visually narrower than the section title -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 max-w-2xl mx-auto w-full">
-                        <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource Efficiency Analysis</h4>
+                        <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource
+                            Efficiency Analysis</h4>
                         <div class="chart-container">
                             <canvas id="resourceChart"></canvas>
                         </div>
@@ -73,38 +80,47 @@
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong> While slower, models like <em>Anything V5</em> offer superior semantic understanding compared to GANs.</span>
+                                <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong>
+                                    While slower, models like <em>Anything V5</em> offer superior semantic understanding
+                                    compared to GANs.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g., AnimeGANv2) are real-time capable but lack generative diversity, suitable only for style transfer, not creation from scratch.</span>
+                                <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g.,
+                                    AnimeGANv2) are real-time capable but lack generative diversity, suitable only for
+                                    style transfer, not creation from scratch.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo offers a middle ground—fast inference with decent quality, making it the prime candidate for interactive software integration.</span>
+                                <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo
+                                    offers a middle ground—fast inference with decent quality, making it the prime
+                                    candidate for interactive software integration.</span>
                             </li>
                         </ul>
                         <div class="pt-4 border-t border-blue-200 mt-4">
-                            <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX 3060 (12GB).</p>
+                            <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX
+                                3060 (12GB).</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <!-- Section 2: Model Explorer (Interactive Radar) -->
-        <section id="models" class="scroll-mt-24 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <section id="models"
+            class="scroll-mt-24 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
             <div class="p-8 border-b border-stone-100">
                 <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
                     <span class="w-8 h-1 bg-blue-500 rounded-full"></span>
                     Model Explorer
                 </h3>
                 <p class="text-stone-600 mt-2">
-                    Select a model below to analyze its specific capabilities across five key dimensions: 
-                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence), 
-                    <strong>Speed</strong> (Inference time), 
-                    <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet compatibility).
+                    Select a model below to analyze its specific capabilities across five key dimensions:
+                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence),
+                    <strong>Speed</strong> (Inference time),
+                    <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet
+                    compatibility).
                 </p>
             </div>
 
@@ -139,20 +155,21 @@
 
         <!-- Section 3: Architecture Comparison -->
         <section class="scroll-mt-24">
-             <div class="mb-6">
+            <div class="mb-6">
                 <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
                     <span class="w-8 h-1 bg-purple-500 rounded-full"></span>
                     Technical Architecture
                 </h3>
                 <p class="text-stone-600 mt-2">
-                    Understanding the underlying architecture is critical for software integration. 
+                    Understanding the underlying architecture is critical for software integration.
                     This breakdown contrasts the two dominant approaches.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Card 1: Latent Diffusion -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition-all-300">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition-all-300">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-stone-800">Latent Diffusion Models (LDM)</h4>
                         <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Recommended</span>
@@ -160,7 +177,7 @@
                     <p class="text-sm text-stone-600 mb-6 h-12">
                         Iteratively denoises random latent noise conditioned on text embeddings (CLIP).
                     </p>
-                    
+
                     <div class="space-y-4">
                         <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
                             <span class="text-stone-500">Training Stability</span>
@@ -175,17 +192,19 @@
                             <span class="font-semibold text-stone-700">Excellent</span>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-stone-100 p-3 rounded text-xs text-stone-500 font-mono">
                         User Prompt -> CLIP -> U-Net (Denoise) -> VAE Decoder -> Image
                     </div>
                 </div>
 
                 <!-- Card 2: GANs -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-stone-400 hover:shadow-md transition-all-300">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-stone-400 hover:shadow-md transition-all-300">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-stone-800">Generative Adversarial (GAN)</h4>
-                        <span class="bg-stone-100 text-stone-600 text-xs font-bold px-2 py-1 rounded">Legacy/Specific</span>
+                        <span
+                            class="bg-stone-100 text-stone-600 text-xs font-bold px-2 py-1 rounded">Legacy/Specific</span>
                     </div>
                     <p class="text-sm text-stone-600 mb-6 h-12">
                         A Generator creates images while a Discriminator critiques them in a zero-sum game.
@@ -234,13 +253,186 @@
 
     <footer class="bg-stone-100 py-10 mt-20 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application</p>
+            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application
+            </p>
         </div>
     </footer>
 
     <!-- JavaScript Logic -->
     
-5:T3929,// --- Data Store ---
+5:Te7d,@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+.report-content {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+}
+
+/* Custom Scrollbar Colors */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+}
+
+/* Chart Container Specifics */
+.chart-container {
+    max-width: 600px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* Timeline Node Logic */
+.timeline-node.active .circle {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    color: white;
+}
+
+.timeline-node.active .content {
+    border-left-color: #ea580c;
+    background-color: #fff7ed;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all-300 {
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Support */
+.dark .report-content {
+    background-color: transparent;
+    color: #bfdbfe !important;
+    /* Blue-200 */
+}
+
+/* Force Headers to be Colored in Dark Mode */
+/* Force Headers to be Colored in Dark Mode */
+
+/* Fix White Backgrounds/Nav in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/80,
+.dark .bg-stone-50,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #bfdbfe !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #bfdbfe;
+    /* Blue-200 */
+}
+
+/* Fix Dark Mode Text Visibility (Override Stone-900/800) */
+.dark .text-stone-900,
+.dark .text-stone-800,
+.dark .text-stone-700 {
+    color: #f5f5f4 !important;
+    /* Stone-100 */
+}
+
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+
+.dark .timeline-node.active .circle {
+    background-color: #f97316;
+    /* Orange-500 */
+    border-color: #f97316;
+}
+
+.dark .timeline-node.active .content {
+    background-color: rgba(67, 20, 7, 0.5);
+    /* Darker Orange background */
+    border-left-color: #f97316;
+    color: #fdba74;
+    /* Orange-300 */
+}
+
+/* Fix for White Cards in Dark Mode */
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-blue-50,
+.dark .bg-stone-50,
+.dark .bg-stone-100,
+.dark .shadow-lg,
+.dark .card-hover,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Restore Blue Effect for Active Interaction (Dark Mode) */
+.dark .timeline-node .content.border-blue-500 {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    /* Blue Tint */
+    border-color: #3b82f6 !important;
+    /* Blue Border */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Restore Blue Effect for Active Interaction (Light Mode) */
+html:not(.dark) .timeline-node .content.border-blue-500 {
+    background-color: #eff6ff !important;
+    /* Blue-50 */
+    border-color: #3b82f6 !important;
+    color: #000000 !important;
+}
+
+/* Fix "Recommended" Badge in Dark Mode */
+.dark .bg-blue-100 {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+    color: #93c5fd !important;
+    /* Blue-300 */
+}
+
+.dark .text-blue-800 {
+    color: #93c5fd !important;
+}
+
+/* Fix Stone Tags in Dark Mode */
+.dark .bg-stone-100 {
+    background-color: rgba(68, 64, 60, 0.4) !important;
+    color: #d6d3d1 !important;
+}
+
+.dark .text-stone-600,
+.dark .text-stone-500 {
+    color: #d6d3d1 !important;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-blue-600,
+.dark .text-blue-800,
+.dark .text-blue-500 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}6:T3929,// --- Data Store ---
 const models = [
     {
         id: 'anything_v5',
@@ -596,7 +788,7 @@ if (typeof renderRoadmap !== 'undefined') { window.renderRoadmap = renderRoadmap
     renderModelList();
     updateModelView(selectedModelId);
     renderRoadmap();
-}7:["slug","anime-gen","d"]
-0:["uF2fDZR-TC4s6DTB--URR",[[["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__?{\"slug\":\"anime-gen\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Anime Generation Model"}],["$","$L3",null,{"content":"$4","styles":"@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');\n\n.report-content {\n    font-family: 'Inter', sans-serif;\n    background-color: #fdfaf6;\n    color: #333;\n}\n\n/* Custom Scrollbar Colors */\n::-webkit-scrollbar-track {\n    background: #f1f1f1;\n}\n\n::-webkit-scrollbar-thumb {\n    background: #d4d4d8;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    background: #a1a1aa;\n}\n\n/* Chart Container Specifics */\n.chart-container {\n    max-width: 600px;\n    max-height: 400px;\n    margin: 0 auto;\n}\n\n/* Timeline Node Logic */\n.timeline-node.active .circle {\n    background-color: #ea580c;\n    border-color: #ea580c;\n    color: white;\n}\n\n.timeline-node.active .content {\n    border-left-color: #ea580c;\n    background-color: #fff7ed;\n}\n\n.card-hover:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n}\n\n.transition-all-300 {\n    transition: all 0.3s ease;\n}","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$5","title":"Anime Generation Model"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/1fecd13e9d4ab683.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/471247cfad3b81ab.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$L9",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$La",null]]]]
-a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
+}8:["slug","anime-gen","d"]
+0:["ycuHSYga1dFJ-Xb61UrFQ",[[["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__?{\"slug\":\"anime-gen\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","anime-gen","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Anime Generation Model"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Anime Generation Model"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/2223fb7bc43fc007.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/e5d5e53d9e84b5b0.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/a6d76a49270d0e06.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$La",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$Lb",null]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
 1:null

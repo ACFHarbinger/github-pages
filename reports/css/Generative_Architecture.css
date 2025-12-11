@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap');
 
-body { 
-    font-family: 'Inter', sans-serif; 
-    background-color: #f8fafc; 
-    color: #0f172a; 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
 }
 
-h1, h2, h3, h4, .font-heading {
+h1,
+h2,
+h3,
+h4,
+.font-heading {
     font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Custom Scrollbar Colors */
-::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #94a3b8; }
-::-webkit-scrollbar-thumb:hover { background: #64748b; }
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
 
 /* Chart Container Specifics */
 .chart-container {
@@ -26,16 +38,19 @@ h1, h2, h3, h4, .font-heading {
 .card-interaction {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .card-interaction:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-color: #6366f1; /* Indigo-500 */
+    border-color: #6366f1;
+    /* Indigo-500 */
 }
 
 /* CSS-only Flowchart Nodes */
 .flow-node {
     position: relative;
 }
+
 .flow-arrow::after {
     content: '↓';
     position: absolute;
@@ -45,6 +60,7 @@ h1, h2, h3, h4, .font-heading {
     font-size: 1.25rem;
     color: #94a3b8;
 }
+
 @media (min-width: 768px) {
     .flow-arrow-md::after {
         content: '→';
@@ -54,4 +70,194 @@ h1, h2, h3, h4, .font-heading {
         left: auto;
         transform: translateY(-50%);
     }
+}
+
+/* Dark Mode Support */
+.dark body {
+    background-color: transparent;
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Force Headers to be Colored in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Fix Dark Mode Text Visibility (Override Slate-900/800) */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f1f5f9 !important;
+    /* Slate-100 */
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+
+
+/* Fix White Backgrounds/Nav in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark .bg-slate-50,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #c7d2fe !important;
+}
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.dark .card-interaction:hover {
+    background-color: rgba(30, 41, 59, 0.8);
+    border-color: #818cf8;
+    /* Indigo-400 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+
+.dark .flow-arrow::after,
+.dark .flow-arrow-md::after {
+    color: #64748b;
+}
+
+/* Fix for Hardcoded Dark Sections in Light Mode */
+html:not(.dark) #convergence {
+    background-color: #f8fafc !important;
+    /* Forces dark section to be light */
+    color: #0f172a !important;
+}
+
+html:not(.dark) #convergence p,
+html:not(.dark) #convergence h3,
+html:not(.dark) #convergence h5 {
+    color: #0f172a !important;
+}
+
+html:not(.dark) #convergence .bg-slate-800\/50,
+html:not(.dark) #convergence .bg-slate-900 {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Fix Chart Contrast in Light Mode (Invert White Text to Dark) */
+html:not(.dark) #capabilityChart {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Fix Chart Contrast in Dark Mode (Disable Inversion for Layout-Native Dark Chart) */
+.dark #capabilityChart {
+    filter: none !important;
+}
+
+
+/* Fix Color-Coded Cards in Dark Mode */
+.dark .bg-amber-50,
+.dark .bg-emerald-50,
+.dark .bg-indigo-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .text-amber-800,
+.dark .text-amber-600 {
+    color: #fbbf24 !important;
+    /* Amber-400 */
+}
+
+.dark .text-emerald-800,
+.dark .text-emerald-600 {
+    color: #34d399 !important;
+    /* Emerald-400 */
+}
+
+.dark .text-indigo-900 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+
+/* Global Safety Fix for Light Mode Classes in Dark Mode */
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* Fix Strategy Strategy Cards Hover */
+.dark button.group:hover {
+    background-color: rgba(30, 41, 59, 1) !important;
+    border-color: #6366f1 !important;
+}
+
+/* Fix Badges (Emerald, Amber, Indigo) in Dark Mode */
+.dark .bg-emerald-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    /* Emerald-500/20 */
+    color: #6ee7b7 !important;
+    /* Emerald-300 */
+}
+
+.dark .text-emerald-800 {
+    color: #6ee7b7 !important;
+}
+
+.dark .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    /* Amber-500/20 */
+    color: #fcd34d !important;
+    /* Amber-300 */
+}
+
+.dark .text-amber-700 {
+    color: #fcd34d !important;
+}
+
+.dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    /* Indigo-500/20 */
+    /* Indigo-300 */
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-emerald-600,
+.dark .text-emerald-700,
+.dark .text-emerald-800 {
+    color: #34d399 !important;
+    /* Emerald-400 */
+}
+
+.dark .text-amber-600,
+.dark .text-amber-700 {
+    color: #fbbf24 !important;
+    /* Amber-400 */
+}
+
+.dark .text-indigo-600,
+.dark .text-indigo-700 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
 }

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State of the Art in Audio Signal Processing 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/Audio_Signal_Processing.css">
 </head>
+
 <body class="antialiased selection:bg-pink-900 selection:text-white">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 neon-panel border-b border-white/5">
+    <nav class="relative bg-white/90 backdrop-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3 mr-20">
@@ -23,12 +27,14 @@
                         <div class="waveform-bar" style="animation-delay: 0.2s;"></div>
                         <div class="waveform-bar" style="animation-delay: 0.3s;"></div>
                     </div>
-                    <h1 class="text-xl font-bold tracking-widest font-display text-white"><span class="text-pink-500">Audio</span></h1>
+                    <h1 class="text-xl font-bold tracking-widest font-display text-white"><span
+                            class="text-pink-500">Audio</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                     <a href="#shift" class="text-gray-400 hover:text-pink-500 transition-colors">Cognitive Shift</a>
                     <a href="#control" class="text-gray-400 hover:text-pink-500 transition-colors">Active Control</a>
-                    <a href="#synthesis" class="text-gray-400 hover:text-pink-500 transition-colors">Neural Synthesis</a>
+                    <a href="#synthesis" class="text-gray-400 hover:text-pink-500 transition-colors">Neural
+                        Synthesis</a>
                     <a href="#music" class="text-gray-400 hover:text-pink-500 transition-colors">Agentic Music</a>
                 </div>
             </div>
@@ -39,7 +45,8 @@
 
         <!-- Hero Section -->
         <section id="shift" class="text-center space-y-8 pt-10">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-pink-400 text-xs font-bold uppercase tracking-widest border border-white/10">
+            <div
+                class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-pink-400 text-xs font-bold uppercase tracking-widest border border-white/10">
                 Strategic Research Report
             </div>
             <h2 class="text-5xl md:text-7xl font-bold font-display tracking-tight leading-tight uppercase">
@@ -47,27 +54,37 @@
                 <span class="gradient-text">Audio Engineering</span>
             </h2>
             <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
-                From static, rule-based DSP to dynamic, <span class="text-white">Reinforcement Learning Agents</span>. 
+                From static, rule-based DSP to dynamic, <span class="text-white">Reinforcement Learning Agents</span>.
                 The era of the "Black Box" is ending; the era of the "Grey Box" neuro-symbolic system has begun.
             </p>
-            
+
             <!-- Paradigm Comparison -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 text-left">
                 <div class="p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-black opacity-60">
                     <h3 class="text-gray-500 font-display text-lg mb-4">Legacy Paradigm (2010-2022)</h3>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> Linear Adaptive Filters (FxLMS)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> "Black Box" End-to-End Deep Learning</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span> MSE Loss (Perceptual Mismatch)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                            Linear Adaptive Filters (FxLMS)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                            "Black Box" End-to-End Deep Learning</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-gray-600 rounded-full"></span>
+                            MSE Loss (Perceptual Mismatch)</li>
                     </ul>
                 </div>
-                <div class="p-8 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-900/10 to-purple-900/10 relative overflow-hidden">
+                <div
+                    class="p-8 rounded-2xl border border-pink-500/30 bg-gradient-to-br from-pink-900/10 to-purple-900/10 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-pink-500 blur-3xl opacity-20"></div>
                     <h3 class="text-white font-display text-lg mb-4">Cognitive State (2023-2025)</h3>
                     <ul class="space-y-3 text-sm text-gray-200">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>Deep Reinforcement Learning</strong> (PPO Agents)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>Differentiable DSP (DDSP)</strong> "Grey Box"</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span> <strong>RLHF</strong> (Alignment with Human Aesthetics)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span>
+                            <strong>Deep Reinforcement Learning</strong> (PPO Agents)
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span>
+                            <strong>Differentiable DSP (DDSP)</strong> "Grey Box"
+                        </li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink-500 rounded-full"></span>
+                            <strong>RLHF</strong> (Alignment with Human Aesthetics)
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -82,18 +99,23 @@
                         The Rise of the <span class="text-pink-500">Meta-Controller</span>
                     </h3>
                     <p class="text-gray-400 leading-relaxed">
-                        In Active Noise Control (ANC), traditional algorithms like FxLMS fail with non-linear distortion and impulsive noise. The SOTA solution is <strong>DRL-ANC</strong>: an RL agent that doesn't generate audio, but *tunes the filters* in real-time.
+                        In Active Noise Control (ANC), traditional algorithms like FxLMS fail with non-linear distortion
+                        and impulsive noise. The SOTA solution is <strong>DRL-ANC</strong>: an RL agent that doesn't
+                        generate audio, but *tunes the filters* in real-time.
                     </p>
-                    
+
                     <div class="space-y-4">
                         <div class="neon-panel rounded-lg">
                             <h4 class="text-pink-400 font-bold mb-1">Algorithm: PPO (Proximal Policy Optimization)</h4>
-                            <p class="text-xs text-gray-400">Chosen for stability. Prevents "howling" by clipping policy updates, ensuring smooth filter transitions.</p>
+                            <p class="text-xs text-gray-400">Chosen for stability. Prevents "howling" by clipping policy
+                                updates, ensuring smooth filter transitions.</p>
                         </div>
                         <div class="neon-panel rounded-lg">
                             <h4 class="text-purple-400 font-bold mb-1">Reward Function Engineering</h4>
-                            <p class="text-xs text-gray-400 font-mono">$R = \alpha·\Delta SNR - \beta·MSE - \gamma·TV(w)$</p>
-                            <p class="text-xs text-gray-500 mt-1">Includes Total Variation (TV) penalties to prevent "zipper noise" artifacts.</p>
+                            <p class="text-xs text-gray-400 font-mono">$R = \alpha·\Delta SNR - \beta·MSE -
+                                \gamma·TV(w)$</p>
+                            <p class="text-xs text-gray-500 mt-1">Includes Total Variation (TV) penalties to prevent
+                                "zipper noise" artifacts.</p>
                         </div>
                     </div>
                 </div>
@@ -101,15 +123,18 @@
                 <!-- Interactive Visualization -->
                 <div class="lg:col-span-7 neon-panel p-6 rounded-2xl">
                     <div class="flex justify-between items-center mb-6">
-                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Convergence & Stability Benchmark</h4>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Impulsive Noise Scenario</span>
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Convergence & Stability
+                            Benchmark</h4>
+                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Impulsive Noise
+                            Scenario</span>
                     </div>
                     <div class="chart-container">
                         <canvas id="controlChart"></canvas>
                     </div>
                     <div class="mt-6 text-center">
-                        
-                        <p class="text-xs text-gray-500 mt-2 italic">Figure: The Agent observes the error microphone state and adjusts IIR filter coefficients.</p>
+
+                        <p class="text-xs text-gray-500 mt-2 italic">Figure: The Agent observes the error microphone
+                            state and adjusts IIR filter coefficients.</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +143,8 @@
         <!-- Section 3: Synthesis & Architecture -->
         <section id="synthesis" class="scroll-mt-24">
             <div class="mb-12 text-center">
-                <h3 class="text-3xl font-display text-white">Architectural <span class="text-purple-500">Renaissance</span></h3>
+                <h3 class="text-3xl font-display text-white">Architectural <span
+                        class="text-purple-500">Renaissance</span></h3>
                 <p class="text-gray-400 mt-2">Moving beyond "Black Boxes" to interpretable, differentiable systems.</p>
             </div>
 
@@ -132,10 +158,12 @@
                         Neural networks predict parameters for oscillators and filters rather than raw samples.
                     </p>
                     <div class="mt-4 pt-4 border-t border-white/5">
-                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Phase-coherent, high-fidelity audio with 1/10th parameters.</span>
+                        <span class="text-xs text-green-400">Result:</span> <span
+                            class="text-xs text-gray-400">Phase-coherent, high-fidelity audio with 1/10th
+                            parameters.</span>
                     </div>
                     <div class="mt-4 opacity-50 hover:opacity-100 transition-opacity">
-                         
+
                     </div>
                 </div>
 
@@ -145,10 +173,12 @@
                     <h4 class="text-xl font-bold text-purple-400 mb-2">Neural Fields</h4>
                     <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Spatial Audio</p>
                     <p class="text-sm text-gray-300">
-                        Replacing discrete HRTF tables with continuous neural functions $f(x,y,z) \rightarrow \text{Filter}.$
+                        Replacing discrete HRTF tables with continuous neural functions $f(x,y,z) \rightarrow
+                        \text{Filter}.$
                     </p>
                     <div class="mt-4 pt-4 border-t border-white/5">
-                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Infinite resolution spatial audio for VR/XR.</span>
+                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">Infinite
+                            resolution spatial audio for VR/XR.</span>
                     </div>
                 </div>
 
@@ -158,13 +188,15 @@
                     <h4 class="text-xl font-bold text-blue-400 mb-2">Diffusion (DiT)</h4>
                     <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Generative Synthesis</p>
                     <p class="text-sm text-gray-300">
-                        Diffusion Transformers (like EzAudio-DiT) operating in latent space to hallucinate missing frequencies.
+                        Diffusion Transformers (like EzAudio-DiT) operating in latent space to hallucinate missing
+                        frequencies.
                     </p>
                     <div class="mt-4 pt-4 border-t border-white/5">
-                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">SOTA Bandwidth Extension & Packet Loss Concealment.</span>
+                        <span class="text-xs text-green-400">Result:</span> <span class="text-xs text-gray-400">SOTA
+                            Bandwidth Extension & Packet Loss Concealment.</span>
                     </div>
                     <div class="mt-4 opacity-50 hover:opacity-100 transition-opacity">
-                        
+
                     </div>
                 </div>
             </div>
@@ -177,27 +209,32 @@
                 <div class="space-y-6">
                     <h3 class="text-2xl font-display text-white">The Agent as Engineer</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        AI is no longer just generating MIDI; it is mixing tracks. Systems like <strong>DeepFADE</strong> use hierarchical DRL to automate DJ transitions, optimizing for beat alignment and tonal consonance.
+                        AI is no longer just generating MIDI; it is mixing tracks. Systems like
+                        <strong>DeepFADE</strong> use hierarchical DRL to automate DJ transitions, optimizing for beat
+                        alignment and tonal consonance.
                     </p>
-                    
+
                     <div class="bg-gray-900/50 p-6 rounded-xl border-l-2 border-pink-500">
                         <h4 class="text-white font-bold mb-2">SynthRL (Inverse Synthesis)</h4>
                         <p class="text-sm text-gray-400">
-                            An RL agent hears a sound and turns the knobs on a VST synthesizer to recreate it. Because RL doesn't need gradients, it works on "Black Box" plugins.
+                            An RL agent hears a sound and turns the knobs on a VST synthesizer to recreate it. Because
+                            RL doesn't need gradients, it works on "Black Box" plugins.
                         </p>
                     </div>
 
                     <div class="bg-gray-900/50 p-6 rounded-xl border-l-2 border-purple-500">
                         <h4 class="text-white font-bold mb-2">RLHF in Music</h4>
                         <p class="text-sm text-gray-400">
-                            <strong>MusicRL</strong> aligns generative output with human preference. Users rank clips, training a Reward Model that guides the diffusion process toward "aesthetic" quality.
+                            <strong>MusicRL</strong> aligns generative output with human preference. Users rank clips,
+                            training a Reward Model that guides the diffusion process toward "aesthetic" quality.
                         </p>
                     </div>
                 </div>
 
                 <!-- Right: Future Radar -->
                 <div class="neon-panel p-6 rounded-2xl flex flex-col justify-center items-center">
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">2025 Technology Radar</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">2025 Technology Radar
+                    </h4>
                     <div class="chart-container" style="height: 300px;">
                         <canvas id="radarChart"></canvas>
                     </div>
@@ -209,11 +246,13 @@
 
     <footer class="border-t border-white/10 bg-black py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-600 text-xs tracking-widest uppercase">Synthesized from "State of the Art in Audio Signal Processing 2023-2025"</p>
+            <p class="text-gray-600 text-xs tracking-widest uppercase">Synthesized from "State of the Art in Audio
+                Signal Processing 2023-2025"</p>
         </div>
     </footer>
 
     <!-- Linked Logic -->
     <script src="../javascript/Audio_Signal_Processing.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/Anime_Gen_Model.css">
 </head>
+
 <body class="bg-stone-50 text-stone-800">
 
     <!-- Chosen Palette: Warm Neutrals (Stone/blue/Slate). Background: #fdfaf6. Accents: #ea580c (blue). 
          Use of whitespace and subtle shadows for hierarchy. -->
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+    <nav class="relative bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center space-x-2">
                     <span class="text-2xl text-blue-600">●</span>
-                    <h1 class="text-xl font-bold tracking-tight text-stone-800">Anime <span class="font-normal text-stone-500">Image Generation</span></h1>
+                    <h1 class="text-xl font-bold tracking-tight text-stone-800">Anime <span
+                            class="font-normal text-stone-500">Image Generation</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#dashboard" class="text-stone-500 hover:text-blue-600 transition-colors">Performance</a>
@@ -35,10 +38,13 @@
 
         <!-- Header / Context -->
         <header class="text-center max-w-3xl mx-auto space-y-4">
-            <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Open Source Deep Learning Models for Anime Illustration</h2>
+            <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Open Source Deep Learning Models for Anime
+                Illustration</h2>
             <p class="text-lg text-stone-600 leading-relaxed">
-                A strategic analysis of non-proprietary generative models capable of integration into external software stacks. 
-                Focusing on <strong>Stable Diffusion Fine-tunes</strong> and <strong>GANs</strong>, prioritized by style consistency, resource efficiency, and licensing flexibility.
+                A strategic analysis of non-proprietary generative models capable of integration into external software
+                stacks.
+                Focusing on <strong>Stable Diffusion Fine-tunes</strong> and <strong>GANs</strong>, prioritized by style
+                consistency, resource efficiency, and licensing flexibility.
             </p>
         </header>
 
@@ -47,8 +53,8 @@
             <!-- NEW WRAPPER: Ensures all content within this section is centered and constrained for visual hierarchy -->
             <div class="max-w-4xl mx-auto">
                 <!-- Ensure all content is inside one vertical flex container for strict top-to-bottom flow -->
-                <div class="flex flex-col space-y-8"> 
-                    
+                <div class="flex flex-col space-y-8">
+
                     <!-- 1. Section Title & Description (The very top content) -->
                     <!-- Added text-center here to center the description text -->
                     <div class="text-center">
@@ -58,15 +64,18 @@
                         </h3>
                         <!-- Adjusted margin to mt-4 and removed max-w-4xl as the parent wrapper now handles it -->
                         <p class="text-stone-600 mt-4">
-                            This section visualizes the trade-offs between computational cost (VRAM) and output quality (Community Rating). 
-                            Understanding these metrics is crucial for determining which models can be deployed in consumer-grade environments versus server-side clusters.
+                            This section visualizes the trade-offs between computational cost (VRAM) and output quality
+                            (Community Rating).
+                            Understanding these metrics is crucial for determining which models can be deployed in
+                            consumer-grade environments versus server-side clusters.
                         </p>
                     </div>
 
                     <!-- 2. Chart (Now the second item in the section flow, centered) -->
                     <!-- max-w-2xl mx-auto is kept here to make the chart card visually narrower than the section title -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 max-w-2xl mx-auto w-full">
-                        <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource Efficiency Analysis</h4>
+                        <h4 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">Resource
+                            Efficiency Analysis</h4>
                         <div class="chart-container">
                             <canvas id="resourceChart"></canvas>
                         </div>
@@ -78,38 +87,47 @@
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong> While slower, models like <em>Anything V5</em> offer superior semantic understanding compared to GANs.</span>
+                                <span class="text-stone-700 text-sm"><strong>Diffusion Models dominate quality:</strong>
+                                    While slower, models like <em>Anything V5</em> offer superior semantic understanding
+                                    compared to GANs.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g., AnimeGANv2) are real-time capable but lack generative diversity, suitable only for style transfer, not creation from scratch.</span>
+                                <span class="text-stone-700 text-sm"><strong>Latency Trade-off:</strong> GANs (e.g.,
+                                    AnimeGANv2) are real-time capable but lack generative diversity, suitable only for
+                                    style transfer, not creation from scratch.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-blue-500 mr-2 mt-1">▸</span>
-                                <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo offers a middle ground—fast inference with decent quality, making it the prime candidate for interactive software integration.</span>
+                                <span class="text-stone-700 text-sm"><strong>Integration Viability:</strong> SD XL Turbo
+                                    offers a middle ground—fast inference with decent quality, making it the prime
+                                    candidate for interactive software integration.</span>
                             </li>
                         </ul>
                         <div class="pt-4 border-t border-blue-200 mt-4">
-                            <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX 3060 (12GB).</p>
+                            <p class="text-xs text-stone-500">Data simulated based on average inference on NVIDIA RTX
+                                3060 (12GB).</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <!-- Section 2: Model Explorer (Interactive Radar) -->
-        <section id="models" class="scroll-mt-24 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+        <section id="models"
+            class="scroll-mt-24 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
             <div class="p-8 border-b border-stone-100">
                 <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
                     <span class="w-8 h-1 bg-blue-500 rounded-full"></span>
                     Model Explorer
                 </h3>
                 <p class="text-stone-600 mt-2">
-                    Select a model below to analyze its specific capabilities across five key dimensions: 
-                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence), 
-                    <strong>Speed</strong> (Inference time), 
-                    <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet compatibility).
+                    Select a model below to analyze its specific capabilities across five key dimensions:
+                    <strong>Quality</strong> (Visual fidelity), <strong>Flexibility</strong> (Prompt adherence),
+                    <strong>Speed</strong> (Inference time),
+                    <strong>License</strong> (Permissiveness), and <strong>Ecosystem</strong> (LoRA/ControlNet
+                    compatibility).
                 </p>
             </div>
 
@@ -144,20 +162,21 @@
 
         <!-- Section 3: Architecture Comparison -->
         <section class="scroll-mt-24">
-             <div class="mb-6">
+            <div class="mb-6">
                 <h3 class="text-2xl font-bold text-stone-800 flex items-center gap-2">
                     <span class="w-8 h-1 bg-purple-500 rounded-full"></span>
                     Technical Architecture
                 </h3>
                 <p class="text-stone-600 mt-2">
-                    Understanding the underlying architecture is critical for software integration. 
+                    Understanding the underlying architecture is critical for software integration.
                     This breakdown contrasts the two dominant approaches.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Card 1: Latent Diffusion -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition-all-300">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition-all-300">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-stone-800">Latent Diffusion Models (LDM)</h4>
                         <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Recommended</span>
@@ -165,7 +184,7 @@
                     <p class="text-sm text-stone-600 mb-6 h-12">
                         Iteratively denoises random latent noise conditioned on text embeddings (CLIP).
                     </p>
-                    
+
                     <div class="space-y-4">
                         <div class="flex items-center justify-between text-sm border-b border-stone-100 pb-2">
                             <span class="text-stone-500">Training Stability</span>
@@ -180,17 +199,19 @@
                             <span class="font-semibold text-stone-700">Excellent</span>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-stone-100 p-3 rounded text-xs text-stone-500 font-mono">
                         User Prompt -> CLIP -> U-Net (Denoise) -> VAE Decoder -> Image
                     </div>
                 </div>
 
                 <!-- Card 2: GANs -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-stone-400 hover:shadow-md transition-all-300">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-stone-400 hover:shadow-md transition-all-300">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-stone-800">Generative Adversarial (GAN)</h4>
-                        <span class="bg-stone-100 text-stone-600 text-xs font-bold px-2 py-1 rounded">Legacy/Specific</span>
+                        <span
+                            class="bg-stone-100 text-stone-600 text-xs font-bold px-2 py-1 rounded">Legacy/Specific</span>
                     </div>
                     <p class="text-sm text-stone-600 mb-6 h-12">
                         A Generator creates images while a Discriminator critiques them in a zero-sum game.
@@ -239,11 +260,13 @@
 
     <footer class="bg-stone-100 py-10 mt-20 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application</p>
+            <p class="text-stone-500 text-sm">Generated for Anime Generation Model Research • Single Page Application
+            </p>
         </div>
     </footer>
 
     <!-- JavaScript Logic -->
     <script src="../javascript/Anime_Gen_Model.js"></script>
 </body>
+
 </html>

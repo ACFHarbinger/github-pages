@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025 Local AI Coding Stack</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/Local_AI_Coding.css">
 </head>
+
 <body class="antialiased selection:bg-sky-900 selection:text-sky-100">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+    <nav class="relative bg-white/90 backdrop-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">⚡</span>
-                    <h1 class="text-lg font-bold tracking-tight font-heading">Local <span class="text-sky-400">Dev</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight font-heading">Local <span
+                            class="text-sky-400">Dev</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#landscape" class="text-slate-400 hover:text-sky-400 transition-colors">Model Landscape</a>
                     <a href="#hardware" class="text-slate-400 hover:text-sky-400 transition-colors">VRAM Calc</a>
                     <a href="#stack" class="text-slate-400 hover:text-sky-400 transition-colors">Software Stack</a>
-                    <a href="#recommendations" class="bg-sky-600/20 text-sky-400 px-4 py-1.5 rounded-full hover:bg-sky-600/30 transition-colors">Builds</a>
+                    <a href="#recommendations"
+                        class="bg-sky-600/20 text-sky-400 px-4 py-1.5 rounded-full hover:bg-sky-600/30 transition-colors">Builds</a>
                 </div>
             </div>
         </div>
@@ -33,7 +39,8 @@
 
         <!-- Hero Section -->
         <section class="text-center space-y-6">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-sky-900/30 text-sky-400 text-xs font-semibold uppercase tracking-wide border border-sky-800">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-sky-900/30 text-sky-400 text-xs font-semibold uppercase tracking-wide border border-sky-800">
                 2025 Research Report
             </div>
             <h2 class="text-5xl md:text-6xl font-bold font-heading tracking-tight">
@@ -41,7 +48,8 @@
                 <span class="gradient-text">Local AI-Assisted Coding</span>
             </h2>
             <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                The 2025 meta is <strong>Specialized, Local, and Quantized</strong>. The primary goal is achieving absolute privacy, security, and compliance by running SOTA models entirely on your machine.
+                The 2025 meta is <strong>Specialized, Local, and Quantized</strong>. The primary goal is achieving
+                absolute privacy, security, and compliance by running SOTA models entirely on your machine.
             </p>
         </section>
 
@@ -53,32 +61,38 @@
                         Model Architecture: <span class="text-sky-400">Dense vs. MoE</span>
                     </h3>
                     <p class="text-slate-400 leading-relaxed">
-                        The divergence in performance between the S-Tier models—Qwen2.5-Coder (Dense) and DeepSeek-V3 (Mixture-of-Experts or MoE)—reveals a crucial distinction in their capabilities.
+                        The divergence in performance between the S-Tier models—Qwen2.5-Coder (Dense) and DeepSeek-V3
+                        (Mixture-of-Experts or MoE)—reveals a crucial distinction in their capabilities.
                     </p>
 
                     <div class="mt-4">
-                        
+
                     </div>
-                    
+
                     <div class="grid grid-cols-1 gap-4 pt-4">
                         <div class="bg-slate-800/50 p-4 rounded-xl border-l-4 border-sky-500">
                             <h4 class="font-bold text-sky-400">Qwen2.5-Coder (Dense, 32B)</h4>
-                            <p class="text-sm text-slate-400 mt-1">The "Software Engineer". Highly specialized, strong Aider score, excelling at daily tasks like debugging and generating boilerplate.</p>
+                            <p class="text-sm text-slate-400 mt-1">The "Software Engineer". Highly specialized, strong
+                                Aider score, excelling at daily tasks like debugging and generating boilerplate.</p>
                         </div>
                         <div class="bg-slate-800/50 p-4 rounded-xl border-l-4 border-indigo-500">
                             <h4 class="font-bold text-indigo-400">DeepSeek-V3 (MoE, 671B Total)</h4>
-                            <p class="text-sm text-slate-400 mt-1">The "Research Scientist". Vast knowledge applied sparsely (37B active params). Superior for complex, abstract reasoning and new algorithms.</p>
+                            <p class="text-sm text-slate-400 mt-1">The "Research Scientist". Vast knowledge applied
+                                sparsely (37B active params). Superior for complex, abstract reasoning and new
+                                algorithms.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 glass-panel p-6 rounded-2xl">
-                    <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 text-center">Aider Benchmark: Autonomous Coding (Pass %)</h4>
+                    <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6 text-center">Aider
+                        Benchmark: Autonomous Coding (Pass %)</h4>
                     <div class="chart-container">
                         <canvas id="benchmarkChart"></canvas>
                     </div>
                     <p class="text-center text-xs text-slate-500 mt-4">
-                        The "Benchmark Trap": Code-specific models (Qwen, DeepSeek) outperform the massive Llama generalist because Aider measures *editing* ability, not just function generation.
+                        The "Benchmark Trap": Code-specific models (Qwen, DeepSeek) outperform the massive Llama
+                        generalist because Aider measures *editing* ability, not just function generation.
                     </p>
                 </div>
             </div>
@@ -90,16 +104,19 @@
                 <div class="text-center mb-10">
                     <h3 class="text-3xl font-bold font-heading text-slate-100">VRAM Requirement Calculator</h3>
                     <p class="text-slate-400 mt-2">
-                        Quantization (GGUF) is the key. **4-bit (Q4\_K\_M) is the new frontier**, offering an 8x memory reduction with minimal practical performance loss.
+                        Quantization (GGUF) is the key. **4-bit (Q4\_K\_M) is the new frontier**, offering an 8x memory
+                        reduction with minimal practical performance loss.
                     </p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <!-- Calculator Inputs -->
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-sky-400 mb-2">Model Size (Parameters)</label>
-                            <select id="modelSize" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 outline-none transition-all">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-sky-400 mb-2">Model Size
+                                (Parameters)</label>
+                            <select id="modelSize"
+                                class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 outline-none transition-all">
                                 <option value="7">7B / 8B (Lightweight)</option>
                                 <option value="14">14B (Mid-Range)</option>
                                 <option value="22">22B (Codestral)</option>
@@ -108,34 +125,43 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-indigo-400 mb-2">Quantization Level</label>
-                            <select id="quantLevel" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wide text-indigo-400 mb-2">Quantization
+                                Level</label>
+                            <select id="quantLevel"
+                                class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
                                 <option value="0.55">Q4_K_M (Recommended 4-bit)</option>
                                 <option value="0.65">Q5_K_M (High Quality 5-bit)</option>
                                 <option value="0.95">Q8_0 (Luxury 8-bit)</option>
                             </select>
                         </div>
-                        <button onclick="calculateVRAM()" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-sky-900/50">
+                        <button onclick="calculateVRAM()"
+                            class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-sky-900/50">
                             Calculate Requirement
                         </button>
                     </div>
 
                     <!-- Calculator Output -->
-                    <div class="glass-panel rounded-xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                    <div
+                        class="glass-panel rounded-xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-indigo-500/10"></div>
                         <div class="relative z-10">
-                            <span class="text-slate-400 text-sm font-medium">Estimated VRAM (Weights + 8K Context)</span>
+                            <span class="text-slate-400 text-sm font-medium">Estimated VRAM (Weights + 8K
+                                Context)</span>
                             <div id="vramResult" class="text-5xl font-bold text-white mt-2 mb-1">-- GB</div>
-                            <div id="hardwareRec" class="text-sm font-bold text-sky-400 uppercase tracking-wide">Select Options</div>
+                            <div id="hardwareRec" class="text-sm font-bold text-sky-400 uppercase tracking-wide">Select
+                                Options</div>
                             <p id="hardwareDesc" class="text-xs text-slate-500 mt-4 max-w-xs mx-auto"></p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
-                    
+
                     <p class="text-xs text-slate-500 mt-2">
-                        The GGUF format enables flexible weight management, allowing layers to be offloaded to slower system RAM if VRAM is insufficient, though performance suffers greatly. The goal is always 100% VRAM residency.
+                        The GGUF format enables flexible weight management, allowing layers to be offloaded to slower
+                        system RAM if VRAM is insufficient, though performance suffers greatly. The goal is always 100%
+                        VRAM residency.
                     </p>
                 </div>
             </div>
@@ -145,19 +171,25 @@
         <section id="stack" class="scroll-mt-24">
             <div class="mb-10">
                 <h3 class="text-3xl font-bold font-heading text-slate-100">The Software Ecosystem</h3>
-                <p class="text-slate-400 mt-2">The goal is seamless integration. Ollama is the invisible backend service that connects your model to your IDE.</p>
+                <p class="text-slate-400 mt-2">The goal is seamless integration. Ollama is the invisible backend service
+                    that connects your model to your IDE.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Step 1: Runtime -->
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-sky-500/50 transition-colors">
+                <div
+                    class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-sky-500/50 transition-colors">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded bg-sky-900/50 text-sky-400 flex items-center justify-center font-bold">1</div>
+                        <div
+                            class="w-8 h-8 rounded bg-sky-900/50 text-sky-400 flex items-center justify-center font-bold">
+                            1</div>
                         <h4 class="font-bold text-slate-200">The Runtime: Ollama</h4>
                     </div>
                     <div class="space-y-3">
                         <p class="text-xs text-slate-400">
-                            Ollama is the clear winner for professionals. It runs as a stable background service and provides a clean, **OpenAI-compatible REST API**. Model management is simple: <code>ollama pull qwen2.5-coder:32b</code>.
+                            Ollama is the clear winner for professionals. It runs as a stable background service and
+                            provides a clean, **OpenAI-compatible REST API**. Model management is simple:
+                            <code>ollama pull qwen2.5-coder:32b</code>.
                         </p>
                         <strong class="text-sky-400 text-sm block pt-2 border-t border-slate-700">Competitors:</strong>
                         <p class="text-xs text-slate-500">
@@ -167,32 +199,41 @@
                 </div>
 
                 <!-- Step 2: IDE Plugin -->
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-colors">
+                <div
+                    class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-colors">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded bg-indigo-900/50 text-indigo-400 flex items-center justify-center font-bold">2</div>
+                        <div
+                            class="w-8 h-8 rounded bg-indigo-900/50 text-indigo-400 flex items-center justify-center font-bold">
+                            2</div>
                         <h4 class="font-bold text-slate-200">IDE Integration (Offline Mode)</h4>
                     </div>
                     <ul class="space-y-4">
                         <li>
                             <strong class="text-indigo-400 block text-sm">VS Code:</strong>
                             <span class="text-slate-300 text-sm">Use <strong>Continue</strong> extension.</span>
-                            <p class="text-xs text-slate-500">Acts as a bridge, routing requests from the editor to your local Ollama API.</p>
+                            <p class="text-xs text-slate-500">Acts as a bridge, routing requests from the editor to your
+                                local Ollama API.</p>
                         </li>
                         <li>
                             <strong class="text-indigo-400 block text-sm">JetBrains:</strong>
                             <span class="text-slate-300 text-sm">Use <strong>AI Assistant</strong> plugin.</span>
-                            <p class="text-xs text-slate-500">Crucially, enable "Offline mode" to guarantee data never leaves your network.</p>
+                            <p class="text-xs text-slate-500">Crucially, enable "Offline mode" to guarantee data never
+                                leaves your network.</p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Step 3: Specialization -->
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-colors">
+                <div
+                    class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-colors">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded bg-emerald-900/50 text-emerald-400 flex items-center justify-center font-bold">3</div>
+                        <div
+                            class="w-8 h-8 rounded bg-emerald-900/50 text-emerald-400 flex items-center justify-center font-bold">
+                            3</div>
                         <h4 class="font-bold text-slate-200">The Hybrid Stack (FIM)</h4>
                     </div>
-                    <p class="text-sm text-slate-300 mb-4">Separate FIM autocomplete from heavy reasoning for max speed.</p>
+                    <p class="text-sm text-slate-300 mb-4">Separate FIM autocomplete from heavy reasoning for max speed.
+                    </p>
                     <div class="space-y-2">
                         <div class="p-2 rounded bg-slate-900 border border-emerald-500/30">
                             <span class="text-xs text-emerald-400 font-bold uppercase">Autocomplete (FIM)</span>
@@ -210,17 +251,21 @@
         <!-- Section 4: Recommendations -->
         <section id="recommendations" class="scroll-mt-24 pb-20">
             <h3 class="text-3xl font-bold font-heading text-slate-100 mb-8">Strategic Build Lists</h3>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Persona 1 -->
                 <div class="glass-panel p-6 rounded-xl border-t-4 border-sky-500">
                     <h4 class="font-bold text-lg text-white mb-1">Pragmatic NVIDIA</h4>
                     <p class="text-xs text-sky-400 uppercase tracking-wide mb-4">Best Practicality</p>
                     <ul class="text-sm text-slate-300 space-y-3">
-                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090 (24GB)</span></li>
-                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Qwen2.5-Coder 32B</span></li>
-                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF Q5_K_M</span></li>
-                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama + Continue</span></li>
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090
+                                (24GB)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Qwen2.5-Coder
+                                32B</span></li>
+                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF
+                                Q5_K_M</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama +
+                                Continue</span></li>
                     </ul>
                     <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
                         Runs S-Tier coding model entirely in VRAM for maximum speed and fluidity.
@@ -232,10 +277,14 @@
                     <h4 class="font-bold text-lg text-white mb-1">Apple Ecosystem</h4>
                     <p class="text-xs text-slate-400 uppercase tracking-wide mb-4">Capacity & Portability</p>
                     <ul class="text-sm text-slate-300 space-y-3">
-                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">M3/M4 Max (64GB+)</span></li>
-                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Llama 3.1 70B</span></li>
-                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF Q4_K_M</span></li>
-                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama (Metal)</span></li>
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">M3/M4 Max
+                                (64GB+)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">Llama 3.1
+                                70B</span></li>
+                        <li class="flex justify-between"><span>Format:</span> <span class="text-white">GGUF
+                                Q4_K_M</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama
+                                (Metal)</span></li>
                     </ul>
                     <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
                         Leverages Unified Memory to run 70B models impossible on single discrete GPUs.
@@ -247,9 +296,12 @@
                     <h4 class="font-bold text-lg text-white mb-1">Ultimate Hybrid</h4>
                     <p class="text-xs text-emerald-400 uppercase tracking-wide mb-4">Zero Compromise</p>
                     <ul class="text-sm text-slate-300 space-y-3">
-                        <li class="flex justify-between"><span>FIM:</span> <span class="text-white">Tabby + Codestral 22B</span></li>
-                        <li class="flex justify-between"><span>Debug:</span> <span class="text-white">Ollama + Qwen 32B</span></li>
-                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090</span></li>
+                        <li class="flex justify-between"><span>FIM:</span> <span class="text-white">Tabby + Codestral
+                                22B</span></li>
+                        <li class="flex justify-between"><span>Debug:</span> <span class="text-white">Ollama + Qwen
+                                32B</span></li>
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">RTX 3090/4090</span>
+                        </li>
                     </ul>
                     <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
                         Separates fast autocomplete from heavy-duty reasoning and chat functions.
@@ -261,9 +313,12 @@
                     <h4 class="font-bold text-lg text-white mb-1">Bleeding Edge</h4>
                     <p class="text-xs text-purple-400 uppercase tracking-wide mb-4">Researcher / Complex Math</p>
                     <ul class="text-sm text-slate-300 space-y-3">
-                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">2x RTX 4090 (48GB)</span></li>
-                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">DeepSeek-V3 (MoE)</span></li>
-                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama Multi-GPU</span></li>
+                        <li class="flex justify-between"><span>HW:</span> <span class="text-white">2x RTX 4090
+                                (48GB)</span></li>
+                        <li class="flex justify-between"><span>Model:</span> <span class="text-white">DeepSeek-V3
+                                (MoE)</span></li>
+                        <li class="flex justify-between"><span>Runtime:</span> <span class="text-white">Ollama
+                                Multi-GPU</span></li>
                     </ul>
                     <div class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500">
                         Required hardware to run the most powerful open-source reasoning engines.
@@ -283,4 +338,5 @@
     <!-- Logic -->
     <script src="../javascript/Local_AI_Coding.js"></script>
 </body>
+
 </html>

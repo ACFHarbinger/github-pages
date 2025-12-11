@@ -2,8 +2,8 @@
 3:I[6205,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],"default"]
 7:I[4707,[],""]
 9:I[6423,[],""]
-a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-07300a4b5c3281bf.js"],"default"]
-4:T3e2c,
+a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-0b5cc103b1b4abea.js"],"default"]
+4:T4035,
 
     <!-- Palette: "Synthetic Indigo" -->
     <!-- Structure: 
@@ -12,20 +12,22 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
          3. The Pipeline (Infographic Flowchart)
          4. Efficiency Stats
     -->
-    
+
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. CSS-based Infographics only. -->
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="relative bg-white/90 backdrop-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl text-indigo-600">❖</span>
-                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span class="font-normal text-slate-500">Pipeline</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900">MetaCLIP <span
+                            class="font-normal text-slate-500">Pipeline</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#paradigm" class="text-slate-500 hover:text-indigo-600 transition-colors">Shift</a>
                     <a href="#stack" class="text-slate-500 hover:text-indigo-600 transition-colors">The Stack</a>
-                    <a href="#pipeline" class="text-slate-500 hover:text-indigo-600 transition-colors">Pipeline Infographic</a>
+                    <a href="#pipeline" class="text-slate-500 hover:text-indigo-600 transition-colors">Pipeline
+                        Infographic</a>
                 </div>
             </div>
         </div>
@@ -35,27 +37,31 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
 
         <!-- 1. The Paradigm Shift (Hero) -->
         <section id="paradigm" class="text-center max-w-4xl mx-auto space-y-8">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wide">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wide">
                 Strategic Recommendation
             </div>
-            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight text-center w-full mx-auto">
                 From Scavenging <br>
                 to <span class="text-indigo-600">Synthesis</span>
             </h2>
             <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                Training SOTA Vision-Language Models in late 2025 no longer requires billions of noisy web images. 
-                The new standard is <strong>Generative Augmentation</strong>—using FLUX.1 and ControlNet to manufacture semantic alignment.
+                Training SOTA Vision-Language Models in late 2025 no longer requires billions of noisy web images.
+                The new standard is <strong>Generative Augmentation</strong>—using FLUX.1 and ControlNet to manufacture
+                semantic alignment.
             </p>
-            
+
             <!-- Comparison Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-left">
-                <div class="bg-white p-6 rounded-xl border border-slate-200 opacity-60 hover:opacity-100 transition-opacity">
+                <div
+                    class="bg-white p-6 rounded-xl border border-slate-200 opacity-60 hover:opacity-100 transition-opacity">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="w-2 h-2 rounded-full bg-red-400"></span>
                         <h3 class="font-bold text-slate-500 uppercase text-xs tracking-wider">Legacy (2021-2024)</h3>
                     </div>
                     <div class="font-bold text-xl text-slate-800 mb-1">Data Scavenging</div>
-                    <p class="text-sm text-slate-500">Web scraping (LAION), noisy alignment, long-tail distribution, harmful content bottlenecks.</p>
+                    <p class="text-sm text-slate-500">Web scraping (LAION), noisy alignment, long-tail distribution,
+                        harmful content bottlenecks.</p>
                 </div>
                 <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 shadow-sm relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-100 rounded-bl-full -mr-8 -mt-8"></div>
@@ -64,7 +70,8 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                         <h3 class="font-bold text-indigo-600 uppercase text-xs tracking-wider">SOTA (2025)</h3>
                     </div>
                     <div class="font-bold text-xl text-indigo-900 mb-1 relative z-10">Data Synthesis</div>
-                    <p class="text-sm text-indigo-800 relative z-10">Programmatic generation, perfect alignment, controlled compositionality, iterative filtering.</p>
+                    <p class="text-sm text-indigo-800 relative z-10">Programmatic generation, perfect alignment,
+                        controlled compositionality, iterative filtering.</p>
                 </div>
             </div>
         </section>
@@ -78,23 +85,26 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
 
             <!-- CSS Architecture Diagram -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
+
                 <!-- Left: Interactive Selector -->
                 <div class="lg:col-span-4 space-y-4">
                     <!-- MODIFIED: Pass 'event' object to showStackDetail -->
-                    <div class="interactive-card active bg-white p-4 rounded-lg border border-indigo-500 shadow-sm" onclick="showStackDetail('flux', event)">
+                    <div class="interactive-card active bg-white p-4 rounded-lg border border-indigo-500 shadow-sm"
+                        onclick="showStackDetail('flux', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">The Backbone</span>
                         <h4 class="font-bold text-indigo-600 text-lg">FLUX.1 Kontext Pro</h4>
                         <p class="text-xs text-slate-500 mt-1">Native multimodal context (Text + Image).</p>
                     </div>
-                    
-                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('control', event)">
+
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200"
+                        onclick="showStackDetail('control', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">Structural Control</span>
                         <h4 class="font-bold text-slate-800 text-lg">ControlNet Union</h4>
                         <p class="text-xs text-slate-500 mt-1">Depth, Canny, Pose invariance.</p>
                     </div>
-                    
-                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200" onclick="showStackDetail('instruct', event)">
+
+                    <div class="interactive-card bg-white p-4 rounded-lg border border-slate-200"
+                        onclick="showStackDetail('instruct', event)">
                         <span class="text-xs font-bold text-slate-400 uppercase">Semantic Control</span>
                         <h4 class="font-bold text-slate-800 text-lg">InstructAny2Pix</h4>
                         <p class="text-xs text-slate-500 mt-1">Multi-modal instruction following.</p>
@@ -102,16 +112,23 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                 </div>
 
                 <!-- Right: Visual Diagram Area -->
-                <div class="lg:col-span-8 bg-slate-100 rounded-2xl p-8 border border-slate-200 min-h-[400px] flex items-center justify-center relative overflow-hidden">
+                <div
+                    class="lg:col-span-8 bg-slate-100 rounded-2xl p-8 border border-slate-200 min-h-[400px] flex items-center justify-center relative overflow-hidden">
                     <!-- Background Grid -->
-                    <div class="absolute inset-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px; opacity: 0.5;"></div>
-                    
+                    <div class="absolute inset-0 bg-grid-pattern">
+                    </div>
+
                     <!-- Dynamic Content -->
-                    <div id="stackVisual" class="relative z-10 w-full max-w-lg bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center animate-fade-in">
+                    <div id="stackVisual"
+                        class="relative z-10 w-full max-w-lg bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center animate-fade-in">
                         <!-- Initial Content -->
-                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">⚡</div>
+                        <div
+                            class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                            ⚡</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">FLUX.1 Kontext Pro</h3>
-                        <p class="text-slate-600 mb-6">The "Engine" of the pipeline. Selected for its ability to accept both text and reference images natively, enabling the "Context-Aware" generation required for VLM training.</p>
+                        <p class="text-slate-600 mb-6">The "Engine" of the pipeline. Selected for its ability to accept
+                            both text and reference images natively, enabling the "Context-Aware" generation required
+                            for VLM training.</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-slate-50 p-2 rounded border border-slate-200">
                                 <span class="block text-xs font-bold text-slate-500">Inputs</span>
@@ -141,15 +158,17 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                 <!-- Step 1 -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(1)">
                     <div class="order-2 lg:order-1 flex justify-center lg:justify-end items-center">
-                         <div class="pipeline-card left-card active cursor-pointer" id="card-1">
+                        <div class="pipeline-card left-card active cursor-pointer" id="card-1">
                             <div class="connector-line"></div>
                             <div class="flex justify-between items-start mb-2">
-                                <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded uppercase">Gen-1</span>
+                                <span
+                                    class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded uppercase">Gen-1</span>
                                 <span class="text-xs text-slate-400 font-mono">SynthCLIP</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-lg">Baseline Generation</h4>
-                            <p class="text-sm text-slate-600 mt-2">Generate 30M+ pairs using high-quality LLM captions and FLUX.1 backbone.</p>
-                         </div>
+                            <p class="text-sm text-slate-600 mt-2">Generate 30M+ pairs using high-quality LLM captions
+                                and FLUX.1 backbone.</p>
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center items-center relative">
                         <div class="pipeline-node active" id="node-1">01</div>
@@ -159,17 +178,19 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                 <!-- Step 2 -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(2)">
                     <div class="order-2 lg:order-1 flex justify-center items-center relative">
-                         <div class="pipeline-node" id="node-2">02</div>
+                        <div class="pipeline-node" id="node-2">02</div>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center lg:justify-start items-center">
                         <div class="pipeline-card right-card cursor-pointer" id="card-2">
                             <div class="connector-line"></div>
                             <div class="flex justify-between items-start mb-2">
-                                <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded uppercase">Augment</span>
+                                <span
+                                    class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded uppercase">Augment</span>
                                 <span class="text-xs text-slate-400 font-mono">SPARCL</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-lg">Compositional Variation</h4>
-                            <p class="text-sm text-slate-600 mt-2">Create "clusters" of data (e.g., same scene, different object) using ControlNet & InstructAny2Pix.</p>
+                            <p class="text-sm text-slate-600 mt-2">Create "clusters" of data (e.g., same scene,
+                                different object) using ControlNet & InstructAny2Pix.</p>
                         </div>
                     </div>
                 </div>
@@ -177,15 +198,17 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                 <!-- Step 3 -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 relative group" onclick="activateStep(3)">
                     <div class="order-2 lg:order-1 flex justify-center lg:justify-end items-center">
-                         <div class="pipeline-card left-card cursor-pointer" id="card-3">
+                        <div class="pipeline-card left-card cursor-pointer" id="card-3">
                             <div class="connector-line"></div>
                             <div class="flex justify-between items-start mb-2">
-                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded uppercase">Filter</span>
+                                <span
+                                    class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded uppercase">Filter</span>
                                 <span class="text-xs text-slate-400 font-mono">UniFilter</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-lg">Quality Curation</h4>
-                            <p class="text-sm text-slate-600 mt-2">Train a QA classifier on small HQ data. Filter the 1B synthetic pairs down to the best 20%.</p>
-                         </div>
+                            <p class="text-sm text-slate-600 mt-2">Train a QA classifier on small HQ data. Filter the 1B
+                                synthetic pairs down to the best 20%.</p>
+                        </div>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center items-center relative">
                         <div class="pipeline-node" id="node-3">03</div>
@@ -195,17 +218,19 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                 <!-- Step 4 -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative group" onclick="activateStep(4)">
                     <div class="order-2 lg:order-1 flex justify-center items-center relative">
-                         <div class="pipeline-node" id="node-4">04</div>
+                        <div class="pipeline-node" id="node-4">04</div>
                     </div>
                     <div class="order-1 lg:order-2 flex justify-center lg:justify-start items-center">
                         <div class="pipeline-card right-card cursor-pointer" id="card-4">
                             <div class="connector-line"></div>
                             <div class="flex justify-between items-start mb-2">
-                                <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded uppercase">Train</span>
+                                <span
+                                    class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-1 rounded uppercase">Train</span>
                                 <span class="text-xs text-slate-400 font-mono">MetaCLIP</span>
                             </div>
                             <h4 class="font-bold text-slate-900 text-lg">Iterative Loop</h4>
-                            <p class="text-sm text-slate-600 mt-2">Train v0.1. Use v0.1 to re-filter the dataset. Train v0.2. Data-Model co-evolution.</p>
+                            <p class="text-sm text-slate-600 mt-2">Train v0.1. Use v0.1 to re-filter the dataset. Train
+                                v0.2. Data-Model co-evolution.</p>
                         </div>
                     </div>
                 </div>
@@ -220,7 +245,8 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                     <div class="md:w-1/2 space-y-4">
                         <h3 class="text-2xl font-bold text-white">The ROI of Synthesis</h3>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Research (SynthVLM) demonstrates that high-quality synthetic data is significantly more data-efficient than web data. You need less compute to reach the same SOTA performance.
+                            Research (SynthVLM) demonstrates that high-quality synthetic data is significantly more
+                            data-efficient than web data. You need less compute to reach the same SOTA performance.
                         </p>
                         <div class="flex gap-4 pt-2">
                             <div>
@@ -234,7 +260,7 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
                         </div>
                     </div>
                     <div class="md:w-1/2 w-full h-48">
-                         <canvas id="roiChart"></canvas>
+                        <canvas id="roiChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -249,9 +275,16 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
 
     <!-- Linked Logic -->
     
-5:T978,/* Base Typography */
-.report-content { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
-.font-mono { font-family: 'JetBrains Mono', monospace; }
+5:T224b,/* Base Typography */
+.report-content {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
 
 /* Chart Container Specifics */
 .chart-container {
@@ -293,7 +326,8 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
     z-index: 10;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
+    /* Center horizontally */
 }
 
 .pipeline-node.active {
@@ -323,7 +357,8 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
 
 /* Connector Arrow (CSS only) */
 .connector-line {
-    display: none; /* Hidden on mobile */
+    display: none;
+    /* Hidden on mobile */
 }
 
 @media (min-width: 1024px) {
@@ -336,10 +371,16 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
         width: 50px;
         transition: background 0.3s;
     }
-    .left-card .connector-line { left: 100%; }
-    .right-card .connector-line { right: 100%; }
-    
-    .pipeline-node.active + .connector-line,
+
+    .left-card .connector-line {
+        left: 100%;
+    }
+
+    .right-card .connector-line {
+        right: 100%;
+    }
+
+    .pipeline-node.active+.connector-line,
     .pipeline-card.active .connector-line {
         background: #4f46e5;
     }
@@ -350,14 +391,317 @@ a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app
     transition: all 0.2s;
     cursor: pointer;
 }
+
 .interactive-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     border-color: #6366f1;
 }
+
 .interactive-card.active {
     border-color: #4f46e5;
     background-color: #eef2ff;
+}
+
+/* Dark Mode Support */
+.dark .report-content {
+    background-color: transparent;
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Fix White Backgrounds in Dark Mode */
+
+
+/* Fix White Backgrounds in Dark Mode - Comprehensive */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-indigo-50,
+.dark nav,
+.dark .interactive-card {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #e2e8f0 !important;
+}
+
+/* Grid Pattern */
+.bg-grid-pattern {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+.dark .bg-grid-pattern {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+    opacity: 0.3;
+    background-image: radial-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+    opacity: 0.3;
+}
+
+/* Fix Badges/Accents in Dark Mode */
+.dark .bg-indigo-100,
+.dark .bg-emerald-100,
+.dark .bg-purple-100,
+.dark .bg-amber-100 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .text-indigo-700 {
+    color: #818cf8 !important;
+}
+
+.dark .text-emerald-700 {
+    color: #34d399 !important;
+}
+
+.dark .text-purple-700 {
+    color: #c084fc !important;
+}
+
+.dark .text-amber-700 {
+    color: #fbbf24 !important;
+}
+
+/* Fix Pipeline Components in Dark Mode */
+.dark .pipeline-card {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #e2e8f0 !important;
+}
+
+.dark .pipeline-node {
+    background-color: #1e293b !important;
+    border-color: #6366f1 !important;
+    color: #c7d2fe !important;
+}
+
+.dark .pipeline-node.active {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Specific fix for comparison grid items */
+.dark .bg-white.opacity-60 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+/* Fix Text Colors in Dark Mode */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600 {
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+.dark .text-slate-500 {
+    color: #94a3b8 !important;
+    /* Slate-400 */
+}
+
+/* Vibrancy for Accents */
+.dark .text-indigo-600 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-indigo-900 {
+    color: #a5b4fc !important;
+    /* Indigo-300 */
+}
+
+/* Active Card State in Dark Mode */
+.dark .interactive-card.active {
+    background-color: rgba(49, 46, 129, 0.4) !important;
+    /* Indigo-900/40 */
+    border-color: #818cf8 !important;
+}
+
+/* Force Headers to be Colored in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Fix Dark Mode Text Visibility (Override Slate-900/800) */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f1f5f9 !important;
+    /* Slate-100 */
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+.dark .pipeline-line {
+    background: #334155;
+}
+
+.dark .pipeline-node {
+    background: #1e293b;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+.dark .pipeline-node.active {
+    background: #6366f1;
+    /* Indigo-500 */
+    border-color: #6366f1;
+    color: white;
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.2);
+}
+
+.dark .pipeline-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+.dark .pipeline-card.active {
+    border-color: #6366f1;
+    background-color: rgba(49, 46, 129, 0.3);
+}
+
+.dark .interactive-card:hover {
+    border-color: #818cf8;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .interactive-card.active {
+    background-color: rgba(49, 46, 129, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .dark .connector-line {
+        background: #334155;
+    }
+
+    .dark .pipeline-node.active+.connector-line,
+    .dark .pipeline-card.active .connector-line {
+        background: #6366f1;
+    }
+}
+
+/* Global Safety Fix for Light Mode Classes in Dark Mode */
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-blue-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* Fix Badges (Purple, Amber, Indigo, Emerald) in Dark Mode */
+.dark .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.2) !important;
+    /* Purple-500/20 */
+    color: #d8b4fe !important;
+    /* Purple-300 */
+}
+
+.dark .text-purple-700 {
+    color: #d8b4fe !important;
+}
+
+.dark .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    color: #fcd34d !important;
+}
+
+.dark .text-amber-700 {
+    color: #fcd34d !important;
+}
+
+.dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+.dark .text-indigo-700 {
+    color: #a5b4fc !important;
+}
+
+.dark .bg-emerald-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: #6ee7b7 !important;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-indigo-600,
+.dark .text-indigo-700,
+.dark .text-indigo-800,
+.dark .text-indigo-900 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-emerald-400,
+.dark .text-emerald-600,
+.dark .text-emerald-700 {
+    color: #34d399 !important;
+    /* Emerald-400 */
+}
+
+.dark .text-purple-700 {
+    color: #c084fc !important;
+    /* Purple-400 */
+}
+
+
+.dark .text-amber-700 {
+    color: #fbbf24 !important;
+    /* Amber-400 */
+}
+
+.dark .text-indigo-600,
+.dark .text-indigo-700 {
+    color: #818cf8 !important;
+}
+
+
+
+/* Fix "SOTA" Card (Indigo-50) in Dark Mode */
+.dark .bg-indigo-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Fix Center Stack Visual Card in Dark Mode */
+.dark #stackVisual {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.dark #stackVisual h3 {
+    color: #ffffff !important;
+}
+
+.dark #stackVisual p {
+    color: #cbd5e1 !important;
 }6:T1222,// --- Stack Visual Data ---
 const stackDetails = {
     flux: {
@@ -475,6 +819,6 @@ if (typeof activateStep !== 'undefined') { window.activateStep = activateStep; }
         });
     }
 }8:["slug","strategic","d"]
-0:["uF2fDZR-TC4s6DTB--URR",[[["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__?{\"slug\":\"strategic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Strategic Generative Pipeline"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Strategic Generative Pipeline"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/1fecd13e9d4ab683.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/471247cfad3b81ab.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$La",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$Lb",null]]]]
+0:["ycuHSYga1dFJ-Xb61UrFQ",[[["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__?{\"slug\":\"strategic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","strategic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Strategic Generative Pipeline"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Strategic Generative Pipeline"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/2223fb7bc43fc007.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/e5d5e53d9e84b5b0.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/a6d76a49270d0e06.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$La",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$Lb",null]]]]
 b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
 1:null

@@ -1,9 +1,9 @@
 2:I[2972,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],""]
 3:I[6205,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],"default"]
-6:I[4707,[],""]
-8:I[6423,[],""]
-9:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-07300a4b5c3281bf.js"],"default"]
-4:T3deb,
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-0b5cc103b1b4abea.js"],"default"]
+4:T43d0,
 
     <!-- Chosen Palette: Warm Neutrals. Background: Stone-50 (#fafaf9). Primary Text: Stone-800. 
          Accents: Amber-600 (Focus/Action), Stone-500 (Secondary). 
@@ -28,18 +28,22 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-panel border-b border-stone-200 shadow-sm">
+    <nav class="relative border-b border-stone-200 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">🏛️</span>
-                    <h1 class="text-lg font-bold tracking-tight text-stone-900 font-heading">Semantic <span class="font-light text-stone-500">Architect</span></h1>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900 font-heading">Semantic <span
+                            class="font-light text-slate-500">Architect</span></h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#foundation" class="text-stone-500 hover:text-amber-600 transition-base">Foundation Models</a>
-                    <a href="#dml" class="text-stone-500 hover:text-amber-600 transition-base">Metric Learning</a>
-                    <a href="#sota" class="text-stone-500 hover:text-amber-600 transition-base">SOTA Benchmarks</a>
-                    <a href="#deploy" class="bg-stone-800 text-stone-50 px-4 py-2 rounded-full hover:bg-amber-600 transition-base">Build Stack</a>
+                    <a href="#foundation" class="text-slate-500 hover:text-indigo-600 transition-base">Foundation
+                        Models</a>
+                    <a href="#dml" class="text-slate-500 hover:text-indigo-600 transition-base">Metric Learning</a>
+                    <a href="#sota" class="text-slate-500 hover:text-indigo-600 transition-base">SOTA Benchmarks</a>
+                    <a href="#deploy"
+                        class="bg-slate-800 text-slate-50 px-4 py-2 rounded-full hover:bg-indigo-600 transition-base">Build
+                        Stack</a>
                 </div>
             </div>
         </div>
@@ -48,34 +52,45 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
 
         <!-- Header -->
+        <!-- Header -->
         <header class="text-center max-w-4xl mx-auto space-y-6">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-stone-200 text-stone-600 text-xs font-semibold uppercase tracking-wide">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wide border border-indigo-200 shadow-sm">
                 From Local Features to Global Understanding
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 tracking-tight font-heading leading-tight">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight font-heading leading-tight">
                 An Architect's Guide to <br>
-                <span class="text-amber-600">Image Embeddings & Deployment</span>
+                <span class="text-indigo-600">Image Embeddings & Deployment</span>
             </h2>
             <p class="text-lg text-stone-600 leading-relaxed">
-                The efficacy of a semantic search system is determined by its architecture. 
-                This interactive guide analyzes the shift from <strong>CNNs</strong> to <strong>Vision Transformers</strong>, 
-                evaluates SOTA models like <strong>DINOv2</strong> and <strong>CLIP</strong>, and provides a framework for scalable vector deployment.
+                The efficacy of a semantic search system is determined by its architecture.
+                This interactive guide analyzes the shift from <strong>CNNs</strong> to <strong>Vision
+                    Transformers</strong>,
+                evaluates SOTA models like <strong>DINOv2</strong> and <strong>CLIP</strong>, and provides a framework
+                for scalable vector deployment.
             </p>
         </header>
 
         <!-- Section 1: The Foundation (CNN vs ViT) -->
         <section id="foundation" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">I. The Architectural Divide</h3>
+                <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">I. The
+                    Architectural Divide</h3>
                 <p class="text-stone-600 leading-relaxed">
-                    The field is defined by a split between <strong>CNNs</strong> (ResNet, EfficientNet), which rely on strong "inductive biases" like locality, and <strong>Vision Transformers (ViTs)</strong>, which favor global context and massive data scale.
-                    While CNNs excel with limited data, ViTs dominate when data is abundant, treating images as sequences of patches to capture long-range dependencies.
+                    The field is defined by a split between <strong>CNNs</strong> (ResNet, EfficientNet), which rely on
+                    strong "inductive biases" like locality, and <strong>Vision Transformers (ViTs)</strong>, which
+                    favor global context and massive data scale.
+                    While CNNs excel with limited data, ViTs dominate when data is abundant, treating images as
+                    sequences of patches to capture long-range dependencies.
                 </p>
-                
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 space-y-4">
-                    <h4 class="font-bold text-stone-800 text-sm uppercase tracking-wide">Key Takeaway</h4>
-                    <p class="text-sm text-stone-600">
-                        The ViT era shifts the burden from <em>architecture engineering</em> (designing clever filters) to <em>data engineering</em>. 
+
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-sm border border-indigo-100 space-y-4">
+                    <h4 class="font-bold text-indigo-900 text-sm uppercase tracking-wide flex items-center gap-2">
+                        <span class="text-xl">💡</span> Key Takeaway
+                    </h4>
+                    <p class="text-sm text-indigo-800">
+                        The ViT era shifts the burden from <em>architecture engineering</em> (designing clever filters)
+                        to <em>data engineering</em>.
                         Success now depends on the scale and curation of the training dataset (e.g., LVD-142M).
                     </p>
                 </div>
@@ -86,8 +101,10 @@
                 <div class="flex justify-between items-center mb-4">
                     <h4 class="text-stone-800 font-bold font-heading">Architecture Profile Analysis</h4>
                     <div class="flex gap-4 text-xs">
-                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-stone-400"></span> CNN (ResNet)</span>
-                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Transformer (ViT)</span>
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-stone-400"></span>
+                            CNN (ResNet)</span>
+                        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            Transformer (ViT)</span>
                     </div>
                 </div>
                 <div class="chart-container">
@@ -101,41 +118,51 @@
             <div class="max-w-3xl mx-auto text-center mb-10">
                 <h3 class="text-2xl font-bold text-stone-900 font-heading">II. The Engine of Similarity</h3>
                 <p class="text-stone-600 mt-4">
-                    A backbone is useless without a structured vector space. Deep Metric Learning (DML) shapes this space.
-                    Explore how loss functions evolved from simple Euclidean distance to Geodesic optimization on a hypersphere.
+                    A backbone is useless without a structured vector space. Deep Metric Learning (DML) shapes this
+                    space.
+                    Explore how loss functions evolved from simple Euclidean distance to Geodesic optimization on a
+                    hypersphere.
                 </p>
             </div>
 
             <!-- Interactive Loss Explorer -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Option 1 -->
-                <button onclick="updateLoss('contrastive')" class="loss-btn active group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('contrastive')"
+                    class="loss-btn active group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">🔗</span>
-                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Pair-Based</span>
+                        <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded">Pair-Based</span>
                     </div>
-                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Contrastive Loss</h4>
-                    <p class="text-sm text-stone-500 mt-2">The foundational approach using simple positive/negative pairs.</p>
+                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-sky-600">Contrastive Loss</h4>
+                    <p class="text-sm text-slate-500 mt-2">The foundational approach using simple positive/negative
+                        pairs.</p>
                 </button>
 
                 <!-- Option 2 -->
-                <button onclick="updateLoss('triplet')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('triplet')"
+                    class="loss-btn group text-left p-6 rounded-xl border border-slate-200 bg-white hover:border-emerald-400 transition-base focus:outline-none focus:ring-2 focus:ring-emerald-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">∆</span>
-                        <span class="text-xs font-bold bg-stone-100 text-stone-500 px-2 py-1 rounded">Triplet-Based</span>
+                        <span
+                            class="text-xs font-bold bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Triplet-Based</span>
                     </div>
-                    <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">Triplet Loss</h4>
-                    <p class="text-sm text-stone-500 mt-2">Uses Anchor-Positive-Negative triplets to create clustered spaces.</p>
+                    <h4 class="text-lg font-bold text-slate-800 group-hover:text-emerald-600">Triplet Loss</h4>
+                    <p class="text-sm text-slate-500 mt-2">Uses Anchor-Positive-Negative triplets to create clustered
+                        spaces.</p>
                 </button>
 
                 <!-- Option 3 -->
-                <button onclick="updateLoss('arcface')" class="loss-btn group text-left p-6 rounded-xl border border-stone-200 bg-white hover:border-amber-400 transition-base focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <button onclick="updateLoss('arcface')"
+                    class="loss-btn group text-left p-6 rounded-xl border border-slate-200 bg-white hover:border-purple-400 transition-base focus:outline-none focus:ring-2 focus:ring-purple-500">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-2xl">🌐</span>
-                        <span class="text-xs font-bold bg-amber-100 text-amber-700 px-2 py-1 rounded">SOTA / Margin</span>
+                        <span class="text-xs font-bold bg-purple-100 text-purple-600 px-2 py-1 rounded">SOTA /
+                            Margin</span>
                     </div>
                     <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-600">ArcFace</h4>
-                    <p class="text-sm text-stone-500 mt-2">Optimizes angular geodesic distance on a normalized hypersphere.</p>
+                    <p class="text-sm text-stone-500 mt-2">Optimizes angular geodesic distance on a normalized
+                        hypersphere.</p>
                 </button>
             </div>
 
@@ -149,47 +176,57 @@
         <section id="sota" class="scroll-mt-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-5 space-y-6">
-                    <h3 class="text-2xl font-bold text-stone-900 font-heading border-l-4 border-amber-500 pl-4">III. Visual vs. Conceptual</h3>
-                    <p class="text-stone-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 font-heading border-l-4 border-purple-500 pl-4">III.
+                        Visual vs. Conceptual</h3>
+                    <p class="text-slate-600 leading-relaxed">
                         The SOTA landscape is divided between Self-Supervised Learning (SSL) and Multimodal Learning.
-                        <strong>DINOv2</strong> (SSL) acts as a "visual cortex," excelling at pure pixel-level understanding. 
-                        <strong>CLIP</strong> (Multimodal) learns "meaning" through language, enabling zero-shot capabilities.
+                        <strong>DINOv2</strong> (SSL) acts as a "visual cortex," excelling at pure pixel-level
+                        understanding.
+                        <strong>CLIP</strong> (Multimodal) learns "meaning" through language, enabling zero-shot
+                        capabilities.
                     </p>
-                    
+
                     <ul class="space-y-4 mt-6">
                         <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold">A</span>
+                            <span
+                                class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs font-bold ring-2 ring-amber-50">A</span>
                             <div>
-                                <strong class="text-stone-800">DINOv2 (ViT-L/G):</strong>
-                                <p class="text-sm text-stone-600">Best for "Find similar looking images". 768-dim embeddings. Higher storage cost.</p>
+                                <strong class="text-slate-800">DINOv2 (ViT-L/G):</strong>
+                                <p class="text-sm text-slate-600">Best for "Find similar looking images". 768-dim
+                                    embeddings. Higher storage cost.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-6 h-6 rounded-full bg-stone-200 text-stone-600 flex items-center justify-center text-xs font-bold">B</span>
+                            <span
+                                class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xs font-bold ring-2 ring-purple-50">B</span>
                             <div>
-                                <strong class="text-stone-800">CLIP / MetaCLIP:</strong>
-                                <p class="text-sm text-stone-600">Best for "Find images matching this text". 512-dim embeddings. Lower visual precision.</p>
+                                <strong class="text-slate-800">CLIP / MetaCLIP:</strong>
+                                <p class="text-sm text-slate-600">Best for "Find images matching this text". 512-dim
+                                    embeddings. Lower visual precision.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-                     <h4 class="text-stone-800 font-bold font-heading mb-4 text-center">Performance Profile Comparison</h4>
+                    <h4 class="text-stone-800 font-bold font-heading mb-4 text-center">Performance Profile Comparison
+                    </h4>
                     <div class="chart-container">
                         <canvas id="sotaChart"></canvas>
                     </div>
-                    <p class="text-center text-xs text-stone-400 mt-4">Relative performance scale based on benchmark trends (visual vs. semantic tasks).</p>
+                    <p class="text-center text-xs text-stone-400 mt-4">Relative performance scale based on benchmark
+                        trends (visual vs. semantic tasks).</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Deployment Architect (Interactive Form) -->
-        <section id="deploy" class="scroll-mt-24 bg-stone-900 text-stone-50 rounded-3xl p-8 md:p-12">
+        <section id="deploy"
+            class="scroll-mt-24 bg-slate-900 text-slate-50 rounded-3xl p-8 md:p-12 border border-slate-800 shadow-2xl">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-10">
                     <h3 class="text-3xl font-bold font-heading text-white">Build Your Architecture</h3>
-                    <p class="text-stone-400 mt-2">
+                    <p class="text-slate-400 mt-2">
                         Define your constraints to generate a recommended stack (Model + Training Strategy + Vector DB).
                     </p>
                 </div>
@@ -198,34 +235,43 @@
                     <!-- Input Panel -->
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Search Modality</label>
-                            <select id="inputModality" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Search
+                                Modality</label>
+                            <select id="inputModality"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="visual">Visual Only (Image-to-Image)</option>
                                 <option value="multimodal">Multimodal (Text-to-Image)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Domain Specificity</label>
-                            <select id="inputDomain" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Domain
+                                Specificity</label>
+                            <select id="inputDomain"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="general">General (Web/Life)</option>
                                 <option value="specific">Specialized (Medical/E-comm)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wide text-stone-500 mb-2">Scale & Ops Capability</label>
-                            <select id="inputScale" class="w-full bg-stone-800 border border-stone-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wide text-slate-500 mb-2">Scale &
+                                Ops Capability</label>
+                            <select id="inputScale"
+                                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-base">
                                 <option value="prototyping">Prototyping / Managed (Low Ops)</option>
                                 <option value="massive">Massive Scale (Self-Hosted)</option>
                             </select>
                         </div>
-                        <button onclick="generateArchitecture()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-xl transition-base mt-4 shadow-lg shadow-amber-900/50">
+                        <button onclick="generateArchitecture()"
+                            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold py-4 rounded-xl transition-base mt-4 shadow-lg shadow-indigo-900/50 transform hover:-translate-y-0.5">
                             Generate Stack Recommendation
                         </button>
                     </div>
 
                     <!-- Output Panel -->
-                    <div class="bg-stone-800 rounded-xl p-6 border border-stone-700 relative min-h-[300px] flex items-center justify-center" id="resultContainer">
-                        <p class="text-stone-500 text-center italic">Configure inputs and click Generate to see your architectural blueprint.</p>
+                    <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 relative min-h-[300px] flex items-center justify-center shadow-inner"
+                        id="resultContainer">
+                        <p class="text-slate-500 text-center italic">Configure inputs and click Generate to see your
+                            architectural blueprint.</p>
                     </div>
                 </div>
             </div>
@@ -236,13 +282,282 @@
     <footer class="bg-stone-100 py-12 mt-24 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="text-stone-500 font-heading font-medium">SemanticArchitect © 2025</p>
-            <p class="text-stone-400 text-sm mt-2">Based on "An Architect's Guide to Image Embeddings and Semantic Search"</p>
+            <p class="text-stone-400 text-sm mt-2">Based on "An Architect's Guide to Image Embeddings and Semantic
+                Search"</p>
         </div>
     </footer>
 
     <!-- Logic Script -->
     
-5:T2498,// --- Data for Loss Explorer ---
+5:T1770,/* Typography */
+.report-content {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar Colors */
+::-webkit-scrollbar-track {
+    background: #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6d3d1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a29e;
+}
+
+/* Chart Container Specifics */
+.chart-container {
+    max-width: 600px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid #e7e5e4;
+}
+
+.transition-base {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Support */
+.dark .report-content {
+    background-color: transparent !important;
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Force Headers to be Colored in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Fix Dark Mode Text Visibility */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f1f5f9 !important;
+    /* Slate-100 */
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Global Safety Fix for Light Mode Classes in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/95,
+.dark .bg-slate-50,
+.dark .bg-gray-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    /* Dark Slate */
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+/* Ensure Slate-50 backgrounds are also dark */
+.dark .bg-slate-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #e2e8f0 !important;
+}
+
+/* Fix Glass Panel in Dark Mode */
+.dark .glass-panel {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix Text in Light Contexts being White in Dark Mode */
+.dark .text-slate-900,
+.dark .text-slate-800 {
+    color: #e2e8f0 !important;
+    /* Slate-200 */
+}
+
+/* Pop the Indigo Accent */
+.dark .text-indigo-600 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+/* Fix Badges (Indigo, Slate) in Dark Mode */
+.dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    color: #c7d2fe !important;
+}
+
+.dark .bg-indigo-50 {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.dark .text-indigo-900,
+.dark .text-indigo-800,
+.dark .text-indigo-700,
+.dark .text-indigo-600 {
+    color: #c7d2fe !important;
+}
+
+/* Variety Colors (Sky, Emerald, Purple) */
+.dark .bg-sky-100 {
+    background-color: rgba(14, 165, 233, 0.2) !important;
+    color: #bae6fd !important;
+}
+
+.dark .text-sky-600 {
+    color: #bae6fd !important;
+}
+
+.dark .bg-emerald-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    color: #6ee7b7 !important;
+}
+
+.dark .text-emerald-600 {
+    color: #6ee7b7 !important;
+}
+
+.dark .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.2) !important;
+    color: #e9d5ff !important;
+}
+
+.dark .text-purple-600 {
+    color: #e9d5ff !important;
+}
+
+.dark .bg-slate-100 {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+    color: #cbd5e1 !important;
+}
+
+.dark .bg-slate-200 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    color: #e2e8f0 !important;
+}
+
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+}
+
+
+
+/* Fix Formula Box in Dark Mode */
+.dark .bg-slate-50 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Fix Footer and Card Backgrounds in Dark Mode */
+.dark .bg-stone-100,
+.dark .bg-stone-800 {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+}
+
+.dark .border-stone-700 {
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.dark .text-stone-900,
+.dark .text-stone-800 {
+    color: #f1f5f9 !important;
+    /* Light Text for Dark Mode */
+}
+
+.dark .text-stone-600,
+.dark .text-stone-500,
+.dark .text-stone-400 {
+    color: #cbd5e1 !important;
+    /* Slate-300 */
+}
+
+/* Fix Stone Badges in Dark Mode */
+.dark .bg-stone-200 {
+    background-color: rgba(68, 64, 60, 0.6) !important;
+    color: #e7e5e4 !important;
+}
+
+/* Fix Amber Badge (SOTA / Margin) in Dark Mode */
+.dark .bg-amber-100 {
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    color: #fcd34d !important;
+}
+
+.dark .text-amber-700 {
+    color: #fcd34d !important;
+}
+
+/* Color Variety Fixes (Simulating variety by mapping Stone classes to different colors in specific contexts if possible, or using direct overrides) */
+/* Ideally, we should update the .report-content to use different classes, but for now we ensure the existing classes map nicely. */
+/* Using nth-of-type selectors to inject variety into the loss buttons if they share classes */
+.dark .loss-btn:nth-of-type(1) .bg-stone-100 {
+    background-color: rgba(14, 165, 233, 0.2) !important;
+    /* Sky */
+    color: #bae6fd !important;
+}
+
+.dark .loss-btn:nth-of-type(2) .bg-stone-100 {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    /* Emerald */
+    color: #6ee7b7 !important;
+}
+
+.dark .loss-btn:hover {
+    border-color: rgba(99, 102, 241, 0.4) !important;
+    background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* Specific Fix for Code Box */
+.dark #resultContainer code,
+.dark .font-mono {
+    color: #e2e8f0;
+    background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.dark .glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(148, 163, 184, 0.1);
+}
+
+
+/* Restore Colors in Dark Mode */
+.dark .text-indigo-600,
+.dark .text-indigo-500 {
+    color: #818cf8 !important;
+    /* Indigo-400 */
+}
+
+.dark .text-slate-900 {
+    color: #f1f5f9 !important;
+}6:T2498,// --- Data for Loss Explorer ---
 const lossData = {
     contrastive: {
         title: "Contrastive Loss (Pair-Based)",
@@ -468,7 +783,7 @@ if (typeof generateArchitecture !== 'undefined') { window.generateArchitecture =
     });
 }
 if(window.updateLoss) window.updateLoss('contrastive');
-7:["slug","semantic","d"]
-0:["uF2fDZR-TC4s6DTB--URR",[[["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__?{\"slug\":\"semantic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Semantic Search"}],["$","$L3",null,{"content":"$4","styles":"/* Typography */\n.report-content { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafaf9; color: #44403c; }\nh1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }\n\n/* Custom Scrollbar Colors */\n::-webkit-scrollbar-track { background: #f5f5f4; }\n::-webkit-scrollbar-thumb { background: #d6d3d1; }\n::-webkit-scrollbar-thumb:hover { background: #a8a29e; }\n\n/* Chart Container Specifics */\n.chart-container {\n    max-width: 600px;\n    max-height: 400px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n/* Utilities */\n.glass-panel {\n    background: rgba(255, 255, 255, 0.95);\n    backdrop-filter: blur(8px);\n    border: 1px solid #e7e5e4;\n}\n.transition-base { transition: all 0.3s ease-in-out; }","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$5","title":"Semantic Search"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/5283f8f8abdc6c70.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/1fecd13e9d4ab683.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/471247cfad3b81ab.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$L9",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$La",null]]]]
-a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
+8:["slug","semantic","d"]
+0:["ycuHSYga1dFJ-Xb61UrFQ",[[["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__?{\"slug\":\"semantic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","semantic","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Semantic Search"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Semantic Search"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/2223fb7bc43fc007.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/e5d5e53d9e84b5b0.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/a6d76a49270d0e06.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$La",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$Lb",null]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
 1:null

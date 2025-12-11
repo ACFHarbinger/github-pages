@@ -1,10 +1,89 @@
-body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; }
-h1, h2, h3, h4, .font-tech { font-family: 'Rajdhani', sans-serif; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+/* Fix Dark Mode Text Visibility & Color */
+.dark body {
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+/* Fix White Backgrounds/Nav in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark nav,
+.dark .glass-panel {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #c7d2fe !important;
+}
+
+/* Force Headers to be Colored in Native Dark */
+h1,
+h2,
+h3,
+h4 {
+    color: #34d399 !important;
+    /* Emerald-400 */
+}
+
+p,
+li,
+span {
+    color: #c7d2fe;
+    /* Indigo-200 */
+}
+
+/* Light Mode Overrides */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+    color: #0f172a !important;
+}
+
+html:not(.dark) p,
+html:not(.dark) li,
+html:not(.dark) span {
+    color: #334155 !important;
+}
+
+/* Override Grays with Colors in Dark Mode */
+.dark .text-slate-400,
+.dark .text-slate-500 {
+    color: #a5b4fc !important;
+    /* Indigo-300 */
+}
+
+.dark .text-slate-300,
+.dark .text-slate-200,
+.dark .text-slate-100 {
+    color: #c7d2fe !important;
+    /* Indigo-200 */
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-tech {
+    font-family: 'Rajdhani', sans-serif;
+}
 
 /* Custom Scrollbar Colors */
-::-webkit-scrollbar-track { background: #0f172a; }
-::-webkit-scrollbar-thumb { background: #334155; }
-::-webkit-scrollbar-thumb:hover { background: #475569; }
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
 
 /* Chart Container - Inherits base from reports.css */
 
@@ -33,4 +112,57 @@ h1, h2, h3, h4, .font-tech { font-family: 'Rajdhani', sans-serif; }
     width: 2px;
     background-color: #475569;
     margin: 0 auto;
+}
+
+/* Light Mode Support */
+html:not(.dark) body {
+    background-color: transparent;
+    color: #000000;
+}
+
+
+html:not(.dark) .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html:not(.dark) .glass-panel {
+    background: #ffffff;
+    border-color: #cbd5e1;
+}
+
+html:not(.dark) .glass-panel:hover {
+    border-color: #6366f1;
+    background: #f8fafc;
+}
+
+html:not(.dark) .flow-line {
+    background-color: #cbd5e1;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-sky-500,
+.dark .text-sky-400 {
+    color: #38bdf8 !important;
+    /* Sky-400 */
+}
+
+.dark .text-blue-500 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}
+
+.dark .text-emerald-400 {
+    color: #34d399 !important;
+}
+
+.dark .text-purple-400 {
+    color: #c084fc !important;
+}
+
+.dark .text-amber-400 {
+    color: #fbbf24 !important;
+}
+
+.dark .text-indigo-400 {
+    color: #818cf8 !important;
 }

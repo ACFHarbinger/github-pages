@@ -46,3 +46,128 @@ body {
 .transition-all-300 {
     transition: all 0.3s ease;
 }
+
+/* Dark Mode Support */
+.dark body {
+    background-color: transparent;
+    color: #bfdbfe !important;
+    /* Blue-200 */
+}
+
+/* Force Headers to be Colored in Dark Mode */
+/* Force Headers to be Colored in Dark Mode */
+
+/* Fix White Backgrounds/Nav in Dark Mode */
+.dark .bg-white,
+.dark .bg-white\/80,
+.dark .bg-stone-50,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    color: #bfdbfe !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}
+
+.dark p,
+.dark li,
+.dark span {
+    color: #bfdbfe;
+    /* Blue-200 */
+}
+
+/* Fix Dark Mode Text Visibility (Override Stone-900/800) */
+.dark .text-stone-900,
+.dark .text-stone-800,
+.dark .text-stone-700 {
+    color: #f5f5f4 !important;
+    /* Stone-100 */
+}
+
+
+.dark .chart-container canvas {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+
+.dark .timeline-node.active .circle {
+    background-color: #f97316;
+    /* Orange-500 */
+    border-color: #f97316;
+}
+
+.dark .timeline-node.active .content {
+    background-color: rgba(67, 20, 7, 0.5);
+    /* Darker Orange background */
+    border-left-color: #f97316;
+    color: #fdba74;
+    /* Orange-300 */
+}
+
+/* Fix for White Cards in Dark Mode */
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-blue-50,
+.dark .bg-stone-50,
+.dark .bg-stone-100,
+.dark .shadow-lg,
+.dark .card-hover,
+.dark nav {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Restore Blue Effect for Active Interaction (Dark Mode) */
+.dark .timeline-node .content.border-blue-500 {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    /* Blue Tint */
+    border-color: #3b82f6 !important;
+    /* Blue Border */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Restore Blue Effect for Active Interaction (Light Mode) */
+html:not(.dark) .timeline-node .content.border-blue-500 {
+    background-color: #eff6ff !important;
+    /* Blue-50 */
+    border-color: #3b82f6 !important;
+    color: #000000 !important;
+}
+
+/* Fix "Recommended" Badge in Dark Mode */
+.dark .bg-blue-100 {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+    color: #93c5fd !important;
+    /* Blue-300 */
+}
+
+.dark .text-blue-800 {
+    color: #93c5fd !important;
+}
+
+/* Fix Stone Tags in Dark Mode */
+.dark .bg-stone-100 {
+    background-color: rgba(68, 64, 60, 0.4) !important;
+    color: #d6d3d1 !important;
+}
+
+.dark .text-stone-600,
+.dark .text-stone-500 {
+    color: #d6d3d1 !important;
+}
+
+/* Restore Colors in Dark Mode */
+.dark .text-blue-600,
+.dark .text-blue-800,
+.dark .text-blue-500 {
+    color: #60a5fa !important;
+    /* Blue-400 */
+}

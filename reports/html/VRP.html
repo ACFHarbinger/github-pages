@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State of the Art: Vehicle Routing (2025)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/VRP.css">
 </head>
+
 <body class="antialiased selection:bg-indigo-900 selection:text-indigo-100">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+    <nav class="relative bg-white/90 backdrop-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
                     <span class="text-2xl text-indigo-500">🚚</span>
-                    <h1 class="text-xl font-bold tracking-tight font-tech"><span class="text-indigo-400">Optima</span></h1>
+                    <h1 class="text-xl font-bold tracking-tight font-tech"><span class="text-indigo-400">Optima</span>
+                    </h1>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#landscape" class="text-slate-400 hover:text-indigo-400 transition-colors">The Landscape</a>
+                    <a href="#landscape" class="text-slate-400 hover:text-indigo-400 transition-colors">The
+                        Landscape</a>
                     <a href="#paradigms" class="text-slate-400 hover:text-indigo-400 transition-colors">Algorithms</a>
                     <a href="#evrp" class="text-slate-400 hover:text-indigo-400 transition-colors">EVRP Frontier</a>
-                    <a href="#recommendations" class="bg-indigo-600/20 text-indigo-300 border border-indigo-500/50 px-4 py-1.5 rounded-full hover:bg-indigo-600/30 transition-colors">Practitioner's Guide</a>
+                    <a href="#recommendations"
+                        class="bg-indigo-600/20 text-indigo-300 border border-indigo-500/50 px-4 py-1.5 rounded-full hover:bg-indigo-600/30 transition-colors">Practitioner's
+                        Guide</a>
                 </div>
             </div>
         </div>
@@ -33,7 +41,8 @@
 
         <!-- Hero Section -->
         <section class="text-center space-y-6">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-900/30 text-indigo-400 text-xs font-bold uppercase tracking-wide border border-indigo-800">
+            <div
+                class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-900/30 text-indigo-400 text-xs font-bold uppercase tracking-wide border border-indigo-800">
                 Strategic Research Report
             </div>
             <h2 class="text-5xl md:text-7xl font-bold font-tech tracking-tight leading-tight uppercase">
@@ -41,7 +50,8 @@
                 <span class="gradient-text">State of the Art</span>
             </h2>
             <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                From "XL" scale metaheuristics to Agentic AI designers. A comprehensive analysis of the vehicle routing landscape in 2024–2025.
+                From "XL" scale metaheuristics to Agentic AI designers. A comprehensive analysis of the vehicle routing
+                landscape in 2024–2025.
             </p>
         </section>
 
@@ -54,17 +64,20 @@
                         Paradigm Shift: <span class="text-indigo-400">Hybridization</span>
                     </h3>
                     <p class="text-slate-400 leading-relaxed">
-                        The boundary between "Learning" and "Searching" has eroded. The SOTA is no longer pure OR or pure AI, but a symbiotic fusion.
+                        The boundary between "Learning" and "Searching" has eroded. The SOTA is no longer pure OR or
+                        pure AI, but a symbiotic fusion.
                     </p>
-                    
+
                     <div class="space-y-4 font-tech">
                         <div class="p-4 bg-slate-900/50 rounded-lg border-l-4 border-emerald-500">
                             <h4 class="font-bold text-emerald-400 text-lg">HGS (Genetic Search)</h4>
-                            <p class="text-sm text-slate-400 mt-1">Undisputed champion for quality. Uses "Giant Tour" representation and "Catastrophe" diversity management.</p>
+                            <p class="text-sm text-slate-400 mt-1">Undisputed champion for quality. Uses "Giant Tour"
+                                representation and "Catastrophe" diversity management.</p>
                         </div>
                         <div class="p-4 bg-slate-900/50 rounded-lg border-l-4 border-purple-500">
                             <h4 class="font-bold text-purple-400 text-lg">Agentic AI</h4>
-                            <p class="text-sm text-slate-400 mt-1">LLMs don't solve the route; they <em>write the solver code</em>. Enables "Zero-Shot" custom constraints.</p>
+                            <p class="text-sm text-slate-400 mt-1">LLMs don't solve the route; they <em>write the solver
+                                    code</em>. Enables "Zero-Shot" custom constraints.</p>
                         </div>
                     </div>
                 </div>
@@ -72,15 +85,16 @@
                 <!-- Benchmarking Chart -->
                 <div class="lg:col-span-7 glass-panel p-6 rounded-2xl">
                     <div class="flex justify-between items-center mb-6">
-                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Scaling to "XL" (10k Nodes)</h4>
+                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Scaling to "XL" (10k
+                            Nodes)</h4>
                         <span class="text-xs text-slate-500 bg-slate-900 px-2 py-1 rounded">Optimality Gap (%)</span>
                     </div>
                     <div class="chart-container">
                         <canvas id="scalingChart"></canvas>
                     </div>
                     <p class="text-center text-xs text-slate-500 mt-4">
-                        While Exact methods break and NCO struggles at scale, Hybrid Genetic Search (PyVRP) maintains <1% gap even at 10,000 nodes.
-                    </p>
+                        While Exact methods break and NCO struggles at scale, Hybrid Genetic Search (PyVRP) maintains
+                        <1% gap even at 10,000 nodes. </p>
                 </div>
             </div>
         </section>
@@ -94,53 +108,68 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">🧬</div>
+                    <div
+                        class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">
+                        🧬</div>
                     <h4 class="text-xl font-bold text-emerald-400 font-tech mb-2">Hybrid Genetic Search</h4>
-                    <span class="text-xs font-bold bg-emerald-900/50 text-emerald-300 px-2 py-1 rounded uppercase">The King</span>
+                    <span class="text-xs font-bold bg-emerald-900/50 text-emerald-300 px-2 py-1 rounded uppercase">The
+                        King</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-emerald-500">▸</span> 
-                            <span><strong>Giant Tour:</strong> Ignores capacity initially to traverse search space.</span>
+                            <span class="text-emerald-500">▸</span>
+                            <span><strong>Giant Tour:</strong> Ignores capacity initially to traverse search
+                                space.</span>
                         </li>
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-emerald-500">▸</span> 
-                            <span><strong>Split Algorithm:</strong> Uses shortest-path on DAG to segment tour into valid routes.</span>
+                            <span class="text-emerald-500">▸</span>
+                            <span><strong>Split Algorithm:</strong> Uses shortest-path on DAG to segment tour into valid
+                                routes.</span>
                         </li>
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-emerald-500">▸</span> 
-                            <span><strong>PyVRP:</strong> The SOTA implementation bridging C++ speed with Python ease.</span>
+                            <span class="text-emerald-500">▸</span>
+                            <span><strong>PyVRP:</strong> The SOTA implementation bridging C++ speed with Python
+                                ease.</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">🧠</div>
+                    <div
+                        class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">
+                        🧠</div>
                     <h4 class="text-xl font-bold text-purple-400 font-tech mb-2">Neural Optimization</h4>
-                    <span class="text-xs font-bold bg-purple-900/50 text-purple-300 px-2 py-1 rounded uppercase">The Frontier</span>
+                    <span class="text-xs font-bold bg-purple-900/50 text-purple-300 px-2 py-1 rounded uppercase">The
+                        Frontier</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-purple-500">▸</span> 
-                            <span><strong>Diffusion Models:</strong> Generates entire solution structure simultaneously (non-autoregressive).</span>
+                            <span class="text-purple-500">▸</span>
+                            <span><strong>Diffusion Models:</strong> Generates entire solution structure simultaneously
+                                (non-autoregressive).</span>
                         </li>
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-purple-500">▸</span> 
-                            <span><strong>Generalization:</strong> Uses "Multi-Expert" modules to handle varying constraint tightness.</span>
+                            <span class="text-purple-500">▸</span>
+                            <span><strong>Generalization:</strong> Uses "Multi-Expert" modules to handle varying
+                                constraint tightness.</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="glass-panel p-6 rounded-xl group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">📐</div>
+                    <div
+                        class="absolute top-0 right-0 p-3 opacity-10 text-6xl group-hover:opacity-20 transition-opacity">
+                        📐</div>
                     <h4 class="text-xl font-bold text-sky-400 font-tech mb-2">Exact Methods (BCP)</h4>
-                    <span class="text-xs font-bold bg-sky-900/50 text-sky-300 px-2 py-1 rounded uppercase">The Proof</span>
+                    <span class="text-xs font-bold bg-sky-900/50 text-sky-300 px-2 py-1 rounded uppercase">The
+                        Proof</span>
                     <ul class="mt-4 space-y-3 text-sm text-slate-300">
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-sky-500">▸</span> 
+                            <span class="text-sky-500">▸</span>
                             <span><strong>Neural Pricing:</strong> Uses ML to accelerate column generation.</span>
                         </li>
                         <li class="grid grid-cols-[max-content_1fr] gap-x-2">
-                            <span class="text-sky-500">▸</span> 
-                            <span><strong>RouteOpt:</strong> Modular solver proving optimality for 360-400 node instances.</span>
+                            <span class="text-sky-500">▸</span>
+                            <span><strong>RouteOpt:</strong> Modular solver proving optimality for 360-400 node
+                                instances.</span>
                         </li>
                     </ul>
                 </div>
@@ -155,29 +184,33 @@
                         <!-- Agent 1 -->
                         <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-indigo-500">
                             <h5 class="text-sm font-bold text-indigo-400 uppercase">1. Interpreter Agent</h5>
-                            <p class="text-xs text-slate-400">Reads natural language: "Drivers need a 15m break every 3h."</p>
+                            <p class="text-xs text-slate-400">Reads natural language: "Drivers need a 15m break every
+                                3h."</p>
                         </div>
                         <!-- Arrow -->
                         <div class="h-6 flow-line"></div>
                         <!-- Agent 2 -->
                         <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-purple-500">
                             <h5 class="text-sm font-bold text-purple-400 uppercase">2. Coder Agent</h5>
-                            <p class="text-xs text-slate-400 font-mono bg-slate-950 p-2 rounded mt-1">solver.Add(drive_time <= 180)</p>
+                            <p class="text-xs text-slate-400 font-mono bg-slate-950 p-2 rounded mt-1">
+                                solver.Add(drive_time <= 180)</p>
                         </div>
                         <!-- Arrow -->
                         <div class="h-6 flow-line"></div>
                         <!-- Agent 3 -->
                         <div class="w-full max-w-md glass-panel p-4 rounded-lg border-l-4 border-emerald-500">
                             <h5 class="text-sm font-bold text-emerald-400 uppercase">3. Refiner Agent</h5>
-                            <p class="text-xs text-slate-400">Tests synthetic cases. Debugs errors. Optimizes params.</p>
+                            <p class="text-xs text-slate-400">Tests synthetic cases. Debugs errors. Optimizes params.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
                     <h3 class="text-3xl font-bold font-tech text-slate-100">The Agentic Shift</h3>
                     <p class="text-slate-400 mt-4 leading-relaxed">
-                        In 2025, we stop asking AI to "solve" the problem and start asking it to "write the solver." 
-                        Frameworks like <strong>AFL</strong> can automatically generate valid code for 91.67% of custom VRP variants, democratizing access to complex optimization.
+                        In 2025, we stop asking AI to "solve" the problem and start asking it to "write the solver."
+                        Frameworks like <strong>AFL</strong> can automatically generate valid code for 91.67% of custom
+                        VRP variants, democratizing access to complex optimization.
                     </p>
                 </div>
             </div>
@@ -187,14 +220,16 @@
         <section id="evrp" class="scroll-mt-24">
             <div class="grid grid-cols-1 gap-8">
                 <div class="glass-panel p-8 rounded-2xl border border-slate-700">
-                    <div class="inline-block px-3 py-1 mb-4 rounded bg-amber-900/30 text-amber-400 text-xs font-bold uppercase tracking-wide">
+                    <div
+                        class="inline-block px-3 py-1 mb-4 rounded bg-amber-900/30 text-amber-400 text-xs font-bold uppercase tracking-wide">
                         Industrial Driver
                     </div>
                     <h3 class="text-2xl font-bold font-tech text-slate-100 mb-4">Electric Vehicle Routing</h3>
                     <p class="text-slate-400 leading-relaxed mb-6">
-                        Physics dictates the algorithm. Solvers must now handle non-linear charging curves and battery degradation.
+                        Physics dictates the algorithm. Solvers must now handle non-linear charging curves and battery
+                        degradation.
                     </p>
-                    
+
                     <div class="space-y-4">
                         <div class="flex items-center justify-between p-3 bg-slate-900 rounded border border-slate-700">
                             <span class="text-sm text-slate-300">Non-Linear Charging</span>
@@ -212,7 +247,7 @@
         <!-- Section 5: Recommendations -->
         <section id="recommendations" class="scroll-mt-24 pb-20">
             <h3 class="text-3xl font-bold font-tech text-slate-100 mb-8 text-center">Practitioner's Guide</h3>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Persona 1 -->
                 <div class="glass-panel p-6 rounded-xl border-t-4 border-emerald-500">
@@ -221,7 +256,8 @@
                     <ul class="text-sm text-slate-300 space-y-3">
                         <li><span class="text-slate-500">Goal:</span> Save 1-2% fleet cost</li>
                         <li><span class="text-slate-500">Time:</span> Minutes/Hours</li>
-                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: PyVRP</span></li>
+                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: PyVRP</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -232,7 +268,8 @@
                     <ul class="text-sm text-slate-300 space-y-3">
                         <li><span class="text-slate-500">Goal:</span> Instant Assignment</li>
                         <li><span class="text-slate-500">Time:</span> Milliseconds</li>
-                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: VROOM (C++)</span></li>
+                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: VROOM
+                                (C++)</span></li>
                     </ul>
                 </div>
 
@@ -243,7 +280,8 @@
                     <ul class="text-sm text-slate-300 space-y-3">
                         <li><span class="text-slate-500">Goal:</span> 30,000+ Nodes</li>
                         <li><span class="text-slate-500">Tech:</span> List Variables</li>
-                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: Hexaly</span></li>
+                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool:
+                                Hexaly</span></li>
                     </ul>
                 </div>
 
@@ -254,7 +292,8 @@
                     <ul class="text-sm text-slate-300 space-y-3">
                         <li><span class="text-slate-500">Goal:</span> Weird Constraints</li>
                         <li><span class="text-slate-500">Tech:</span> CP / Agentic AI</li>
-                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: OR-Tools / AFL</span></li>
+                        <li class="pt-2 border-t border-slate-700"><span class="text-white font-bold">Tool: OR-Tools /
+                                AFL</span></li>
                     </ul>
                 </div>
             </div>
@@ -264,11 +303,13 @@
 
     <footer class="border-t border-slate-800 bg-slate-900 py-10 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-slate-500 text-sm">Synthesized from "The State of the Art in Combinatorial Optimization" (2025)</p>
+            <p class="text-slate-500 text-sm">Synthesized from "The State of the Art in Combinatorial Optimization"
+                (2025)</p>
         </div>
     </footer>
 
     <!-- Chart Logic -->
     <script src="../javascript/VRP.js"></script>
 </body>
+
 </html>
