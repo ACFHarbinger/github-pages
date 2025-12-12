@@ -1,0 +1,492 @@
+2:I[2972,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],""]
+3:I[6205,["972","static/chunks/972-7ad3ab13aec984ff.js","661","static/chunks/app/content/reports/%5Bslug%5D/page-d6d3c8cccc082981.js"],"default"]
+7:I[4707,[],""]
+9:I[6423,[],""]
+a:I[1662,["972","static/chunks/972-7ad3ab13aec984ff.js","185","static/chunks/app/layout-0b5cc103b1b4abea.js"],"default"]
+4:T3dfa,
+
+    <!-- Navigation -->
+    <nav class="relative bg-slate-900/90 backdrop-blur border-b border-white/5 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- LOGO SECTION -->
+                <div class="flex items-center gap-3">
+                    <!-- Animated Nodes Logo -->
+                    <div class="flex items-center gap-2">
+                        <div class="node-pulse" style="animation-delay: 0s;"></div>
+                        <div class="w-4 h-0.5 bg-gray-700"></div>
+                        <div class="node-pulse" style="animation-delay: 0.5s;"></div>
+                        <div class="w-4 h-0.5 bg-gray-700"></div>
+                        <div class="node-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-widest font-display text-white mt-1">
+                        <span class="text-emerald-500">Logistics</span>.AI
+                    </h1>
+                </div>
+
+                <!-- NAVIGATION LINKS: Added ml-12 for separation -->
+                <div class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase items-center md:ml-12">
+                    <a href="#landscape" class="text-gray-400 hover:text-emerald-500 transition-colors">The
+                        Landscape</a>
+                    <a href="#hgs" class="text-gray-400 hover:text-emerald-500 transition-colors">HGS (SOTA)</a>
+                    <a href="#neural" class="text-gray-400 hover:text-emerald-500 transition-colors">Neural VRP</a>
+                    <a href="#benchmarks" class="text-gray-400 hover:text-emerald-500 transition-colors">Benchmarks</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area: Reduced top padding to pt-12 (48px) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-32 pt-12">
+
+        <!-- Hero Section: Using explicit mb/mt classes now, not space-y -->
+        <section id="landscape" class="text-center">
+            <!-- Subtitle: mb-2 for a small gap to the title below -->
+            <div
+                class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-emerald-400 text-xs font-bold uppercase tracking-widest border border-emerald-500/20 mb-2">
+                Combinatorial Optimization Research 2025
+            </div>
+
+            <!-- Title: mt-0 here is now guaranteed by the new CSS rule -->
+            <div class="flex justify-center w-full">
+                <h2
+                    class="text-5xl md:text-7xl font-bold font-display tracking-tight leading-tight uppercase text-center">
+                    Solving the <br>
+                    <span class="gradient-text">PCVRP Horizon</span>
+                </h2>
+            </div>
+
+            <!-- Paragraph: mt-2 for a small gap below the title -->
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light mt-2">
+                The Periodic Capacitated Vehicle Routing Problem has shifted from Branch-and-Cut exact methods to <span
+                    class="text-white">Hybrid Genetic Search</span> and emerging <span class="text-emerald-400">Deep
+                    Graph Learning</span>.
+            </p>
+
+            <!-- Methodology Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-left">
+                <!-- Exact Methods -->
+                <div class="p-6 rounded-2xl border border-white/5 bg-gray-900/40">
+                    <h3 class="text-gray-500 font-display text-sm mb-4">Exact Methods</h3>
+                    <p class="text-xs font-bold text-gray-600 mb-2">Branch-and-Cut-and-Price</p>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-red-500 rounded-full"></span>Optimality Guaranteed</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-red-500 rounded-full"></span>Limited
+                            to N < 100</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-red-500 rounded-full"></span>Computation: Hours/Days</li>
+                    </ul>
+                </div>
+
+                <!-- Metaheuristics (HGS) -->
+                <div
+                    class="p-6 rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/10 to-blue-900/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500 blur-3xl opacity-10"></div>
+                    <h3 class="text-emerald-400 font-display text-sm mb-4">Metaheuristics (Current King)</h3>
+                    <p class="text-xs font-bold text-white mb-2">Hybrid Genetic Search (HGS)</p>
+                    <ul class="space-y-2 text-xs text-gray-200">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Industry Standard (Vidal et al.)</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Population Diversity Management</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Scales to N > 10,000</li>
+                    </ul>
+                </div>
+
+                <!-- Neural VRP -->
+                <div class="p-6 rounded-2xl border border-blue-500/30 bg-gray-900/40">
+                    <h3 class="text-blue-400 font-display text-sm mb-4">Neural / Learning</h3>
+                    <p class="text-xs font-bold text-white mb-2">Deep Reinforcement Learning</p>
+                    <ul class="space-y-2 text-xs text-gray-200">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-blue-400 rounded-full"></span>Inference in Milliseconds</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-400 rounded-full"></span>POMO /
+                            Attention Models</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-blue-400 rounded-full"></span>Generalization Issues</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: HGS Deep Dive -->
+        <section id="hgs" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Content -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h3 class="text-3xl font-display text-white">
+                        The Dominance of <span class="text-emerald-500">HGS</span>
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        While Neural approaches gain hype, <strong>Hybrid Genetic Search (HGS)</strong> remains the
+                        champion for solution quality in PCVRP. It decouples the problem into two phases:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="neon-panel p-4 rounded-lg border-l-2 border-emerald-500">
+                            <h4 class="text-emerald-400 font-bold mb-1 text-sm">1. Pattern Assignment</h4>
+                            <p class="text-xs text-gray-400">Selecting which days a customer is visited (e.g., M-W-F vs
+                                T-Th-S). Handled via crossover operators.</p>
+                        </div>
+                        <div class="neon-panel p-4 rounded-lg border-l-2 border-blue-500">
+                            <h4 class="text-blue-400 font-bold mb-1 text-sm">2. Split Algorithm</h4>
+                            <p class="text-xs text-gray-400">
+                                Transforms a Giant Tour (permutation) into feasible routes optimally in $O(1)$ amortized
+                                time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Visualization -->
+                <div class="lg:col-span-7 neon-panel p-6 rounded-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Convergence Profile (Gap
+                            to Best Known)</h4>
+                        <span
+                            class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-white/10">Instance:
+                            Cordeau p10</span>
+                    </div>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="convergenceChart"></canvas>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <p class="text-xs text-gray-500 mt-2 italic">HGS approaches 0.0% gap slower than Neural methods
+                            start, but achieves higher final precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Neural & ALNS -->
+        <section id="neural" class="scroll-mt-24">
+            <div class="mb-12 text-center">
+                <h3 class="text-3xl font-display text-white">Alternative <span
+                        class="text-blue-500">Architectures</span></h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- ALNS Card -->
+                <div class="neon-panel p-8 rounded-xl group relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl text-white opacity-5 rotate-12">⚙️</div>
+                    <h4 class="text-xl font-bold text-emerald-400 mb-2">ALNS</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Adaptive Large Neighborhood Search
+                    </p>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Destroys and repairs solutions. The "Swiss Army Knife" of VRP.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Pros</strong>
+                            <span class="text-gray-500">Handles complex side-constraints (time windows, driver breaks)
+                                easily.</span>
+                        </div>
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Cons</strong>
+                            <span class="text-gray-500">Many hyperparameters to tune. Slower than HGS on pure
+                                PCVRP.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neural Card -->
+                <div class="neon-panel p-8 rounded-xl group relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl text-white opacity-5 rotate-12">🧠</div>
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">Neural VRP (POMO)</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Deep Reinforcement Learning</p>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Encoder-Decoder Transformers trained via REINFORCE to construct routes node-by-node.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Pros</strong>
+                            <span class="text-gray-500">Instant inference ($<1s$). No retraining needed for similar
+                                    instances.</span>
+                        </div>
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Cons</strong>
+                            <span class="text-gray-500">Training takes days. Hard to enforce strict hard constraints
+                                (capacity/time).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Radar Comparison -->
+        <section id="benchmarks" class="scroll-mt-24 pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left: Text -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-display text-white">Algorithm Selection Strategy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The choice of algorithm depends on the operational horizon. For <strong>Strategic
+                            Planning</strong> (where compute time is irrelevant), HGS or Branch-and-Cut is preferred.
+                        For <strong>Real-Time Dispatch</strong> (dynamic requests), Neural approaches are gaining
+                        traction.
+                    </p>
+
+                    <ul class="space-y-4 mt-8">
+                        <li class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-400 font-bold">
+                                1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Vidal's Unified HGS</h4>
+                                <p class="text-xs text-gray-500">Current record holder on Cordeau benchmarks. Uses
+                                    "broken pairs" distance for diversity.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold">
+                                2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">N2S (Neural Neighborhood Search)</h4>
+                                <p class="text-xs text-gray-500">A hybrid that uses Neural Networks to *guide* the local
+                                    search operators of a metaheuristic.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Radar Chart -->
+                <div class="neon-panel p-6 rounded-2xl flex flex-col justify-center items-center">
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Performance Trade-offs
+                    </h4>
+                    <div class="chart-container" style="height: 350px; width: 100%;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Lighter background, better visibility -->
+    <footer class="border-t border-white/10 bg-slate-900 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-xs tracking-widest uppercase">Research Synthesis: State of the Art PCVRP 2025
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom JS Link -->
+    
+5:T850,/* --- CORE STYLES --- */
+.report-content {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #e5e5e5;
+}
+
+/* Gradient Text Utilities */
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+    /* Blue to Emerald */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    background: linear-gradient(to right, #3b82f6, #10b981);
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: #3b82f6 !important;
+    width: fit-content;
+}
+
+/* --- FIX: ZERO MARGIN FOR HERO H2 TO ELIMINATE RESIDUAL GAP --- */
+#landscape h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Neon Panels */
+.neon-panel {
+    background: rgba(15, 23, 42, 0.6);
+    /* Slate-900 transparent */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    /* Emerald border */
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neon-panel:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    /* Blue transition */
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3b82f6, #10b981);
+    border-radius: 3px;
+}
+
+/* Animation for "Computing" Nodes */
+.node-pulse {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+
+    70% {
+        transform: scale(1.5);
+        opacity: 0;
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Chart overrides for dark mode */
+.chart-container canvas {
+    filter: none !important;
+}6:Tee8,// Common Chart Options
+Chart.defaults.font.family = 'Inter';
+Chart.defaults.color = '#94a3b8';
+
+// --- CONVERGENCE CHART (Line) ---
+const ctxConv = document.getElementById('convergenceChart').getContext('2d');
+new Chart(ctxConv, {
+    type: 'line',
+    data: {
+        labels: ['0s', '10s', '30s', '60s', '120s', '300s'], // Time in seconds
+        datasets: [
+            {
+                label: 'HGS (Genetic)',
+                data: [15, 5, 1.5, 0.5, 0.1, 0.0], // Starts high, converges deep
+                borderColor: '#10b981', // Emerald
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                borderWidth: 2,
+                tension: 0.3,
+                fill: true
+            },
+            {
+                label: 'Neural (Constructive)',
+                data: [3.5, 3.5, 3.5, 3.5, 3.5, 3.5], // Instant solution, but stagnates
+                borderColor: '#3b82f6', // Blue
+                borderWidth: 2,
+                borderDash: [5, 5],
+                tension: 0.1,
+                fill: false
+            },
+            {
+                label: 'ALNS',
+                data: [10, 6, 4, 3, 2, 1.2], // Good, but slower than HGS
+                borderColor: '#a855f7', // Purple
+                borderWidth: 2,
+                tension: 0.3,
+                fill: false
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { labels: { color: '#e5e5e5' } },
+            tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+            y: {
+                title: { display: true, text: 'Gap to Optimal (%)', color: '#6b7280' },
+                grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            },
+            x: {
+                grid: { display: false },
+                title: { display: true, text: 'Compute Time (Log Scale approximation)', color: '#6b7280' }
+            }
+        }
+    }
+});
+
+// --- RADAR CHART ---
+const ctxRadar = document.getElementById('radarChart').getContext('2d');
+new Chart(ctxRadar, {
+    type: 'radar',
+    data: {
+        labels: ['Solution Quality', 'Inference Speed', 'Scalability (N>1000)', 'Flexibility (Constraints)', 'Ease of Impl.'],
+        datasets: [
+            {
+                label: 'HGS',
+                data: [95, 60, 90, 70, 40], // High quality, hard to code
+                borderColor: '#10b981',
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                pointBackgroundColor: '#10b981',
+                borderWidth: 2
+            },
+            {
+                label: 'Deep RL',
+                data: [75, 99, 60, 30, 20], // Fast, rigid, very hard to train
+                borderColor: '#3b82f6',
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                pointBackgroundColor: '#3b82f6',
+                borderWidth: 2
+            },
+            {
+                label: 'ALNS',
+                data: [85, 50, 70, 95, 80], // Flexible, easier to code
+                borderColor: '#a855f7', // Purple
+                backgroundColor: 'rgba(168, 85, 247, 0.0)', // Transparent fill
+                borderDash: [5, 5],
+                pointBackgroundColor: '#a855f7',
+                borderWidth: 2
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: '#cbd5e1' } } },
+        scales: {
+            r: {
+                angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                pointLabels: { color: '#e5e5e5', font: { size: 11, family: 'Inter' } },
+                ticks: { display: false, max: 100 }
+            }
+        }
+    }
+});
+
+// --- Exports ---
+
+
+// --- Initialization ---
+{
+
+}8:["slug","pcvrp","d"]
+0:["ZG_58DlU0rvRLLd7DV_gG",[[["",{"children":["content",{"children":["reports",{"children":[["slug","pcvrp","d"],{"children":["__PAGE__?{\"slug\":\"pcvrp\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["content",{"children":["reports",{"children":[["slug","pcvrp","d"],{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"animate-in fade-in duration-500 flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950","children":["$","main",null,{"className":"flex-1 w-full pb-12","children":["$","div",null,{"className":"max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-6 pt-10","children":["$","$L2",null,{"href":"/content/reports","className":"flex items-center text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors w-fit group","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":20,"height":20,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left mr-2 group-hover:-translate-x-1 transition-transform","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back to Reports List"]}]}],["$","h1",null,{"className":"text-3xl font-bold mb-6 capitalize text-slate-900 dark:text-white","children":"Periodic Capacitated Vehicle Routing Problem"}],["$","$L3",null,{"content":"$4","styles":"$5","scripts":["https://cdn.jsdelivr.net/npm/chart.js"],"inlineScript":"$6","title":"Periodic Capacitated Vehicle Routing Problem"}]]}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/2223fb7bc43fc007.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/github-pages/_next/static/css/e5d5e53d9e84b5b0.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children","$8","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children","reports","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","content","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/github-pages/_next/static/css/39bb95725bbac5e6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_b0711f","children":["$","$La",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$Lb",null]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"ACF | Harbinger"}],["$","meta","3",{"name":"description","content":"Personal blog and portfolio."}],["$","link","4",{"rel":"icon","href":"/github-pages/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
+1:null

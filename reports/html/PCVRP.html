@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOTA: Periodic CVRP Algorithms 2025</title>
+
+    <!-- External Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="pcvrp.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased selection:bg-emerald-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="relative bg-slate-900/90 backdrop-blur border-b border-white/5 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- LOGO SECTION -->
+                <div class="flex items-center gap-3">
+                    <!-- Animated Nodes Logo -->
+                    <div class="flex items-center gap-2">
+                        <div class="node-pulse" style="animation-delay: 0s;"></div>
+                        <div class="w-4 h-0.5 bg-gray-700"></div>
+                        <div class="node-pulse" style="animation-delay: 0.5s;"></div>
+                        <div class="w-4 h-0.5 bg-gray-700"></div>
+                        <div class="node-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-widest font-display text-white mt-1">
+                        <span class="text-emerald-500">Logistics</span>.AI
+                    </h1>
+                </div>
+
+                <!-- NAVIGATION LINKS: Added ml-12 for separation -->
+                <div class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase items-center md:ml-12">
+                    <a href="#landscape" class="text-gray-400 hover:text-emerald-500 transition-colors">The
+                        Landscape</a>
+                    <a href="#hgs" class="text-gray-400 hover:text-emerald-500 transition-colors">HGS (SOTA)</a>
+                    <a href="#neural" class="text-gray-400 hover:text-emerald-500 transition-colors">Neural VRP</a>
+                    <a href="#benchmarks" class="text-gray-400 hover:text-emerald-500 transition-colors">Benchmarks</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area: Reduced top padding to pt-12 (48px) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-32 pt-12">
+
+        <!-- Hero Section: Using explicit mb/mt classes now, not space-y -->
+        <section id="landscape" class="text-center">
+            <!-- Subtitle: mb-2 for a small gap to the title below -->
+            <div
+                class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-emerald-400 text-xs font-bold uppercase tracking-widest border border-emerald-500/20 mb-2">
+                Combinatorial Optimization Research 2025
+            </div>
+
+            <!-- Title: mt-0 here is now guaranteed by the new CSS rule -->
+            <div class="flex justify-center w-full">
+                <h2
+                    class="text-5xl md:text-7xl font-bold font-display tracking-tight leading-tight uppercase text-center">
+                    Solving the <br>
+                    <span class="gradient-text">PCVRP Horizon</span>
+                </h2>
+            </div>
+
+            <!-- Paragraph: mt-2 for a small gap below the title -->
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light mt-2">
+                The Periodic Capacitated Vehicle Routing Problem has shifted from Branch-and-Cut exact methods to <span
+                    class="text-white">Hybrid Genetic Search</span> and emerging <span class="text-emerald-400">Deep
+                    Graph Learning</span>.
+            </p>
+
+            <!-- Methodology Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 text-left">
+                <!-- Exact Methods -->
+                <div class="p-6 rounded-2xl border border-white/5 bg-gray-900/40">
+                    <h3 class="text-gray-500 font-display text-sm mb-4">Exact Methods</h3>
+                    <p class="text-xs font-bold text-gray-600 mb-2">Branch-and-Cut-and-Price</p>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-red-500 rounded-full"></span>Optimality Guaranteed</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-red-500 rounded-full"></span>Limited
+                            to N < 100</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-red-500 rounded-full"></span>Computation: Hours/Days</li>
+                    </ul>
+                </div>
+
+                <!-- Metaheuristics (HGS) -->
+                <div
+                    class="p-6 rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-900/10 to-blue-900/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500 blur-3xl opacity-10"></div>
+                    <h3 class="text-emerald-400 font-display text-sm mb-4">Metaheuristics (Current King)</h3>
+                    <p class="text-xs font-bold text-white mb-2">Hybrid Genetic Search (HGS)</p>
+                    <ul class="space-y-2 text-xs text-gray-200">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Industry Standard (Vidal et al.)</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Population Diversity Management</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-emerald-400 rounded-full"></span>Scales to N > 10,000</li>
+                    </ul>
+                </div>
+
+                <!-- Neural VRP -->
+                <div class="p-6 rounded-2xl border border-blue-500/30 bg-gray-900/40">
+                    <h3 class="text-blue-400 font-display text-sm mb-4">Neural / Learning</h3>
+                    <p class="text-xs font-bold text-white mb-2">Deep Reinforcement Learning</p>
+                    <ul class="space-y-2 text-xs text-gray-200">
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-blue-400 rounded-full"></span>Inference in Milliseconds</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-blue-400 rounded-full"></span>POMO /
+                            Attention Models</li>
+                        <li class="flex items-center gap-2"><span
+                                class="w-1 h-1 bg-blue-400 rounded-full"></span>Generalization Issues</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: HGS Deep Dive -->
+        <section id="hgs" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Content -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h3 class="text-3xl font-display text-white">
+                        The Dominance of <span class="text-emerald-500">HGS</span>
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        While Neural approaches gain hype, <strong>Hybrid Genetic Search (HGS)</strong> remains the
+                        champion for solution quality in PCVRP. It decouples the problem into two phases:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="neon-panel p-4 rounded-lg border-l-2 border-emerald-500">
+                            <h4 class="text-emerald-400 font-bold mb-1 text-sm">1. Pattern Assignment</h4>
+                            <p class="text-xs text-gray-400">Selecting which days a customer is visited (e.g., M-W-F vs
+                                T-Th-S). Handled via crossover operators.</p>
+                        </div>
+                        <div class="neon-panel p-4 rounded-lg border-l-2 border-blue-500">
+                            <h4 class="text-blue-400 font-bold mb-1 text-sm">2. Split Algorithm</h4>
+                            <p class="text-xs text-gray-400">
+                                Transforms a Giant Tour (permutation) into feasible routes optimally in $O(1)$ amortized
+                                time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Visualization -->
+                <div class="lg:col-span-7 neon-panel p-6 rounded-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest">Convergence Profile (Gap
+                            to Best Known)</h4>
+                        <span
+                            class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-white/10">Instance:
+                            Cordeau p10</span>
+                    </div>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="convergenceChart"></canvas>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <p class="text-xs text-gray-500 mt-2 italic">HGS approaches 0.0% gap slower than Neural methods
+                            start, but achieves higher final precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Neural & ALNS -->
+        <section id="neural" class="scroll-mt-24">
+            <div class="mb-12 text-center">
+                <h3 class="text-3xl font-display text-white">Alternative <span
+                        class="text-blue-500">Architectures</span></h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- ALNS Card -->
+                <div class="neon-panel p-8 rounded-xl group relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl text-white opacity-5 rotate-12">⚙️</div>
+                    <h4 class="text-xl font-bold text-emerald-400 mb-2">ALNS</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Adaptive Large Neighborhood Search
+                    </p>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Destroys and repairs solutions. The "Swiss Army Knife" of VRP.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Pros</strong>
+                            <span class="text-gray-500">Handles complex side-constraints (time windows, driver breaks)
+                                easily.</span>
+                        </div>
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Cons</strong>
+                            <span class="text-gray-500">Many hyperparameters to tune. Slower than HGS on pure
+                                PCVRP.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neural Card -->
+                <div class="neon-panel p-8 rounded-xl group relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl text-white opacity-5 rotate-12">🧠</div>
+                    <h4 class="text-xl font-bold text-blue-400 mb-2">Neural VRP (POMO)</h4>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mb-4">Deep Reinforcement Learning</p>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Encoder-Decoder Transformers trained via REINFORCE to construct routes node-by-node.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-xs">
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Pros</strong>
+                            <span class="text-gray-500">Instant inference ($<1s$). No retraining needed for similar
+                                    instances.</span>
+                        </div>
+                        <div class="bg-gray-900/50 p-2 rounded">
+                            <strong class="text-white block">Cons</strong>
+                            <span class="text-gray-500">Training takes days. Hard to enforce strict hard constraints
+                                (capacity/time).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Radar Comparison -->
+        <section id="benchmarks" class="scroll-mt-24 pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left: Text -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-display text-white">Algorithm Selection Strategy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The choice of algorithm depends on the operational horizon. For <strong>Strategic
+                            Planning</strong> (where compute time is irrelevant), HGS or Branch-and-Cut is preferred.
+                        For <strong>Real-Time Dispatch</strong> (dynamic requests), Neural approaches are gaining
+                        traction.
+                    </p>
+
+                    <ul class="space-y-4 mt-8">
+                        <li class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-900/50 flex items-center justify-center text-emerald-400 font-bold">
+                                1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Vidal's Unified HGS</h4>
+                                <p class="text-xs text-gray-500">Current record holder on Cordeau benchmarks. Uses
+                                    "broken pairs" distance for diversity.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold">
+                                2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">N2S (Neural Neighborhood Search)</h4>
+                                <p class="text-xs text-gray-500">A hybrid that uses Neural Networks to *guide* the local
+                                    search operators of a metaheuristic.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Radar Chart -->
+                <div class="neon-panel p-6 rounded-2xl flex flex-col justify-center items-center">
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Performance Trade-offs
+                    </h4>
+                    <div class="chart-container" style="height: 350px; width: 100%;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Lighter background, better visibility -->
+    <footer class="border-t border-white/10 bg-slate-900 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-xs tracking-widest uppercase">Research Synthesis: State of the Art PCVRP 2025
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom JS Link -->
+    <script src="pcvrp.js"></script>
+</body>
+
+</html>
